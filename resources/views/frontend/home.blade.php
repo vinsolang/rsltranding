@@ -23,7 +23,7 @@
               <img src="{{ asset('assets/images/logo.png') }}">
             </div> --}}
           <div class="home-banner-context">
-        <h5>Welcome to</h5>
+            <h5>{{ __('messages.home') }}</h5>
            <h1>RSL TRADING</h1>
            <h3>Health Life Future</h3>
 
@@ -71,7 +71,7 @@
       <div class="we-start-context">
          <div class="context-one">
          <h5>Why We Started</h5>
-          <p>“We help local farmers by creating global opportunities for Cambodian agricultural products.”</p>      
+          <p>“We help local farmers by creating global opportunities for Cambodian agricultural products.”</p>
          </div>
           <div class="context-two">
          <h5> Export Commodities</h5>
@@ -108,7 +108,7 @@
 
 <div class="card-content-logo">
 <img src="{{asset ('assets/images/card-logo-1.png')}}">
-<div> 
+<div>
 </div>
 </div>
 </div>
@@ -130,7 +130,7 @@
 
 <div class="card-content-logo">
 <img src="{{asset ('assets/images/card-logo-2.png')}}">
-<div> 
+<div>
 </div>
 </div>
 </div>
@@ -152,7 +152,7 @@
 
 <div class="card-content-logo">
 <img src="{{asset ('assets/images/card-logo-3.png')}}">
-<div> 
+<div>
 </div>
 </div>
 </div>
@@ -175,7 +175,7 @@
 
 <div class="card-content-logo">
 <img src="{{asset ('assets/images/card-logo-4.png')}}">
-<div> 
+<div>
 </div>
 </div>
 </div>
@@ -198,7 +198,7 @@
 
 <div class="card-content-logo">
 <img src="{{asset ('assets/images/card-logo-5.png')}}">
-<div> 
+<div>
 </div>
 </div>
 </div>
@@ -221,7 +221,7 @@
 
 <div class="card-content-logo">
 <img src="{{asset ('assets/images/card-logo-6.png')}}">
-<div> 
+<div>
 </div>
 </div>
 </div>
@@ -315,7 +315,7 @@ Operations</p>
    <div class="background-achievement-main">
       <img src="{{ asset('assets/images/background-achievement-main.png') }}" alt="">
    </div>
- </div>   
+ </div>
 </section>
 
 <section>
@@ -333,7 +333,7 @@ Operations</p>
                  <p class="question"><span>Q:</span> What Cambodian products does RSL Trading export?</p>
                   <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -349,7 +349,7 @@ Operations</p>
                  <p class="question"><span>Q:</span>What is the minimum order quantity (MOQ) for exports?</p>
                   <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -366,7 +366,7 @@ Operations</p>
                  <p class="question"><span>Q:</span> Which countries do you export to?</p>
                   <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -383,7 +383,7 @@ Operations</p>
                  <p class="question"><span>Q:</span> Which countries do you export to?</p>
                   <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -399,7 +399,7 @@ Operations</p>
                  <p class="question"><span>Q:</span>  Can RSL Trading provide custom packaging or labeling for buyers?</p>
                   <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -416,7 +416,7 @@ Operations</p>
                  <p class="question"><span>Q:</span> How can I order Cambodian agricultural products from RSL Trading?</p>
                   <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -425,7 +425,7 @@ Operations</p>
                 </button>
              </div>
            </div>
-        
+
       <div class="FAQ-content">
         <h5>For Sellers / Local Farmers</h5>
         </div>
@@ -438,7 +438,7 @@ Operations</p>
                  <p class="question"><span>Q:</span> How can local farmers supply products to RSL Trading?</p>
                   <p class="answer">A:  Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -454,7 +454,7 @@ Operations</p>
                  <p class="question"><span>Q:</span> How does RSL Trading ensure fair pricing for farmers?</p>
                   <p class="answer">A:  Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -470,7 +470,7 @@ Operations</p>
                  <p class="question"><span>Q:</span>  What support does RSL Trading provide to farmers?</p>
                   <p class="answer">A:  Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -486,7 +486,7 @@ Operations</p>
                  <p class="question"><span>Q:</span>  Which types of Cambodian products are suitable for export?</p>
                   <p class="answer">A:  Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -503,7 +503,7 @@ Operations</p>
                  <p class="question"><span>Q:</span>  Are there contracts or agreements with farmers?</p>
                   <p class="answer">A:  Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.</p>
                 </div>
-                 
+
                 <button onclick="toggleDropdown(this)" >
            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.70851 15.6649C9.32815 16.3536 8.33811 16.3536 7.95775 15.6649L0.126071 1.48343C-0.241993 0.816944 0.240089 1.9447e-07 1.00145 2.61031e-07L16.6648 1.63036e-06C17.4262 1.69693e-06 17.9083 0.816944 17.5402 1.48343L9.70851 15.6649Z" fill="#D9D9D9"/>
@@ -512,7 +512,7 @@ Operations</p>
                 </button>
              </div>
            </div>
-           
+
            </div>
          </div>
         </div>
@@ -532,7 +532,7 @@ Operations</p>
   <input class="col-12" placeholder="Mobile Phone ">
 </div>
 
-<div class="col-lg-6 col-md-6 input-field"> 
+<div class="col-lg-6 col-md-6 input-field">
   <input class="col-12" placeholder="Company Name">
 </div>
 

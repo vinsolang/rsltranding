@@ -1,15 +1,16 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\CareerController;
-use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\DetailController;
 use App\Http\Controllers\Frontend\EventsController;
 use App\Http\Controllers\Frontend\ExportController;
-use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ImportController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\ContactController;
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
 Route::get('/export', [ExportController::class, 'index'])->name("export");
@@ -18,6 +19,8 @@ Route::get('/about', [AboutController::class, 'index'])->name("about");
 Route::get('/events', [EventsController::class, 'index'])->name("events");
 Route::get('/career', [CareerController::class, 'index'])->name("career");
 Route::get('/contact', [ContactController::class, 'index'])->name("contact");
+
+Route::get('/lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
 
 Route::get('/rice-detail', [DetailController::class, 'rice'])->name("rice-detail");
 Route::get('/coffee-detail', [DetailController::class, 'coffee'])->name("coffee-detail");
