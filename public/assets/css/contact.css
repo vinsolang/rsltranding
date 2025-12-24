@@ -127,15 +127,12 @@ position: relative;
   outline: none !important;
 }
 
-
 .input-field{
     width: 100%;
   height: 49px;
   border-radius: 24.5px;
   margin-bottom: 0.5rem;
 }
-
-
 
 .wrapper-contact .input-field input::placeholder{
   font-size: 16px !important;

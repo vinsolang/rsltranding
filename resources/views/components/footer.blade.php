@@ -29,7 +29,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 3fr 4fr 5fr;
-      gap: 2rem;
+      gap: 1.5rem;
       padding-left: 2.5rem;
       padding-right: 2.5rem;
       font-size: 16px;
@@ -47,6 +47,11 @@
 
    footer .footer-content .footer-navigate li{
       list-style: none;
+   }
+
+   footer .footer-content .footer-navigate li a{
+      color: #FFFFFF;
+      text-decoration: none;
    }
 
    footer .footer-content .footer-address{ 
@@ -237,10 +242,10 @@
                <li><a href="{{ route('home') }}">Home</a></li>
                <li><a href="{{ route('export')}}">Export Commodities</a></li>
                <li><a href="{{ route('about') }}">About Us</a></li>
-               <li><a href="{{ route('events') }}"></a>Events</li>
-               <li><a href="{{ route('career') }}"></a>Career</li>
+               <li><a href="{{ route('events') }}">Events</a></li>
+               <li><a href="{{ route('career') }}">Career</a></li>
                <li><a href="{{ route('contact') }}">Contact Us</a></li>
-   
+       
       </div>
           <div class="footer-address">
             <h5>Full Office Address</h5>
