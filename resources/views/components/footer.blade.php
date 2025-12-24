@@ -234,16 +234,14 @@
           <div class="footer-navigate">
             <h5>Navigation</h5>
 
-               <li>Home</li>
-               <li>Export Commodities</li>
-               <li>About Us</li>
-               <li>Events</li>
-               <li>Career</li>
-               <li>Contact Us</li>
-       
+               <li><a href="{{ route('home') }}">Home</a></li>
+               <li><a href="{{ route('export')}}">Export Commodities</a></li>
+               <li><a href="{{ route('about') }}">About Us</a></li>
+               <li><a href="{{ route('events') }}"></a>Events</li>
+               <li><a href="{{ route('career') }}"></a>Career</li>
+               <li><a href="{{ route('contact') }}">Contact Us</a></li>
+   
       </div>
-
-
           <div class="footer-address">
             <h5>Full Office Address</h5>
 
