@@ -12,6 +12,7 @@
 
 <section>
 <div class="main-banner">
+  <img class="img-banner"  src="{{ asset('assets/images/banner-img-1.png') }}">
      <div class="main-banner-h1-bg">
         <h1>About Us</h1>
      </div>
@@ -33,6 +34,32 @@
       <div class="main-card-product">
       <div class="container">
         <div class="row">  
+
+
+               <div class="col-lg-4 col-md-6 col-12">
+          <div class="card-product">
+           <div class="first-sub-card">
+              <h5 style="color: #8DC640">Our Vision</h5> 
+              <p>Everyone has Better Health, Longer Life & Greater Future.</p>
+
+           </div>
+           <div style="background-color: #8DC640;" class="second-sub-card ">
+             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_23_5168" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H47.9141V47.9141H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_23_5168)">
+<path d="M33.1822 27.5668L39.1572 21.5918C40.2103 20.5388 40.8018 19.1107 40.8018 17.6215V6.27001C40.8018 4.71944 42.0588 3.46254 43.6093 3.46254C45.1598 3.46254 46.4168 4.71944 46.4168 6.27001V21.5983C46.4168 23.7875 45.6493 25.9075 44.2477 27.5893L37.0586 36.2163V40.8955H23.957V32.7286C23.957 30.2468 24.9429 27.8666 26.6978 26.1115L34.8465 17.9624C35.9428 16.866 37.7202 16.866 38.8166 17.9622C39.913 19.0585 39.9131 20.8361 38.8168 21.9324L33.1823 27.5673" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.7317 27.5668L8.75662 21.5918C7.70354 20.5388 7.11201 19.1107 7.11201 17.6215V6.27001C7.11201 4.71944 5.85501 3.46254 4.30454 3.46254C2.75407 3.46254 1.49707 4.71944 1.49707 6.27001V21.5983C1.49707 23.7875 2.26454 25.9075 3.66612 27.5893L10.8553 36.2163V40.8955H23.9568V32.7286C23.9568 30.2468 22.9709 27.8666 21.2161 26.1115L13.0674 17.9624C11.9711 16.866 10.1937 16.866 9.09726 17.9622C8.00085 19.0585 8.00076 20.8361 9.09708 21.9324L14.7316 27.5673" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.9302 46.5104H23.957V40.8955H38.9302V46.5104Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.9566 46.5104H8.9834V40.8955H23.9566V46.5104Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.957 4.17233L22.5491 2.76439C20.7348 0.950107 17.7933 0.950107 15.9789 2.76439C14.1646 4.57876 14.1646 7.52024 15.9789 9.33461L23.957 17.3127L31.9351 9.33461C33.7495 7.52024 33.7495 4.57876 31.9351 2.76439C30.1207 0.950107 27.1792 0.950107 25.365 2.76439L23.957 4.17233Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+  </div>
+        </div>
+          </div>
 
 
           <div class="col-lg-4 col-md-6 col-12">
@@ -74,32 +101,6 @@
 
 
           
-          <div class="col-lg-4 col-md-6 col-12">
-          <div class="card-product">
-           <div class="first-sub-card">
-              <h5 style="color: #8DC640">Our Vision</h5> 
-              <p>Everyone has Better Health, Longer Life & Greater Future.</p>
-
-           </div>
-           <div style="background-color: #8DC640;" class="second-sub-card ">
-             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_23_5168" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
-<path d="M0 0H47.9141V47.9141H0V0Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_23_5168)">
-<path d="M33.1822 27.5668L39.1572 21.5918C40.2103 20.5388 40.8018 19.1107 40.8018 17.6215V6.27001C40.8018 4.71944 42.0588 3.46254 43.6093 3.46254C45.1598 3.46254 46.4168 4.71944 46.4168 6.27001V21.5983C46.4168 23.7875 45.6493 25.9075 44.2477 27.5893L37.0586 36.2163V40.8955H23.957V32.7286C23.957 30.2468 24.9429 27.8666 26.6978 26.1115L34.8465 17.9624C35.9428 16.866 37.7202 16.866 38.8166 17.9622C39.913 19.0585 39.9131 20.8361 38.8168 21.9324L33.1823 27.5673" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.7317 27.5668L8.75662 21.5918C7.70354 20.5388 7.11201 19.1107 7.11201 17.6215V6.27001C7.11201 4.71944 5.85501 3.46254 4.30454 3.46254C2.75407 3.46254 1.49707 4.71944 1.49707 6.27001V21.5983C1.49707 23.7875 2.26454 25.9075 3.66612 27.5893L10.8553 36.2163V40.8955H23.9568V32.7286C23.9568 30.2468 22.9709 27.8666 21.2161 26.1115L13.0674 17.9624C11.9711 16.866 10.1937 16.866 9.09726 17.9622C8.00085 19.0585 8.00076 20.8361 9.09708 21.9324L14.7316 27.5673" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M38.9302 46.5104H23.957V40.8955H38.9302V46.5104Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.9566 46.5104H8.9834V40.8955H23.9566V46.5104Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.957 4.17233L22.5491 2.76439C20.7348 0.950107 17.7933 0.950107 15.9789 2.76439C14.1646 4.57876 14.1646 7.52024 15.9789 9.33461L23.957 17.3127L31.9351 9.33461C33.7495 7.52024 33.7495 4.57876 31.9351 2.76439C30.1207 0.950107 27.1792 0.950107 25.365 2.76439L23.957 4.17233Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
-
-  </div>
-        </div>
-          </div>
-
-
 
           
           <div class="col-lg-4 col-md-6 col-12">
@@ -167,37 +168,27 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-4 col-md-4 col-12">
         <div class="card-profile">
             <img src="{{ asset('assets/images/profile-card-2.png') }}">
-             <p class="profile-name">Mr. Chov Sambath</p>
+             <p class="profile-name">Mr. Chov Sambath (Mike)</p>
              <p class="profile-position">Co-Founder</p>
         </div>
       </div>
 
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-4 col-md-4 col-12">
         <div class="card-profile">
             <img src="{{ asset('assets/images/profile-card-3.png') }}">
-             <p class="profile-name"> Ms. Srun Phech Lang</p>
+             <p class="profile-name"> Ms. Chheng Sony</p>
              <p class="profile-position">Co-Founder</p>
         </div>
       </div>
 
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-4 col-md-4 col-12">
         <div class="card-profile">
             <img src="{{ asset('assets/images/profile-card-4.png') }}">
-             <p class="profile-name">Mr. Chheng Sony</p>
+             <p class="profile-name">Mr. Srun Phechlang (Jessie)</p>
              <p class="profile-position">Co-Founder</p>
-              <p class="profile-position">General Manager</p>
-        </div>
-      </div>
-
-            <div class="col-lg-3 col-md-6 col-12">
-        <div class="card-profile">
-            <img src="{{ asset('assets/images/profile-card-5.png') }}">
-             <p class="profile-name"> Ms. Yan Socheat </p>
-             <p class="profile-position">Accountant &</p>
-             <p class="profile-position">Admin Supervisor</p>
         </div>
       </div>
 
@@ -254,18 +245,208 @@
 
 <div class="col-lg-6 col-md-6 input-field">
 <select class="form-select" aria-label="Default select example">
-  <option selected>Country</option>
-  <option value="1">Cambodia</option>
-  <option value="2">China</option>
-  <option value="3">USA</option>
+       <option selected disabled>Select a Country</option>
+    <option value="AF">Afghanistan</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Algeria</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaijan</option>
+    <option value="BS">Bahamas</option>
+    <option value="BH">Bahrain</option>
+    <option value="BD">Bangladesh</option>
+    <option value="BB">Barbados</option>
+    <option value="BY">Belarus</option>
+    <option value="BE">Belgium</option>
+    <option value="BZ">Belize</option>
+    <option value="BJ">Benin</option>
+    <option value="BT">Bhutan</option>
+    <option value="BO">Bolivia</option>
+    <option value="BA">Bosnia and Herzegovina</option>
+    <option value="BW">Botswana</option>
+    <option value="BR">Brazil</option>
+    <option value="BN">Brunei</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BF">Burkina Faso</option>
+    <option value="BI">Burundi</option>
+    <option value="KH">Cambodia</option>
+    <option value="CM">Cameroon</option>
+    <option value="CA">Canada</option>
+    <option value="CV">Cape Verde</option>
+    <option value="CF">Central African Republic</option>
+    <option value="TD">Chad</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CO">Colombia</option>
+    <option value="KM">Comoros</option>
+    <option value="CG">Congo</option>
+    <option value="CR">Costa Rica</option>
+    <option value="HR">Croatia</option>
+    <option value="CU">Cuba</option>
+    <option value="CY">Cyprus</option>
+    <option value="CZ">Czech Republic</option>
+    <option value="DK">Denmark</option>
+    <option value="DJ">Djibouti</option>
+    <option value="DM">Dominica</option>
+    <option value="DO">Dominican Republic</option>
+    <option value="EC">Ecuador</option>
+    <option value="EG">Egypt</option>
+    <option value="SV">El Salvador</option>
+    <option value="GQ">Equatorial Guinea</option>
+    <option value="ER">Eritrea</option>
+    <option value="EE">Estonia</option>
+    <option value="ET">Ethiopia</option>
+    <option value="FJ">Fiji</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+    <option value="GA">Gabon</option>
+    <option value="GM">Gambia</option>
+    <option value="GE">Georgia</option>
+    <option value="DE">Germany</option>
+    <option value="GH">Ghana</option>
+    <option value="GR">Greece</option>
+    <option value="GD">Grenada</option>
+    <option value="GT">Guatemala</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-Bissau</option>
+    <option value="GY">Guyana</option>
+    <option value="HT">Haiti</option>
+    <option value="HN">Honduras</option>
+    <option value="HU">Hungary</option>
+    <option value="IS">Iceland</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IR">Iran</option>
+    <option value="IQ">Iraq</option>
+    <option value="IE">Ireland</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italy</option>
+    <option value="JM">Jamaica</option>
+    <option value="JP">Japan</option>
+    <option value="JO">Jordan</option>
+    <option value="KZ">Kazakhstan</option>
+    <option value="KE">Kenya</option>
+    <option value="KI">Kiribati</option>
+    <option value="KP">North Korea</option>
+    <option value="KR">South Korea</option>
+    <option value="KW">Kuwait</option>
+    <option value="KG">Kyrgyzstan</option>
+    <option value="LA">Laos</option>
+    <option value="LV">Latvia</option>
+    <option value="LB">Lebanon</option>
+    <option value="LS">Lesotho</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libya</option>
+    <option value="LI">Liechtenstein</option>
+    <option value="LT">Lithuania</option>
+    <option value="LU">Luxembourg</option>
+    <option value="MG">Madagascar</option>
+    <option value="MW">Malawi</option>
+    <option value="MY">Malaysia</option>
+    <option value="MV">Maldives</option>
+    <option value="ML">Mali</option>
+    <option value="MT">Malta</option>
+    <option value="MH">Marshall Islands</option>
+    <option value="MR">Mauritania</option>
+    <option value="MU">Mauritius</option>
+    <option value="MX">Mexico</option>
+    <option value="FM">Micronesia</option>
+    <option value="MD">Moldova</option>
+    <option value="MC">Monaco</option>
+    <option value="MN">Mongolia</option>
+    <option value="ME">Montenegro</option>
+    <option value="MA">Morocco</option>
+    <option value="MZ">Mozambique</option>
+    <option value="MM">Myanmar</option>
+    <option value="NA">Namibia</option>
+    <option value="NR">Nauru</option>
+    <option value="NP">Nepal</option>
+    <option value="NL">Netherlands</option>
+    <option value="NZ">New Zealand</option>
+    <option value="NI">Nicaragua</option>
+    <option value="NE">Niger</option>
+    <option value="NG">Nigeria</option>
+    <option value="NO">Norway</option>
+    <option value="OM">Oman</option>
+    <option value="PK">Pakistan</option>
+    <option value="PW">Palau</option>
+    <option value="PA">Panama</option>
+    <option value="PG">Papua New Guinea</option>
+    <option value="PY">Paraguay</option>
+    <option value="PE">Peru</option>
+    <option value="PH">Philippines</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="QA">Qatar</option>
+    <option value="RO">Romania</option>
+    <option value="RU">Russia</option>
+    <option value="RW">Rwanda</option>
+    <option value="KN">Saint Kitts and Nevis</option>
+    <option value="LC">Saint Lucia</option>
+    <option value="VC">Saint Vincent and the Grenadines</option>
+    <option value="WS">Samoa</option>
+    <option value="SM">San Marino</option>
+    <option value="ST">Sao Tome and Principe</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="SN">Senegal</option>
+    <option value="RS">Serbia</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leone</option>
+    <option value="SG">Singapore</option>
+    <option value="SK">Slovakia</option>
+    <option value="SI">Slovenia</option>
+    <option value="SB">Solomon Islands</option>
+    <option value="SO">Somalia</option>
+    <option value="ZA">South Africa</option>
+    <option value="ES">Spain</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="SD">Sudan</option>
+    <option value="SR">Suriname</option>
+    <option value="SZ">Swaziland</option>
+    <option value="SE">Sweden</option>
+    <option value="CH">Switzerland</option>
+    <option value="SY">Syria</option>
+    <option value="TW">Taiwan</option>
+    <option value="TJ">Tajikistan</option>
+    <option value="TZ">Tanzania</option>
+    <option value="TH">Thailand</option>
+    <option value="TG">Togo</option>
+    <option value="TO">Tonga</option>
+    <option value="TT">Trinidad and Tobago</option>
+    <option value="TN">Tunisia</option>
+    <option value="TR">Turkey</option>
+    <option value="TM">Turkmenistan</option>
+    <option value="TV">Tuvalu</option>
+    <option value="UG">Uganda</option>
+    <option value="UA">Ukraine</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="GB">United Kingdom</option>
+    <option value="US">USA</option>
+    <option value="UY">Uruguay</option>
+    <option value="UZ">Uzbekistan</option>
+    <option value="VU">Vanuatu</option>
+    <option value="VE">Venezuela</option>
+    <option value="VN">Vietnam</option>
+    <option value="YE">Yemen</option>
+    <option value="ZM">Zambia</option>
+    <option value="ZW">Zimbabwe</option>
 </select>
 
 </div>
 
 
 <div class="col-lg-6 col-md-6 input-field">
-  <input class="col-12" placeholder="Export
-">
+ <select class="form-select" aria-label="Default select example">
+ <option selected>Export</option>
+  <option value="1">Select Commodities</option>
+  <option value="2">Select Commodities</option>
+  <option value="3">Select Commodities</option>
+    <option value="4">Select Commodities</option>
+</select>
 </div>
 
 <div class="col-lg-6 col-md-6 input-field">

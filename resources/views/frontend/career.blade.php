@@ -12,6 +12,7 @@
 
 <section>
 <div class="main-banner">
+    <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}">
      <div class="main-banner-h1-bg">
         <h1>Career</h1>
      </div>
