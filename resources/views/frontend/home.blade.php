@@ -11,7 +11,7 @@
 
 
 @section('content')
-    {{-- <section>
+    <section>
         <div class="main-banner">
             <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}">
             <video autoplay muted class="home-banner-logo">
@@ -30,7 +30,7 @@
                 </button>
             </div>
         </div>
-    </section> --}}
+    </section>
 
     <section class="home-first-banner relative w-full h-[110vh] ">
 
