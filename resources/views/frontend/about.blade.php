@@ -155,18 +155,7 @@
     </div>
 </section>
 
-<section>
-  <div class="second-banner">
-    <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}">
-    <div class="second-banner-context container">
-     <img class="direct-profile" src="{{ asset('assets/images/profile-card-1.png') }}">
-     <h5>Message from Board of Director</h5>
-     <div class="p-bg">
-<p>At the heart of our mission is a commitment to global well-being. By providing premium, high-quality products, we aim to enhance longevity and health for people everywhere. We are dedicated to serving and supporting our global community indefinitely, ensuring a thriving future for all humanity.</p>
-     </div>
-    </div>
-  </div> 
-</section>
+
 
 <section>
   <div class="meet-our-team-card">

@@ -514,7 +514,7 @@ color: #ffffff
 .meet-our-team-card{
   width: 100%;
   height: 100%;
-  margin-top: -13rem;
+  margin-top: 5rem;
   position: relative;
   z-index: 60;
 }
@@ -637,22 +637,23 @@ margin-top: 0.5rem;
 
 .second-banner{
   width: 100%;
-  height: 150vh;
-  position: relative;
-  z-index: 0;
+  height: 160vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
+  object-position: center;
+  
 }
 
-.second-banner .second-banner-img{
+/* .second-banner .second-banner-img{
 width: 100%;
   height: 150vh;
 object-fit: cover;
 position: absolute;
 top: 0%;
 z-index: -1;
-}
+} */
 
 .second-banner .second-banner-context{
   display: flex;
