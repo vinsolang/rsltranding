@@ -1287,12 +1287,12 @@
 
     {{-- banner --}}
     <section>
-        <div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+        <div class="main-banner bg-cover" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
             {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
-            <video autoplay muted loop class="home-banner-logo">
-                <source src="{{ asset('assets/videos/LOGO.webm') }}">
-                </source>
+            <video autoplay muted loop playsinline class="home-banner-logo">
+                <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
             </video>
+
 
             <div class="home-banner-context">
                 {{-- <h5 class="popup">{{ __('messages.home') }}</h5> --}}

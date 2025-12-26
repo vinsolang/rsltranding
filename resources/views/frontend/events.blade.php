@@ -192,7 +192,7 @@
 
 
 
-        @media screen and (max-width: 1440px) and (min-width: 768px) {
+        /* @media screen and (max-width: 1440px) and (min-width: 768px) {
             .first-card {
                 position: relative;
                 width: 100%;
@@ -200,7 +200,7 @@
                 padding-top: 18rem;
                 margin-top: -15% !important;
             }
-        }
+        } */
 
         .main-banner {
             width: 100%;
