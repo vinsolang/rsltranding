@@ -1419,7 +1419,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="pt-6 md:pt-0">
         <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>Contact Form</p>
             <div class="row">
