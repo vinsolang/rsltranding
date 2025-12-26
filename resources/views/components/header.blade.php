@@ -55,14 +55,10 @@
                     </svg>
 
                 </a>
-          
-           
+
+
             </div>
 
-            {{-- <div class="text-[12px]">
-                <a href="{{ route('lang.switch', 'en') }}">English</a> |
-                <a href="{{ route('lang.switch', 'kh') }}">Khmer</a>
-            </div> --}}
             <div x-data="{ open: false }" class="relative text-[14px] py-4 ">
 
                 <!-- Current Language Button -->
@@ -216,17 +212,17 @@
 
         </div>
 
-        <div style="position: relative;" x-show="open" x-cloak x-transition:enter="transform transition ease-out duration-300"
+        <div x-show="open" x-cloak x-transition:enter="transform transition ease-out duration-300"
             x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
             x-transition:leave="transform transition ease-in duration-200" x-transition:leave-start="translate-x-0"
             x-transition:leave-end="translate-x-full"
             class="fixed inset-y-0 right-0 w-full md:w-64 bg-white shadow-xl z-50">
-            <div class="flex justify-between items-center p-4">
+            <div class="flex justify-between items-center px-4 py-2">
                 <img src="{{ asset('assets/images/logo.png') }}" alt="" class="w-10">
                 <button @click="open = false" class="text-2xl">&times;</button>
             </div>
 
-            <hr class="h-1" style="background: linear-gradient(90deg, #8DC640 0%, #059848 100%);">
+            <hr class="h-1 m-0" style="background: linear-gradient(90deg, #8DC640 0%, #059848 100%);">
 
             <ul class="space-y-2 p-4">
                 <li>
@@ -314,8 +310,8 @@
                         </svg>
 
                     </a>
-               
-                
+
+
                 </div>
             </div>
         </div>

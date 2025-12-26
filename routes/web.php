@@ -19,6 +19,8 @@ Route::get('/about', [AboutController::class, 'index'])->name("about");
 Route::get('/events', [EventsController::class, 'index'])->name("events");
 Route::get('/career', [CareerController::class, 'index'])->name("career");
 Route::get('/contact', [ContactController::class, 'index'])->name("contact");
+Route::post('/contact', [ContactController::class, 'send'])->name("contact.send");
+Route::post('/contact/career', [ContactController::class, 'careerForm'])->name("contact.careerForm");
 
 Route::get('/lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
 

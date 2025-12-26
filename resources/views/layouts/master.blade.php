@@ -126,113 +126,113 @@
     @yield('export-detail')
     @yield('career')
     <script>
-       const counters = document.querySelectorAll(".counter");
+        const counters = document.querySelectorAll(".counter");
 
-function animateCount(counter) {
-  const target = +counter.getAttribute("data-target");
-  const duration = 2000;
-  let start = 0;
+        function animateCount(counter) {
+            const target = +counter.getAttribute("data-target");
+            const duration = 2000;
+            let start = 0;
 
-  const step = () => {
-    const increment = target / (duration / 16);
-    start += increment;
+            const step = () => {
+                const increment = target / (duration / 16);
+                start += increment;
 
-    let value = Math.floor(start);
+                let value = Math.floor(start);
 
-    // decide suffix
-    let suffix = "";
-    if (counter.classList.contains("plus")) suffix = "+";
-    if (counter.classList.contains("percent")) suffix = "%";
+                // decide suffix
+                let suffix = "";
+                if (counter.classList.contains("plus")) suffix = "+";
+                if (counter.classList.contains("percent")) suffix = "%";
 
-    if (start < target) {
-      counter.textContent = value + suffix;
-      requestAnimationFrame(step);
-    } else {
-      counter.textContent = target + suffix;
-    }
-  };
+                if (start < target) {
+                    counter.textContent = value + suffix;
+                    requestAnimationFrame(step);
+                } else {
+                    counter.textContent = target + suffix;
+                }
+            };
 
-  step();
-}
+            step();
+        }
 
-const observer = new IntersectionObserver(
-  (entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCount(entry.target);
-        obs.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCount(entry.target);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3
+            }
+        );
 
-counters.forEach(counter => observer.observe(counter));
-
-
-
-const tradeSelect = document.getElementById("tradeType");
-const commodityList = document.getElementById("commodityList");
-
-const data = {
-  import: [
-    "Basmati Rice (India)",
-    "Sona Masoori Rice",
-    "Cumin Seeds",
-    "Turmeric (Whole)",
-    "Red Peppers (Whole)",
-    "Cardamom (Green)",
-    "Turmeric Powder",
-    "Red Pepper Powder",
-    "Dried Garlic",
-    "Dried Onions"
-  ],
-
-  export: [
-    "Rice",
-    "Yellow Corn",
-    "Fresh Mango",
-    "Dried Mango",
-    "Cashew Nuts",
-    "Peanuts",
-    "Dried Cassava",
-    "Pepper",
-    "Coffee Beans"
-  ]
-};
-
-tradeSelect.addEventListener("change", function () {
-  const type = this.value;
-
-  // clear old list
-  commodityList.innerHTML = "";
-
-  if (!type) return;
-
-  // build checkbox list
-  data[type].forEach(item => {
-    const wrapper = document.createElement("div");
-    wrapper.className = "form-check";
-
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.className = "form-check-input";
-    input.value = item;
-    input.id = item;
-
-    const label = document.createElement("label");
-    label.className = "form-check-label";
-    label.setAttribute("for", item);
-    label.textContent = item;
-
-    wrapper.appendChild(input);
-    wrapper.appendChild(label);
-    commodityList.appendChild(wrapper);
-  });
-});
+        counters.forEach(counter => observer.observe(counter));
 
 
 
+        const tradeSelect = document.getElementById("tradeType");
+        const commodityList = document.getElementById("commodityList");
+
+        const data = {
+            import: [
+                "Basmati Rice (India)",
+                "Sona Masoori Rice",
+                "Cumin Seeds",
+                "Turmeric (Whole)",
+                "Red Peppers (Whole)",
+                "Cardamom (Green)",
+                "Turmeric Powder",
+                "Red Pepper Powder",
+                "Dried Garlic",
+                "Dried Onions"
+            ],
+
+            export: [
+                "Rice",
+                "Yellow Corn",
+                "Fresh Mango",
+                "Dried Mango",
+                "Cashew Nuts",
+                "Peanuts",
+                "Dried Cassava",
+                "Pepper",
+                "Coffee Beans"
+            ]
+        };
+
+        tradeSelect.addEventListener("change", function() {
+            const type = this.value;
+
+            // clear old list
+            commodityList.innerHTML = "";
+
+            if (!type) return;
+
+            // build checkbox list
+            data[type].forEach(item => {
+                const wrapper = document.createElement("div");
+                wrapper.className = "form-check";
+
+                const input = document.createElement("input");
+                input.type = "checkbox";
+                input.className = "form-check-input";
+                input.name = "commodities[]"; // ✅ IMPORTANT
+                input.value = item;
+                input.id = item;
+
+                const label = document.createElement("label");
+                label.className = "form-check-label";
+                label.setAttribute("for", item);
+                label.textContent = item;
+
+                wrapper.appendChild(input);
+                wrapper.appendChild(label);
+                commodityList.appendChild(wrapper);
+            });
+
+        });
     </script>
 </body>
 
