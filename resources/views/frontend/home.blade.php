@@ -1287,10 +1287,15 @@
         <div class="main-banner bg-cover" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
             {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
             <video autoplay muted loop playsinline class="home-banner-logo">
+                <!-- WebM for Chrome/Firefox/Edge -->
                 <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
-                <source src="{{ asset('assets/videos/LOGO.mov') }}" type="video/quicktime">
-            </video>
 
+                <!-- MOV HEVC for Safari/iPhone -->
+                <source src="{{ asset('assets/videos/LOGO.mov') }}" type="video/mp4">
+{{-- 
+                <!-- Optional fallback image -->
+                <img src="{{ asset('assets/images/LOGO.png') }}" alt="Logo"> --}}
+            </video>
 
 
             <div class="home-banner-context">
