@@ -985,9 +985,9 @@
             </div>
             <div class="main-card-product">
                 <div class="container">
-                    <div class="row">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-4">
                         {{-- item 1 --}}
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
@@ -1051,7 +1051,7 @@
                         </div>
 
                         {{-- item 2 --}}
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
@@ -1131,7 +1131,7 @@
                         </div>
 
                         {{-- item 3 --}}
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
@@ -1195,7 +1195,7 @@
                         </div>
 
                         {{-- item 4 --}}
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
