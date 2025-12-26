@@ -1288,7 +1288,9 @@
             {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
             <video autoplay muted loop playsinline class="home-banner-logo">
                 <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
+                <source src="{{ asset('assets/videos/LOGO.mov') }}" type="video/quicktime">
             </video>
+
 
 
             <div class="home-banner-context">
