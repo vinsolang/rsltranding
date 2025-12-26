@@ -63,8 +63,9 @@
         </li>
         <li>
             <a href="{{ route('about') }} "
-                {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'About Us' : 'About Us') }}
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('about') ? 'active' : '' }}"></a>
+
+                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('about') ? 'active' : '' }}">
+                            {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'About Us' : 'About Us') }}</a>
         </li>
         <li>
             <a href="{{ route('events') }} "
