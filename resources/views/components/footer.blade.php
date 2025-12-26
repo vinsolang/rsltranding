@@ -370,7 +370,7 @@
                 </div>
 
 
-                <div class="footer-social footer-social-display">
+                {{-- <div class="footer-social footer-social-display">
 
                     <h5>Follow Us</h5>
 
@@ -399,7 +399,7 @@
 
                     </div>
 
-                </div>
+                </div> --}}
 
 
                 </li>
