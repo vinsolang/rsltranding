@@ -1339,7 +1339,7 @@
 
 
             <div class="w-[100%] h-full pb-20">
-                <img src="{{ asset('assets/images/Map.png') }}" class="w-full h-full mx-auto">
+                <img src="{{ asset('assets/images/map-1.png') }}" class="w-full h-full mx-auto">
             </div>
 
         </div>
