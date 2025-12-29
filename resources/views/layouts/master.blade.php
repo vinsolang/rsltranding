@@ -146,6 +146,8 @@ function animateCount(counter) {
         10
     );
 
+    const unit = counter.dataset.unit || ""; // 👈 ADD THIS
+
     const duration = 2000;
     let start = 0;
     const increment = target / (duration / 16);
@@ -160,15 +162,21 @@ function animateCount(counter) {
         if (counter.classList.contains("percent")) suffix = "%";
 
         if (value < target) {
-            counter.textContent = value.toLocaleString() + suffix;
+            counter.textContent =
+                value.toLocaleString() + unit + suffix;
             requestAnimationFrame(step);
         } else {
-            counter.textContent = target.toLocaleString() + suffix;
+            counter.textContent =
+                target.toLocaleString() + unit + suffix;
         }
     };
 
     step();
 }
+
+// run animation
+counters.forEach(counter => animateCount(counter));
+
 
 const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {

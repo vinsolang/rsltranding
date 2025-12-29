@@ -1403,8 +1403,8 @@
                                 : 'Premium export-quality rice carefully processed to meet international food standards.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
-                                <h1>.01</h1>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <h1>{{ app()->getLocale() === 'en' ? '.01' : (app()->getLocale() === 'km' ? '.០១' : '.01') }}</h1>
                             </div>
 
                             <div class="card-content-logo">
@@ -1427,8 +1427,8 @@
                                 : 'High-quality Cambodian coffee beans roasted and prepared for global export markets.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
-                                <h1>.02</h1>
+                                <a href="{{ route('export') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <h1>{{ app()->getLocale() === 'en' ? '02' : (app()->getLocale() === 'km' ? '.០២' : '02') }}</h1>
                             </div>
 
                             <div class="card-content-logo">
@@ -1451,8 +1451,8 @@
                                 : 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'ស្វែងយល់បន្ថែម' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
-                                <h1>.03</h1>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <h1>{{ app()->getLocale() === 'en' ? '.03' : (app()->getLocale() === 'km' ? '.០៣' : '.03') }}</h1>
                             </div>
 
                             <div class="card-content-logo">
@@ -1477,7 +1477,7 @@
 
                             <div class="wrapper-card-content">
                                 <a href="{{ route('export') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
-                                <h1>.04</h1>
+                                <h1>{{ app()->getLocale() === 'en' ? '.04' : (app()->getLocale() === 'km' ? '.០៤' : '.04') }}</h1>
                             </div>
 
                             <div class="card-content-logo">
@@ -1502,7 +1502,7 @@
 
                             <div class="wrapper-card-content">
                                 <a href="{{ route('export') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
-                                <h1>.05</h1>
+                                <h1>{{ app()->getLocale() === 'en' ? '.05' : (app()->getLocale() === 'km' ? '.០៥' : '.05') }}</h1>
                             </div>
 
                             <div class="card-content-logo">
@@ -1527,7 +1527,7 @@
 
                             <div class="wrapper-card-content">
                                 <a href="{{ route('export') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
-                                <h1>.06</h1>
+                                <h1>{{ app()->getLocale() === 'en' ? '.06' : (app()->getLocale() === 'km' ? '.០៦' : '.06') }}</h1>
                             </div>
 
                             <div class="card-content-logo">
@@ -1563,7 +1563,13 @@
                                 </div>
 
                                 <div class="achievement-card-content">
-                                    <h1 class="counter plus" data-target="1,000">0</h1>
+                                    <h1 
+                                    class="counter plus" 
+                                    data-target="1000"
+                                    data-unit="{{ app()->getLocale() === 'km' ? 'នាក់' : '' }}"
+                                >
+                                    0
+                                </h1>
                                     <p>{{ app()->getLocale() === 'en' ? 'local farmers supported' : (app()->getLocale() === 'km' ? 'គាំទ្រកសិករក្នុងស្រុកជាង' : 'local farmers supported') }}</p>
                                 </div>
                             </div>
@@ -1576,7 +1582,7 @@
                                 </div>
 
                                 <div class="achievement-card-content">
-                                    <h1 class="counter no" data-target="5">0</h1>
+                                    <h1 class="counter no" data-target="5" data-unit="{{ app()->getLocale() === 'km' ? 'ទ្វីប' : '' }}">0</h1>
                                     <p>{{ app()->getLocale() === 'en' ? 'Continents Export' : (app()->getLocale() === 'km' ? 'នាំចេញទៅកាន់ទ្វីបចំនួន' : 'Continents Export') }}</p>
                                 </div>
                             </div>
@@ -1590,7 +1596,7 @@
                                 </div>
 
                                 <div class="achievement-card-content">
-                                    <h1 class="counter plus" data-target="500">0</h1>
+                                    <h1 class="counter plus" data-target="500" data-unit="{{ app()->getLocale() === 'km' ? 'ប្រភេទ' : '' }}">0</h1>
                                     <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលនាំចេញជាង' : 'Export Commodities') }}</p>
                                 </div>
                             </div>
@@ -1604,7 +1610,7 @@
                                 </div>
 
                                 <div class="achievement-card-content">
-                                    <h1 class="counter plus" data-target="10">0</h1>
+                                    <h1 class="counter plus" data-target="10" data-unit="{{ app()->getLocale() === 'km' ? 'ឆ្នាំ' : '' }}">0</h1>
                                     <p>{{ app()->getLocale() === 'en' ? 'Years in Operation' : (app()->getLocale() === 'km' ? 'បទពិសោធន៍ប្រតិបត្តិការជាង' : 'Years in Operation') }}</p>
                                 </div>
                             </div>
