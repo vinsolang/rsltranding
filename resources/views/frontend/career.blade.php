@@ -79,7 +79,7 @@
             }
 
             .main-banner .main-banner-p-bg {
-                width: 30rem;
+                width: 40rem;
                 text-align: center;
             }
 
@@ -149,7 +149,7 @@
             .main-banner .main-banner-p-bg p {
                 font-size: 10px;
             }
-
+            
 
             .btn-Interest-to-export {
                 width: 180px;
@@ -438,7 +438,7 @@
         }
 
         .banner-content .main-banner-p-bg {
-            width: 500px;
+            width: 550px;
         }
 
         @media screen and (max-width: 1025px) {
