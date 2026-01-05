@@ -1310,13 +1310,13 @@
 
             <div class="home-banner-context">
                 {{-- <h5 class="popup">{{ __('messages.home') }}</h5> --}}
-                <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : 'Welcome to') }}</h5>
-                <h1 data-aos="zoom-in-up" data-aos-duration="1200" class="{{ app()->getLocale() === 'km' ? 'khmer-title' : 'english-title' }}">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក' : 'RSL TRADING') }}</h1>
-                <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'សុខភាព ជីវិត អនាគត' : 'Health Life Future') }}</h3>
+                <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h5>
+                <h1 data-aos="zoom-in-up" data-aos-duration="1200" class="{{ app()->getLocale() === 'km' ? 'khmer-title' : 'english-title' }}">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}</h1>
+                <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'សុខភាព ជីវិត អនាគត' : '健康 生活 未来') }}</h3>
 
                 <button class="btn-explore-our-exports" data-aos="zoom-in-up" data-aos-duration="1600">
                     <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                    <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Exports' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីការនាំចេញ' : 'Explore Our Exports') }}</a></p>
+                    <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Exports' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីការនាំចេញ' : '探索我们的出口业务') }}</a></p>
                 </button>
             </div>
         </div>
@@ -1334,10 +1334,10 @@
         <div
             class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-40">
 
-            <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : 'Welcome to') }}</h2>
+            <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h2>
 
             <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder {{ app()->getLocale() == 'km' ? 'text-xl md:text-2xl' : 'text-[30px] md:text-[50px]' }}">
-                {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក' : 'RSL TRADING') }}
+                {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}
             </h1>
 
             <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10 {{ app()->getLocale() === 'km'
@@ -1352,10 +1352,7 @@
                 ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា 
                 អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល 
                 និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
-                : 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
-                dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
-                Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
-                while supporting them for better opportunities and incomes.') }}  
+                : 'RSL贸易有限公司成立于2015年，专注于本地和国际市场的农产品，致力于将当地农民与我们联系起来，将大米，咖啡，胡椒，香蕉，腰果，芒果，芒果干，木薯干等几种当地产品带给全球买家，同时支持他们获得更好的机会和收入。') }}  
             </p>
 
 
@@ -1372,8 +1369,8 @@
             <img class="we-start-bg" src="{{ asset('assets/images/bg-2.png') }}">
             <div class="we-start-context">
                 <div class="-mt-[6rem] 2xl:-mt-[10rem]" class="context-one">
-                    <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">{{ app()->getLocale() === 'en' ? 'Why We Started ?' : (app()->getLocale() === 'km' ? 'មូលហេតុនៃការស្ថាបនា ?' : 'Why We Started ?') }}</h5>
-                    <p>{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“យើងខ្ញុំជួយកសិករក្នុងស្រុកដោយបង្កើតឱកាសសម្រាប់ការលក់ផលិតផលកសិកម្មផលិតដោយកូនខ្មែរ។”' : '“We help local farmers by creating global opportunities for Cambodian agricultural products.”') }}</p>
+                    <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">{{ app()->getLocale() === 'en' ? 'Why We Started ?' : (app()->getLocale() === 'km' ? 'មូលហេតុនៃការស្ថាបនា ?' : '创办这家公司的原因?') }}</h5>
+                    <p>{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“យើងខ្ញុំជួយកសិករក្នុងស្រុកដោយបង្កើតឱកាសសម្រាប់ការលក់ផលិតផលកសិកម្មផលិតដោយកូនខ្មែរ។”' : '“我们通过为柬埔寨的农产品创造全球市场机会，来帮助当地的农民。”') }}</p>
                 </div>
             </div>
 
@@ -1389,7 +1386,7 @@
 
     {{-- Commodities --}}
     <section>
-        <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញសំខាន់ៗរបស់យើងខ្ញុំ' : 'Our Main Commodities') }}</h5>
+        <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញសំខាន់ៗរបស់យើងខ្ញុំ' : '主要商品') }}</h5>
         <div class="container">
             <div class="row">
 
@@ -1397,13 +1394,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-1.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : 'Rice') }}</h4>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : '大米') }}</h4>
                             <p>{{ app()->getLocale() === 'en' ? 'Premium export-quality rice carefully processed to meet international food standards.' 
                                 : (app()->getLocale() === 'km' ? 'អង្ករ​ដែល​មាន​គុណភាព​ខ្ពស់​សម្រាប់​នាំចេញ។' 
-                                : 'Premium export-quality rice carefully processed to meet international food standards.') }}</p>
+                                : '优质出口级大米，经过精心加工，符合国际食品标准。') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
                                 <h1>{{ app()->getLocale() === 'en' ? '.01' : (app()->getLocale() === 'km' ? '.០១' : '.01') }}</h1>
                             </div>
 
@@ -1421,13 +1418,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-2.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Coffee' : (app()->getLocale() === 'km' ? 'កាហ្វេ' : 'Coffee') }}</h4>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Coffee' : (app()->getLocale() === 'km' ? 'កាហ្វេ' : '咖啡') }}</h4>
                             <p>{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' 
                                 : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' 
-                                : 'High-quality Cambodian coffee beans roasted and prepared for global export markets.') }}</p>
+                                : '高品质的柬埔寨咖啡豆经过精心烘焙和加工，以供全球出口市场使用。') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
                                 <h1>{{ app()->getLocale() === 'en' ? '02' : (app()->getLocale() === 'km' ? '.០២' : '02') }}</h1>
                             </div>
 
@@ -1445,13 +1442,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-3.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Corn' : (app()->getLocale() === 'km' ? 'ពោត' : 'Corn') }}</h4>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Corn' : (app()->getLocale() === 'km' ? 'ពោត' : '黄玉米') }}</h4>
                             <p>{{ app()->getLocale() === 'en' ? 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.' 
                                 : (app()->getLocale() === 'km' ? 'ពោតលឿងគុណភាពខ្ពស់ ស័ក្តិសមសម្រាប់ចំណីសត្វ ការកែច្នៃអាហារ។​' 
-                                : 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.') }}</p>
+                                : '高品质的黄玉米，可用于动物饲料、食品加工以及工业用途。') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
                                 <h1>{{ app()->getLocale() === 'en' ? '.03' : (app()->getLocale() === 'km' ? '.០៣' : '.03') }}</h1>
                             </div>
 
@@ -1470,13 +1467,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-4.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : 'Cashew Nuts') }}</h4>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}</h4>
                             <p>{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' 
                                 : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' 
-                                : 'High-quality Cambodian cashew nuts suitable for global export markets.') }}</p>
+                                : ' 高品质的柬埔寨腰果，适合出口全球市场。') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
                                 <h1>{{ app()->getLocale() === 'en' ? '.04' : (app()->getLocale() === 'km' ? '.០៤' : '.04') }}</h1>
                             </div>
 
@@ -1495,13 +1492,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-5.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Potato / Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូង/ដំឡូងមី' : 'Potato / Cassava') }}</h4>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Potato / Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូង/ដំឡូងមី' : '土豆/木薯') }}</h4>
                             <p>{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' 
                                 : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' 
-                                : 'High-quality dried cassava for industrial processing and international export.') }}</p>
+                                : '高品质的干木薯，可用于工业加工及国际出口。') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
                                 <h1>{{ app()->getLocale() === 'en' ? '.05' : (app()->getLocale() === 'km' ? '.០៥' : '.05') }}</h1>
                             </div>
 
@@ -1520,13 +1517,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-6.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Mango' : (app()->getLocale() === 'km' ? 'ផ្លែស្វាយ' : 'Mango') }}</h4>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Mango' : (app()->getLocale() === 'km' ? 'ផ្លែស្វាយ' : '芒果') }}</h4>
                             <p>{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' 
                                 : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់ៗ គុណភាពនាំចេញ ជាមួយនឹងរសជាតិឈ្ងុយឆ្ងាញ់ និងផ្អែមធម្មជាតិ។' 
-                                : 'Export-quality fresh mangoes with rich flavor and natural sweetness.') }}</p>
+                                : '出口级新鲜芒果，味道浓郁，甜度自然。') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
                                 <h1>{{ app()->getLocale() === 'en' ? '.06' : (app()->getLocale() === 'km' ? '.០៦' : '.06') }}</h1>
                             </div>
 
@@ -1551,7 +1548,7 @@
 
             <div class="achievement-content">
 
-                <h4>{{ app()->getLocale() === 'en' ? 'Acheivement in Number' : (app()->getLocale() === 'km' ? 'សមិទ្ធផលជាតួលេខ' : 'Acheivement in Number') }}</h4>
+                <h4>{{ app()->getLocale() === 'en' ? 'Acheivement in Number' : (app()->getLocale() === 'km' ? 'សមិទ្ធផលជាតួលេខ' : '数量上的成就') }}</h4>
 
                 <div class="container wrapper-achievement-card">
                     <div class="row">
@@ -1570,7 +1567,7 @@
                                 >
                                     0
                                 </h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'local farmers supported' : (app()->getLocale() === 'km' ? 'គាំទ្រកសិករក្នុងស្រុកជាង' : 'local farmers supported') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'local farmers supported' : (app()->getLocale() === 'km' ? 'គាំទ្រកសិករក្នុងស្រុកជាង' : '支持多名当地农民') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1583,7 +1580,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter no" data-target="5" data-unit="{{ app()->getLocale() === 'km' ? 'ទ្វីប' : '' }}">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Continents Export' : (app()->getLocale() === 'km' ? 'នាំចេញទៅកាន់ទ្វីបចំនួន' : 'Continents Export') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Continents Export' : (app()->getLocale() === 'km' ? 'នាំចេញទៅកាន់ទ្វីបចំនួន' : '大洲出口') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1597,7 +1594,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="500" data-unit="{{ app()->getLocale() === 'km' ? 'ប្រភេទ' : '' }}">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលនាំចេញជាង' : 'Export Commodities') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលនាំចេញជាង' : '出口产品') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1611,7 +1608,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="10" data-unit="{{ app()->getLocale() === 'km' ? 'ឆ្នាំ' : '' }}">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Years in Operation' : (app()->getLocale() === 'km' ? 'បទពិសោធន៍ប្រតិបត្តិការជាង' : 'Years in Operation') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Years in Operation' : (app()->getLocale() === 'km' ? 'បទពិសោធន៍ប្រតិបត្តិការជាង' : '年以上运营经验') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1624,7 +1621,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter percent" data-target="20">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Farmers Sources' : (app()->getLocale() === 'km' ? 'ប្រមូលទិញពីកសិករ' : 'Farmers Sources') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Farmers Sources' : (app()->getLocale() === 'km' ? 'ប្រមូលទិញពីកសិករ' : '农民来源') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1638,7 +1635,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter percent" data-target="80">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Communities Sources' : (app()->getLocale() === 'km' ? 'ប្រមូលទិញពីសហគមន៍' : 'Communities Sources') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Communities Sources' : (app()->getLocale() === 'km' ? 'ប្រមូលទិញពីសហគមន៍' : '社区资源') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1663,8 +1660,8 @@
         <div class="FAQ-background">
             <div class="container">
                 <div class="FAQ-content">
-                    <h1>{{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : (app()->getLocale() === 'km' ? 'សំណួរដែលសួរញឹកញាប់' : 'Frequently Asked Questions') }}</h1>
-                    <h5>{{ app()->getLocale() === 'en' ? 'For buyers/Importers' : (app()->getLocale() === 'km' ? 'សម្រាប់អ្នកទិញ/អ្នកនាំចូល' : 'For buyers/Importers') }}</h5>
+                    <h1>{{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : (app()->getLocale() === 'km' ? 'សំណួរដែលសួរញឹកញាប់' : '常见问题解答') }}</h1>
+                    <h5>{{ app()->getLocale() === 'en' ? 'For buyers/Importers' : (app()->getLocale() === 'km' ? 'សម្រាប់អ្នកទិញ/អ្នកនាំចូល' : '买家/进口商') }}</h5>
                 </div>
 
                 <div class="row">
@@ -1790,7 +1787,7 @@
                     </div>
 
                     <div class="FAQ-content">
-                        <h5>{{ app()->getLocale() === 'en' ? 'For Sellers / Local Farmers' : (app()->getLocale() === 'km' ? 'សម្រាប់អ្នកលក់ / កសិករក្នុងស្រុក' : 'For Sellers / Local Farmers') }}</h5>
+                        <h5>{{ app()->getLocale() === 'en' ? 'For Sellers / Local Farmers' : (app()->getLocale() === 'km' ? 'សម្រាប់អ្នកលក់ / កសិករក្នុងស្រុក' : '卖家/本地农民') }}</h5>
                     </div>
                     <div class="container">
                         <div class="row">

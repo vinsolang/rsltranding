@@ -623,18 +623,18 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000"> {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : 'Career') }}</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000"> {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}</h1>
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'J​​oin Our Team and Grow with Cambodia’s Leading Agricultural Exporter' : (app()->getLocale() === 'km' ? 'ចូលរួមជាមួយក្រុមការងាររបស់យើងខ្ញុំនឹងរីកចម្រើនជាមួយក្រុមហ៊ុននាំចេញផលិតផលកសិកម្មឈានមុខគេរបស់ប្រទេសកម្ពុជា' : 'J​​oin Our Team and Grow with Cambodia’s Leading Agricultural Exporter') }}</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'J​​oin Our Team and Grow with Cambodia’s Leading Agricultural Exporter' : (app()->getLocale() === 'km' ? 'ចូលរួមជាមួយក្រុមការងាររបស់យើងខ្ញុំនឹងរីកចម្រើនជាមួយក្រុមហ៊ុននាំចេញផលិតផលកសិកម្មឈានមុខគេរបស់ប្រទេសកម្ពុជា' : '加入我们的团队，与柬埔寨领先的农业出口商') }}</p>
 
                         <p data-aos="zoom-in-up" data-aos-duration="1400">
                             {{ app()->getLocale() === 'en' ? '​Be part of a company that connects local farmers to global markets, values integrity, and delivers quality products worldwide.' 
                             : (app()->getLocale() === 'km' ? 'ក្លាយជាផ្នែកមួយនៃក្រុមហ៊ុនដែលផ្សាភ្ជាប់កសិករក្នុងស្រុកទៅកាន់ទីផ្សារសកល ឱ្យតម្លៃលើភាពសុចរិត និងផ្តល់ផលិតផលដែលមានគុណភាពទូទាំងពិភពលោក។' 
-                            : '​Be part of a company that connects local farmers to global markets, values integrity, and delivers quality products worldwide.') }}
+                            : '起成长-成为公司的一员，将当地农民与全球市场联系起来，重视诚信，并在全球范围内') }}
                         </p>
                     </div>
-                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#first-card"><button class="btn-Interest-to-export">{{ app()->getLocale() === 'en' ? 'View Open Positions' : (app()->getLocale() === 'km' ? 'មើលមុខតំណែងទំនេរ' : 'View Open Positions') }}</button></a>
+                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#first-card"><button class="btn-Interest-to-export">{{ app()->getLocale() === 'en' ? 'View Open Positions' : (app()->getLocale() === 'km' ? 'មើលមុខតំណែងទំនេរ' : '“查看空缺职位') }}</button></a>
                 </div>
             </div>
         </div>
@@ -652,38 +652,38 @@
                 <div class="container">
                     <div class="row gx-5">
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="name">{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : 'Name') }}</label>
+                            <label class="text-[#fff] mb-1" for="name">{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : '姓名') }}</label>
                             <div class="career-input-form">
-                                <input id="name" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your full name' : (app()->getLocale() === 'km' ? 'បញ្ចូលឈ្មោះពេញរបស់អ្នក' : 'Enter your full name') }}">
+                                <input id="name" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your full name' : (app()->getLocale() === 'km' ? 'បញ្ចូលឈ្មោះពេញរបស់អ្នក' : '请输入您的全名') }}">
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អ៉ីម៉ែល' : 'Email') }}</label>
+                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អ៉ីម៉ែល' : '邮箱') }}</label>
                             <div class="career-input-form">
-                                <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : 'Enter your email address') }}">
+                                <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="phone">{{ app()->getLocale() === 'en' ? 'Phone Number' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ' : 'Phone Number') }}</label>
+                            <label class="text-[#fff] mb-1" for="phone">{{ app()->getLocale() === 'en' ? 'Phone Number' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ' : '电话号码') }}</label>
                             <div class="career-input-form">
-                                <input id="phone" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your phone number' : (app()->getLocale() === 'km' ? 'បញ្ចូលលេខទូរសព្ទរបស់អ្នក' : 'Enter your phone number') }}">
+                                <input id="phone" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your phone number' : (app()->getLocale() === 'km' ? 'បញ្ចូលលេខទូរសព្ទរបស់អ្នក' : '请输入您的电话号码') }}">
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="cv">{{ app()->getLocale() === 'en' ? 'Upload CV' : (app()->getLocale() === 'km' ? 'អាប់ឡូត CV' : 'Upload CV') }}</label>
+                            <label class="text-[#fff] mb-1" for="cv">{{ app()->getLocale() === 'en' ? 'Upload CV' : (app()->getLocale() === 'km' ? 'អាប់ឡូត CV' : '上传简历') }}</label>
                             <div class="career-file-form">
                                 <input type="file" id="cv" name="cv" placeholder="Upload your CV">
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="position">{{ app()->getLocale() === 'en' ? 'Position' : (app()->getLocale() === 'km' ? 'មុខតំណែង' : 'Position') }}</label>
+                            <label class="text-[#fff] mb-1" for="position">{{ app()->getLocale() === 'en' ? 'Position' : (app()->getLocale() === 'km' ? 'មុខតំណែង' : '职位') }}</label>
                             <div class="career-input-form">
                                 <select id="position" name="position" class="form-select">
-                                    <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : 'Select a position') }}</option>
+                                    <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : '请选择职位') }}</option>
                                     <option value="Position1">Position1</option>
                                     <option value="Position2">Position2</option>
                                     <option value="Position3">Position3</option>
@@ -692,7 +692,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="cover_letter">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : (app()->getLocale() === 'km' ? 'អាប់ឡូត Cover Letter' : 'Upload Cover Letter') }}</label>
+                            <label class="text-[#fff] mb-1" for="cover_letter">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : (app()->getLocale() === 'km' ? 'អាប់ឡូត Cover Letter' : '上传求职信') }}</label>
                             <div class="career-file-form">
                                 <input type="file" id="cover_letter" name="cover_letter"
                                     placeholder="Upload your cover letter">
@@ -702,7 +702,7 @@
                         <div class="col-12 d-flex justify-content-center">
                             <button type="submit" class="btn-career-submit">
                                 <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                                <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'ដាក់ស្នើ' : 'Submit') }}</p>
+                                <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'ដាក់ស្នើ' : '提交') }}</p>
                             </button>
                         </div>
 

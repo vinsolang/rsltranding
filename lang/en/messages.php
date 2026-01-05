@@ -7,7 +7,7 @@ return [
     "q2" => "What is the minimum order quantity (MOQ) for exports?",
     "a2" => "A: MOQ varies depending on the product and destination. Contact our export team in Phnom Penh for customized details.",
     "q3" => "Which countries do you export to?",
-    "a3" => "A: We currently export to international markets, including Russia.",
+    "a3" => "A: We currently export to international markets, including Russia, South Korea, India, Bangladesh, Thailand, Malaysia, Vietnam, China, Taiwan, Hong Kong, Africa and are expanding globally to bring Cambodian agricultural products to potential markets like Australia and Canada.",
     "q4"=> "How does RSL Trading ensure product quality and safe delivery?",
     "a4"=> "A: All Cambodian products are carefully sourced, inspected, and packaged to meet international standards. As an affiliate of RSL Global Logistics, we professionally handle cargo, shipping, and export documentation to ensure smooth delivery worldwide.",
     "q5" => "Can RSL Trading provide custom packaging or labeling for buyers?",

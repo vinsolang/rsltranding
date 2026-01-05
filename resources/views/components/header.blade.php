@@ -12,7 +12,8 @@
                             fill="#109A49" />
                     </svg>
                     <span>
-                        {{ $locale === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច ' : ($locale === 'cn' ? 'Monday - Friday 8am - 5pm' : 'Monday - Friday 8am - 5pm') }}
+                        {{-- {{ $locale === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច ' : ($locale === 'cn' ? 'Monday - Friday 8am - 5pm' : '星期一至五 8am - 5pm') }} --}}
+                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}
                     </span>
                 </a>
                 <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
@@ -230,44 +231,44 @@
                 <li>
                     <a href="{{ route('home') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('home') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                            {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : 'Home') }}
+                            {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
 
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('export') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('export') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ការនាំចេញ' : 'Export') }}
+                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ការនាំចេញ' : '出口') }}
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('import') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('import') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ការនាំចូល' : 'Import') }}
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is(patterns: 'import') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ការនាំចូល' : '进口') }}
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('about') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('about') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : 'About Us') }}                    
+                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}                    
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('events') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('events') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : 'Activities') }}                    
+                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}                    
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('career') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('career') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : 'Career') }}                    
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}                    
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('contact') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('contact') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : 'Contact') }}                    
+                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}                    
                     </a>
                 </li>
             </ul>
@@ -282,7 +283,7 @@
                                 fill="#109A49" />
                         </svg>
                         <span>
-                            {{ $locale === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច ' : ($locale === 'cn' ? 'Monday - Friday 8am - 5pm' : 'Monday - Friday 8am - 5pm') }}
+                            {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}
                         </span>
                     </a>
                     <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">

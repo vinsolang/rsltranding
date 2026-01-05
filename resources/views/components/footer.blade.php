@@ -294,28 +294,28 @@
 
         <div class="footer-content">
             <div class="footer-navigate">
-                <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'Navigation' : 'Navigation') }}</h5>
+                <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5>
 
                 <li><a href="{{ route('home') }}">
-                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : 'Home') }}
+                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
                     </a></li>
                 <li><a href="{{ route('export') }}">
-                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : 'Export') }}
+                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : '出口') }}
                     </a></li>
                 <li><a href="{{ route('import') }}">
-                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : 'Import') }}
+                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : '进口') }}
                     </a></li>
                 <li><a href="{{ route('about') }}">
-                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : 'About Us') }}
+                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
                     </a></li>
                 <li><a href="{{ route('events') }}">
-                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : 'Activities') }}
+                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
                     </a></li>
                 <li><a href="{{ route('career') }}">
-                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : 'Career') }}
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
                     </a></li>
                 <li><a href="{{ route('contact') }}">
-                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : 'Contact') }}
+                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
                     </a></li>
 
             </div>
@@ -333,7 +333,7 @@
                         {!! app()->getLocale() === 'en'
                             ? '#202, Borey 999 Honey, 2<sup>nd</sup> Floor, Street 355, Group 03, Village 1, Boeng Kak 1 Commune, Toul Kork District, Phnom Penh'
                             : (app()->getLocale() == 'km' ? 'អាសយដ្ឋាន៖ ផ្ទះលេខ ២០២ បុរី ៩៩៩ ហានី ជាន់ទី ២ ផ្លូវលេខ ៣៥៥ ក្រុមទី ០៣ ភូមិ ១ សង្កាត់បឹងកក់ ១ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ'
-                            : '#202, Borey 999 Honey, 2<sup>nd</sup> Floor, Street 355, Group 03, Village 1, Boeng Kak 1 Commune, Toul Kork District, Phnom Penh')
+                            : '办公地址：金边市土角区Boeng Kak 1公社1村03组355街2楼Borey 999 Honey 202号')
                         !!}
                     </a>
                 </li>
@@ -345,9 +345,9 @@
                     <h5 class="mt-3">{{ app()->getLocale() === 'en' ? '+855 77 678 300' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០' : '+855 77 678 300') }}</h5>
                 </li>
                 <li>
-                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : 'Operation Hour') }}</h5>
+                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
                 </li>
-                <li>{{ app()->getLocale() === 'en' ? 'Mon - Fri' : (app()->getLocale() === 'km' ? 'ច័ន្ទ - សុក្រ' : 'Mon - Fri') }}</li>
+                <li>{{ app()->getLocale() === 'en' ? 'Mon - Fri' : (app()->getLocale() === 'km' ? 'ច័ន្ទ - សុក្រ' : '星期一至五') }}</li>
                 <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li>
 
             </div>
@@ -357,7 +357,7 @@
             <div class="footer-social">
                 <img src="{{ asset('assets/images/footer-logo.png') }}">
 
-                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'ទំនាក់ទំនងមកយើងខ្ញុំ' : 'Follow Us') }}</h5>
+                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'ទំនាក់ទំនងមកយើងខ្ញុំ' : '聯絡我們') }}</h5>
 
                 <div class="link-social">
                     <a href="https://www.facebook.com/rsltradingcambodia" target="_blank"><svg width="27"
@@ -388,10 +388,7 @@
                     as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
                     worldwide while supporting farmers with better opportunities and incomes.' 
                     : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
-                    : 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
-                    local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
-                    as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
-                    worldwide while supporting farmers with better opportunities and incomes.') }}</p>
+                    : 'RSL贸易公司成立于2015年，是柬埔寨农业出口的领导者，致力于将当地农民与全球市场联系起来。我们的目标是将最好的“柬埔寨制造”产品（如大米、咖啡、玉米、腰果、芒果、木薯和其他营养水果）带给世界各地的买家，同时为农民提供更好的机会和收入。') }}</p>
                 <div class="company-bg">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.297500132666!2d104.86175!3d11.6021264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095385a229bec1%3A0xada2a43a8ca90037!2z4Z6Y4Z-Q4Z6a4Z6V4Z-S4Z6b4Z654Z6fIE1vcmUgUGx1cw!5e0!3m2!1sen!2skh!4v1766630998356!5m2!1sen!2skh"

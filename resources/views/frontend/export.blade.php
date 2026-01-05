@@ -1067,10 +1067,10 @@
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000">
-                            {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : 'Export') }}
+                            {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : '出口商品') }}
                         </h1>
                         <h1 data-aos="zoom-in-up" data-aos-duration="1200">
-                            {{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? '' : 'Commodities') }}
+                            {{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? '' : '') }}
                         </h1>
                     </div>
                     <div class="main-banner-p-bg">
@@ -1080,13 +1080,12 @@
                                                                                     & Cassava, Exported Worldwide with Quality You Can Trust.'
                                 : (app()->getLocale() === 'km'
                                     ? 'ផលិតផលកសិកម្មកម្ពុជារួមមាន អង្ករ កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំណាប់ស្វាយ និងដំឡូងមី ត្រូវបាននាំចេញទៅកាន់ទីផ្សារពិភពលោកជាមួយនឹងគុណភាពដែលលោកអ្នកអាចទុកចិត្តបាន។'
-                                    : 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
-                                                                                    & Cassava, Exported Worldwide with Quality You Can Trust.') }}
+                                    : '优质柬埔寨农产品-大米，咖啡，玉米，腰果，芒果和木薯，出口到世界各地，质量值得信赖。') }}
                         </p>
                     </div>
                     <a data-aos="zoom-in-up" data-aos-duration="1600" href="#interest"><button
                             class="btn-Interest-to-export">
-                            {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}
+                            {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}
                         </button></a>
                 </div>
             </div>
@@ -1109,32 +1108,32 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Grains & Cereals' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ' : 'Grains & Cereals') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Grains & Cereals' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ' : '谷物和谷类食品') }}',
                                         desc: '{{ app()->getLocale() === 'en'
                                             ? 'High-quality, farm-sourced grains trusted by local farmers and global buyers.'
                                             : (app()->getLocale() === 'km'
                                                 ? 'គ្រាប់ធញ្ញជាតិប្រកបដោយគុណភាពខ្ពស់មានប្រភពច្បាស់លាស់ដែលកសិករក្នុងស្រុក និងអ្នកទិញទូទាំងពិភពលោកអាចជឿទុកចិត្តបាន។'
-                                                : 'High-quality, farm-sourced grains trusted by local farmers and global buyers.') }}',
+                                                : '高品质、农场采购的谷物，深受当地农民和全球买家的信赖。') }}',
                                         img: '{{ asset('assets/images/export/cereals.jpg') }}'
                                     },
 
                                     rice: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : 'Rice') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : '大米') }}',
                                         desc: '{{ app()->getLocale() === 'en'
                                             ? 'Premium export-quality rice carefully processed to meet international food standards.'
                                             : (app()->getLocale() === 'km'
                                                 ? 'អង្ករ​ដែល​មាន​គុណភាព​ខ្ពស់​សម្រាប់​នាំចេញ។'
-                                                : 'Premium export-quality rice carefully processed to meet international food standards.') }}',
+                                                : '优质出口级大米，经过精心加工，符合国际食品标准。') }}',
                                         img: '{{ asset('assets/images/export/rice.jpg') }}'
                                     },
 
                                     yellow_corn: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : 'Yellow Corn') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄玉米') }}',
                                         desc: '{{ app()->getLocale() === 'en'
                                             ? 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.'
                                             : (app()->getLocale() === 'km'
                                                 ? 'ពោតលឿងគុណភាពខ្ពស់ ស័ក្តិសមសម្រាប់ចំណីសត្វ ការកែច្នៃអាហារ និងការប្រើប្រាស់ក្នុងឧស្សាហកម្ម។'
-                                                : 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.') }}',
+                                                : '高品质的黄玉米，可用于动物饲料、食品加工以及工业用途。') }}',
                                         img: '{{ asset('assets/images/card-3.png') }}'
                                     }
 
@@ -1154,24 +1153,24 @@
                                     <div class="smaill-detail-card">
                                         <!-- Fresh Mango -->
                                         <button x-show="active === 'default'" @click="active = 'rice'">
-                                            {{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : 'Rice') }}
+                                            {{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : '大米') }}
                                         </button>
 
                                         <!-- Dried Mango -->
                                         <button x-show="active === 'default'" @click="active = 'yellow_corn'">
-                                            {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : 'Yellow Corn') }}
+                                            {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄玉米') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
                                         <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}
                                             </a></button>
                                     </div>
 
@@ -1189,18 +1188,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Fruits Products' : (app()->getLocale() === 'km' ? 'ផលិតផលផ្លែឈើ' : 'Fruits Products') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.' : (app()->getLocale() === 'km' ? 'ផ្លែឈើស្រស់ និងផ្លែឈើកែច្នៃ ប្រមូលផលនៅពេលទុំដើម្បីទទួលបានឱជារស និងគុណភាពខ្ពស់។' : 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Fruits Products' : (app()->getLocale() === 'km' ? 'ផលិតផលផ្លែឈើ' : '水果制品') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.' : (app()->getLocale() === 'km' ? 'ផ្លែឈើស្រស់ និងផ្លែឈើកែច្នៃ ប្រមូលផលនៅពេលទុំដើម្បីទទួលបានឱជារស និងគុណភាពខ្ពស់។' : '新鲜且经过加工的水果均在成熟度最佳时采摘，以确保其风味和品质达到最高水平。') }}',
                                         img: '{{ asset('assets/images/export/fruits.jpg') }}'
                                     },
                                     fresh_mango: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : 'Fresh Mango') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់ៗ គុណភាពនាំចេញ ជាមួយនឹងរសជាតិឈ្ងុយឆ្ងាញ់ និងផ្អែមធម្មជាតិ។' : 'Export-quality fresh mangoes with rich flavor and natural sweetness.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : '新鲜芒果') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់ៗ គុណភាពនាំចេញ ជាមួយនឹងរសជាតិឈ្ងុយឆ្ងាញ់ និងផ្អែមធម្មជាតិ។' : '出口级新鲜芒果，味道浓郁，甜度自然。') }}',
                                         img: '{{ asset('assets/images/export-card-product-2.png') }}'
                                     },
                                     dried_mango: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : 'Dried Mango') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Carefully dried mango slices for long shelf life and premium taste.' : (app()->getLocale() === 'km' ? 'ចំណិតស្វាយហាលស្ងួតល្អដើម្បីទទួលបានកាលបរិច្ឆេទរក្សាទុកបានយូរអង្វែង និងរសជាតិឆ្ងាញ់។' : 'Carefully dried mango slices for long shelf life and premium taste.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : '芒果干') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Carefully dried mango slices for long shelf life and premium taste.' : (app()->getLocale() === 'km' ? 'ចំណិតស្វាយហាលស្ងួតល្អដើម្បីទទួលបានកាលបរិច្ឆេទរក្សាទុកបានយូរអង្វែង និងរសជាតិឆ្ងាញ់។' : '精心干燥处理的芒果片，保质期长且口感上乘。') }}',
                                         img: '{{ asset('assets/images/export/dry_mango.jpg') }}'
                                     }
                                 }
@@ -1219,24 +1218,24 @@
                                     <div class="smaill-detail-card">
                                         <!-- Fresh Mango -->
                                         <button x-show="active === 'default'" @click="active = 'fresh_mango'">
-                                            {{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : 'Fresh Mango') }}
+                                            {{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : '新鲜芒果') }}
                                         </button>
 
                                         <!-- Dried Mango -->
                                         <button x-show="active === 'default'" @click="active = 'dried_mango'">
-                                            {{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : 'Dried Mango') }}
+                                            {{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : '芒果干') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
                                         <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</a></button>
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1252,18 +1251,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Nuts & Legumes' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​' : 'Nuts & Legumes') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium-grade nuts and legumes sourced from trusted Cambodian farmers.' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​​លំដាប់​ខ្ពស់​ដែល​មាន​ប្រភព​មក​ពី​កសិករ​ក្នុងស្រុក​ប្រកបដោយទំនុកចិត្ត។' : 'Premium-grade nuts and legumes sourced from trusted Cambodian farmers.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Nuts & Legumes' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​' : '坚果和豆类') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium-grade nuts and legumes sourced from trusted Cambodian farmers.' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​​លំដាប់​ខ្ពស់​ដែល​មាន​ប្រភព​មក​ពី​កសិករ​ក្នុងស្រុក​ប្រកបដោយទំនុកចិត្ត។' : '优质的坚果和豆类均来自可信赖的柬埔寨农民所种植的作物。') }}',
                                         img: '{{ asset('assets/images/export-card-product-3.png') }}'
                                     },
                                     cashew: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : 'Cashew Nuts') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' : 'High-quality Cambodian cashew nuts suitable for global export markets.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' : '高品质的柬埔寨腰果，适合出口全球市场。') }}',
                                         img: '{{ asset('assets/images/export/nuts.jpg') }}'
                                     },
                                     peanut: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : 'Peanuts') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium peanuts processed for food and industrial use.' : (app()->getLocale() === 'km' ? 'សណ្តែកដីប្រកបដោយគុណភាពខ្ពស់កែច្នៃសម្រាប់ម្ហូបអាហារ និងការប្រើប្រាស់ក្នុងឧស្សាហកម្មនានា។' : 'Premium peanuts processed for food and industrial use.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : '花生') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium peanuts processed for food and industrial use.' : (app()->getLocale() === 'km' ? 'សណ្តែកដីប្រកបដោយគុណភាពខ្ពស់កែច្នៃសម្រាប់ម្ហូបអាហារ និងការប្រើប្រាស់ក្នុងឧស្សាហកម្មនានា។' : '优质花生，用于食品和工业加工。') }}',
                                         img: '{{ asset('assets/images/export/peanut.jpg') }}'
                                     }
                                 }
@@ -1282,17 +1281,17 @@
                                     <div class="smaill-detail-card">
                                         <!-- Cashew -->
                                         <button x-show="active === 'default'" @click="active = 'cashew'">
-                                            {{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : 'Cashew Nuts') }}
+                                            {{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}
                                         </button>
 
                                         <!-- Peanut -->
                                         <button x-show="active === 'default'" @click="active = 'peanut'">
-                                            {{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : 'Peanuts') }}
+                                            {{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : '花生') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
@@ -1300,7 +1299,7 @@
                                     <div class="btn-card-interest-to-export">
                                         <div class="btn-card-interest-to-export">
                                             <button><a href="#contact"
-                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</a></button>
+                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                         </div>
                                     </div>
 
@@ -1317,13 +1316,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Root Crops' : (app()->getLocale() === 'km' ? 'ដំណាំ​មើម' : 'Root Crops') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Processed and dried cassava ideal for industrial and export applications.' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​កែច្នៃ និង​សម្ងួត​ល្អ​សម្រាប់​ការ​ប្រើប្រាស់​ក្នុង​ឧស្សាហកម្ម និង​ការ​នាំ​ចេញ​។' : 'Processed and dried cassava ideal for industrial and export applications.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Root Crops' : (app()->getLocale() === 'km' ? 'ដំណាំ​មើម' : '根茎类作物') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Processed and dried cassava ideal for industrial and export applications.' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​កែច្នៃ និង​សម្ងួត​ល្អ​សម្រាប់​ការ​ប្រើប្រាស់​ក្នុង​ឧស្សាហកម្ម និង​ការ​នាំ​ចេញ​។' : '经过加工和干燥处理的木薯非常适合用于工业生产及出口用途。') }}',
                                         img: '{{ asset('assets/images/export/root_crops.jpg') }}'
                                     },
                                     cassava: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : 'Dried Cassava') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' : 'High-quality dried cassava for industrial processing and international export.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' : '高品质的干木薯，适用于工业加工及国际出口。') }}',
                                         img: '{{ asset('assets/images/export-card-product-4.png') }}'
                                     }
                                 }
@@ -1342,20 +1341,20 @@
                                     <div class="smaill-detail-card">
                                         <!-- Dried Cassava -->
                                         <button x-show="active === 'default'" @click="active = 'cassava'">
-                                            {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : 'Dried Cassava') }}
+                                            {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
                                         <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</a></button>
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1373,13 +1372,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេស' : 'Spices') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : (app()->getLocale() === 'km' ? 'ម្រេចដ៏ឈ្ងុយរបស់​កម្ពុជាមាន​កេរ្តិ៍ឈ្មោះ​ល្បីល្បាញ​ទូទាំង​ពិភពលោក ជាមួយនឹង​រសជាតិ​ឆ្ងាញ់។' : 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេស' : '香料') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : (app()->getLocale() === 'km' ? 'ម្រេចដ៏ឈ្ងុយរបស់​កម្ពុជាមាន​កេរ្តិ៍ឈ្មោះ​ល្បីល្បាញ​ទូទាំង​ពិភពលោក ជាមួយនឹង​រសជាតិ​ឆ្ងាញ់។' : '具有浓郁香气的柬埔寨胡椒，以其全球知名的声誉和丰富的风味而著称。') }}',
                                         img: '{{ asset('assets/images/export/spices.jpg') }}'
                                     },
                                     pepper: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : 'Pepper') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'ម្រេចកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញអន្តរជាតិ។' : 'High-quality Cambodian pepper suitable for international export markets.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'ម្រេចកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញអន្តរជាតិ។' : '高品质的柬埔寨辣椒，适合出口至国际市场的使用。') }}',
                                         img: '{{ asset('assets/images/export-card-product-5.png') }}'
                                     }
                                 }
@@ -1397,20 +1396,20 @@
                                     <div class="smaill-detail-card">
                                         <!-- Pepper -->
                                         <button x-show="active === 'default'" @click="active = 'pepper'">
-                                            {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : 'Pepper') }}
+                                            {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
                                         <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</a></button>
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1428,13 +1427,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : 'Coffee & Beverages') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។' : 'Premium Cambodian coffee beans carefully selected and exported with international standards.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡与饮品') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។' : '精选的优质柬埔寨咖啡豆，按照国际标准精心挑选并出口。') }}',
                                         img: '{{ asset('assets/images/export-card-product-6.png') }}'
                                     },
                                     coffee: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : 'Coffee Beans') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' : 'High-quality Cambodian coffee beans roasted and prepared for global export markets.') }}',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' : '采用优质原料烘焙而成的柬埔寨咖啡豆，专为全球出口市场而生产。') }}',
                                         img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
                                     }
                                 }
@@ -1453,18 +1452,18 @@
                                     <div class="smaill-detail-card">
                                         <!-- Coffee Beans -->
                                         <button x-show="active === 'default'" @click="active = 'coffee'">
-                                            {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : 'Coffee Beans') }}
+                                            {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
-                                            class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
+                                            class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
 
                                         </button>
                                     </div>
                                     <div class="btn-card-interest-to-export">
                                         <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</a></button>
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->

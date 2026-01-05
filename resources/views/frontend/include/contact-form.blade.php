@@ -1,30 +1,30 @@
   <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
-            <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : 'Contact Form') }}</p>
+            <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : '联系表格') }}</p>
             <div class="row">
                 @csrf
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : 'name') }}">
+                    <input class="col-12" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : '姓名') }}">
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរសព្ទ' : 'Mobile Phone') }}">
+                    <input class="col-12" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរសព្ទ' : '手机号码') }}">
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="company" placeholder="{{ app()->getLocale() === 'en' ? 'Company Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះក្រុមហ៊ុន' : 'Company Name') }}">
+                    <input class="col-12" name="company" placeholder="{{ app()->getLocale() === 'en' ? 'Company Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះក្រុមហ៊ុន' : '公司名称') }}">
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
                     <select name="trade_type" id="tradeType" class="form-select">
-                        <option value="">{{ app()->getLocale() === 'en' ? 'Select Import/Export' : (app()->getLocale() === 'km' ? 'ជ្រើសរើសទំនិញ នាំចូល/នាំចេញ ' : 'Select Import/Export') }}</option>
-                        <option value="import">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'នាំចូល (ជ្រើសរើសទំនិញ)' : 'Import') }}</option>
-                        <option value="export">{{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'នាំចេញ (ជ្រើសរើសទំនិញ)' : 'Export') }}</option>
+                        <option value="">{{ app()->getLocale() === 'en' ? 'Select Import/Export' : (app()->getLocale() === 'km' ? 'ជ្រើសរើសទំនិញ នាំចូល/នាំចេញ ' : '选择进出口') }}</option>
+                        <option value="import">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'នាំចូល (ជ្រើសរើសទំនិញ)' : '进口 - Import') }}</option>
+                        <option value="export">{{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'នាំចេញ (ជ្រើសរើសទំនិញ)' : '出口 - Export') }}</option>
                     </select>
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
                     <select name="country" class="form-select" aria-label="Default select example">
-                        <option selected disabled>{{ app()->getLocale() === 'en' ? 'Country' : (app()->getLocale() === 'km' ? 'ប្រទេស (ជ្រើសរើសប្រទេស)' : 'Country') }}</option>
+                        <option selected disabled>{{ app()->getLocale() === 'en' ? 'Country' : (app()->getLocale() === 'km' ? 'ប្រទេស (ជ្រើសរើសប្រទេស)' : '选择国家/地区') }}</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -219,20 +219,20 @@
 
 
                 <div class="col-lg-6 col-md-6">
-                    <label class="choose-field">Commodities</label>
+                    <label class="choose-field">{{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? 'ទំនិញ' : '商品种类') }}</label>
                     <div id="commodityList" class="showcommoditylist"></div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="address" placeholder="{{ app()->getLocale() === 'en' ? 'Address' : (app()->getLocale() === 'km' ? 'អាសយដ្ឋាន' : 'Addess') }}">
+                    <input class="col-12" name="address" placeholder="{{ app()->getLocale() === 'en' ? 'Address' : (app()->getLocale() === 'km' ? 'អាសយដ្ឋាន' : '地址') }}">
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៉ីម៉ែល)' : 'Email') }}">
+                    <input class="col-12" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៉ីម៉ែល)' : '电子邮件') }}">
                 </div>
 
                 <div class="col-12 input-field">
-                    <textarea class="col-12" name="message" placeholder="{{ app()->getLocale() === 'en' ? 'Messages' : (app()->getLocale() === 'km' ? 'សារ' : 'Messages') }}"></textarea>
+                    <textarea class="col-12" name="message" placeholder="{{ app()->getLocale() === 'en' ? 'Messages' : (app()->getLocale() === 'km' ? 'សារ' : '留言') }}"></textarea>
                 </div>
             </div>
 
@@ -241,7 +241,7 @@
                 <div class="confrim-policy-text">
                     <p>{{ app()->getLocale() === 'en' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' 
                     : (app()->getLocale() === 'km' ? 'ខ្ញុំយល់ព្រមឱ្យស្ថាប័ននេះរក្សាទុកព័ត៌មានដែលខ្ញុំបានដាក់ស្នើសួរដើម្បីអាចឆ្លើយតបទៅនឹងសំណួររបស់ខ្ញុំ។' 
-                    : 'I consent to having this website store my submitted information so they can respond to my enquiry.') }}
+                    : '我同意該機構可以儲存我提交的信息，以便回复我的問題。') }}
                     </p>
                 </div>
             </div>
@@ -250,7 +250,7 @@
             <div class="d-flex justify-content-center">
                 <button class="btn-Submit">
                     <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                    <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'ដាក់បញ្ជូន' : 'Submit') }}</p>
+                    <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'ដាក់បញ្ជូន' : '提交') }}</p>
                 </button>
             </div>
         </form>
