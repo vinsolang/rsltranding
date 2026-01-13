@@ -1274,7 +1274,7 @@
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
-                            <img src="{{ asset('assets/our_team/chov_sambath.jpg') }}" class="w-32 h-32 rounded-full object-cover">
+                            <img src="{{ asset('assets/our_team/chovsambath.JPG') }}" class="w-32 h-32 rounded-full object-cover">
                             <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Chov Sambath (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'Chov Sambath (Mike) 先生') }}</p>
                             <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                         </div>
