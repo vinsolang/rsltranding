@@ -1242,7 +1242,7 @@
     <section>
         <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2">
             {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
-            <img class="" src="{{ asset('assets/images/profile-card-1.png') }}" class="">
+            <img src="{{ asset('assets/our_team/REACH_SOTHORN.jpg') }}" class="w-48 h-48 rounded-full object-cover">
             <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Board of Director' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
             <div class="p-bg">
                 <p class="{{ app()->getLocale() === 'km'
@@ -1266,7 +1266,7 @@
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="card-profile">
-                            <img src="{{ asset('assets/images/profile-card-1.png') }}">
+                            <img src="{{ asset('assets/our_team/REACH_SOTHORN.jpg') }}" class="w-32 h-32 rounded-full object-cover">
                             <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Reach Sothorn 先生') }}</p>
                             <p class="profile-position">{{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : '创始人') }}</p>
                         </div>
@@ -1274,7 +1274,7 @@
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
-                            <img src="{{ asset('assets/images/profile-card-2.png') }}">
+                            <img src="{{ asset('assets/our_team/chov_sambath.jpg') }}" class="w-32 h-32 rounded-full object-cover">
                             <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Chov Sambath (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'Chov Sambath (Mike) 先生') }}</p>
                             <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                         </div>
@@ -1282,7 +1282,7 @@
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
-                            <img src="{{ asset('assets/images/profile-card-3.png') }}">
+                            <img src="{{ asset('assets/our_team/CHHENG_SONY.jpg') }}" class="w-32 h-32 rounded-full object-cover">
                             <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Ms. Chheng Sony' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'Chheng Sony 先生') }}</p>
                             <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                         </div>
@@ -1290,7 +1290,7 @@
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
-                            <img src="{{ asset('assets/images/profile-card-4.png') }}">
+                            <img src="{{ asset('assets/our_team/SRUN_PHECHLANG_(Jessie).png') }}" class="w-32 h-32 rounded-full object-cover">
                             <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Srun Phechlang (Jessie)' : (app()->getLocale() === 'km' ? 'លោក ស្រ៊ុន ពេជ្រឡាង(Jessie)' : 'Srun Phechlang (Jessie) 女士') }}</p>
                             <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                         </div>

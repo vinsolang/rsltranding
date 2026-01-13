@@ -1551,9 +1551,9 @@
                 <h4>{{ app()->getLocale() === 'en' ? 'Acheivement in Number' : (app()->getLocale() === 'km' ? 'សមិទ្ធផលជាតួលេខ' : '数量上的成就') }}</h4>
 
                 <div class="container wrapper-achievement-card">
-                    <div class="row">
+                    <div class="flex md:flex-row flex-wrap justify-center items-center py-24">
 
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                        {{-- <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                             <div class="achievement-card">
                                 <div class="achievement-card-img">
                                     <img src="{{ asset('assets/images/achievement-card-img-1.png') }}">
@@ -1597,7 +1597,7 @@
                                     <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលនាំចេញជាង' : '出口产品') }}</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
 
                         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
