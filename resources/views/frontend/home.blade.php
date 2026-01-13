@@ -1340,7 +1340,7 @@
                 {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}
             </h1>
 
-            <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10 {{ app()->getLocale() === 'km'
+            {{-- <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10 {{ app()->getLocale() === 'km'
                     ? 'max-w-5xl'
                     : 'max-w-6xl'
                 }}">
@@ -1353,8 +1353,19 @@
                 អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល 
                 និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
                 : 'RSL贸易有限公司成立于2015年，专注于本地和国际市场的农产品，致力于将当地农民与我们联系起来，将大米，咖啡，胡椒，香蕉，腰果，芒果，芒果干，木薯干等几种当地产品带给全球买家，同时支持他们获得更好的机会和收入。') }}  
-            </p>
+            </p> --}}
 
+            <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10 {{ app()->getLocale() === 'km'
+                    ? 'max-w-5xl'
+                    : 'max-w-6xl'
+                }}">
+                {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading connects Cambodian farmers with global markets. We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and tropical fruits to countries worldwide. So far, we have successfully exported 3 tons of coffee beans to Russia through our coffee bean processing partner in Siem Reap.' 
+                : (app()->getLocale() === 'km' ? ' ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ 
+                ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា 
+                អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល 
+                និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
+                : 'RSL贸易有限公司成立于2015年，专注于本地和国际市场的农产品，致力于将当地农民与我们联系起来，将大米，咖啡，胡椒，香蕉，腰果，芒果，芒果干，木薯干等几种当地产品带给全球买家，同时支持他们获得更好的机会和收入。') }}  
+            </p>
 
             <div class="w-[100%] h-full pb-20">
                 <img src="{{ asset('assets/images/map-2-2.png') }}" class="w-full h-full mx-auto">
