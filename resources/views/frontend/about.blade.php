@@ -1305,7 +1305,7 @@
             <h1>{{ app()->getLocale() === 'en' ? 'Business Credential Licenses' : (app()->getLocale() === 'km' ? 'ឯកសារចុះបញ្ជិកាសហគ្រាស' : '营业执照') }}</h1>
         </div>
         <div class="business-credentail-card">
-            {{-- <div class="business-credentail-card-wrapper">
+            <div class="business-credentail-card-wrapper">
                 <div class="credentail-img">
                     <img src="{{ asset('assets/images/credentail-1.png') }}">
                 </div>
@@ -1317,8 +1317,8 @@
                 <div class="credentail-img">
                     <img src="{{ asset('assets/images/credentail-2.png') }}">
                 </div>
-            </div> --}}
-            <div class="flex lg:flex-row flex-col justify-center items-center gap-6 max-w-8xl mx-auto px-2">
+            </div>
+            {{-- <div class="flex lg:flex-row flex-col justify-center items-center gap-6 max-w-8xl mx-auto px-2">
     
                 <div class="flex items-center">
                     <img 
@@ -1344,7 +1344,7 @@
                     >
                 </div>
 
-            </div>
+            </div> --}}
 
         </div>
     </section>
