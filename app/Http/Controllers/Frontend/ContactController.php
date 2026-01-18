@@ -71,7 +71,6 @@ class ContactController extends Controller
         $text .= "📧 Email: $email\n";
         $text .= "📱 Phone: $phone\n";
         $text .= "💼 Position: $position\n";
-
         // Send message to Telegram
         Http::post("https://api.telegram.org/bot$telegramToken/sendMessage", [
             'chat_id' => $chatId,

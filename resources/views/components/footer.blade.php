@@ -299,23 +299,21 @@
                 <li><a href="{{ route('home') }}">
                         {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
                     </a></li>
-                <li><a href="{{ route('export') }}">
-                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : '出口') }}
-                    </a></li>
-                <li><a href="{{ route('import') }}">
-                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : '进口') }}
-                    </a></li>
                 <li><a href="{{ route('about') }}">
                         {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
                     </a></li>
+                <li><a href="{{ route('our_product') }}">
+                        {{ app()->getLocale() === 'en' ? 'Our Product' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
+                    </a></li>
+                
                 <li><a href="{{ route('events') }}">
-                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
+                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
                     </a></li>
                 <li><a href="{{ route('career') }}">
                         {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
                     </a></li>
                 <li><a href="{{ route('contact') }}">
-                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
+                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
                     </a></li>
 
             </div>
@@ -342,7 +340,7 @@
                     <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5>
                 </li>
                 <li>
-                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? '+855 77 678 300' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០' : '+855 77 678 300') }}</h5>
+                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
                 </li>
                 <li>
                     <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
@@ -367,7 +365,7 @@
                                 fill="#007BFF" />
                         </svg></a>
 
-                    <a href="https://t.me/+85577678300" target="_blank">
+                    <a href="https://t.me/+85511678588" target="_blank">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path

@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Import - RSL Trading</title>
+    <title>Export - RSL Trading</title>
 @endsection
 
-{{-- @section('css')
-     <link rel="stylesheet" href="{{ asset('assets/css/import.css') }}">
-@endsection --}}
+@section('css')
+     <link rel="stylesheet" href="{{ asset('assets/css/export.css') }}">
+@endsection
 
-@section(section: 'content')
+@section('content')
     <style>
         :root {
             color: #059848;
@@ -26,6 +26,7 @@
             position: relative;
         }
 
+
         .main-banner .img-banner {
             width: 100%;
             height: 115vh;
@@ -35,11 +36,7 @@
             z-index: -1;
         }
 
-        .main-banner .main-banner-h1-bg {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+
 
         .main-banner h1 {
             font-weight: bolder;
@@ -123,7 +120,6 @@
         }
 
 
-
         @media screen and (max-width: 426px) {
 
             .main-banner {
@@ -156,6 +152,19 @@
                 margin-top: 3rem;
             }
         }
+        @media screen and (max-width: 768px) {
+
+            .btn-Interest-to-export {
+                width: 228px;
+                height: 43px;
+                background-color: #FFFFFF;
+                font-weight: bolder;
+                color: #059848;
+                border-radius: 41.5px;
+                margin-top: 2rem;
+            }
+
+        }
 
         .first-card {
             position: relative;
@@ -168,11 +177,10 @@
         .first-card-background {
             z-index: 0 !important;
             position: absolute;
-            height: 100%;
+            height: 170vh;
             width: 100%;
             top: 0;
-            margin-top: -5.5rem;
-
+            margin-top: -7rem;
         }
 
         .first-card-background img {
@@ -181,50 +189,113 @@
             height: 170vh;
         }
 
-
-
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 2561px) and (min-width: 1441px) {
             .first-card {
-                margin-top: 6% !important;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding-top: 10rem;
+                margin-top: -5rem !important;
             }
         }
 
-        .main-banner {
-            width: 100%;
-            height: 100vh;
-            background-color: #D9D9D9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 0 !important;
-            position: relative;
+
+        @media screen and (max-width: 1440px) and (min-width: 1025px) {
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding-top: 10rem;
+                margin-top: -5rem !important;
+            }
+        }
+
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding-top: 10rem;
+                margin-top: -5rem !important;
+            }
         }
 
 
-        .btn-Interest-to-export {
-            width: 228px;
-            height: 43px;
-            background-color: #FFFFFF;
-            font-weight: bolder;
-            color: #059848;
-            border-radius: 41.5px;
-            margin-top: 2rem;
+        @media screen and (max-width: 640px) and (min-width: 426px) {
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding-top: 10rem;
+                margin-top: 2rem !important;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding-top: 10rem;
+                margin-top: 3rem !important;
+            }
+        }
+
+
+
+
+        .main-card-product {
+            width: 100%;
+            height: auto;
+            margin-top: 2rem !important;
+            position: relative;
+        }
+
+        @media screen and (max-width: 2560px) and (min-width: 1441px) {
+            .main-card-product {
+                margin-top: 2rem !important;
+                ;
+            }
+        }
+
+        @media screen and (max-width: 1440px) and (min-width: 1025px) {
+            .main-card-product {
+                margin-top: 2rem !important;
+            }
+        }
+
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+            .main-card-product {
+                margin-top: -2rem !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) and (min-width: 426px) {
+            .main-card-product {
+                margin-top: -2rem !important;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            .main-card-product {
+                margin-top: -2rem !important;
+            }
         }
 
         .card-product {
             position: relative;
-            margin-top: -5rem;
+            margin-bottom: 1rem;
         }
 
         .card-product .card-product-bg {
             width: 100%;
+
         }
 
         .card-product .card-product-detail {
             width: 100%;
-            height: 480px;
-            background-color: #D7FFEE;
+            height: 360px;
+            background-color: #EEFFF8;
             position: relative;
             margin-top: -5rem;
             border: #EEFFF8;
@@ -233,7 +304,22 @@
             padding-right: 2rem;
             padding-top: 3rem;
             padding-bottom: 1.5rem;
-            margin-bottom: 1.5rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            .card-product .card-product-detail {
+                width: 100%;
+                height: 390px;
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 426px) {
+            .card-product .card-product-detail {
+                height: 380px;
+            }
         }
 
         .card-product .card-product-detail h5 {
@@ -245,18 +331,18 @@
         .smaill-detail-card {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            position: relative;
+            align-items: center;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
         }
-
-
 
         .card-product .card-product-detail .smaill-detail-card button {
             color: #1E1E1E;
             font-size: 20px;
             width: 274px;
-            max-width: 100%;
             height: 47px;
         }
 
@@ -270,7 +356,6 @@
             background-color: #059848;
             color: #FFFFFF;
             width: 274px;
-            max-width: 100%;
             height: 47px;
             border-radius: 23.5px;
             display: flex;
@@ -279,15 +364,15 @@
         }
 
         .card-product .card-product-detail .smaill-detail-card button:hover a {
-            color: #FFFFFF;
+            color: #FFFFFF
         }
+
 
         .card-product .card-product-detail .btn-card-interest-to-export {
             position: absolute;
             bottom: 5%;
             left: 50%;
-            transform: translate(-50%);
-
+            transform: translateX(-50%);
         }
 
         .card-product .card-product-detail .btn-card-interest-to-export button {
@@ -300,13 +385,12 @@
             color: #FFFFFF;
         }
 
-
         .card-no {
             width: 72px;
             height: 72px;
             background: linear-gradient(to right, #8DC640, #059848);
             position: absolute;
-            top: -7%;
+            top: -10%;
             right: 10%;
             border-radius: 100px;
             display: flex;
@@ -321,630 +405,6 @@
             margin-top: 1rem;
         }
 
-        .partner-main {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 5rem;
-            z-index: 10;
-        }
-
-        .partner-main .partner-bg {
-            width: 100%;
-            height: 598px !important;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
-
-        .partner-main h1 {
-            font-size: 25px;
-            color: #FFFFFF;
-            font-weight: bolder;
-            margin-bottom: 2.5rem;
-            margin-top: 2.5rem;
-        }
-
-        .partner-main .partner-card-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 2rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        .partner-main .partner-card-wrapper .partner-card {
-            width: 100%;
-            height: 323px;
-            background-color: #007E3A;
-            color: #FFFFFF;
-            border-radius: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-            padding-left: 1rem;
-        }
-
-        .partner-main .partner-card-wrapper .partner-card h5 {
-            font-size: 20px;
-        }
-
-        .partner-main .partner-card-wrapper .partner-card p {
-            font-size: 15px;
-        }
-
-        .partner-main .partner-card-wrapper .partner-card svg {
-            width: 80px
-        }
-
-        @media screen and (max-width: 769px) {
-            .partner-main .partner-card-wrapper {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-
-            .partner-main .partner-card-wrapper .partner-card {
-                width: 100%;
-                height: 220px;
-                background-color: #007E3A;
-                color: #FFFFFF;
-                border-radius: 30px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 0.5rem;
-                padding-left: 0.5rem;
-            }
-
-            .partner-main .partner-card-wrapper .partner-card h5 {
-                font-size: 15px;
-            }
-
-            .partner-main .partner-card-wrapper .partner-card p {
-                font-size: 13px;
-            }
-
-            .partner-main .partner-card-wrapper .partner-card svg {
-                width: 60px
-            }
-
-        }
-
-
-        @media screen and (max-width: 426px) {
-
-            .partner-main {
-                width: 100%;
-                height: 598px;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .partner-main .partner-card-wrapper {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 0.5rem;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-            }
-
-
-            .partner-main .partner-card-wrapper .partner-card {
-                width: 100%;
-                height: 190px;
-                background-color: #007E3A;
-                color: #FFFFFF;
-                border-radius: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 0.5rem;
-                padding-left: 0.5rem;
-            }
-
-            .partner-main .partner-card-wrapper .partner-card h5 {
-                font-size: 13px;
-            }
-
-            .partner-main .partner-card-wrapper .partner-card p {
-                font-size: 10px;
-            }
-
-            .partner-main .partner-card-wrapper .partner-card svg {
-                width: 40px
-            }
-        }
-
-        .wrapper-contact {
-            margin-top: 15rem;
-            margin-bottom: 5rem;
-            padding-top: 1rem;
-            width: 100%;
-            padding-left: 5rem !important;
-            padding-right: 5rem !important;
-        }
-
-        .wrapper-contact p {
-            text-align: center;
-            color: #059848;
-            font-size: 30px;
-        }
-
-        .wrapper-contact .input-field input {
-            width: 100%;
-            height: 49px;
-            border-radius: 24.5px;
-            background-color: #ECECEC;
-            padding-left: 1.5rem;
-            font-size: 16px !important;
-            margin-bottom: 0.5rem;
-            outline: none !important;
-        }
-
-        .wrapper-contact .input-field input::placeholder {
-            font-size: 16px !important;
-            color: #394552 !important;
-        }
-
-        .wrapper-contact .input-field input:focus {
-            border: 1px solid #059848 !important;
-        }
-
-        .wrapper-contact .input-field textarea {
-            width: 100%;
-            max-height: auto;
-            border-radius: 24.5px;
-            background-color: #ECECEC;
-            padding-left: 1.5rem;
-            font-size: 16px !important;
-            margin-bottom: 0.5rem;
-        }
-
-        .wrapper-contact .input-field textarea::placeholder {
-            color: #394552;
-        }
-
-        .wrapper-contact .input-field textarea:focus {
-            border: 1px solid #059848 !important;
-        }
-
-        .wrapper-contact .input-field select {
-            width: 100%;
-            height: 49px;
-            border-radius: 24.5px;
-            background-color: #ECECEC;
-            padding-left: 1.5rem;
-            font-size: 16px !important;
-            margin-bottom: 0.5rem;
-            outline: none !important;
-            border: 1px solid #394552;
-        }
-
-        .wrapper-contact .input-field select option {
-            background-color: #059848;
-            color: #ffffff
-        }
-
-        .confirm-policy {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .confirm-policy input[type="checkbox"] {
-            width: 27px;
-            height: 27px;
-            border-radius: 100px;
-            background-color: #059848;
-            border: none;
-        }
-
-        .confirm-policy input[type="checkbox"]:focus,
-        .confirm-policy input[type="checkbox"]:active {
-            box-shadow: none;
-            background-color: #059848;
-        }
-
-        .confrim-policy-text {
-            width: 25rem;
-        }
-
-        .confirm-policy p {
-            font-size: 15px;
-            color: #059848;
-        }
-
-        .btn-Submit {
-            position: relative;
-            width: 396.97px;
-            height: 80.14px;
-            margin-top: 2rem;
-        }
-
-        .btn-Submit img {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            z-index: 0;
-        }
-
-        .btn-Submit p {
-            position: absolute;
-            top: 47%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            color: #FFFFFF;
-            font-weight: 500;
-            margin-top: 0.2rem;
-            font-size: 35px;
-        }
-
-
-        @media screen and (max-width: 768px) {
-
-
-            .wrapper-contact {
-                margin-top: 1rem;
-                padding-top: 1rem;
-                width: 100%;
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-            }
-
-            .btn-Submit {
-                width: 356.97px;
-                height: 75.14px;
-                margin-top: 2rem;
-            }
-
-            .btn-Submit p {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 1;
-                color: #FFFFFF;
-                font-weight: 500;
-                margin-top: 0rem;
-            }
-
-            .confirm-policy p {
-                font-size: 14px;
-                color: #059848;
-            }
-        }
-
-        @media screen and (max-width: 426px) {
-            .btn-Submit {
-                width: 286.97px;
-                height: 68.14px;
-                margin-top: 2rem;
-            }
-
-            .btn-Submit p {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 1;
-                color: #FFFFFF;
-                font-weight: 500;
-                margin-top: -0.3rem;
-                font-size: 25px;
-            }
-        }
-
-        .last-banner {
-            width: 100%;
-            height: 70vh;
-        }
-
-        .last-banner img {
-            width: 100%;
-            height: 70vh;
-            object-fit: cover;
-        }
-
-        @media screen and (max-width: 769px) {
-            .last-banner {
-                width: 100%;
-                height: 50vh;
-            }
-
-            .last-banner img {
-                width: 100%;
-                height: 50vh;
-                object-fit: cover;
-            }
-
-        }
-
-
-        @media screen and (max-width: 426px) {
-            .last-banner {
-                width: 100%;
-                height: 40vh;
-            }
-
-            .last-banner img {
-                width: 100%;
-                height: 40vh;
-                object-fit: cover;
-            }
-
-        }
-
-
-
-
-
-
-
-
-        .showcommoditylist {
-            width: 100%;
-            height: auto;
-            background-color: #059848;
-            color: #ffffff;
-            border-radius: 24.5px;
-            padding-left: 1rem;
-        }
-
-        .wrapper-contact .choose-field {
-            width: 100%;
-            height: 49px;
-            border-radius: 24.5px;
-            background-color: #ECECEC;
-            padding-left: 1.5rem;
-            font-size: 16px !important;
-            margin-bottom: 0.5rem;
-            outline: none !important;
-            padding-top: 0.7rem
-        }
-
-
-
-        /* banner style */
-
-        .main-banner .wrapper-banner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding-left: 5rem;
-            padding-right: 5rem;
-            gap: 5rem !important;
-            position: relative
-        }
-
-        .main-banner .banner-img {
-            position: absolute;
-            width: 100%;
-            height: 120vh;
-            top: 0%;
-            z-index: -1;
-            object-fit: cover;
-        }
-
-        .banner-content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .banner-content .main-banner-h1-bg {
-            text-align: center;
-        }
-
-        .wrapper-banner .logo-video {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .wrapper-banner .home-banner-logo {
-            width: 400px !important;
-        }
-
-        .banner-content .main-banner-h1-bg h1 {
-            font-size: 70px;
-        }
-
-        .banner-content .main-banner-p-bg p {
-            font-size: 16px;
-        }
-
-        .banner-content .main-banner-p-bg {
-            width: 500px;
-        }
-
-        @media screen and (max-width: 1025px) {
-            .main-banner .wrapper-banner {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
-            }
-
-            .banner-content .main-banner-h1-bg {
-                text-align: center;
-            }
-
-            .wrapper-banner .home-banner-logo {
-                width: 300px !important;
-            }
-
-            .banner-content .main-banner-h1-bg h1 {
-                font-size: 55px;
-            }
-
-            .banner-content .main-banner-p-bg {
-                width: 350px !important;
-            }
-
-            .banner-content .main-banner-p-bg p {
-                font-size: 16px;
-            }
-        }
-
-        @media screen and (max-width: 769px) {
-            .main-banner .wrapper-banner {
-                display: grid;
-                grid-template-columns: 1fr;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                margin-top: -4rem
-            }
-
-            .banner-content .main-banner-h1-bg {
-                text-align: center;
-            }
-
-            .wrapper-banner .home-banner-logo {
-                width: 250px !important;
-            }
-
-            .banner-content .main-banner-h1-bg {
-                width: 100% !important
-            }
-
-
-            .banner-content .main-banner-h1-bg h1 {
-                font-size: 40px;
-            }
-
-            .banner-content .main-banner-p-bg {
-                width: 100% !important;
-            }
-
-            .banner-content .main-banner-p-bg p {
-                font-size: 16px;
-            }
-
-            .first-card {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                margin-top: 7% !important;
-            }
-
-
-            .main-banner .banner-img {
-                position: absolute;
-                width: 100%;
-                height: 130vh;
-                top: 0%;
-                z-index: -1;
-                object-fit: cover;
-            }
-        }
-
-
-        @media screen and (max-width: 641px) {
-            .main-banner .wrapper-banner {
-                display: grid;
-                grid-template-columns: 1fr;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                margin-top: 15rem
-            }
-
-            .first-card {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                margin-top: 50% !important;
-            }
-
-            .main-banner .banner-img {
-                position: absolute;
-                width: 100%;
-                height: 150vh;
-                top: 0%;
-                z-index: -1;
-                object-fit: cover;
-            }
-        }
-
-        @media screen and (max-width: 426px) {
-            .main-banner .wrapper-banner {
-                display: grid;
-                grid-template-columns: 1fr;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                gap: 1rem;
-                margin-top: 15rem;
-            }
-
-            .banner-content .main-banner-h1-bg {
-                text-align: center;
-            }
-
-            .wrapper-banner .home-banner-logo {
-                width: 200px !important;
-            }
-
-            .banner-content .main-banner-h1-bg h1 {
-                font-size: 40px;
-            }
-
-            .banner-content .main-banner-p-bg {
-                width: 100% !important;
-            }
-
-            .banner-content .main-banner-p-bg p {
-                font-size: 14px;
-            }
-
-            .first-card {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                margin-top: 70% !important;
-            }
-        }
-
-        /* popup animate */
-
-
-        .popup {
-            opacity: 0;
-            transform: scale(0.6);
-            animation: popupIn 1s ease-out forwards;
-        }
-
-        /* Keyframe animation */
-        @keyframes popupIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.6);
-            }
-
-            60% {
-                opacity: 1;
-                transform: scale(1.05);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
         .partner-main {
             width: 100%;
             height: 100%;
@@ -1115,9 +575,473 @@
             }
         }
 
+        .wrapper-contact {
+            margin-top: 15rem;
+            margin-bottom: 3rem;
+            padding-top: 1rem;
+            width: 100%;
+            padding-left: 5rem !important;
+            padding-right: 5rem !important;
+        }
+
+        .wrapper-contact p {
+            text-align: center;
+            color: #059848;
+            font-size: 30px;
+        }
+
+
+
+        .wrapper-contact .input-field input {
+            width: 100%;
+            height: 49px;
+            border-radius: 24.5px;
+            background-color: #ECECEC;
+            padding-left: 1.5rem;
+            font-size: 16px !important;
+            margin-bottom: 0.5rem;
+            outline: none !important;
+        }
+
+        .wrapper-contact .input-field input::placeholder {
+            font-size: 16px !important;
+            color: #394552 !important;
+        }
+
+        .wrapper-contact .input-field input:focus {
+            border: 1px solid #059848 !important;
+        }
+
+        .wrapper-contact .input-field textarea {
+            width: 100%;
+            max-height: auto;
+            border-radius: 24.5px;
+            background-color: #ECECEC;
+            padding-left: 1.5rem;
+            font-size: 16px !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .wrapper-contact .input-field textarea::placeholder {
+            color: #394552;
+        }
+
+        .wrapper-contact .input-field textarea:focus {
+            border: 1px solid #059848 !important;
+        }
+
+
+        .wrapper-contact .input-field select {
+            width: 100%;
+            height: 49px;
+            border-radius: 24.5px;
+            background-color: #ECECEC;
+            padding-left: 1.5rem;
+            font-size: 16px !important;
+            margin-bottom: 0.5rem;
+            outline: none !important;
+            border: 1px solid #394552;
+        }
+
+        .wrapper-contact .input-field select option {
+            background-color: #059848;
+            color: #ffffff
+        }
+
+        .confirm-policy {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .confirm-policy input[type="checkbox"] {
+            width: 27px;
+            height: 27px;
+            border-radius: 100px;
+            background-color: #059848;
+            border: none;
+        }
+
+        .confirm-policy input[type="checkbox"]:focus,
+        .confirm-policy input[type="checkbox"]:active {
+            box-shadow: none;
+            background-color: #059848;
+        }
+
+        .confrim-policy-text {
+            width: 25rem;
+        }
+
+        .confirm-policy p {
+            font-size: 15px;
+            color: #059848;
+        }
+
+        .btn-Submit {
+            position: relative;
+            width: 396.97px;
+            height: 80.14px;
+            margin-top: 2rem;
+        }
+
+        .btn-Submit img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+        }
+
+        .btn-Submit p {
+            position: absolute;
+            top: 47%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            color: #FFFFFF;
+            font-weight: 500;
+            margin-top: 0.2rem;
+            font-size: 35px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+
+            .wrapper-contact {
+                margin-top: 5rem;
+                padding-top: 1rem;
+                width: 100%;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .btn-Submit {
+                width: 356.97px;
+                height: 75.14px;
+                margin-top: 2rem;
+            }
+
+            .btn-Submit p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                color: #FFFFFF;
+                font-weight: 500;
+                margin-top: 0rem;
+            }
+
+            .confirm-policy p {
+                font-size: 14px;
+                color: #059848;
+            }
+        }
+
+        @media screen and (max-width: 426px) {
+            .btn-Submit {
+                width: 286.97px;
+                height: 68.14px;
+                margin-top: 2rem;
+            }
+
+            .btn-Submit p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                color: #FFFFFF;
+                font-weight: 500;
+                margin-top: -0.3rem;
+                font-size: 25px;
+            }
+        }
+
+        .last-banner {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .last-banner img {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 769px) {
+            .last-banner {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .last-banner img {
+                width: 100%;
+                height: 50vh;
+                object-fit: cover;
+            }
+        }
+
+        @media screen and (max-width: 426px) {
+            .last-banner {
+                width: 100%;
+                height: 40vh;
+            }
+
+            .last-banner img {
+                width: 100%;
+                height: 40vh;
+                object-fit: cover;
+            }
+
+        }
+
+
+        .showcommoditylist {
+            width: 100%;
+            height: auto;
+            background-color: #059848;
+            color: #ffffff;
+            border-radius: 24.5px;
+            padding-left: 1rem;
+        }
+
+        .wrapper-contact .choose-field {
+            width: 100%;
+            height: 49px;
+            border-radius: 24.5px;
+            background-color: #ECECEC;
+            padding-left: 1.5rem;
+            font-size: 16px !important;
+            margin-bottom: 0.5rem;
+            outline: none !important;
+            padding-top: 0.7rem
+        }
+
+        /* banner style */
+
+        .main-banner .wrapper-banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            gap: 5rem !important;
+            position: relative
+        }
+
+        .main-banner .banner-img {
+            position: absolute;
+            width: 100%;
+            height: 120vh;
+            top: 0%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .banner-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-content .main-banner-h1-bg {
+            text-align: center;
+        }
+
+        .wrapper-banner .logo-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .wrapper-banner .home-banner-logo {
+            width: 400px !important;
+        }
+
+        .banner-content .main-banner-h1-bg h1 {
+            font-size: 70px;
+        }
+
+        .banner-content .main-banner-p-bg p {
+            font-size: 16px;
+        }
+
+        .banner-content .main-banner-p-bg {
+            width: 500px;
+        }
+
+        @media screen and (max-width: 1025px) {
+            .main-banner .wrapper-banner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+
+            .banner-content .main-banner-h1-bg {
+                text-align: center;
+            }
+
+            .wrapper-banner .home-banner-logo {
+                width: 300px !important;
+            }
+
+            .banner-content .main-banner-h1-bg h1 {
+                font-size: 55px;
+            }
+
+            .banner-content .main-banner-p-bg {
+                width: 350px !important;
+            }
+
+            .banner-content .main-banner-p-bg p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 769px) {
+            .main-banner .wrapper-banner {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-top: -4rem
+            }
+
+            .banner-content .main-banner-h1-bg {
+                text-align: center;
+            }
+
+            .wrapper-banner .home-banner-logo {
+                width: 250px !important;
+            }
+
+            .banner-content .main-banner-h1-bg {
+                width: 100% !important
+            }
+
+
+            .banner-content .main-banner-h1-bg h1 {
+                font-size: 40px;
+            }
+
+            .banner-content .main-banner-p-bg {
+                width: 100% !important;
+            }
+
+            .banner-content .main-banner-p-bg p {
+                font-size: 16px;
+            }
+
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin-top: 7% !important;
+            }
+
+
+            .main-banner .banner-img {
+                position: absolute;
+                width: 100%;
+                height: 130vh;
+                top: 0%;
+                z-index: -1;
+                object-fit: cover;
+            }
+        }
+
+
+        @media screen and (max-width: 641px) {
+            .main-banner .wrapper-banner {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-top: 15rem
+            }
+
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin-top: 75% !important;
+            }
+        }
+
+        @media screen and (max-width: 426px) {
+            .main-banner .wrapper-banner {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                gap: 1rem;
+                margin-top: 15rem;
+            }
+
+            .banner-content .main-banner-h1-bg {
+                text-align: center;
+            }
+
+            .wrapper-banner .home-banner-logo {
+                width: 200px !important;
+            }
+
+            .banner-content .main-banner-h1-bg h1 {
+                font-size: 40px;
+            }
+
+            .banner-content .main-banner-p-bg {
+                width: 100% !important;
+            }
+
+            .banner-content .main-banner-p-bg p {
+                font-size: 14px;
+            }
+
+            .first-card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin-top: 95% !important;
+            }
+        }
+
+        /* popup animate */
+
+
+        .popup {
+            opacity: 0;
+            transform: scale(0.6);
+            animation: popupIn 1s ease-out forwards;
+        }
+
+        /* Keyframe animation */
+        @keyframes popupIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.6);
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
     </style>
+
     <section>
         <div class="main-banner relative">
+           <!-- <img class="banner-img" src="{{ asset('assets/images/banner-img-1.png') }}">  -->
             <video autoplay muted loop playsinline class="absolute banner-img inset-0 z-[-10] object-cover w-full h-full"
                 poster="fallback-image.jpg">
                 <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
@@ -1133,59 +1057,79 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ការនាំចូលទំនិញ' : '商品物资') }}</h1>
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? '' : '') }}</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">
+                            {{ app()->getLocale() === 'en' ? 'Main' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}
+                        </h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">
+                            {{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? '' : '') }}
+                        </h1>
                     </div>
                     <div class="main-banner-p-bg">
                         <p data-aos="zoom-in-up" data-aos-duration="1400">
-                            {{ app()->getLocale() === 'en' ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes & Cassava, Exported Worldwide with Quality You Can Trust.' 
-                            : (app()->getLocale() === 'km' ? 'ផលិតផលកសិកម្មកម្ពុជារួមមាន អង្ករ កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំណាប់ស្វាយ និងដំឡូងមី ត្រូវបាននាំចេញទៅកាន់ទីផ្សារពិភពលោកជាមួយនឹងគុណភាពដែលលោកអ្នកអាចទុកចិត្តបាន។' 
-                            : '优质柬埔寨农产品——大米、咖啡、玉米、腰果、芒果和木薯，出口全球，品质值得信赖') }}
+                            {{ app()->getLocale() === 'en'
+                                ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
+                                                                                    & Cassava, Exported Worldwide with Quality You Can Trust.'
+                                : (app()->getLocale() === 'km'
+                                    ? 'ផលិតផលកសិកម្មកម្ពុជារួមមាន អង្ករ កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំណាប់ស្វាយ និងដំឡូងមី ត្រូវបាននាំចេញទៅកាន់ទីផ្សារពិភពលោកជាមួយនឹងគុណភាពដែលលោកអ្នកអាចទុកចិត្តបាន។'
+                                    : '优质柬埔寨农产品-大米，咖啡，玉米，腰果，芒果和木薯，出口到世界各地，质量值得信赖。') }}
                         </p>
                     </div>
-                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#first-card">
-                        <button class="btn-Interest-to-export">
-                            {{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : '进口兴趣') }}
-                        </button>
-                    </a>
+                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#interest"><button
+                            class="btn-Interest-to-export">
+                            {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}
+                        </button></a>
                 </div>
             </div>
         </div>
         </div>
     </section>
-
     <section id="first-card">
         <div class="first-card">
             <div class="first-card-background">
                 <img src="{{ asset('assets/images/second-bg.png') }}">
             </div>
-            <div class="main-card-product">
-                <div class="container">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-4">
-                        {{-- item 1 --}}
-                        <div class="">
+            <div class="main-card-product" id="interest">
+                <div class="container mt-[-140px]">
+                    <div class="row gap-y-20">
+                    <h2 class="text-[25px] md:text-[50px] text-[#059848] leading-tight fw-bolder pb-2">Main Commodities</h2>
+                        <div class="col-lg-4 col-md-6 col-12" id="rice">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Premium Rice Varieties' : (app()->getLocale() === 'km' ? 'ពូជអង្ករលំដាប់ខ្ពស់' : '优质水稻品种') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality imported aromatic and medium-grain rice varieties trusted by international buyers.' : (app()->getLocale() === 'km' ? 'ពូជអង្ករក្រអូបនាំចូល និងពូជអង្ករកម្រិតមធ្យមប្រកបដោយគុណភាពខ្ពស់ដែលអតិថិជនអាចទុកចិត្តបាន។' : '优质进口香米、中粒米品种，深受国际买家信赖。') }}',
-                                        img: '{{ asset('assets/images/import/premium _rice.jpg') }}'
+                                        title: '{{ app()->getLocale() === 'en' ? 'Grains & Cereals' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ' : '谷物和谷类食品') }}',
+                                        desc: '{{ app()->getLocale() === 'en'
+                                            ? 'High-quality, farm-sourced grains trusted by local farmers and global buyers.'
+                                            : (app()->getLocale() === 'km'
+                                                ? 'គ្រាប់ធញ្ញជាតិប្រកបដោយគុណភាពខ្ពស់មានប្រភពច្បាស់លាស់ដែលកសិករក្នុងស្រុក និងអ្នកទិញទូទាំងពិភពលោកអាចជឿទុកចិត្តបាន។'
+                                                : '高品质、农场采购的谷物，深受当地农民和全球买家的信赖。') }}',
+                                        img: '{{ asset('assets/images/export/cereals.jpg') }}'
                                     },
-                                    basmati: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី (ឥណ្ឌា)' : '印度巴斯马蒂大米（印度）') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium long-grain basmati rice imported from India with rich aroma and superior quality.' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទីគ្រាប់វែង នាំចូលពីប្រទេសឥណ្ឌា មានក្លិនក្រអូបឈ្ងុយឆ្ងាញ់ និងគុណភាពខ្ពស់។' : '印度进口优质长粒香米，香气浓郁，品质优越') }}',
-                                        img: '{{ asset('assets/images/import/rice.jpg') }}'
+
+                                    rice: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : '大米') }}',
+                                        desc: '{{ app()->getLocale() === 'en'
+                                            ? 'Premium export-quality rice carefully processed to meet international food standards.'
+                                            : (app()->getLocale() === 'km'
+                                                ? 'អង្ករ​ដែល​មាន​គុណភាព​ខ្ពស់​សម្រាប់​នាំចេញ។'
+                                                : '优质出口级大米，经过精心加工，符合国际食品标准。') }}',
+                                        img: '{{ asset('assets/images/export/rice.jpg') }}'
                                     },
-                                    corn: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-grade yellow corn suitable for food processing and animal feed.' : (app()->getLocale() === 'km' ? 'ពោតលឿងប្រកបដោយគុណភាពខ្ពស់ ស័ក្តិសមសម្រាប់កែច្នៃអាហារ និងចំណីសត្វ។' : '适用于食品加工和动物饲料的高档黄玉米。') }}',
-                                        img: '{{ asset('assets/images/export-card-product-1.png') }}'
+
+                                    yellow_corn: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄玉米') }}',
+                                        desc: '{{ app()->getLocale() === 'en'
+                                            ? 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.'
+                                            : (app()->getLocale() === 'km'
+                                                ? 'ពោតលឿងគុណភាពខ្ពស់ ស័ក្តិសមសម្រាប់ចំណីសត្វ ការកែច្នៃអាហារ និងការប្រើប្រាស់ក្នុងឧស្សាហកម្ម។'
+                                                : '高品质的黄玉米，可用于动物饲料、食品加工以及工业用途。') }}',
+                                        img: '{{ asset('assets/images/card-3.png') }}'
                                     }
+
                                 }
                             }">
                                 <!-- Image -->
-                                <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
 
                                 <div class="card-product-detail">
                                     <!-- Title -->
@@ -1196,14 +1140,14 @@
 
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
-                                        <!-- Basmati -->
-                                        <button x-show="active === 'default'" @click="active = 'basmati'">
-                                            {{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី (ឥណ្ឌា)' : '印度巴斯马蒂大米（印度）') }}
+                                        <!-- Fresh Mango -->
+                                        <button x-show="active === 'default'" @click="active = 'rice'">
+                                            {{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : '大米') }}
                                         </button>
 
-                                        <!-- Yellow Corn -->
-                                        <button x-show="active === 'default'" @click="active = 'corn'">
-                                           {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}
+                                        <!-- Dried Mango -->
+                                        <button x-show="active === 'default'" @click="active = 'yellow_corn'">
+                                            {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄玉米') }}
                                         </button>
 
                                         <!-- Back -->
@@ -1214,11 +1158,9 @@
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button>
-                                            <a href="#contact" class="text-[#fff] decoration-transparent">
-                                                {{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : '进口兴趣') }}
-                                            </a>
-                                        </button>
+                                        <button><a href="#contact"
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}
+                                            </a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1229,40 +1171,30 @@
                             </div>
                         </div>
 
-                        {{-- item 2 --}}
-                        <div class="">
+
+                        <div class="col-lg-4 col-md-6 col-12" id="fruits">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Whole Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេសទាំងមូល' : '整个香料') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Sourced from reputable growers to ensure purity, aroma, and strong market demand.' : (app()->getLocale() === 'km' ? 'ទទួលទិញពីប្រភពដែលមានកេរ្តិ៍ឈ្មោះល្អ ដើម្បីធានាបាននូវគុណភាព ក្លិនឈ្ងុយ និងមានតម្រូវការទីផ្សារខ្លាំង។' : '采购自信誉良好的种植者，以确保纯度') }}',
-                                        img: '{{ asset('assets/images/export/spices.jpg') }}'
+                                        title: '{{ app()->getLocale() === 'en' ? 'Fruits Products' : (app()->getLocale() === 'km' ? 'ផលិតផលផ្លែឈើ' : '水果制品') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.' : (app()->getLocale() === 'km' ? 'ផ្លែឈើស្រស់ និងផ្លែឈើកែច្នៃ ប្រមូលផលនៅពេលទុំដើម្បីទទួលបានឱជារស និងគុណភាពខ្ពស់។' : '新鲜且经过加工的水果均在成熟度最佳时采摘，以确保其风味和品质达到最高水平。') }}',
+                                        img: '{{ asset('assets/images/export/fruits.jpg') }}'
                                     },
-                                    cumin: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ជីអង្កាម' : '香气和强劲的市场需求。') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality whole cumin seeds with strong aroma for global spice markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់​ជីអង្កាម​ជាមួយ​នឹង​ក្លិន​ឈ្ងុយ​ខ្លាំង​សម្រាប់​ទីផ្សារ​គ្រឿងទេស​ពិភពលោក។' : '高品质全孜然种子，香气浓郁，畅销全球香料市场。') }}',
-                                        img: '{{ asset('assets/images/import/cumin_seed.jpg') }}'
+                                    fresh_mango: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : '新鲜芒果') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់ៗ គុណភាពនាំចេញ ជាមួយនឹងរសជាតិឈ្ងុយឆ្ងាញ់ និងផ្អែមធម្មជាតិ។' : '出口级新鲜芒果，味道浓郁，甜度自然。') }}',
+                                        img: '{{ asset('assets/images/export-card-product-2.png') }}'
                                     },
-                                    turmeric: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'រមៀត' : '子姜黄（整个）') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Whole turmeric roots known for vibrant color and medicinal properties.' : (app()->getLocale() === 'km' ? '​រមៀត​មានចម្រុះពណ៌ និង​មាន​លក្ខណៈសម្បត្តិ​ជាឱសថ។' : '整个姜黄根以鲜艳的颜色和药用特性而闻名。') }}',
-                                        img: '{{ asset('assets/images/import/turmeric-1.jpg') }}'
-                                    },
-                                    red_pepper: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម ' : 'Red Peppers (Whole)') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Whole dried red peppers with bold heat and rich color.' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហមមានរសជាតិហឹរខ្លាំង និងមានចម្រុះពណ៌។' : '整个干红椒，辣味浓烈，色泽丰富') }}',
-                                        img: '{{ asset('assets/images/import/red_peppers.jpg') }}'
-                                    },
-                                    cardamom: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញ ' : '小豆蔻(绿色)') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium green cardamom pods with intense aroma and flavor.' : (app()->getLocale() === 'km' ? 'ផ្លែក្រវាញបៃតងគុណភាពខ្ពស់ ជាមួយនឹងក្លិនក្រអូប និងរសជាតិដិត។' : '优质绿色小豆蔻豆荚，香气浓郁。') }}',
-                                        img: '{{ asset('assets/images/import/cardamom.jpg') }}'
+                                    dried_mango: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : '芒果干') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Carefully dried mango slices for long shelf life and premium taste.' : (app()->getLocale() === 'km' ? 'ចំណិតស្វាយហាលស្ងួតល្អដើម្បីទទួលបានកាលបរិច្ឆេទរក្សាទុកបានយូរអង្វែង និងរសជាតិឆ្ងាញ់។' : '精心干燥处理的芒果片，保质期长且口感上乘。') }}',
+                                        img: '{{ asset('assets/images/export/dry_mango.jpg') }}'
                                     }
                                 }
                             }">
                                 <!-- Image -->
-                                <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
 
                                 <div class="card-product-detail">
                                     <!-- Title -->
@@ -1273,31 +1205,26 @@
 
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
-                                        <button x-show="active === 'default'" @click="active = 'cumin'">
-                                            {{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ជីអង្កាម' : '薄荷籽') }}
+                                        <!-- Fresh Mango -->
+                                        <button x-show="active === 'default'" @click="active = 'fresh_mango'">
+                                            {{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : '新鲜芒果') }}
                                         </button>
 
-                                        <button x-show="active === 'default'" @click="active = 'turmeric'">
-                                            {{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'រមៀត' : '子姜黄（整个）') }}
-                                        </button>
-
-                                        <button x-show="active === 'default'" @click="active = 'red_pepper'">
-                                            {{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម ' : '红辣椒（整个）') }}
-                                        </button>
-
-                                        <button x-show="active === 'default'" @click="active = 'cardamom'">
-                                            {{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញ ' : '小豆蔻(绿色)') }}
+                                        <!-- Dried Mango -->
+                                        <button x-show="active === 'default'" @click="active = 'dried_mango'">
+                                            {{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : '芒果干') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : ' 进口兴趣') }}</a></button>
+                                        <button><a href="#contact"
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1308,30 +1235,29 @@
                             </div>
                         </div>
 
-                        {{-- item 3 --}}
-                        <div class="">
+                        <div class="col-lg-4 col-md-6 col-12" id="nuts">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Spice Powders' : (app()->getLocale() === 'km' ? 'ម្សៅគ្រឿងទេស ' : '香料粉') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Finely milled premium spice powders ready for wholesale and reprocessing.' : (app()->getLocale() === 'km' ? 'ម្សៅគ្រឿងទេសគុណភាពខ្ពស់កិនល្អិតៗរួចរាល់សម្រាប់លក់ដុំ និងកែច្នៃឡើងវិញ។ ' : '精细研磨的优质香料粉末准备批发和再加工。') }}',
-                                        img: '{{ asset('assets/images/import/spices_powder.jpg') }}'
+                                        title: '{{ app()->getLocale() === 'en' ? 'Nuts & Legumes' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​' : '坚果和豆类') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium-grade nuts and legumes sourced from trusted Cambodian farmers.' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​​លំដាប់​ខ្ពស់​ដែល​មាន​ប្រភព​មក​ពី​កសិករ​ក្នុងស្រុក​ប្រកបដោយទំនុកចិត្ត។' : '优质的坚果和豆类均来自可信赖的柬埔寨农民所种植的作物。') }}',
+                                        img: '{{ asset('assets/images/export-card-product-3.png') }}'
                                     },
-                                    turmeric_powder: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Turmeric Powder' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀត ' : '姜黄粉') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium turmeric powder with vibrant color and strong aroma for food processing.' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀតគុណភាពខ្ពស់ជាមួយនឹងចម្រុះពណ៌ និងក្លិនក្រអូបដិត សម្រាប់កែច្នៃអាហារ។ ' : '优质的姜黄粉，颜色鲜艳，香气浓郁，适合食品加工。') }}',
-                                        img: '{{ asset('assets/images/import/turmeric.jpg') }}'
+                                    cashew: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' : '高品质的柬埔寨腰果，适合出口全球市场。') }}',
+                                        img: '{{ asset('assets/images/export/nuts.jpg') }}'
                                     },
-                                    red_pepper_powder: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម ' : '红辣椒粉') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality red pepper powder with rich color and balanced heat.' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហមដែលមានគុណភាពខ្ពស់ ជាមួយនឹងពណ៌សម្បូរបែប។ ' : '优质红椒粉，色泽丰富，辣度均衡。') }}',
-                                        img: '{{ asset('assets/images/import/red_peppers_powder.jpg') }}'
+                                    peanut: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : '花生') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium peanuts processed for food and industrial use.' : (app()->getLocale() === 'km' ? 'សណ្តែកដីប្រកបដោយគុណភាពខ្ពស់កែច្នៃសម្រាប់ម្ហូបអាហារ និងការប្រើប្រាស់ក្នុងឧស្សាហកម្មនានា។' : '优质花生，用于食品和工业加工。') }}',
+                                        img: '{{ asset('assets/images/export/peanut.jpg') }}'
                                     }
                                 }
                             }">
                                 <!-- Image -->
-                                <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
 
                                 <div class="card-product-detail">
                                     <!-- Title -->
@@ -1342,29 +1268,28 @@
 
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
-                                        <!-- Turmeric Powder -->
-                                        <button x-show="active === 'default'" @click="active = 'turmeric_powder'">
-                                            {{ app()->getLocale() === 'en' ? 'Turmeric Powder' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀត ' : '姜黄粉') }}
+                                        <!-- Cashew -->
+                                        <button x-show="active === 'default'" @click="active = 'cashew'">
+                                            {{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}
                                         </button>
 
-                                        <!-- Red Pepper Powder -->
-                                        <button x-show="active === 'default'" @click="active = 'red_pepper_powder'">
-                                            {{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម ' : '红辣椒粉') }}
+                                        <!-- Peanut -->
+                                        <button x-show="active === 'default'" @click="active = 'peanut'">
+                                            {{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : '花生') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button>
-                                            <a href="#contact" class="text-[#fff] decoration-transparent">
-                                                {{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : '进口兴趣') }}
-                                            </a>
-                                        </button>
+                                        <div class="btn-card-interest-to-export">
+                                            <button><a href="#contact"
+                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                        </div>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1373,27 +1298,26 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {{-- item 4 --}}
-                        <div class="">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12" id="root_crops">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Dehydrated Vegetables' : (app()->getLocale() === 'km' ? 'បន្លែសម្ងួត' : '脱水蔬菜') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Long-shelf-life dehydrated garlic and onion products ideal for food production and distribution.' : (app()->getLocale() === 'km' ? 'ផលិតផលខ្ទឹមស ដែលមានកាលបរិច្ឆេទប្រើប្រាស់បានយូរ ស័ក្តិសមសម្រាប់ការផលិត និងចែកចាយអាហារ។' : '长保质期脱水大蒜和洋葱产品的理想食品生产和分销。') }}',
-                                        img: '{{ asset('assets/images/import/dehydrated_vegetables.jpg') }}'
+                                        title: '{{ app()->getLocale() === 'en' ? 'Root Crops' : (app()->getLocale() === 'km' ? 'ដំណាំ​មើម' : '根茎类作物') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Processed and dried cassava ideal for industrial and export applications.' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​កែច្នៃ និង​សម្ងួត​ល្អ​សម្រាប់​ការ​ប្រើប្រាស់​ក្នុង​ឧស្សាហកម្ម និង​ការ​នាំ​ចេញ​។' : '经过加工和干燥处理的木薯非常适合用于工业生产及出口用途。') }}',
+                                        img: '{{ asset('assets/images/export/root_crops.jpg') }}'
                                     },
-                                    garlic: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹមសស្ងួត' : '干蒜') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium dehydrated garlic with strong aroma and extended shelf life for global food markets.' : (app()->getLocale() === 'km' ? 'ខ្ទឹមសស្ងួតគុណភាពខ្ពស់ ជាមួយនឹងក្លិនក្រអូបខ្លាំង និងកាលបរិច្ឆេទរក្សាទុកបានយូរសម្រាប់ទីផ្សារម្ហូបអាហារពិភពលោក។' : '优质脱水大蒜，香气浓郁，保质期延长，畅销全球食品市场。') }}',
-                                        img: '{{ asset('assets/images/import/garlic.jpg') }}'
+                                    cassava: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' : '高品质的干木薯，适用于工业加工及国际出口。') }}',
+                                        img: '{{ asset('assets/images/export-card-product-4.png') }}'
                                     }
                                 }
                             }">
                                 <!-- Image -->
-                                <img class="card-product-bg  h-[250px] object-cover" :src="products[active].img">
+                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
 
                                 <div class="card-product-detail">
                                     <!-- Title -->
@@ -1404,21 +1328,22 @@
 
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
-                                        <!-- Dried Garlic -->
-                                        <button x-show="active === 'default'" @click="active = 'garlic'">
-                                            {{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹមសស្ងួត' : '干蒜') }}
+                                        <!-- Dried Cassava -->
+                                        <button x-show="active === 'default'" @click="active = 'cassava'">
+                                            {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : '进口兴趣') }}</a></button>
+                                        <button><a href="#contact"
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1427,180 +1352,131 @@
                                     </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12" id="spices">
+                            <div class="card-product" x-data="{
+                                active: 'default',
+                                products: {
+                                    default: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេស' : '香料') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : (app()->getLocale() === 'km' ? 'ម្រេចដ៏ឈ្ងុយរបស់​កម្ពុជាមាន​កេរ្តិ៍ឈ្មោះ​ល្បីល្បាញ​ទូទាំង​ពិភពលោក ជាមួយនឹង​រសជាតិ​ឆ្ងាញ់។' : '具有浓郁香气的柬埔寨胡椒，以其全球知名的声誉和丰富的风味而著称。') }}',
+                                        img: '{{ asset('assets/images/export/spices.jpg') }}'
+                                    },
+                                    pepper: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'ម្រេចកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញអន្តរជាតិ។' : '高品质的柬埔寨辣椒，适合出口至国际市场的使用。') }}',
+                                        img: '{{ asset('assets/images/export-card-product-5.png') }}'
+                                    }
+                                }
+                            }">
+                                <!-- Image -->
+                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
+                                <div class="card-product-detail">
+                                    <!-- Title -->
+                                    <h5 x-text="products[active].title"></h5>
+
+                                    <!-- Description -->
+                                    <p x-text="products[active].desc"></p>
+
+                                    <!-- Buttons -->
+                                    <div class="smaill-detail-card">
+                                        <!-- Pepper -->
+                                        <button x-show="active === 'default'" @click="active = 'pepper'">
+                                            {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}
+                                        </button>
+
+                                        <!-- Back -->
+                                        <button x-show="active !== 'default'" @click="active = 'default'"
+                                            class="btn-back">
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
+                                        </button>
+                                    </div>
+
+                                    <!-- Interest Button -->
+                                    <div class="btn-card-interest-to-export">
+                                        <button><a href="#contact"
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                    </div>
+
+                                    <!-- Card Number -->
+                                    <div class="card-no">
+                                        <p>{{ app()->getLocale() === 'en' ? '05' : (app()->getLocale() === 'km' ? '០៥' : '05') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
 
+                        <div class="col-lg-4 col-md-6 col-12" id="coffee">
+                            <div class="card-product" x-data="{
+                                active: 'default',
+                                products: {
+                                    default: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡与饮品') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។' : '精选的优质柬埔寨咖啡豆，按照国际标准精心挑选并出口。') }}',
+                                        img: '{{ asset('assets/images/export-card-product-6.png') }}'
+                                    },
+                                    coffee: {
+                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' : '采用优质原料烘焙而成的柬埔寨咖啡豆，专为全球出口市场而生产。') }}',
+                                        img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
+                                    }
+                                }
+                            }">
+                                <!-- Image -->
+                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
+
+                                <div class="card-product-detail">
+                                    <!-- Title -->
+                                    <h5 x-text="products[active].title"></h5>
+
+                                    <!-- Description -->
+                                    <p x-text="products[active].desc"></p>
+
+                                    <!-- Buttons -->
+                                    <div class="smaill-detail-card">
+                                        <!-- Coffee Beans -->
+                                        <button x-show="active === 'default'" @click="active = 'coffee'">
+                                            {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
+                                        </button>
+
+                                        <!-- Back -->
+                                        <button x-show="active !== 'default'" @click="active = 'default'"
+                                            class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
+
+                                        </button>
+                                    </div>
+                                    <div class="btn-card-interest-to-export">
+                                        <button><a href="#contact"
+                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                    </div>
+
+                                    <!-- Card Number -->
+                                    <div class="card-no">
+                                        <p>{{ app()->getLocale() === 'en' ? '06' : (app()->getLocale() === 'km' ? '០៦' : '06') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+        </div>
     </section>
-
+   
+    <section class="mt-[-100px]">
+        @include('frontend.include.import')
+     </section>
     <section>
-
-        {{-- <div class="partner-main">
-            <img class="partner-bg" src="{{ asset('assets/images/bg-3.png') }}">
-            <h1>Why Partner with RSL Trading?</h1>
-
-            <div class="partner-card-wrapper">
-                <div class="partner-card">
-                    <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_47_4715" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                            width="82" height="82">
-                            <path d="M80.5 80.5V1.5H1.5V80.5H80.5Z" fill="white" stroke="white" stroke-width="3" />
-                        </mask>
-                        <g mask="url(#mask0_47_4715)">
-                            <path
-                                d="M8.00732 45.9648C8.89139 45.9648 9.60889 46.6823 9.60889 47.5664C9.60889 48.4505 8.89139 49.168 8.00732 49.168C7.12326 49.168 6.40576 48.4505 6.40576 47.5664C6.40576 46.6823 7.12326 45.9648 8.00732 45.9648Z"
-                                fill="white" />
-                            <path
-                                d="M14.4136 66.7948C14.4088 68.5598 12.977 69.9883 11.2104 69.9883H1.60107V41.1602H11.2104C12.9802 41.1602 14.4136 42.5937 14.4136 44.3633V66.7948Z"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M54.462 59.7943L74.142 53.0295C76.2417 52.2718 78.7289 52.9877 79.7891 54.9496C81.2289 57.6132 79.9685 60.5504 77.5229 61.5288L47.5977 74.705C45.1505 75.8181 42.4935 76.3945 39.8061 76.3945C36.3948 76.3945 33.0475 75.4672 30.1231 73.7119L21.7469 68.6864C19.8138 67.5267 16.6603 66.8766 14.4133 66.7948"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M14.4136 44.3633H27.0931C28.7444 44.3633 30.3667 44.7877 31.8049 45.5981L40.2676 50.3579C40.7481 50.6286 41.2878 50.7695 41.8387 50.7695H52.2105C54.8642 50.7695 57.0151 52.9204 57.0151 55.5742C57.0151 57.368 56.0334 58.9311 54.576 59.7559C53.8777 60.1531 53.0705 60.3789 52.2105 60.3789H35.929"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M27.2183 13.2947C28.5154 8.86784 32.2041 5.5896 37.1078 5.5896C45.0067 5.5896 47.5019 14.5984 47.5019 14.5984C47.5019 14.5984 49.9971 5.5896 57.8976 5.5896C64.0508 5.5896 68.2918 10.7546 68.2918 16.8724C68.2918 24.9685 60.6587 30.388 47.6941 41.6248C39.8841 34.8556 33.5491 30.1257 29.9542 25.4166"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M27.0659 18.0977C27.95 18.0977 28.6675 18.8152 28.6675 19.6992C28.6675 20.5833 27.95 21.3008 27.0659 21.3008C26.1819 21.3008 25.4644 20.5833 25.4644 19.6992C25.4644 18.8152 26.1819 18.0977 27.0659 18.0977Z"
-                                fill="white" />
-                        </g>
-                    </svg>
-                    <h5>Strong Financial Stability</h5>
-                    <p>We have the resources and expertise to handle large-scale exports efficiently and reliably.</p>
-                </div>
-
-
-                <div class="partner-card">
-                    <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_47_4715" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                            width="82" height="82">
-                            <path d="M80.5 80.5V1.5H1.5V80.5H80.5Z" fill="white" stroke="white" stroke-width="3" />
-                        </mask>
-                        <g mask="url(#mask0_47_4715)">
-                            <path
-                                d="M8.00732 45.9648C8.89139 45.9648 9.60889 46.6823 9.60889 47.5664C9.60889 48.4505 8.89139 49.168 8.00732 49.168C7.12326 49.168 6.40576 48.4505 6.40576 47.5664C6.40576 46.6823 7.12326 45.9648 8.00732 45.9648Z"
-                                fill="white" />
-                            <path
-                                d="M14.4136 66.7948C14.4088 68.5598 12.977 69.9883 11.2104 69.9883H1.60107V41.1602H11.2104C12.9802 41.1602 14.4136 42.5937 14.4136 44.3633V66.7948Z"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M54.462 59.7943L74.142 53.0295C76.2417 52.2718 78.7289 52.9877 79.7891 54.9496C81.2289 57.6132 79.9685 60.5504 77.5229 61.5288L47.5977 74.705C45.1505 75.8181 42.4935 76.3945 39.8061 76.3945C36.3948 76.3945 33.0475 75.4672 30.1231 73.7119L21.7469 68.6864C19.8138 67.5267 16.6603 66.8766 14.4133 66.7948"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M14.4136 44.3633H27.0931C28.7444 44.3633 30.3667 44.7877 31.8049 45.5981L40.2676 50.3579C40.7481 50.6286 41.2878 50.7695 41.8387 50.7695H52.2105C54.8642 50.7695 57.0151 52.9204 57.0151 55.5742C57.0151 57.368 56.0334 58.9311 54.576 59.7559C53.8777 60.1531 53.0705 60.3789 52.2105 60.3789H35.929"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M27.2183 13.2947C28.5154 8.86784 32.2041 5.5896 37.1078 5.5896C45.0067 5.5896 47.5019 14.5984 47.5019 14.5984C47.5019 14.5984 49.9971 5.5896 57.8976 5.5896C64.0508 5.5896 68.2918 10.7546 68.2918 16.8724C68.2918 24.9685 60.6587 30.388 47.6941 41.6248C39.8841 34.8556 33.5491 30.1257 29.9542 25.4166"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M27.0659 18.0977C27.95 18.0977 28.6675 18.8152 28.6675 19.6992C28.6675 20.5833 27.95 21.3008 27.0659 21.3008C26.1819 21.3008 25.4644 20.5833 25.4644 19.6992C25.4644 18.8152 26.1819 18.0977 27.0659 18.0977Z"
-                                fill="white" />
-                        </g>
-                    </svg>
-                    <h5>Integrity You Can Trust</h5>
-                    <p>We operate with transparency, honesty, and professionalism in every transaction.</p>
-
-                </div>
-                <div class="partner-card">
-                    <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_47_4715" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                            width="82" height="82">
-                            <path d="M80.5 80.5V1.5H1.5V80.5H80.5Z" fill="white" stroke="white" stroke-width="3" />
-                        </mask>
-                        <g mask="url(#mask0_47_4715)">
-                            <path
-                                d="M8.00732 45.9648C8.89139 45.9648 9.60889 46.6823 9.60889 47.5664C9.60889 48.4505 8.89139 49.168 8.00732 49.168C7.12326 49.168 6.40576 48.4505 6.40576 47.5664C6.40576 46.6823 7.12326 45.9648 8.00732 45.9648Z"
-                                fill="white" />
-                            <path
-                                d="M14.4136 66.7948C14.4088 68.5598 12.977 69.9883 11.2104 69.9883H1.60107V41.1602H11.2104C12.9802 41.1602 14.4136 42.5937 14.4136 44.3633V66.7948Z"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M54.462 59.7943L74.142 53.0295C76.2417 52.2718 78.7289 52.9877 79.7891 54.9496C81.2289 57.6132 79.9685 60.5504 77.5229 61.5288L47.5977 74.705C45.1505 75.8181 42.4935 76.3945 39.8061 76.3945C36.3948 76.3945 33.0475 75.4672 30.1231 73.7119L21.7469 68.6864C19.8138 67.5267 16.6603 66.8766 14.4133 66.7948"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M14.4136 44.3633H27.0931C28.7444 44.3633 30.3667 44.7877 31.8049 45.5981L40.2676 50.3579C40.7481 50.6286 41.2878 50.7695 41.8387 50.7695H52.2105C54.8642 50.7695 57.0151 52.9204 57.0151 55.5742C57.0151 57.368 56.0334 58.9311 54.576 59.7559C53.8777 60.1531 53.0705 60.3789 52.2105 60.3789H35.929"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M27.2183 13.2947C28.5154 8.86784 32.2041 5.5896 37.1078 5.5896C45.0067 5.5896 47.5019 14.5984 47.5019 14.5984C47.5019 14.5984 49.9971 5.5896 57.8976 5.5896C64.0508 5.5896 68.2918 10.7546 68.2918 16.8724C68.2918 24.9685 60.6587 30.388 47.6941 41.6248C39.8841 34.8556 33.5491 30.1257 29.9542 25.4166"
-                                stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M27.0659 18.0977C27.95 18.0977 28.6675 18.8152 28.6675 19.6992C28.6675 20.5833 27.95 21.3008 27.0659 21.3008C26.1819 21.3008 25.4644 20.5833 25.4644 19.6992C25.4644 18.8152 26.1819 18.0977 27.0659 18.0977Z"
-                                fill="white" />
-                        </g>
-                    </svg>
-                    <h5>High-Quality Products</h5>
-                    <p>Our agricultural products are carefully sourced from local farmers and meet international standards.
-                    </p>
-
-                </div>
-
-                <div class="partner-card">
-                    <svg width="82" height="75" viewBox="0 0 82 75" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M73.3737 43.495C72.991 43.495 72.7359 43.3674 72.4808 43.1123C71.9706 42.6021 71.9706 41.8368 72.4808 41.3266C81.0267 32.6532 81.0267 18.7501 72.4808 10.0766C68.2716 5.86745 62.7869 3.57153 56.9196 3.57153C51.0522 3.57153 45.44 5.86745 41.3584 10.0766L28.3481 22.9593C29.7512 23.9797 31.4094 24.6174 33.0675 24.6174C35.1084 24.745 37.0216 23.9797 38.4247 22.5766L38.9349 22.0664C41.1033 19.3879 44.4196 18.495 47.4808 19.5154C48.6288 19.8981 49.7767 20.1532 50.9247 20.1532C54.4961 20.1532 57.8124 18.2399 59.8533 15.0511C60.2359 14.4134 61.0012 14.2858 61.639 14.6685C62.2767 15.0511 62.4043 15.8164 62.0216 16.4542C59.5982 20.4083 55.389 22.7042 50.9247 22.7042C49.3941 22.7042 47.991 22.4491 46.5879 21.9389C44.5471 21.1736 42.3788 21.9389 40.8481 23.7246C40.593 23.9797 40.4655 24.2348 40.2104 24.4899C38.2971 26.4032 35.7461 27.4236 32.94 27.296C30.1339 27.1685 27.5828 26.0205 25.542 23.9797L24.6492 23.0868L39.4451 8.29092C44.0369 3.69908 50.2869 1.02051 56.9196 1.02051C63.5522 1.02051 69.6747 3.57153 74.3941 8.29092C83.9604 17.8572 83.9604 33.546 74.3941 43.1123C74.0114 43.3674 73.7563 43.495 73.3737 43.495Z"
-                            fill="white" />
-                        <path
-                            d="M37.532 75.0002C35.7462 75.0002 34.2156 74.3625 32.9401 73.0869C30.3891 70.5359 30.3891 66.4543 32.9401 63.9033L37.7871 59.0563C39.0626 57.7808 40.5932 57.1431 42.3789 57.1431C44.1646 57.1431 45.6952 57.7808 46.9707 59.0563C49.5218 61.6074 49.5218 65.689 46.9707 68.24L42.1238 73.0869C40.8483 74.2349 39.1901 75.0002 37.532 75.0002ZM42.2513 59.6941C41.2309 59.6941 40.2105 60.0767 39.4452 60.842L34.5983 65.689C33.0677 67.2196 33.0677 69.7706 34.5983 71.3012C36.1289 72.8318 38.6799 72.8318 40.2105 71.3012L45.0575 66.4543C46.5881 64.9237 46.5881 62.3727 45.0575 60.842C44.2922 60.0767 43.3993 59.6941 42.2513 59.6941Z"
-                            fill="white" />
-                        <path
-                            d="M29.2412 68.495C27.4555 68.495 25.7973 67.8572 24.6493 66.5817C22.0983 64.0307 22.0983 59.949 24.6493 57.398L31.9198 50.1276C33.1953 48.8521 34.8534 48.2144 36.5116 48.2144C38.1698 48.2144 39.9555 48.8521 41.1034 50.1276C43.6545 52.6786 43.6545 56.7603 41.1034 59.3113L33.833 66.5817C32.5575 67.7297 30.8993 68.495 29.2412 68.495ZM36.5116 50.6378C35.4912 50.6378 34.4708 51.0205 33.7055 51.7858L26.4351 59.0562C24.9045 60.5868 24.9045 63.1378 26.4351 64.6684C27.9657 66.199 30.5167 66.199 32.0473 64.6684L39.3177 57.398C40.8483 55.8674 40.8483 53.3164 39.3177 51.7858C38.5524 51.148 37.532 50.6378 36.5116 50.6378Z"
-                            fill="white" />
-                        <path
-                            d="M20.8226 61.9898C19.0369 61.9898 17.5063 61.3521 16.2308 60.0766L16.1032 59.949C13.5522 57.398 13.5522 53.3164 16.1032 50.8929L27.0726 39.9235C28.3481 38.648 29.8787 38.0103 31.6644 38.0103C33.4501 38.0103 34.9808 38.648 36.2563 39.9235L36.3838 40.0511C38.9348 42.6021 38.9348 46.6837 36.3838 49.1072L25.4144 60.0766C24.1389 61.3521 22.6083 61.9898 20.8226 61.9898ZM31.792 40.4337C30.7716 40.4337 29.7512 40.8164 28.9859 41.5817L18.0165 52.5511C16.4859 54.0817 16.4859 56.5051 18.0165 58.0358L18.144 58.1633C19.6746 59.6939 22.2257 59.6939 23.6287 58.1633L34.5981 47.1939C36.1287 45.6633 36.1287 43.2398 34.5981 41.7092L34.4706 41.5817C33.8328 40.9439 32.8124 40.4337 31.792 40.4337Z"
-                            fill="white" />
-                        <path
-                            d="M14.3176 53.5716C12.5319 53.5716 10.8737 52.9338 9.72577 51.6583C7.17474 49.1073 7.17474 45.0257 9.72577 42.4746L16.3584 35.842C17.6339 34.5665 19.2921 33.9287 20.9503 33.9287C22.736 33.9287 24.3941 34.5665 25.5421 35.842C28.0931 38.393 28.0931 42.4746 25.5421 45.0257L18.9094 51.6583C17.7615 52.9338 16.1033 53.5716 14.3176 53.5716ZM20.9503 36.4797C19.9298 36.4797 18.9094 36.8624 18.1441 37.6277L11.5115 44.2603C9.98087 45.791 9.98087 48.342 11.5115 49.8726C13.0421 51.4032 15.5931 51.4032 17.1237 49.8726L23.7564 43.2399C25.287 41.7093 25.287 39.1583 23.7564 37.6277C22.9911 36.8624 21.9707 36.4797 20.9503 36.4797Z"
-                            fill="white" />
-                        <path
-                            d="M10.1084 44.5153C9.72577 44.5153 9.47066 44.3878 9.21556 44.1327L7.17474 42.0918C-2.39158 32.5255 -2.39158 16.8367 7.17474 7.27041C11.7666 2.67857 18.0166 0 24.6492 0C31.2819 0 37.4043 2.55102 42.1237 7.27041C42.6339 7.78061 42.6339 8.54592 42.1237 9.05612C41.6135 9.56633 40.8482 9.56633 40.338 9.05612C36.1288 4.84694 30.6441 2.55102 24.7768 2.55102C18.9094 2.55102 13.2972 4.84694 9.21556 9.05612C0.669644 17.7296 0.669644 31.6327 9.21556 40.3061L11.2564 42.3469C11.7666 42.8571 11.7666 43.6225 11.2564 44.1327C10.7462 44.3878 10.4911 44.5153 10.1084 44.5153Z"
-                            fill="white" />
-                        <path
-                            d="M54.7513 67.7299C52.9655 67.7299 51.4349 67.0922 50.1594 65.8167L45.44 61.0973C44.9298 60.5871 44.9298 59.8218 45.44 59.3116C45.9502 58.8013 46.7155 58.8013 47.2257 59.3116L51.9451 64.0309C53.4757 65.5616 56.0268 65.5616 57.5574 64.0309C59.088 62.5003 59.088 59.9493 57.5574 58.4187L50.9247 51.786C50.4145 51.2758 50.4145 50.5105 50.9247 50.0003C51.4349 49.4901 52.2002 49.4901 52.7104 50.0003L59.3431 56.633C61.8941 59.184 61.8941 63.2656 59.3431 65.8167C58.0676 66.9646 56.4094 67.7299 54.7513 67.7299Z"
-                            fill="white" />
-                        <path
-                            d="M45.4401 73.3418C44.0371 73.3418 42.7615 72.9591 41.6136 72.0663C41.1034 71.6836 40.9758 70.7908 41.3585 70.2805C41.7411 69.7703 42.634 69.6428 43.1442 70.0254C44.6748 71.1734 46.9707 71.0459 48.2462 69.6428C49.7768 68.1122 49.7768 65.5612 48.2462 64.0305L47.0983 62.755C46.5881 62.2448 46.5881 61.4795 47.0983 60.9693C47.6085 60.4591 48.3738 60.4591 48.884 60.9693L50.0319 62.1173C52.583 64.6683 52.583 68.7499 50.0319 71.301C48.884 72.704 47.0983 73.3418 45.4401 73.3418Z"
-                            fill="white" />
-                        <path
-                            d="M63.9351 62.1178C62.277 62.1178 60.6188 61.4801 59.3433 60.2045L47.481 48.3423C46.9708 47.8321 46.9708 47.0668 47.481 46.5566C47.9912 46.0464 48.7566 46.0464 49.2668 46.5566L61.129 58.4188C62.6596 59.9495 65.2106 59.9495 66.7412 58.4188C68.2719 56.8882 68.2719 54.3372 66.7412 52.8066L55.8994 41.9648C55.3892 41.4546 55.3892 40.6892 55.8994 40.179C56.4096 39.6688 57.1749 39.6688 57.6851 40.179L68.527 51.0209C71.078 53.5719 71.078 57.6535 68.527 60.2045C67.2514 61.4801 65.5933 62.1178 63.9351 62.1178Z"
-                            fill="white" />
-                        <path
-                            d="M69.5472 52.9339C67.889 52.9339 66.2309 52.2961 64.9553 51.0206L53.0931 39.1583C52.5829 38.6481 52.5829 37.8828 53.0931 37.3726C53.6033 36.8624 54.3686 36.8624 54.8788 37.3726L66.7411 49.2349C68.2717 50.7655 70.8227 50.7655 72.2258 49.2349L72.3533 49.1073C73.8839 47.5767 73.8839 45.1532 72.3533 43.6226L54.1135 25.2553C53.6033 24.7451 53.6033 23.9798 54.1135 23.4696C54.6237 22.9594 55.389 22.9594 55.8992 23.4696L74.139 41.8369C76.69 44.3879 76.69 48.4696 74.139 50.893L74.0115 51.0206C72.8635 52.1685 71.3329 52.9339 69.5472 52.9339Z"
-                            fill="white" />
-                    </svg>
-
-
-                    <h5>Supporting Local Farmers</h5>
-                    <p>By partnering with RSL Trading, you help create jobs and improve incomes for Cambodian farmers.</p>
-
-                </div>
-            </div>
-
-        </div> --}}
         @include('frontend.include.partner')
     </section>
 
-    <section id="contact" class="pt-6 md:pt-0 relative z-[50]">
+    <section id="contact" class="relative z-[50]">
         {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>Contact Form</p>
             <div class="row">

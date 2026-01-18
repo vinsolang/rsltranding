@@ -34,7 +34,7 @@
                             fill="#109A49" />
                     </svg>
 
-                    <span>{{ app()->getLocale() === 'en' ? '+855 77 678 300' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០' : '+855 77 678 300') }}</span>
+                    <span>{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</span>
                 </a>
 
                 {{-- social media --}}
@@ -46,7 +46,7 @@
                             fill="#007BFF" />
                     </svg>
                 </a>
-                <a href="https://t.me/+85577678300" target="_blank">
+                <a href="https://t.me/+85511678588" target="_blank">
                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -219,7 +219,7 @@
             x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
             x-transition:leave="transform transition ease-in duration-200" x-transition:leave-start="translate-x-0"
             x-transition:leave-end="translate-x-full"
-            class="fixed inset-y-0 right-0 w-full md:w-64 bg-white shadow-xl z-50">
+            class="fixed inset-y-0 right-0 w-full md:w-64 bg-white shadow-xl z-50 ">
             <div class="flex justify-between items-center px-4 py-2">
                 <img src="{{ asset('assets/images/logo.png') }}" alt="" class="w-10">
                 <button @click="open = false" class="text-2xl">&times;</button>
@@ -227,24 +227,12 @@
 
             <hr class="h-1 m-0" style="background: linear-gradient(90deg, #8DC640 0%, #059848 100%);">
 
-            <ul class="space-y-2 p-4">
+            <ul class="space-y-2 p-4 uppercase">
                 <li>
                     <a href="{{ route('home') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('home') ? 'bg-[#059848] text-[#fff]' : '' }}">
                             {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
 
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('export') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('export') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ការនាំចេញ' : '出口') }}
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('import') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is(patterns: 'import') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ការនាំចូល' : '进口') }}
                     </a>
                 </li>
                 <li>
@@ -254,9 +242,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{  route('our_product')}}"
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('our_product') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Our Product' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
+                    </a>
+                </li>
+                
+                <li>
                     <a href="{{ route('events') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('events') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}                    
+                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}                    
                     </a>
                 </li>
                 <li>
@@ -268,7 +263,7 @@
                 <li>
                     <a href="{{ route('contact') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('contact') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}                    
+                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}                    
                     </a>
                 </li>
             </ul>
@@ -304,7 +299,7 @@
                                 fill="#109A49" />
                         </svg>
 
-                        <span>{{ app()->getLocale() === 'en' ? '+855 77 678 300' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០' : '+855 77 678 300') }}</span>
+                        <span>{{ app()->getLocale() === 'en' ? '+855 77 678 300/+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០/+៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 77 678 300/+855 11 678 588') }}</span>
                     </a>
                 </div>
 

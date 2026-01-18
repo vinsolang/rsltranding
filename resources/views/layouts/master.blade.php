@@ -15,6 +15,8 @@
     @yield('title')
 
     @yield('css')
+<script src="https://unpkg.com/alpinejs..." defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs..." ></script>
 
 
     <!-- Link Swiper's CSS -->
@@ -137,123 +139,178 @@
             logoImg.classList.add('hidden')
         }
     </script>
-    <script>
-        const counters = document.querySelectorAll(".counter");
+<script>
+    // =========================
+    // Counter animation
+    // =========================
+    const counters = document.querySelectorAll(".counter");
 
-function animateCount(counter) {
-    const target = parseInt(
-        counter.getAttribute("data-target").replace(/,/g, ""),
-        10
-    );
+    function animateCount(counter) {
+        const target = parseInt(counter.getAttribute("data-target").replace(/,/g, ""), 10);
+        const unit = counter.dataset.unit || "";
 
-    const unit = counter.dataset.unit || ""; // 👈 ADD THIS
+        const duration = 2000;
+        let start = 0;
+        const increment = target / (duration / 16);
 
-    const duration = 2000;
-    let start = 0;
-    const increment = target / (duration / 16);
+        const step = () => {
+            start += increment;
+            let value = Math.floor(start);
 
-    const step = () => {
-        start += increment;
-        let value = Math.floor(start);
+            let suffix = "";
+            if (counter.classList.contains("plus")) suffix = "+";
+            if (counter.classList.contains("percent")) suffix = "%";
 
-        // suffix
-        let suffix = "";
-        if (counter.classList.contains("plus")) suffix = "+";
-        if (counter.classList.contains("percent")) suffix = "%";
-
-        if (value < target) {
-            counter.textContent =
-                value.toLocaleString() + unit + suffix;
-            requestAnimationFrame(step);
-        } else {
-            counter.textContent =
-                target.toLocaleString() + unit + suffix;
-        }
-    };
-
-    step();
-}
-
-// run animation
-counters.forEach(counter => animateCount(counter));
-
-
-const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCount(entry.target);
-            obs.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
-
-counters.forEach(counter => observer.observe(counter));
-
-
-
-
-        const tradeSelect = document.getElementById("tradeType");
-        const commodityList = document.getElementById("commodityList");
-
-        const data = {
-            import: [
-                "{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី' : '巴斯马蒂大米（印度）') }}",
-                "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
-                "{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ម្អម ' : '孜然籽') }}",
-                "{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'គ្រាប់រមៀត' : '姜黄（整粒）') }}",
-                "{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម' : '红辣椒（整颗）') }}",
-                "{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញបៃតង' : '绿豆蔻（绿色）') }}",
-                // "{{ app()->getLocale() === 'en' ? 'Turmeric Powder' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀត' : 'Turmeric Powder') }}",
-                "{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម' : '红辣椒粉') }}",
-                "{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹម' : '干大蒜') }}",
-                // "Dried Onions"
-            ],
-
-            export: [
-                "{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ ' : '大米') }}",
-                "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
-                "{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយ' : '新鲜芒果') }}",
-                "{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : '干芒果') }}",
-                "{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី ' : '腰果') }}",
-                "{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី ' : '花生') }}",
-                "{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី' : '乾木薯') }}",
-                "{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '胡椒') }}",
-                "{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}"
-            ]
+            if (value < target) {
+                counter.textContent = value.toLocaleString() + unit + suffix;
+                requestAnimationFrame(step);
+            } else {
+                counter.textContent = target.toLocaleString() + unit + suffix;
+            }
         };
 
-        tradeSelect.addEventListener("change", function() {
+        step();
+    }
+
+    // run once (optional)
+    counters.forEach(counter => animateCount(counter));
+
+    // run on scroll into view
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    counters.forEach(counter => observer.observe(counter));
+
+    // =========================
+    // Commodity list + inline OTHER input
+    // =========================
+    const tradeSelect = document.getElementById("tradeType");
+    const commodityList = document.getElementById("commodityList");
+
+    // Fixed value for backend (do NOT translate)
+    const OTHER_VALUE = "__other__";
+
+    // Label shown to user (translated)
+    const OTHER_LABEL =
+        "{{ app()->getLocale() === 'en' ? 'Other' : (app()->getLocale() === 'km' ? 'ផ្សេងៗ' : '其他') }}";
+
+    const OTHER_PLACEHOLDER =
+        "{{ app()->getLocale() === 'en' ? 'Please specify' : (app()->getLocale() === 'km' ? 'សូមបញ្ជាក់' : '请注明') }}";
+
+    const data = {
+        import: [
+            "{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី' : '巴斯马蒂大米（印度）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
+            "{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ម្អម ' : '孜然籽') }}",
+            "{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'គ្រាប់រមៀត' : '姜黄（整粒）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម' : '红辣椒（整颗）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញបៃតង' : '绿豆蔻（绿色）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម' : '红辣椒粉') }}",
+            "{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹម' : '干大蒜') }}",
+            OTHER_VALUE
+        ],
+
+        export: [
+            "{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ ' : '大米') }}",
+            "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
+            "{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយ' : '新鲜芒果') }}",
+            "{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : '干芒果') }}",
+            "{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី ' : '腰果') }}",
+            "{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី ' : '花生') }}",
+            "{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី' : '乾木薯') }}",
+            "{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '胡椒') }}",
+            "{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}",
+            OTHER_VALUE
+        ],
+
+        local_buying: [
+            "{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី' : '巴斯马蒂大米（印度）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
+            "{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ម្អម ' : '孜然籽') }}",
+            "{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'គ្រាប់រមៀត' : '姜黄（整粒）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម' : '红辣椒（整颗）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញបៃតង' : '绿豆蔻（绿色）') }}",
+            "{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម' : '红辣椒粉') }}",
+            "{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹម' : '干大蒜') }}",
+            "{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ ' : '大米') }}",
+            "{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយ' : '新鲜芒果') }}",
+            "{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}",
+            OTHER_VALUE
+        ]
+    };
+
+    // Safety check if elements exist
+    if (tradeSelect && commodityList) {
+        tradeSelect.addEventListener("change", function () {
             const type = this.value;
 
             // clear old list
             commodityList.innerHTML = "";
 
-            if (!type) return;
+            if (!type || !data[type]) return;
 
             // build checkbox list
             data[type].forEach(item => {
                 const wrapper = document.createElement("div");
-                wrapper.className = "form-check";
+                wrapper.className = "form-check d-flex align-items-center gap-2";
 
                 const input = document.createElement("input");
                 input.type = "checkbox";
                 input.className = "form-check-input";
-                input.name = "commodities[]"; // ✅ IMPORTANT
+                input.name = "commodities[]";
                 input.value = item;
-                input.id = item;
+
+                // safe id (no spaces/special chars)
+                const safeId = "commodity_" + btoa(unescape(encodeURIComponent(item))).replace(/=+/g, "");
+                input.id = safeId;
 
                 const label = document.createElement("label");
                 label.className = "form-check-label";
-                label.setAttribute("for", item);
-                label.textContent = item;
+                label.setAttribute("for", safeId);
+                label.textContent = (item === OTHER_VALUE) ? OTHER_LABEL : item;
 
                 wrapper.appendChild(input);
                 wrapper.appendChild(label);
+
+                // INLINE "Other" input on same line
+                if (item === OTHER_VALUE) {
+                    const otherInput = document.createElement("input");
+                    otherInput.type = "text";
+                    otherInput.name = "commodity_other";
+                    otherInput.className = "form-control form-control-sm ms-2";
+                    otherInput.placeholder = OTHER_PLACEHOLDER;
+                    otherInput.style.display = "none";
+                    otherInput.required = false;
+
+                    input.addEventListener("change", function () {
+                        if (this.checked) {
+                            otherInput.style.display = "inline-block";
+                            otherInput.required = true;
+                            otherInput.focus();
+                        } else {
+                            otherInput.style.display = "none";
+                            otherInput.required = false;
+                            otherInput.value = "";
+                        }
+                    });
+
+                    wrapper.appendChild(otherInput);
+                }
+
                 commodityList.appendChild(wrapper);
             });
-
         });
-    </script>
+    }
+</script>
+
+
+
 </body>
 
 </html>

@@ -1332,7 +1332,7 @@
 
         <!-- Content -->
         <div
-            class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-40">
+            class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-64">
 
             <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h2>
 
@@ -1368,7 +1368,7 @@
             </p> --}}
 
             <div class="w-[100%] h-full pb-20">
-                <img src="{{ asset('assets/images/map-2-2.png') }}" class="w-full h-full mx-auto">
+                <img src="{{ asset('assets/images/map-3.png') }}" class="w-full h-full mx-auto">
             </div>
 
         </div>

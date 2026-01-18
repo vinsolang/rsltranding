@@ -1,29 +1,175 @@
+  <style>
+  .required-label::before {
+    content: "* ";
+    color: red;
+    font-weight: bold;
+  }
+</style>
+
   <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : '联系表格') }}</p>
             <div class="row">
                 @csrf
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : '姓名') }}">
+                    <input class="col-12" name="name" required placeholder="{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : '姓名') }}">
                 </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
+                <!-- <div class="col-lg-6 col-md-6 input-field">
                     <input class="col-12" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរសព្ទ' : '手机号码') }}">
+                </div> -->
+                <div class="col-lg-6 col-md-6 col-12 input-field">
+                    <div class="d-flex gap-2 flex-nowrap">
+                        <select
+                        id="country_code"
+                        name="country_code"
+                        class="form-select sm:w-[]"
+                        style="max-width:170px;"
+                        required
+                        >
+                            <option value="">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Country Code'
+                                    : (app()->getLocale() === 'km'
+                                        ? 'កូដប្រទេស'
+                                        : '国家代码') }}
+                            </option>
+                            <option value="+93">(+93)</option>
+                            <option value="+355">(+355)</option>
+                            <option value="+213">(+213)</option>
+                            <option value="+376">(+376)</option>
+                            <option value="+244">(+244)</option>
+                            <option value="+54">(+54)</option>
+                            <option value="+374">(+374)</option>
+                            <option value="+61">(+61)</option>
+                            <option value="+43">(+43)</option>
+                            <option value="+994">(+994)</option>
+                            <option value="+973">(+973)</option>
+                            <option value="+880">(+880)</option>
+                            <option value="+375">(+375)</option>
+                            <option value="+32">(+32)</option>
+                            <option value="+501">(+501)</option>
+                            <option value="+229">(+229)</option>
+                            <option value="+975">(+975)</option>
+                            <option value="+591">(+591)</option>
+                            <option value="+387">(+387)</option>
+                            <option value="+267">(+267)</option>
+                            <option value="+55">(+55)</option>
+                            <option value="+673">(+673)</option>
+                            <option value="+359">(+359)</option>
+                            <option value="+226">(+226)</option>
+                            <option value="+257">(+257)</option>
+                            <option value="+855">(+855)</option>
+                            <option value="+237">(+237)</option>
+                            <option value="+1">(+1)</option>
+                            <option value="+238">(+238)</option>
+                            <option value="+236">(+236)</option>
+                            <option value="+235">(+235)</option>
+                            <option value="+56">(+56)</option>
+                            <option value="+86">(+86)</option>
+                            <option value="+57">(+57)</option>
+                            <option value="+269">(+269)</option>
+                            <option value="+242">(+242)</option>
+                            <option value="+506">(+506)</option>
+                            <option value="+385">(+385)</option>
+                            <option value="+53">(+53)</option>
+                            <option value="+357">(+357)</option>
+                            <option value="+420">(+420)</option>
+                            <option value="+45">(+45)</option>
+                            <option value="+253">(+253)</option>
+                            <option value="+593">(+593)</option>
+                            <option value="+20">(+20)</option>
+                            <option value="+503">(+503)</option>
+                            <option value="+240">(+240)</option>
+                            <option value="+291">(+291)</option>
+                            <option value="+372">(+372)</option>
+                            <option value="+251">(+251)</option>
+                            <option value="+358">(+358)</option>
+                            <option value="+33">(+33)</option>
+                            <option value="+995">(+995)</option>
+                            <option value="+49">(+49)</option>
+                            <option value="+233">(+233)</option>
+                            <option value="+30">(+30)</option>
+                            <option value="+502">(+502)</option>
+                            <option value="+852">(+852)</option>
+                            <option value="+36">(+36)</option>
+                            <option value="+354">(+354)</option>
+                            <option value="+91">(+91)</option>
+                            <option value="+62">(+62)</option>
+                            <option value="+98">(+98)</option>
+                            <option value="+964">(+964)</option>
+                            <option value="+353">(+353)</option>
+                            <option value="+972">(+972)</option>
+                            <option value="+39">(+39)</option>
+                            <option value="+81">(+81)</option>
+                            <option value="+962">(+962)</option>
+                            <option value="+7">(+7)</option>
+                            <option value="+254">(+254)</option>
+                            <option value="+82">(+82)</option>
+                            <option value="+965">(+965)</option>
+                            <option value="+856">(+856)</option>
+                            <option value="+371">(+371)</option>
+                            <option value="+961">(+961)</option>
+                            <option value="+370">(+370)</option>
+                            <option value="+60">(+60)</option>
+                            <option value="+960">(+960)</option>
+                            <option value="+52">(+52)</option>
+                            <option value="+95">(+95)</option>
+                            <option value="+31">(+31)</option>
+                            <option value="+64">(+64)</option>
+                            <option value="+234">(+234)</option>
+                            <option value="+47">(+47)</option>
+                            <option value="+92">(+92)</option>
+                            <option value="+63">(+63)</option>
+                            <option value="+48">(+48)</option>
+                            <option value="+351">(+351)</option>
+                            <option value="+974">(+974)</option>
+                            <option value="+40">(+40)</option>
+                            <option value="+7">(+7)</option>
+                            <option value="+966">(+966)</option>
+                            <option value="+65">(+65)</option>
+                            <option value="+421">(+421)</option>
+                            <option value="+386">(+386)</option>
+                            <option value="+27">(+27)</option>
+                            <option value="+34">(+34)</option>
+                            <option value="+94">(+94)</option>
+                            <option value="+46">(+46)</option>
+                            <option value="+41">(+41)</option>
+                            <option value="+66">(+66)</option>
+                            <option value="+90">(+90)</option>
+                            <option value="+380">(+380)</option>
+                            <option value="+971">(+971)</option>
+                            <option value="+44">(+44)</option>
+                            <option value="+1">(+1)</option>
+                            <option value="+598">(+598)</option>
+                            <option value="+998">(+998)</option>
+                            <option value="+84">(+84)</option>
+                            <option value="+263">(+263)</option>
+                    </select>
+                        <input
+                            id="phone"
+                            type="tel"
+                            name="phone"
+                            class="form-control"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរសព្ទ' : '手机号码') }}"
+                            required
+                            autocomplete="tel"
+                            />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 input-field">
+                    <input class="col-12" name="company" required  placeholder="{{ app()->getLocale() === 'en' ? 'Company Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះក្រុមហ៊ុន' : '公司名称') }}">
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="company" placeholder="{{ app()->getLocale() === 'en' ? 'Company Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះក្រុមហ៊ុន' : '公司名称') }}">
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <select name="trade_type" id="tradeType" class="form-select">
+                    <select name="trade_type" id="tradeType" class="form-select" required>
                         <option value="">{{ app()->getLocale() === 'en' ? 'Select Import/Export' : (app()->getLocale() === 'km' ? 'ជ្រើសរើសទំនិញ នាំចូល/នាំចេញ ' : '选择进出口') }}</option>
                         <option value="import">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'នាំចូល (ជ្រើសរើសទំនិញ)' : '进口 - Import') }}</option>
                         <option value="export">{{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'នាំចេញ (ជ្រើសរើសទំនិញ)' : '出口 - Export') }}</option>
+                        <option value="local_buying">{{ app()->getLocale() === 'en' ? 'Local Buying' : (app()->getLocale() === 'km' ? 'ការទិញក្នុងប្រទេស' : '本地采购') }}</option>
                     </select>
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <select name="country" class="form-select" aria-label="Default select example">
+                    <select name="country" class="form-select" aria-label="Default select example" required>
                         <option selected disabled>{{ app()->getLocale() === 'en' ? 'Country' : (app()->getLocale() === 'km' ? 'ប្រទេស (ជ្រើសរើសប្រទេស)' : '选择国家/地区') }}</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -221,14 +367,21 @@
                 <div class="col-lg-6 col-md-6">
                     <label class="choose-field">{{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? 'ទំនិញ' : '商品种类') }}</label>
                     <div id="commodityList" class="showcommoditylist"></div>
+                    <div id="otherWrapper" style="display:none; margin-top:10px;">
+                        <input type="text"
+                            name="commodity_other"
+                            id="commodityOtherInput"
+                            class="form-control form-control-sm"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Please specify other commodity' : (app()->getLocale() === 'km' ? 'សូមបញ្ជាក់ផលិតផលផ្សេងៗ' : '请注明其他商品') }}">
+                    </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="address" placeholder="{{ app()->getLocale() === 'en' ? 'Address' : (app()->getLocale() === 'km' ? 'អាសយដ្ឋាន' : '地址') }}">
+                    <input class="col-12" name="address" required placeholder="{{ app()->getLocale() === 'en' ? 'Address' : (app()->getLocale() === 'km' ? 'អាសយដ្ឋាន' : '地址') }}">
                 </div>
 
                 <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៉ីម៉ែល)' : '电子邮件') }}">
+                    <input class="col-12" name="email" required placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៉ីម៉ែល)' : '电子邮件') }}">
                 </div>
 
                 <div class="col-12 input-field">
@@ -237,7 +390,7 @@
             </div>
 
             <div class="confirm-policy">
-                <input type="checkbox" name="policy">
+                <input type="checkbox" name="policy" required>
                 <div class="confrim-policy-text">
                     <p>{{ app()->getLocale() === 'en' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' 
                     : (app()->getLocale() === 'km' ? 'ខ្ញុំយល់ព្រមឱ្យស្ថាប័ននេះរក្សាទុកព័ត៌មានដែលខ្ញុំបានដាក់ស្នើសួរដើម្បីអាចឆ្លើយតបទៅនឹងសំណួររបស់ខ្ញុំ។' 
