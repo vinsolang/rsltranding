@@ -257,7 +257,6 @@
         text-align: center;
         font-size: 20px;
 
-
     }
 
     @media screen and (max-width: 426px) {
