@@ -17,11 +17,13 @@ class ContactController extends Controller
     {
         $data = $request->validate([
             'name' => 'required',
+            'country_code' => 'required',
             'phone' => 'required',
             'company' => 'nullable',
             'trade_type' => 'required',
             'country' => 'required',
             'commodities' => 'nullable|array',
+            'commodityOtherInput' => 'nullable',
             'address' => 'nullable',
             'email' => 'required|email',
             'message' => 'nullable',
@@ -29,11 +31,14 @@ class ContactController extends Controller
 
         $text = "📩 *New Contact Form*\n\n";
         $text .= "👤 Name: {$data['name']}\n";
-        $text .= "📞 Phone: {$data['phone']}\n";
+        $text .= "📞 Phone: ({$data['country_code']}) {$data['phone']}\n";
         $text .= "🏢 Company: {$data['company']}\n";
         $text .= "🔄 Trade: {$data['trade_type']}\n";
         $text .= "🌍 Country: {$data['country']}\n";
-        $text .= "📦 Commodities: " . implode(', ', $data['commodities'] ?? []) . "\n";
+        $text .= "📦 Commodities: "
+            . implode(', ', $data['commodities'] ?? [])
+            . (!empty($data['commodityOtherInput']) ? '( ' . $data['commodityOtherInput'].')' : '')
+            . "\n";
         $text .= "🏠 Address: {$data['address']}\n";
         $text .= "📧 Email: {$data['email']}\n";
         $text .= "💬 Message: {$data['message']}";

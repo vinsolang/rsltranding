@@ -127,9 +127,9 @@
     }
 
     footer .footer-content .footer-company .company-bg {
-        width: 352px;
+        width: 360px;
         max-width: 100%;
-        height: 114px;
+        height: 240px;
         max-height: 100%;
         background-color: #D9D9D9;
 
@@ -297,28 +297,31 @@
                 <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5>
 
                 <li><a href="{{ route('home') }}">
-                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
+                        {{ app()->getLocale() === 'en' ? 'HOME' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
                     </a></li>
                 <li><a href="{{ route('about') }}">
-                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
+                        {{ app()->getLocale() === 'en' ? 'ABOUT US' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
                     </a></li>
-                <li><a href="{{ route('our_product') }}">
-                        {{ app()->getLocale() === 'en' ? 'Our Product' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
+                <li><a href="{{ route('export') }}">
+                        {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : '出口') }}
                     </a></li>
+                {{-- <li><a href="{{ route('import') }}">
+                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : '进口') }}
+                    </a></li> --}}
                 
-                <li><a href="{{ route('events') }}">
+                <li><a href="{{ route('events') }}" class="uppercase">
                         {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
                     </a></li>
-                <li><a href="{{ route('career') }}">
+                <li><a href="{{ route('career') }}" class="uppercase">
                         {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
                     </a></li>
-                <li><a href="{{ route('contact') }}">
+                <li><a href="{{ route('contact') }}" class="uppercase">
                         {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
                     </a></li>
 
             </div>
-            
-            <div class="footer-address">
+
+            <div class="footer-address space-y-3">
                 {{-- <h5>Full Office Address</h5> --}}
 
                 {{-- <li><a style="color: #FFFFFF">{{ app()->getLocale() === 'en' ? '#202, Borey 999 Honey, {{  2<sup>nd</sup> }} Floor, Street 355, Group 03, Village 1 , Boeng
@@ -353,7 +356,9 @@
 
 
             <div class="footer-social">
-                <img src="{{ asset('assets/images/footer-logo.png') }}">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/images/footer-logo.png') }}">
+                </a>
 
                 <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'ទំនាក់ទំនងមកយើងខ្ញុំ' : '聯絡我們') }}</h5>
 
@@ -365,7 +370,7 @@
                                 fill="#007BFF" />
                         </svg></a>
 
-                    <a href="https://t.me/+85511678588" target="_blank">
+                    <a href="https://t.me/+85577678300" target="_blank">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -377,19 +382,27 @@
                         </svg>
                     </a>
                 </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset("assets/images/RSL-Trading.png") }}"
+                        alt=""
+                        class="h-32 w-auto mt-2">
+                </a>
             </div>
 
 
             <div class="footer-company">
-                <p>{{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
+                {{-- <p>{{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
                     local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
                     as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
-                    worldwide while supporting farmers with better opportunities and incomes.' 
-                    : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
-                    : 'RSL贸易公司成立于2015年，是柬埔寨农业出口的领导者，致力于将当地农民与全球市场联系起来。我们的目标是将最好的“柬埔寨制造”产品（如大米、咖啡、玉米、腰果、芒果、木薯和其他营养水果）带给世界各地的买家，同时为农民提供更好的机会和收入。') }}</p>
+                    worldwide while supporting farmers with better opportunities and incomes.'
+                    : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។'
+                    : 'RSL贸易公司成立于2015年，是柬埔寨农业出口的领导者，致力于将当地农民与全球市场联系起来。我们的目标是将最好的“柬埔寨制造”产品（如大米、咖啡、玉米、腰果、芒果、木薯和其他营养水果）带给世界各地的买家，同时为农民提供更好的机会和收入。') }}</p> --}}
+                <h1 style="font-size: 20px">{{ app()->getLocale() === 'en' ? 'Our Location' : (app()->getLocale() === 'km' ? 'Our Location' : 'Our Location') }}</h1>
                 <div class="company-bg">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.297500132666!2d104.86175!3d11.6021264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095385a229bec1%3A0xada2a43a8ca90037!2z4Z6Y4Z-Q4Z6a4Z6V4Z-S4Z6b4Z654Z6fIE1vcmUgUGx1cw!5e0!3m2!1sen!2skh!4v1766630998356!5m2!1sen!2skh"
+                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d14962.26142335518!2d104.898867!3d11.587007!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM1JzEzLjIiTiAxMDTCsDUzJzU1LjkiRQ!5e1!3m2!1sen!2skh!4v1768977457230!5m2!1sen!2skh"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>

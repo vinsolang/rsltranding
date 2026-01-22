@@ -58,7 +58,7 @@
         <li>
             <a href="{{ route('our_product') }}"
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('our_product') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Our Product' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
+                {{ app()->getLocale() === 'en' ? 'Our Products' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
             </a>
         </li>
 

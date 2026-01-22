@@ -1,6 +1,6 @@
 .contact-bg {
     width: 100%;
-    height: 120vh;
+    height: 150vh;
     position: relative;
 }
 
@@ -266,6 +266,14 @@
 .showcommoditylist {
     width: 100%;
     height: auto;
+    background-color: #059848;
+    color: #ffffff;
+    border-radius: 24.5px;
+    padding-left: 1rem;
+}
+.showcommoditylist2 {
+    width: 100%;
+    /* height: auto; */
     background-color: #059848;
     color: #ffffff;
     border-radius: 24.5px;

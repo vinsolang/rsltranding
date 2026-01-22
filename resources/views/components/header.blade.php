@@ -1,10 +1,13 @@
 <section class="w-full bg-white">
     <div class="w-full h-[70px] lg:h-[100px] flex items-center justify-between max-w-7xl mx-auto px-4"
         x-data="{ open: false }">
-        <img src="{{ asset('assets/images/header_logo.png') }}" alt="" class="w-[10rem] lg:w-[15rem]">
+        <a href="{{ route('home') }}" class="flex justify-center items-center lg:space-x-2 xl:space-x-4 md:space-x-4 md:ml-4 lg:ml-1 xl:ml-4">
+            <img src="{{ asset('assets/logo/logo-image.png') }}" alt="" class="w-[50px] xl:w-[100px] md:w-[70px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-10 py-2">
+            <img src="{{ asset('assets/logo/logo-text.png') }}" alt="" class="w-[140px] xl:w-[370px] lg:w-[180px] md:w-[240px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-2 py-2">
+        </a>
         <div class="hidden lg:flex items-center gap-2">
             <div class="flex items-center gap-2">
-                <a  href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
+                <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -13,7 +16,8 @@
                     </svg>
                     <span>
                         {{-- {{ $locale === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច ' : ($locale === 'cn' ? 'Monday - Friday 8am - 5pm' : '星期一至五 8am - 5pm') }} --}}
-                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}
+                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
+                        {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
                     </span>
                 </a>
                 <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
@@ -90,7 +94,7 @@
                 </button>
 
                 <!-- Dropdown -->
-               <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200"
+                <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200"
                     x-transition:enter-start="opacity-0 translate-y-2 scale-95"
                     x-transition:enter-end="opacity-100 translate-y-0 scale-100"
                     x-transition:leave="transition ease-in duration-150"
@@ -99,35 +103,35 @@
                     class="absolute right-0 mt-2 w-44 bg-white rounded shadow-lg py-2 z-50" style="display: none;">
 
                     @if ($locale !== 'en')
-                        <a href="{{ route('lang.switch', 'en') }}"
-                            class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
-                            <img src="{{ asset('assets/images/icons/usa-flag.png') }}" class="w-5 h-5 rounded-full">
-                            <span>
-                                {{ $locale === 'km' ? 'ភាសាអង់គ្លេស' : ($locale === 'cn' ? '英语' : 'English') }}
-                            </span>
-                        </a>
+                    <a href="{{ route('lang.switch', 'en') }}"
+                        class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
+                        <img src="{{ asset('assets/images/icons/usa-flag.png') }}" class="w-5 h-5 rounded-full">
+                        <span>
+                            {{ $locale === 'km' ? 'ភាសាអង់គ្លេស' : ($locale === 'cn' ? '英语' : 'English') }}
+                        </span>
+                    </a>
                     @endif
 
                     <!-- KM -->
                     @if ($locale !== 'km')
-                        <a href="{{ route('lang.switch', 'km') }}"
-                            class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
-                            <img src="{{ asset('assets/images/icons/kh-flag.png') }}" class="w-5 h-5 rounded-full">
-                            <span>
-                                {{ $locale === 'en' ? 'Khmer' : ($locale === 'cn' ? '高棉语' : 'ភាសាខ្មែរ') }}
-                            </span>
-                        </a>
+                    <a href="{{ route('lang.switch', 'km') }}"
+                        class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
+                        <img src="{{ asset('assets/images/icons/kh-flag.png') }}" class="w-5 h-5 rounded-full">
+                        <span>
+                            {{ $locale === 'en' ? 'Khmer' : ($locale === 'cn' ? '高棉语' : 'ភាសាខ្មែរ') }}
+                        </span>
+                    </a>
                     @endif
 
                     <!-- CN -->
                     @if ($locale !== 'ch')
-                        <a href="{{ route('lang.switch', 'ch') }}"
-                            class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
-                            <img src="{{ asset('assets/images/icons/ch-flag.png') }}" class="w-5 h-5 rounded-full">
-                            <span>
-                                {{ $locale === 'en' ? 'Chinese' : ($locale === 'km' ? 'ចិន' : '中文') }}
-                            </span>
-                        </a>
+                    <a href="{{ route('lang.switch', 'ch') }}"
+                        class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
+                        <img src="{{ asset('assets/images/icons/ch-flag.png') }}" class="w-5 h-5 rounded-full">
+                        <span>
+                            {{ $locale === 'en' ? 'Chinese' : ($locale === 'km' ? 'ចិន' : '中文') }}
+                        </span>
+                    </a>
                     @endif
                 </div>
             </div>
@@ -180,35 +184,35 @@
                     class="absolute right-0 mt-2 w-44 bg-white rounded shadow-lg py-2 z-50" style="display: none;">
 
                     @if ($locale !== 'en')
-                        <a href="{{ route('lang.switch', 'en') }}"
-                            class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
-                            <img src="{{ asset('assets/images/icons/usa-flag.png') }}" class="w-5 h-5 rounded-full">
-                            <span>
-                                {{ $locale === 'km' ? 'ភាសាអង់គ្លេស' : ($locale === 'cn' ? '英语' : 'English') }}
-                            </span>
-                        </a>
+                    <a href="{{ route('lang.switch', 'en') }}"
+                        class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
+                        <img src="{{ asset('assets/images/icons/usa-flag.png') }}" class="w-5 h-5 rounded-full">
+                        <span>
+                            {{ $locale === 'km' ? 'ភាសាអង់គ្លេស' : ($locale === 'cn' ? '英语' : 'English') }}
+                        </span>
+                    </a>
                     @endif
 
                     <!-- KM -->
                     @if ($locale !== 'km')
-                        <a href="{{ route('lang.switch', 'km') }}"
-                            class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
-                            <img src="{{ asset('assets/images/icons/kh-flag.png') }}" class="w-5 h-5 rounded-full">
-                            <span>
-                                {{ $locale === 'en' ? 'Khmer' : ($locale === 'cn' ? '高棉语' : 'ភាសាខ្មែរ') }}
-                            </span>
-                        </a>
+                    <a href="{{ route('lang.switch', 'km') }}"
+                        class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
+                        <img src="{{ asset('assets/images/icons/kh-flag.png') }}" class="w-5 h-5 rounded-full">
+                        <span>
+                            {{ $locale === 'en' ? 'Khmer' : ($locale === 'cn' ? '高棉语' : 'ភាសាខ្មែរ') }}
+                        </span>
+                    </a>
                     @endif
 
                     <!-- CN -->
                     @if ($locale !== 'ch')
-                        <a href="{{ route('lang.switch', 'ch') }}"
-                            class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
-                            <img src="{{ asset('assets/images/icons/ch-flag.png') }}" class="w-5 h-5 rounded-full">
-                            <span>
-                                {{ $locale === 'en' ? 'Chinese' : ($locale === 'km' ? 'ចិន' : '中文') }}
-                            </span>
-                        </a>
+                    <a href="{{ route('lang.switch', 'ch') }}"
+                        class="flex items-center gap-2 px-3 py-2 hover:bg-red-500 hover:text-white">
+                        <img src="{{ asset('assets/images/icons/ch-flag.png') }}" class="w-5 h-5 rounded-full">
+                        <span>
+                            {{ $locale === 'en' ? 'Chinese' : ($locale === 'km' ? 'ចិន' : '中文') }}
+                        </span>
+                    </a>
                     @endif
                 </div>
             </div>
@@ -231,39 +235,39 @@
                 <li>
                     <a href="{{ route('home') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('home') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                            {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
+                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
 
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('about') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('about') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}                    
+                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
                     </a>
                 </li>
                 <li>
                     <a href="{{  route('our_product')}}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('our_product') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Our Product' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
+                        {{ app()->getLocale() === 'en' ? 'Our Products' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="{{ route('events') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('events') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}                    
+                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('career') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('career') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}                    
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('contact') }}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('contact') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}                    
+                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
                     </a>
                 </li>
             </ul>
@@ -278,7 +282,8 @@
                                 fill="#109A49" />
                         </svg>
                         <span>
-                            {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}
+                            {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
+                            {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
                         </span>
                     </a>
                     <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">
@@ -299,7 +304,7 @@
                                 fill="#109A49" />
                         </svg>
 
-                        <span>{{ app()->getLocale() === 'en' ? '+855 77 678 300/+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០/+៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 77 678 300/+855 11 678 588') }}</span>
+                        <span>{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</span>
                     </a>
                 </div>
 
@@ -312,7 +317,7 @@
                                 fill="#007BFF" />
                         </svg>
                     </a>
-                    <a href="https://t.me/+85577678300" target="_blank">
+                    <a href="https://t.me/+85511678588" target="_blank">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path

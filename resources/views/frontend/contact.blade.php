@@ -35,7 +35,7 @@
     <section>
 
         <div class="main-contect relative">
-            <video autoplay muted loop playsinline class="absolute contact-bg inset-0 z-[-10] object-cover w-full h-full"
+            <video autoplay muted loop playsinline class="absolute contact-bg inset-0 z-[-10] object-cover w-full h-full "
                 poster="fallback-image.jpg">
                 <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
                 <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">

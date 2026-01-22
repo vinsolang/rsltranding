@@ -14,7 +14,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\OurProductController;
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
-Route::get('/export', [ExportController::class, 'index'])->name("export");
+Route::get('/commodities', [ExportController::class, 'index'])->name("export");
 Route::get('/our_product', [OurProductController::class, 'index'])->name("our_product");
 Route::get('/import', [ImportController::class, 'index'])->name("import");
 Route::get('/about', [AboutController::class, 'index'])->name("about");

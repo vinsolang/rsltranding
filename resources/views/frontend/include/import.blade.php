@@ -211,7 +211,7 @@
             width: 100%;
         }
 
-        .card-product .card-product-detail {
+        .card-product .card-product-detail-im {
             width: 100%;
             height: 480px;
             background-color: #D7FFEE;
@@ -226,7 +226,7 @@
             margin-bottom: 1.5rem;
         }
 
-        .card-product .card-product-detail h5 {
+        .card-product .card-product-detail-im h5 {
             font-weight: bolder;
             color: #059848;
             font-size: 20px;
@@ -242,7 +242,7 @@
 
 
 
-        .card-product .card-product-detail .smaill-detail-card button {
+        .card-product .card-product-detail-im .smaill-detail-card button {
             color: #1E1E1E;
             font-size: 20px;
             width: 274px;
@@ -250,13 +250,13 @@
             height: 47px;
         }
 
-        .card-product .card-product-detail .smaill-detail-card button a {
+        .card-product .card-product-detail-im .smaill-detail-card button a {
             color: #000000;
             text-decoration: none;
         }
 
 
-        .card-product .card-product-detail .smaill-detail-card button:hover {
+        .card-product .card-product-detail-im .smaill-detail-card button:hover {
             background-color: #059848;
             color: #FFFFFF;
             width: 274px;
@@ -268,11 +268,11 @@
             justify-content: center;
         }
 
-        .card-product .card-product-detail .smaill-detail-card button:hover a {
+        .card-product .card-product-detail-im .smaill-detail-card button:hover a {
             color: #FFFFFF;
         }
 
-        .card-product .card-product-detail .btn-card-interest-to-export {
+        .card-product .card-product-detail-im .btn-card-interest-to-export {
             position: absolute;
             bottom: 5%;
             left: 50%;
@@ -280,7 +280,7 @@
 
         }
 
-        .card-product .card-product-detail .btn-card-interest-to-export button {
+        .card-product .card-product-detail-im .btn-card-interest-to-export button {
             width: 165px;
             height: 42.66px;
             background: linear-gradient(to right, #8DC640, #059848);
@@ -1110,7 +1110,7 @@
         <div class="first-card">
             <div class="main-card-product">
                 <div class="container mt-[-400px] lg:mt-[-180px]">
-                    <h2 class="text-[25px] md:text-[50px] text-[#059848]  fw-bolder pb-20">Commodities</h2>
+                    <h2 class="text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#059848] leading-tight fw-bolder pb-20 text-center">Commodities</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-4">
                         {{-- item 1 --}}
 
@@ -1138,7 +1138,7 @@
                                 <!-- Image -->
                                 <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
 
-                                <div class="card-product-detail">
+                                <div class="card-product-detail-im">
                                     <!-- Title -->
                                     <h5 x-text="products[active].title"></h5>
 
@@ -1215,7 +1215,7 @@
                                 <!-- Image -->
                                 <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
 
-                                <div class="card-product-detail">
+                                <div class="card-product-detail-im">
                                     <!-- Title -->
                                     <h5 x-text="products[active].title"></h5>
 
@@ -1284,7 +1284,7 @@
                                 <!-- Image -->
                                 <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
 
-                                <div class="card-product-detail">
+                                <div class="card-product-detail-im">
                                     <!-- Title -->
                                     <h5 x-text="products[active].title"></h5>
 
@@ -1346,7 +1346,7 @@
                                 <!-- Image -->
                                 <img class="card-product-bg  h-[250px] object-cover" :src="products[active].img">
 
-                                <div class="card-product-detail">
+                                <div class="card-product-detail-im">
                                     <!-- Title -->
                                     <h5 x-text="products[active].title"></h5>
 
@@ -1379,8 +1379,7 @@
                                 </div>
                             </div>
                         </div>
-
-
+                        
                     </div>
                 </div>
             </div>

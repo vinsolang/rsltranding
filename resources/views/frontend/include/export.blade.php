@@ -294,7 +294,8 @@
 
         .card-product .card-product-detail {
             width: 100%;
-            height: 360px;
+            height: 320px !important;
+            min-height: unset;
             background-color: #EEFFF8;
             position: relative;
             margin-top: -5rem;
@@ -309,7 +310,7 @@
         @media screen and (max-width: 767px) {
             .card-product .card-product-detail {
                 width: 100%;
-                height: 390px;
+                height: auto;
             }
 
         }
@@ -318,7 +319,7 @@
 
         @media screen and (max-width: 426px) {
             .card-product .card-product-detail {
-                height: 380px;
+                height: auto;
             }
         }
 
@@ -383,6 +384,7 @@
             font-size: 12px;
             font-weight: bold;
             color: #FFFFFF;
+            
         }
 
         .card-no {
@@ -1058,10 +1060,10 @@
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000">
-                            {{ app()->getLocale() === 'en' ? 'Main' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}
+                            {{ app()->getLocale() === 'en' ? 'Our' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}
                         </h1>
                         <h1 data-aos="zoom-in-up" data-aos-duration="1200">
-                            {{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? '' : '') }}
+                            {{ app()->getLocale() === 'en' ? 'Main Products' : (app()->getLocale() === 'km' ? '' : '') }}
                         </h1>
                     </div>
                     <div class="main-banner-p-bg">
@@ -1091,7 +1093,8 @@
             <div class="main-card-product" id="interest">
                 <div class="container mt-[-140px]">
                     <div class="row gap-y-20">
-                    <h2 class="text-[25px] md:text-[50px] text-[#059848] leading-tight fw-bolder pb-2">Main Commodities</h2>
+                    <h2 class="text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#059848] leading-tight fw-bolder pb-2 text-center 2xl:py-36">Our Main Commodities</h2>
+                        
                         <div class="col-lg-4 col-md-6 col-12" id="rice">
                             <div class="card-product" x-data="{
                                 active: 'default',
@@ -1300,166 +1303,238 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-4 col-md-6 col-12" id="root_crops">
-                            <div class="card-product" x-data="{
-                                active: 'default',
-                                products: {
-                                    default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Root Crops' : (app()->getLocale() === 'km' ? 'ដំណាំ​មើម' : '根茎类作物') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Processed and dried cassava ideal for industrial and export applications.' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​កែច្នៃ និង​សម្ងួត​ល្អ​សម្រាប់​ការ​ប្រើប្រាស់​ក្នុង​ឧស្សាហកម្ម និង​ការ​នាំ​ចេញ​។' : '经过加工和干燥处理的木薯非常适合用于工业生产及出口用途。') }}',
-                                        img: '{{ asset('assets/images/export/root_crops.jpg') }}'
-                                    },
-                                    cassava: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' : '高品质的干木薯，适用于工业加工及国际出口。') }}',
-                                        img: '{{ asset('assets/images/export-card-product-4.png') }}'
-                                    }
-                                }
-                            }">
-                                <!-- Image -->
-                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
+                        
+                        <div class="flex justify-center items-center max-w-5xl mx-auto px-12">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-4">
+                                {{-- item 1 --}}
 
-                                <div class="card-product-detail">
-                                    <!-- Title -->
-                                    <h5 x-text="products[active].title"></h5>
+                                <div class="">
+                                    <div class="card-product" x-data="{
+                                        active: 'default',
+                                        products: {
+                                            default: {
+                                                title: '{{ app()->getLocale() === 'en' ? 'Root Crops' : (app()->getLocale() === 'km' ? 'ដំណាំ​មើម' : '根茎类作物') }}',
+                                                desc: '{{ app()->getLocale() === 'en' ? 'Processed and dried cassava ideal for industrial and export applications.' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​កែច្នៃ និង​សម្ងួត​ល្អ​សម្រាប់​ការ​ប្រើប្រាស់​ក្នុង​ឧស្សាហកម្ម និង​ការ​នាំ​ចេញ​។' : '经过加工和干燥处理的木薯非常适合用于工业生产及出口用途。') }}',
+                                                img: '{{ asset('assets/images/export/root_crops.jpg') }}'
+                                            },
+                                            cassava: {
+                                                title: '{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}',
+                                                desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' : '高品质的干木薯，适用于工业加工及国际出口。') }}',
+                                                img: '{{ asset('assets/images/export-card-product-4.png') }}'
+                                            }
+                                        }
+                                    }">
+                                        <!-- Image -->
+                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
 
-                                    <!-- Description -->
-                                    <p x-text="products[active].desc"></p>
+                                        <div class="card-product-detail">
+                                            <!-- Title -->
+                                        <h5 x-text="products[active].title"></h5>
 
-                                    <!-- Buttons -->
-                                    <div class="smaill-detail-card">
-                                        <!-- Dried Cassava -->
-                                        <button x-show="active === 'default'" @click="active = 'cassava'">
-                                            {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}
-                                        </button>
+                                        <!-- Description -->
+                                        <p x-text="products[active].desc"></p>
 
-                                        <!-- Back -->
-                                        <button x-show="active !== 'default'" @click="active = 'default'"
-                                            class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
-                                        </button>
-                                    </div>
+                                        <!-- Buttons -->
+                                        <div class="smaill-detail-card">
+                                            <!-- Dried Cassava -->
+                                            <button x-show="active === 'default'" @click="active = 'cassava'" class="relative top-6">
+                                                {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}
+                                            </button>
 
-                                    <!-- Interest Button -->
-                                    <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
-                                    </div>
+                                            <!-- Back -->
+                                            <button x-show="active !== 'default'" @click="active = 'default'"
+                                                class="btn-back">
+                                                {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
+                                            </button>
+                                        </div>
 
-                                    <!-- Card Number -->
-                                    <div class="card-no">
-                                        <p>{{ app()->getLocale() === 'en' ? '04' : (app()->getLocale() === 'km' ? '០៤' : '04') }}</p>
-                                    </div>
-                                </div>
-                            </div>
+                                        <!-- Interest Button -->
+                                        <div class="btn-card-interest-to-export">
+                                            <button><a href="#contact"
+                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                        </div>
 
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12" id="spices">
-                            <div class="card-product" x-data="{
-                                active: 'default',
-                                products: {
-                                    default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេស' : '香料') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : (app()->getLocale() === 'km' ? 'ម្រេចដ៏ឈ្ងុយរបស់​កម្ពុជាមាន​កេរ្តិ៍ឈ្មោះ​ល្បីល្បាញ​ទូទាំង​ពិភពលោក ជាមួយនឹង​រសជាតិ​ឆ្ងាញ់។' : '具有浓郁香气的柬埔寨胡椒，以其全球知名的声誉和丰富的风味而著称。') }}',
-                                        img: '{{ asset('assets/images/export/spices.jpg') }}'
-                                    },
-                                    pepper: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'ម្រេចកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញអន្តរជាតិ។' : '高品质的柬埔寨辣椒，适合出口至国际市场的使用。') }}',
-                                        img: '{{ asset('assets/images/export-card-product-5.png') }}'
-                                    }
-                                }
-                            }">
-                                <!-- Image -->
-                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
-                                <div class="card-product-detail">
-                                    <!-- Title -->
-                                    <h5 x-text="products[active].title"></h5>
-
-                                    <!-- Description -->
-                                    <p x-text="products[active].desc"></p>
-
-                                    <!-- Buttons -->
-                                    <div class="smaill-detail-card">
-                                        <!-- Pepper -->
-                                        <button x-show="active === 'default'" @click="active = 'pepper'">
-                                            {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}
-                                        </button>
-
-                                        <!-- Back -->
-                                        <button x-show="active !== 'default'" @click="active = 'default'"
-                                            class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
-                                        </button>
-                                    </div>
-
-                                    <!-- Interest Button -->
-                                    <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
-                                    </div>
-
-                                    <!-- Card Number -->
-                                    <div class="card-no">
-                                        <p>{{ app()->getLocale() === 'en' ? '05' : (app()->getLocale() === 'km' ? '០៥' : '05') }}</p>
+                                        <!-- Card Number -->
+                                        <div class="card-no">
+                                            <p>{{ app()->getLocale() === 'en' ? '04' : (app()->getLocale() === 'km' ? '០៤' : '04') }}</p>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
+                                {{-- item 2 --}}
+                                <div class="">
+                                    <div class="card-product" x-data="{
+                                         active: 'default',
+                                        products: {
+                                            default: {
+                                                title: '{{ app()->getLocale() === 'en' ? 'Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេស' : '香料') }}',
+                                                desc: '{{ app()->getLocale() === 'en' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : (app()->getLocale() === 'km' ? 'ម្រេចដ៏ឈ្ងុយរបស់​កម្ពុជាមាន​កេរ្តិ៍ឈ្មោះ​ល្បីល្បាញ​ទូទាំង​ពិភពលោក ជាមួយនឹង​រសជាតិ​ឆ្ងាញ់។' : '具有浓郁香气的柬埔寨胡椒，以其全球知名的声誉和丰富的风味而著称。') }}',
+                                                img: '{{ asset('assets/images/export/spices.jpg') }}'
+                                            },
+                                            pepper: {
+                                                title: '{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}',
+                                                desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'ម្រេចកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញអន្តរជាតិ។' : '高品质的柬埔寨辣椒，适合出口至国际市场的使用。') }}',
+                                                img: '{{ asset('assets/images/export-card-product-5.png') }}'
+                                            }
+                                        }
+                                    }">
+                                        <!-- Image -->
+                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
 
+                                        <div class="card-product-detail">
+                                            <!-- Title -->
+                                        <h5 x-text="products[active].title"></h5>
 
-                        <div class="col-lg-4 col-md-6 col-12" id="coffee">
-                            <div class="card-product" x-data="{
-                                active: 'default',
-                                products: {
-                                    default: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡与饮品') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។' : '精选的优质柬埔寨咖啡豆，按照国际标准精心挑选并出口。') }}',
-                                        img: '{{ asset('assets/images/export-card-product-6.png') }}'
-                                    },
-                                    coffee: {
-                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}',
-                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' : '采用优质原料烘焙而成的柬埔寨咖啡豆，专为全球出口市场而生产。') }}',
-                                        img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
-                                    }
-                                }
-                            }">
-                                <!-- Image -->
-                                <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
+                                        <!-- Description -->
+                                        <p x-text="products[active].desc"></p>
 
-                                <div class="card-product-detail">
-                                    <!-- Title -->
-                                    <h5 x-text="products[active].title"></h5>
+                                        <!-- Buttons -->
+                                        <div class="smaill-detail-card">
+                                            <!-- Pepper -->
+                                            <button x-show="active === 'default'" @click="active = 'pepper'" class="relative top-6">
+                                                {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}
+                                            </button>
 
-                                    <!-- Description -->
-                                    <p x-text="products[active].desc"></p>
+                                            <!-- Back -->
+                                            <button x-show="active !== 'default'" @click="active = 'default'"
+                                                class="btn-back">
+                                                {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
+                                            </button>
+                                        </div>
 
-                                    <!-- Buttons -->
-                                    <div class="smaill-detail-card">
-                                        <!-- Coffee Beans -->
-                                        <button x-show="active === 'default'" @click="active = 'coffee'">
-                                            {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
-                                        </button>
+                                        <!-- Interest Button -->
+                                        <div class="btn-card-interest-to-export">
+                                            <button><a href="#contact"
+                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                        </div>
 
-                                        <!-- Back -->
-                                        <button x-show="active !== 'default'" @click="active = 'default'"
-                                            class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
-
-                                        </button>
-                                    </div>
-                                    <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact"
-                                                class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
-                                    </div>
-
-                                    <!-- Card Number -->
-                                    <div class="card-no">
-                                        <p>{{ app()->getLocale() === 'en' ? '06' : (app()->getLocale() === 'km' ? '០៦' : '06') }}</p>
+                                        <!-- Card Number -->
+                                        <div class="card-no">
+                                            <p>{{ app()->getLocale() === 'en' ? '05' : (app()->getLocale() === 'km' ? '០៥' : '05') }}</p>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+                                {{-- item 3 --}}
+                                <div class="">
+                                    <div class="card-product" x-data="{
+                                        active: 'default',
+                                        products: {
+                                            default: {
+                                                title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡与饮品') }}',
+                                                desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។' : '精选的优质柬埔寨咖啡豆，按照国际标准精心挑选并出口。') }}',
+                                                img: '{{ asset('assets/images/export-card-product-6.png') }}'
+                                            },
+                                            coffee: {
+                                                title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}',
+                                                desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' : '采用优质原料烘焙而成的柬埔寨咖啡豆，专为全球出口市场而生产。') }}',
+                                                img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
+                                            }
+                                        }
+                                    }">
+                                        <!-- Image -->
+                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+
+                                        <div class="card-product-detail">
+                                           <!-- Title -->
+                                        <h5 x-text="products[active].title"></h5>
+
+                                        <!-- Description -->
+                                        <p x-text="products[active].desc"></p>
+
+                                        <!-- Buttons -->
+                                        <div class="smaill-detail-card">
+                                            <!-- Coffee Beans -->
+                                            <button x-show="active === 'default'" @click="active = 'coffee'">
+                                                {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
+                                            </button>
+
+                                            <!-- Back -->
+                                            <button x-show="active !== 'default'" @click="active = 'default'"
+                                                class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
+
+                                            </button>
+                                        </div>
+                                        <div class="btn-card-interest-to-export">
+                                            <button><a href="#contact"
+                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                        </div>
+
+                                        <!-- Card Number -->
+                                        <div class="card-no">
+                                            <p>{{ app()->getLocale() === 'en' ? '06' : (app()->getLocale() === 'km' ? '០៦' : '06') }}</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- item 4 --}}
+                                <div class="">
+                                    <div class="card-product" x-data="{
+                                         active: 'default',
+                                            products: {
+                                                default: {
+                                                    title: 'Forestry & Natural Resource Products',
+                                                    desc: 'Sustainably sourced forestry products from Cambodia, processed to meet international export standards.',
+                                                    img: '{{ asset('assets/charcoal/charcoal-2.jpg') }}'
+                                                },
+                                                charcoal: {
+                                                    title: 'Charcoal',
+                                                    desc: 'High-quality natural charcoal with long burning time and low smoke.',
+                                                    img: '{{ asset('assets/charcoal/charcoal-1.jpg') }}'
+                                                },
+                                                woods: {
+                                                    title: 'Plantation Woods',
+                                                    desc: 'Responsibly grown plantation woods for construction and industrial use.',
+                                                    img: '{{ asset('assets/charcoal/charcoal-3.jpg') }}'
+                                                }
+                                            }
+                                        }">
+                                        <!-- Image -->
+                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+
+                                        <div class="card-product-detail">
+                                           <!-- Title -->
+                                        <h5 x-text="products[active].title"></h5>
+
+                                        <!-- Description -->
+                                        <p x-text="products[active].desc"></p>
+
+                                        <!-- Buttons -->
+                                        <div class="smaill-detail-card">
+                                            <!-- Charcoal -->
+                                            <button x-show="active === 'default'" @click="active = 'charcoal'" class="relative -top-6">
+                                                Charcoal
+                                            </button>
+
+                                            <!-- Plantation Woods -->
+                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
+                                                Plantation Woods
+                                            </button>
+
+                                            <!-- Back -->
+                                            <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
+                                                Back
+                                            </button>
+                                        </div>
+
+                                        <div class="btn-card-interest-to-export">
+                                            <button><a href="#contact"
+                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                        </div>
+
+                                        <!-- Card Number -->
+                                        <div class="card-no">
+                                            <p>{{ app()->getLocale() === 'en' ? '07' : (app()->getLocale() === 'km' ? '០៧' : '07') }}</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
 
