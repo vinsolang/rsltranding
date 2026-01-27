@@ -348,7 +348,11 @@
                 <li>
                     <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
                 </li>
-                <li>{{ app()->getLocale() === 'en' ? 'Mon - Fri' : (app()->getLocale() === 'km' ? 'ច័ន្ទ - សុក្រ' : '星期一至五') }}</li>
+                
+                <li>
+                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
+                    {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
+                </li>
                 <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li>
 
             </div>
