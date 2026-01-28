@@ -1034,7 +1034,7 @@
 <section>
     <div class="first-card">
         <div class="first-card-background">
-            <img src="{{ asset('assets/images/bg-1.png') }}">
+            <img src="{{ asset('assets/images/bg-1.png') }}" class="-z-40">
         </div>
         <div class="md:mt-1 m-4kk">
             <div class="relative mx-auto max-w-6xl px-4 md:px-80">
@@ -1136,7 +1136,7 @@
                         </div>
                     </div>
 
-                    <div class="md:w-[454px] md:h-[300px] mx-auto">
+                    <div class="w-[280px] md:w-[200px] lg:w-[300px] xl:w-[454px] h-[300px] mx-auto">
                         <img src="{{ asset('assets/logo/rsl-core-value.png') }}" alt="" class="">
                     </div>
                     {{-- @php
@@ -1226,7 +1226,7 @@
     </div>
 </section>
 
-<section class="md:-mt-96 mt-10 -mt-4k z-40">
+<section class="relative md:-mt-96 mt-10 -mt-4k z-[999]">
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
