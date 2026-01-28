@@ -294,7 +294,7 @@
 
         .card-product .card-product-detail {
             width: 100%;
-            height: 320px !important;
+            height: 340px !important;
             min-height: unset;
             background-color: #EEFFF8;
             position: relative;
@@ -1554,7 +1554,7 @@
 
                                         <div class="btn-card-interest-to-export">
                                             <button><a href="#contact"
-                                                    class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
+                                                       class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
                                         </div>
 
                                         <!-- Card Number -->

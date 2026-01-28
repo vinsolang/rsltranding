@@ -1065,8 +1065,8 @@
             <img src="{{ asset('assets/images/bg-1.png') }}" class="-z-40">
         </div>
         <div class="md:mt-1 m-4kk">
-            <div class="relative mx-auto max-w-6xl px-4 md:px-80 md:top-0 top-36">
-                <div class="gap-b-32 md:space-y-0 space-y-6">
+            <div class="relative mx-auto max-w-6xl px-4 md:px-80 md:top-0 top-10">
+                <div class="gap-b-32 md:space-y-0 space-y-8">
                     {{-- Vision --}}
                     <div class="relative mx-auto min-h-14 md:mb-12 max-w-4xl">
                         {{-- Background image (BEHIND text) --}}
@@ -1091,9 +1091,9 @@
 
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
 
-                                        <p class="mt-2 mr-5 lg:mr-1 text-xs md:text-base font-semibold leading-relaxed text-gray-800">
+                                        <p class="">
                                             {!! app()->getLocale() === 'en'
-                                            ? 'Everyone has Better Health, Longer Life &amp;<br class="hidden sm:block">Greater Future.'
+                                            ? 'Everyone has Better Health, Longer Life &amp;<br class="hidden sm:block"> Greater Future.'
                                             : (app()->getLocale() === 'km'
                                             ? 'គ្រប់គ្នាមានសុខភាពល្អជាងមុន អាយុវែងជាងមុន និងអនាគត<br class="hidden sm:block">អស្ចារ្យជាងមុន'
                                             : '每个人都拥有更健康、更长寿与更美好的未来。') !!}
@@ -1452,21 +1452,21 @@
     <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
         <img
             src="{{ asset('assets/images/credentail-1.png') }}"
-            class="h-[420px] w-auto object-contain rounded-md border"
+            class="md:h-[420px] w-auto object-contain rounded-md border"
             alt="Certificate 1">
     </div>
 
     <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
         <img
             src="{{ asset('assets/images/credentail-2.png') }}"
-            class="h-[420px] w-auto object-contain rounded-md border"
+            class="md:h-[420px] w-auto object-contain rounded-md border"
             alt="Certificate 2">
     </div>
 
     <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
         <img
             src="{{ asset('assets/cartificate/4.png') }}"
-            class="h-[420px] w-auto object-contain rounded-md border"
+            class="md:h-[420px] w-auto object-contain rounded-md border"
             alt="Certificate 3">
     </div>
 

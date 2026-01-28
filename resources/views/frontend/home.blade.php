@@ -396,7 +396,7 @@
         }
 
         .we-start .we-start-person-none {
-            width: 35vh;
+            width: 30vh;
         }
     }
 
@@ -1317,7 +1317,7 @@
     <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
 </video>
 
-        <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
+        {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
 
 
         <div class="home-banner-context">
@@ -1414,12 +1414,12 @@
         <div class="we-start-context">
             <div class="-mt-[6rem] 2xl:-mt-[10rem]" class="context-one">
                 <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">{{ app()->getLocale() === 'en' ? 'Why We Started ?' : (app()->getLocale() === 'km' ? 'មូលហេតុនៃការស្ថាបនា ?' : '创办这家公司的原因?') }}</h5>
-                <p>{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“យើងខ្ញុំជួយកសិករក្នុងស្រុកដោយបង្កើតឱកាសសម្រាប់ការលក់ផលិតផលកសិកម្មផលិតដោយកូនខ្មែរ។”' : '“我们通过为柬埔寨的农产品创造全球市场机会，来帮助当地的农民。”') }}</p>
+                <p class="">{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“យើងខ្ញុំជួយកសិករក្នុងស្រុកដោយបង្កើតឱកាសសម្រាប់ការលក់ផលិតផលកសិកម្មផលិតដោយកូនខ្មែរ។”' : '“我们通过为柬埔寨的农产品创造全球市场机会，来帮助当地的农民。”') }}</p>
             </div>
         </div>
 
         <div class="we-start-person-none">
-            <img src="{{ asset('assets/logo/person-rice-photo.png') }}">
+            <img src="{{ asset('assets/logo/person-rice-photo.png') }}" class="pt-16">
         </div>
 
         <div class="we-start-person">
