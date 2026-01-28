@@ -1298,11 +1298,12 @@
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full"
             poster="fallback-image.jpg">
             <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
-            <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
+            <source src="{{ asset('assets/videos/bg-rsl/LOGO-koko.mp4') }}" type="video/mp4">
+            {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
         </video>
         {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
         <video id="logoVideo" autoplay muted loop playsinline preload="auto" class="home-banner-logo hidden">
-            <source src="{{ asset('assets/videos/bg-rsl/LOGO-koko.mp4') }}" type="video/webm">
+            <source src="{{ asset('assets/videos/bg-rsl/LOGO-koko.mp4') }}" type="video/mp4">
         </video>
 
         <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
