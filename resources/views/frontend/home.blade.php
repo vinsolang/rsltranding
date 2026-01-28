@@ -1301,7 +1301,7 @@
             <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
         </video>
         {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
-        <video id="logoVideo" autoplay muted loop playsinline class="home-banner-logo hidden">
+        <video id="logoVideo" autoplay muted loop playsinline preload="auto" class="home-banner-logo hidden">
             <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
         </video>
 
