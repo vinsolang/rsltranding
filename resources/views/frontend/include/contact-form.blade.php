@@ -50,7 +50,7 @@
   }
 </style>
 
-<form id="contactForm" action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container" novalidate>
+<form id="contactForm" action="{{ route('application.send') }}" method="POST" class="wrapper-contact container" novalidate>
   <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : '联系表格') }}</p>
 
   <div class="row md:text-lg text-sm">
@@ -434,13 +434,13 @@
 
     <!-- Commodities (required: at least 1 checkbox) -->
     <div class="col-lg-6 col-md-6">
-      <label class="choose-field">
+      {{-- <label class="choose-field">
         {{ app()->getLocale() === 'en'
-      ? 'Commodities'
+      ? 'Commodities (Please select Import or Export first)'
       : (app()->getLocale() === 'km'
         ? 'ទំនិញ'
         : '商品种类') }}
-      </label>
+      </label> --}}
 
       <div id="commodityListWrap">
         <div id="commodityList" class="showcommoditylist w-full bg-[#059848] text-white rounded-[24.5px] pl-4"></div>

@@ -646,7 +646,7 @@
             <div class="first-card-background">
                 <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}">
             </div>
-            <form action="{{ route('contact.careerForm') }}" method="POST" enctype="multipart/form-data"
+            <form action="{{ route('contacts.send') }}" method="POST" enctype="multipart/form-data"
                 class="career-main-form">
                 @csrf
                 <div class="container">
@@ -684,9 +684,9 @@
                             <div class="career-input-form">
                                 <select id="position" name="position" class="form-select">
                                     <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : '请选择职位') }}</option>
-                                    <option value="Position1">Sales Executive</option>
-                                    <option value="Position2">Sales Supervisor</option>
-                                    <option value="Position3">Sales Manager</option>
+                                    <option value="Sales Executive">Sales Executive</option>
+                                    <option value="Sales Supervisor">Sales Supervisor</option>
+                                    <option value="Sales Manager">Sales Manager</option>
                                 </select>
                             </div>
                         </div>

@@ -12,6 +12,9 @@ use App\Http\Controllers\Frontend\ExportController;
 use App\Http\Controllers\Frontend\ImportController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\OurProductController;
+use App\Http\Controllers\Send\ApplicationController;
+use App\Http\Controllers\Send\ContactController as SendContactController;
+use App\Http\Controllers\Send\SendContactController as SendSendContactController;
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
 Route::get('/commodities', [ExportController::class, 'index'])->name("export");
@@ -35,5 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::post('/contact-send', [SendSendContactController::class, 'send'])->name('contacts.send');
+Route::post('/application-send', [ApplicationController::class, 'send'])->name('application.send');
 
 require __DIR__.'/auth.php';
