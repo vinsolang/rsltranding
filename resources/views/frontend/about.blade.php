@@ -1044,7 +1044,7 @@
             <img src="{{ asset('assets/images/bg-1.png') }}" class="-z-40">
         </div>
         <div class="md:mt-1 m-4kk">
-            <div class="relative mx-auto max-w-6xl px-4 md:px-80 md:top-0 top-16">
+            <div class="relative mx-auto max-w-6xl px-4 md:px-80 md:top-0 top-32">
                 <div class="gap-b-32">
                     {{-- Vision --}}
                     <div class="relative mx-auto min-h-14 md:mb-12 max-w-4xl">
