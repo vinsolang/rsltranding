@@ -644,7 +644,7 @@
     <section id="first-card">
         <div class="first-card">
             <div class="first-card-background">
-                <img src="{{ asset('assets/images/career-bg.png') }}">
+                <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}">
             </div>
             <form action="{{ route('contact.careerForm') }}" method="POST" enctype="multipart/form-data"
                 class="career-main-form">

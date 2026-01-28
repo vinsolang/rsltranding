@@ -1750,6 +1750,7 @@
 
     <div class="background-achievement-main">
         <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}" alt="">
+         {{-- <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}" alt=""> --}}
     </div>
     </div>
 </section>
