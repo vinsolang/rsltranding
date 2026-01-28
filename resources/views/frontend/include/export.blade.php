@@ -1491,18 +1491,37 @@
                                 <div class="">
                                     <div class="card-product" x-data="{
                                         active: 'default',
-                                        products: {
-                                            default: {
-                                                title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡与饮品') }}',
-                                                desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។' : '精选的优质柬埔寨咖啡豆，按照国际标准精心挑选并出口。') }}',
-                                                img: '{{ asset('assets/images/export-card-product-6.png') }}'
-                                            },
-                                            coffee: {
-                                                title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}',
-                                                desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' : '采用优质原料烘焙而成的柬埔寨咖啡豆，专为全球出口市场而生产。') }}',
-                                                img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
+                                            products: {
+                                                default: {
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'កាហ្វេ និងភេសជ្ជៈ' : '咖啡与饮品') }}',
+                                                    desc: '{{ app()->getLocale() === 'en'
+                                                        ? 'Premium Cambodian coffee products carefully selected and exported following international standards.'
+                                                        : (app()->getLocale() === 'km'
+                                                        ? 'ផលិតផលកាហ្វេកម្ពុជាគុណភាពខ្ពស់ ត្រូវបានជ្រើសរើស និងនាំចេញតាមស្តង់ដាអន្តរជាតិ។'
+                                                        : '精选的柬埔寨优质咖啡产品，按照国际标准出口。') }}',
+                                                    img: '{{ asset('assets/images/export-card-product-6.png') }}'
+                                                },
+
+                                                bean: {
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Roasted Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេលីង' : '烘焙咖啡豆') }}',
+                                                    desc: '{{ app()->getLocale() === 'en'
+                                                        ? 'Carefully roasted Cambodian coffee beans with rich aroma and balanced flavor, suitable for global markets.'
+                                                        : (app()->getLocale() === 'km'
+                                                        ? 'គ្រាប់កាហ្វេលីងកម្ពុជាមានក្លិនឈ្ងុយ និងរសជាតិសមតុល្យ សមស្របសម្រាប់ទីផ្សារអន្តរជាតិ។'
+                                                        : '精心烘焙的柬埔寨咖啡豆，香气浓郁，口感均衡，适合国际市场。') }}',
+                                                    img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
+                                                },
+
+                                                powder: {
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Roasted Coffee Powder' : (app()->getLocale() === 'km' ? 'ម្សៅកាហ្វេលីង' : '咖啡粉') }}',
+                                                    desc: '{{ app()->getLocale() === 'en'
+                                                        ? 'Finely ground roasted coffee powder, ready for brewing and ideal for retail and export.'
+                                                        : (app()->getLocale() === 'km'
+                                                        ? 'ម្សៅកាហ្វេលីងល្អិត រួចរាល់សម្រាប់ឆុង និងសមស្របសម្រាប់លក់ និងនាំចេញ។'
+                                                        : '细磨烘焙咖啡粉，即冲即用，适合零售及出口。') }}',
+                                                    img: '{{ asset('assets/products/Powder.jpg') }}'
+                                                }
                                             }
-                                        }
                                     }">
                                         <!-- Image -->
                                         <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
@@ -1516,20 +1535,23 @@
 
                                         <!-- Buttons -->
                                         <div class="smaill-detail-card">
-                                            <!-- Coffee Beans -->
-                                            <button x-show="active === 'default'" @click="active = 'coffee'">
-                                                {{ app()->getLocale() === 'en' ? 'Roasted Coffee Bean' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
+                                            <!-- Roasted Coffee Beans -->
+                                            <button x-show="active === 'default'" @click="active = 'bean'">
+                                                {{ app()->getLocale() === 'en' ? 'Roasted Coffee Bean' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេលីង' : '咖啡豆') }}
                                             </button>
-                                            <button x-show="active === 'default'" @click="active = 'coffee'">
-                                                {{ app()->getLocale() === 'en' ? 'Roasted Coffee Powder' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
+
+                                            <!-- Roasted Coffee Powder -->
+                                            <button x-show="active === 'default'" @click="active = 'powder'">
+                                                {{ app()->getLocale() === 'en' ? 'Roasted Coffee Powder' : (app()->getLocale() === 'km' ? 'ម្សៅកាហ្វេលីង' : '咖啡粉') }}
                                             </button>
 
                                             <!-- Back -->
-                                            <button x-show="active !== 'default'" @click="active = 'default'"
-                                                class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
-
+                                            <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
+                                                {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                             </button>
+
                                         </div>
+
                                         <div class="btn-card-interest-to-export">
                                             <button><a href="#contact"
                                                     class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</a></button>
@@ -1546,28 +1568,49 @@
                                 {{-- item 4 --}}
                                 <div class="">
                                     <div class="card-product" x-data="{
-                                         active: 'default',
+                                           active: 'default',
                                             products: {
                                                 default: {
                                                     title: 'Plantation Wood',
                                                     desc: 'Sustainably sourced forestry products from Cambodia, processed to meet international export standards.',
                                                     img: '{{ asset('assets/charcoal/charcoal-2.jpg') }}'
                                                 },
+
                                                 charcoal: {
                                                     title: 'Coconut Shell Charcoal',
-                                                    desc: 'High-quality natural charcoal with long burning time and low smoke.',
-                                                    img: '{{ asset('assets/charcoal/charcoal-1.jpg') }}'
+                                                    desc: 'High-quality natural charcoal made from coconut shells. Long burning time, low smoke, ideal for BBQ and industrial use.',
+                                                    img: '{{ asset('assets/products/Coconut-Shell.jpg') }}'
                                                 },
-                                                woods: {
+
+                                                white_black: {
                                                     title: 'White & Black Charcoal',
-                                                    desc: 'Responsibly grown plantation woods for construction and industrial use.',
-                                                    img: '{{ asset('assets/charcoal/charcoal-3.jpg') }}'
+                                                    desc: 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.',
+                                                    img: '{{ asset('assets/products/Black-Charcoal.jpg') }}'
                                                 },
-                                                {{-- woods1: {
-                                                    title: 'White & Black Charcoal',
-                                                    desc: 'Responsibly grown plantation woods for construction and industrial use.',
-                                                    img: '{{ asset('assets/charcoal/charcoal-3.jpg') }}'
-                                                } --}}
+
+                                                wood_chip: {
+                                                    title: 'Wood Chip',
+                                                    desc: 'Processed wood chips used for biomass fuel, landscaping, animal bedding, and industrial applications.',
+                                                    img: '{{ asset('assets/products/Wood-Chip.jpg') }}'
+                                                },
+
+                                                sawdust: {
+                                                    title: 'Wood Sawdust',
+                                                    desc: 'Fine wood particles suitable for fuel briquettes, composting, particle board, and agricultural use.',
+                                                    img: '{{ asset('assets/products/Wood-Sawdust.jpg') }}'
+                                                },
+
+                                                timber: {
+                                                    title: 'Wood Timber',
+                                                    desc: 'High-quality plantation timber for construction, furniture manufacturing, and export markets.',
+                                                    img: '{{ asset('assets/products/Wood-Timber.jpg') }}'
+                                                },
+
+                                                pellet: {
+                                                    title: 'Wood Pellet',
+                                                    desc: 'Compressed wood pellets used as renewable biomass fuel with high energy efficiency.',
+                                                    img: '{{ asset('assets/products/Wood-Pellet.jpg') }}'
+                                                }
                                             }
                                         }">
                                         <!-- Image -->
@@ -1580,28 +1623,31 @@
                                         <!-- Description -->
                                         <p x-text="products[active].desc"></p>
 
-                                        <!-- Buttons -->
+                                       <!-- Buttons -->
                                         <div class="smaill-detail-card">
-                                            <!-- Charcoal -->
+
                                             <button x-show="active === 'default'" @click="active = 'charcoal'" class="relative -top-6">
                                                 Coconut Shell Charcoal
                                             </button>
 
-                                            <!-- Plantation Woods -->
-                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
+                                            <button x-show="active === 'default'" @click="active = 'white_black'" class="relative -top-6">
                                                 White & Black Charcoal
                                             </button>
-                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
-                                               Wood Chip
+
+                                            <button x-show="active === 'default'" @click="active = 'wood_chip'" class="relative -top-6">
+                                                Wood Chip
                                             </button>
-                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
-                                               Wood Sawdust
+
+                                            <button x-show="active === 'default'" @click="active = 'sawdust'" class="relative -top-6">
+                                                Wood Sawdust
                                             </button>
-                                             <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
-                                               Wood Timber
+
+                                            <button x-show="active === 'default'" @click="active = 'timber'" class="relative -top-6">
+                                                Wood Timber
                                             </button>
-                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
-                                               Wood Pellet
+
+                                            <button x-show="active === 'default'" @click="active = 'pellet'" class="relative -top-6">
+                                                Wood Pellet
                                             </button>
 
                                             <!-- Back -->
@@ -1609,6 +1655,7 @@
                                                 Back
                                             </button>
                                         </div>
+
 
                                         <div class="btn-card-interest-to-export">
                                             <button><a href="#contact"
