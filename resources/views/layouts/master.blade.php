@@ -110,7 +110,7 @@
 
 {{-- <body class="{{ app()->getLocale() === 'en' ? 'inter' : 'kantumruy' }}" > --}}
 
-<body class="{{ app()->getLocale() === 'en' ? 'inter' : 'kantumruy' }} overflow-x-hidden">
+<body class="{{ app()->getLocale() === 'en' ? 'inter' : 'kantumruy' }} overflow-hidden">
   @php
   $locale = app()->getLocale();
   @endphp
