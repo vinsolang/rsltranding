@@ -1301,11 +1301,11 @@
             <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
         </video>
         {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
-        <video id="logoVideo" autoplay muted loop playsinline preload="auto" class="home-banner-logo">
+        <video id="logoVideo" autoplay muted loop playsinline preload="auto" class="home-banner-logo hidden">
             <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
         </video>
 
-        {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
+        <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
 
 
         <div class="home-banner-context">
