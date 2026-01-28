@@ -1068,7 +1068,7 @@
             <div class="relative mx-auto max-w-6xl px-4 md:px-80 md:top-0 top-10">
                 <div class="gap-b-32 md:space-y-0 space-y-8">
                     {{-- Vision --}}
-                    <div class="relative mx-auto min-h-14 md:mb-12 max-w-4xl">
+                    <div class="relative mx-auto min-h-14 md:mb-12 max-w-4xl md:py-0 py-4">
                         {{-- Background image (BEHIND text) --}}
                         <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
                             <img
@@ -1104,7 +1104,7 @@
                         </div>
                     </div>
                     {{-- Mission --}}
-                    <div class="relative mx-auto min-h-14 my-1 mb-20 max-w-4xl ">
+                    <div class="relative mx-auto min-h-14 my-1 mb-20 max-w-4xl md:py-0 py-4">
 
                         {{-- Background image (BEHIND text) --}}
                         <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
@@ -1155,7 +1155,7 @@
                         </div>
                     </div>
                     {{-- Core Values --}}
-                    <div class="text-center mt-2">
+                    <div class="text-center mt-2 md:py-0 py-4">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-black">
                             {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'តម្លៃស្នូលរបស់យើង' : '我们的核心价值观') }}
                         </h3>
@@ -1164,7 +1164,7 @@
                         </div>
                     </div>
 
-                    <div class="relative top-0 xl:-top-8 2xl:-top-14 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[850px] h-auto md:h-[300px] mx-auto">
+                    <div class="relative top-0 xl:-top-8 2xl:-top-14 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[850px] h-auto md:h-[300px] mx-auto md:py-0 py-4">
                         <img src="{{ asset('assets/logo/rsl-core-value.png') }}" alt="" class="w-full h-full object-fill">
                     </div>
                     {{-- @php
