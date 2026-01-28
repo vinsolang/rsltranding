@@ -1749,7 +1749,7 @@
     </div>
 
     <div class="background-achievement-main">
-        <img src="{{ asset('assets/images/background-achievement-main.png') }}" alt="">
+        <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}" alt="">
     </div>
     </div>
 </section>

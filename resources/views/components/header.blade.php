@@ -286,7 +286,7 @@
                             {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
                         </span>
                     </a>
-                    <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">
                         <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
