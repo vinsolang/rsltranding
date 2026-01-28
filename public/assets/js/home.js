@@ -10,3 +10,11 @@ answer.classList.toggle('active');
 }
 
 
+document.addEventListener('touchstart', () => {
+  logoVideo.play();
+}, { once: true });
+
+logoVideo.oncanplay = () => {
+  logoVideo.style.opacity = 1;
+};
+
