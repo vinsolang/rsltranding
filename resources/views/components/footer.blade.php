@@ -321,7 +321,7 @@
 
             </div>
 
-            <div class="footer-address space-y-3">
+            <div class="footer-address space-y-0">
                 {{-- <h5>Full Office Address</h5> --}}
 
                 {{-- <li><a style="color: #FFFFFF">{{ app()->getLocale() === 'en' ? '#202, Borey 999 Honey, {{  2<sup>nd</sup> }} Floor, Street 355, Group 03, Village 1 , Boeng
@@ -340,13 +340,13 @@
                 </li>
 
                 <li>
-                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
                 </li>
                 <li>
-                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
+                    <h5 class="">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
                 </li>
                 <li>
-                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
+                    <h5 class="">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
                 </li>
                 
                 <li>

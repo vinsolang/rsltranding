@@ -306,6 +306,25 @@
             padding-top: 3rem;
             padding-bottom: 1.5rem;
         }
+         .card-product .card-product-bg-1 {
+            width: 100%;
+
+        }
+
+        .card-product .card-product-detail-1 {
+            width: 100%;
+            height: 500px !important;
+            min-height: unset;
+            background-color: #EEFFF8;
+            position: relative;
+            margin-top: -5rem;
+            border: #EEFFF8;
+            border-radius: 20px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+        }
 
         @media screen and (max-width: 767px) {
             .card-product .card-product-detail {
@@ -1250,7 +1269,7 @@
                                     cashew: {
                                         title: '{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}',
                                         desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' : '高品质的柬埔寨腰果，适合出口全球市场。') }}',
-                                        img: '{{ asset('assets/images/export/nuts.jpg') }}'
+                                        img: '{{ asset('assets/products/cashew-nuts.jpg') }}'
                                     },
                                     peanut: {
                                         title: '{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : '花生') }}',
@@ -1326,9 +1345,9 @@
                                         }
                                     }">
                                         <!-- Image -->
-                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                        <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
 
-                                        <div class="card-product-detail">
+                                        <div class="card-product-detail-1">
                                             <!-- Title -->
                                         <h5 x-text="products[active].title"></h5>
 
@@ -1381,9 +1400,9 @@
                                         }
                                     }">
                                         <!-- Image -->
-                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                        <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
 
-                                        <div class="card-product-detail">
+                                        <div class="card-product-detail-1">
                                             <!-- Title -->
                                         <h5 x-text="products[active].title"></h5>
 
@@ -1436,9 +1455,9 @@
                                         }
                                     }">
                                         <!-- Image -->
-                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                        <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
 
-                                        <div class="card-product-detail">
+                                        <div class="card-product-detail-1">
                                            <!-- Title -->
                                         <h5 x-text="products[active].title"></h5>
 
@@ -1449,7 +1468,10 @@
                                         <div class="smaill-detail-card">
                                             <!-- Coffee Beans -->
                                             <button x-show="active === 'default'" @click="active = 'coffee'">
-                                                {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
+                                                {{ app()->getLocale() === 'en' ? 'Roasted Coffee Bean' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
+                                            </button>
+                                            <button x-show="active === 'default'" @click="active = 'coffee'">
+                                                {{ app()->getLocale() === 'en' ? 'Roasted Coffee Powder' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}
                                             </button>
 
                                             <!-- Back -->
@@ -1477,26 +1499,31 @@
                                          active: 'default',
                                             products: {
                                                 default: {
-                                                    title: 'Forestry & Natural Resource Products',
+                                                    title: 'Plantation Wood',
                                                     desc: 'Sustainably sourced forestry products from Cambodia, processed to meet international export standards.',
                                                     img: '{{ asset('assets/charcoal/charcoal-2.jpg') }}'
                                                 },
                                                 charcoal: {
-                                                    title: 'Charcoal',
+                                                    title: 'Coconut Shell Charcoal',
                                                     desc: 'High-quality natural charcoal with long burning time and low smoke.',
                                                     img: '{{ asset('assets/charcoal/charcoal-1.jpg') }}'
                                                 },
                                                 woods: {
-                                                    title: 'Plantation Woods',
+                                                    title: 'White & Black Charcoal',
                                                     desc: 'Responsibly grown plantation woods for construction and industrial use.',
                                                     img: '{{ asset('assets/charcoal/charcoal-3.jpg') }}'
-                                                }
+                                                },
+                                                {{-- woods1: {
+                                                    title: 'White & Black Charcoal',
+                                                    desc: 'Responsibly grown plantation woods for construction and industrial use.',
+                                                    img: '{{ asset('assets/charcoal/charcoal-3.jpg') }}'
+                                                } --}}
                                             }
                                         }">
                                         <!-- Image -->
-                                        <img class="card-product-bg h-[250px] object-cover" :src="products[active].img">
+                                        <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
 
-                                        <div class="card-product-detail">
+                                        <div class="card-product-detail-1">
                                            <!-- Title -->
                                         <h5 x-text="products[active].title"></h5>
 
@@ -1507,12 +1534,24 @@
                                         <div class="smaill-detail-card">
                                             <!-- Charcoal -->
                                             <button x-show="active === 'default'" @click="active = 'charcoal'" class="relative -top-6">
-                                                Charcoal
+                                                Coconut Shell Charcoal
                                             </button>
 
                                             <!-- Plantation Woods -->
                                             <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
-                                                Plantation Woods
+                                                White & Black Charcoal
+                                            </button>
+                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
+                                               Wood Chip
+                                            </button>
+                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
+                                               Wood Sawdust
+                                            </button>
+                                             <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
+                                               Wood Timber
+                                            </button>
+                                            <button x-show="active === 'default'" @click="active = 'woods'" class="relative -top-6">
+                                               Wood Pellet
                                             </button>
 
                                             <!-- Back -->

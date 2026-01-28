@@ -577,6 +577,7 @@
     .card-profile p {
         margin: 0;
         padding: 0;
+        
     }
 
     .credentail-card-title h1 {
@@ -1038,8 +1039,44 @@
         <div class="md:mt-1 m-4kk">
             <div class="relative mx-auto max-w-6xl px-4 md:px-80">
                 <div class="gap-b-32">
-                    {{-- Mission --}}
+                    {{-- Vision --}}
                     <div class="relative mx-auto min-h-14 md:mb-12 max-w-4xl">
+                        {{-- Background image (BEHIND text) --}}
+                        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                            <img
+                                src="{{ asset('assets/images/Group 321.png') }}"
+                                alt=""
+                                class="lg:w-[1000px] object-contain" />
+                        </div>
+                        {{-- Card content (ABOVE image) --}}
+                        <div class="mv-card relative ">
+                            <div class="flex items-center gap-2 md:gap-6">
+                                <div class="max-w-10 sm:max-w-12 md:max-w-16 flex items-center text-orange-500 ml-[19%] md:ml-[19%]">
+                                    {{-- icon --}}
+                                    <img class="w-24 ml-[-12px]" src="{{ asset('assets/images/g3831.png') }}" alt="">
+                                </div>
+
+                                <div class="min-w-0  md:ml-[22px]">
+                                    <h2 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-green-600">
+                                        {{ app()->getLocale() === 'en' ? 'Our Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យរបស់យើង' : '我们的愿景') }}
+                                    </h2>
+
+                                    <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
+
+                                        <p class="mt-2 mr-5 lg:mr-1 text-xs md:text-base font-semibold leading-relaxed text-gray-800">
+                                            {!! app()->getLocale() === 'en'
+                                            ? 'Everyone has Better Health, Longer Life &amp;<br class="hidden sm:block">Greater Future.'
+                                            : (app()->getLocale() === 'km'
+                                            ? 'គ្រប់គ្នាមានសុខភាពល្អជាងមុន អាយុវែងជាងមុន និងអនាគត<br class="hidden sm:block">អស្ចារ្យជាងមុន'
+                                            : '每个人都拥有更健康、更长寿与更美好的未来。') !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Mission --}}
+                    <div class="relative mx-auto min-h-14 my-1 mb-20 max-w-4xl ">
 
                         {{-- Background image (BEHIND text) --}}
                         <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
@@ -1089,44 +1126,8 @@
                             </div>
                         </div>
                     </div>
-                    {{-- Vision --}}
-                    <div class="relative mx-auto min-h-14 my-1 mb-20 max-w-4xl ">
-                        {{-- Background image (BEHIND text) --}}
-                        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-                            <img
-                                src="{{ asset('assets/images/Group 321.png') }}"
-                                alt=""
-                                class="lg:w-[1000px] object-contain" />
-                        </div>
-                        {{-- Card content (ABOVE image) --}}
-                        <div class="mv-card relative ">
-                            <div class="flex items-center gap-2 md:gap-6">
-                                <div class="max-w-10 sm:max-w-12 md:max-w-16 flex items-center text-orange-500 ml-[19%] md:ml-[19%]">
-                                    {{-- icon --}}
-                                    <img class="w-24 ml-[-12px]" src="{{ asset('assets/images/g3831.png') }}" alt="">
-                                </div>
-
-                                <div class="min-w-0  md:ml-[22px]">
-                                    <h2 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-green-600">
-                                        {{ app()->getLocale() === 'en' ? 'Our Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យរបស់យើង' : '我们的愿景') }}
-                                    </h2>
-
-                                    <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
-
-                                        <p class="mt-2 mr-5 lg:mr-1 text-xs md:text-base font-semibold leading-relaxed text-gray-800">
-                                            {!! app()->getLocale() === 'en'
-                                            ? 'Everyone has Better Health, Longer Life &amp;<br class="hidden sm:block">Greater Future.'
-                                            : (app()->getLocale() === 'km'
-                                            ? 'គ្រប់គ្នាមានសុខភាពល្អជាងមុន អាយុវែងជាងមុន និងអនាគត<br class="hidden sm:block">អស្ចារ្យជាងមុន'
-                                            : '每个人都拥有更健康、更长寿与更美好的未来。') !!}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     {{-- Core Values --}}
-                    <div class="text-center mt-[60px]">
+                    <div class="text-center mt-[30px]">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-white">
                             {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'តម្លៃស្នូលរបស់យើង' : '我们的核心价值观') }}
                         </h3>
@@ -1135,7 +1136,10 @@
                         </div>
                     </div>
 
-                    @php
+                    <div class="md:w-[500px] md:h-[300px] mx-auto">
+                        <img src="{{ asset('assets/logo/corevalue.png') }}" alt="" class="">
+                    </div>
+                    {{-- @php
                     $values = [
                     [
                     'letter' => 'P',
@@ -1214,7 +1218,7 @@
                             <div class=" peace-card text-center sm:text-left mt-3 h-[6px]  sm:w-32 md:w-[155px] lg:w-[195px] bg-[#8FD1AD] rounded-full"></div>
                         </div>
                         @endforeach
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -1222,12 +1226,12 @@
     </div>
 </section>
 
-<section class="md:-mt-96 mt-10 -mt-4k">
+<section class="md:-mt-96 mt-10 -mt-4k z-40">
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
         <img src="{{ asset('assets/profile-team/REACH-SOTHORN.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Board of Director' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
+        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Founder' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
         <div class="p-bg">
             <p class="{{ app()->getLocale() === 'km'
                     ? 'max-w-4xl'
@@ -1246,12 +1250,12 @@
 <section>
     <div class="meet-our-team-card">
         <div class="container">
-            <h1>{{ app()->getLocale() === 'en' ? 'Meet Our Team' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '介绍我们的团队') }}</h1>
+            <h1>{{ app()->getLocale() === 'en' ? 'OUR FOUNDING TEAM' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '介绍我们的团队') }}</h1>
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="card-profile">
                         <img src="{{ asset('assets/profile-team/REACH-SOTHORN.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Reach Sothorn 先生') }}</p>
+                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'REACH SOTHORN 先生') }}</p>
                         <p class="profile-position">{{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : '创始人') }}</p>
                     </div>
                 </div>
@@ -1260,7 +1264,7 @@
                     <div class="card-profile">
                         
                         <img src="{{ asset('assets/profile-team/Chov-Sambath.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Chov Sambath (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'Chov Sambath (Mike) 先生') }}</p>
+                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. CHOV SOMBATH (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'CHOV SOMBATH (Mike) 先生') }}</p>
                         <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                     </div>
                 </div>
@@ -1269,7 +1273,7 @@
                     <div class="card-profile">
                         
                         <img src="{{ asset('assets/profile-team/CHHENG-SONY.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Ms. Chheng Sony' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'Chheng Sony 先生') }}</p>
+                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. CHHENG SONY' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'CHHENG SONY 先生') }}</p>
                         <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                     </div>
                 </div>
@@ -1278,7 +1282,7 @@
                     <div class="card-profile">
                         
                         <img src="{{ asset('assets/profile-team/SRUN-PHECHLANG-(Jessie).png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Srun Phechlang (Jessie)' : (app()->getLocale() === 'km' ? 'លោក ស្រ៊ុន ពេជ្រឡាង(Jessie)' : 'Srun Phechlang (Jessie) 女士') }}</p>
+                        <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Ms. SRUN PHECHLANG (Jessie)' : (app()->getLocale() === 'km' ? 'លោក ស្រ៊ុន ពេជ្រឡាង(Jessie)' : 'SRUN PHECHLANG (Jessie) 女士') }}</p>
                         <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}</p>
                     </div>
                 </div>
@@ -1305,30 +1309,31 @@
         <img src="{{ asset('assets/cartificate/4.png') }}">
     </div>
     </div> --}}
-    <div class="flex lg:flex-row flex-col justify-center items-center gap-6 max-w-8xl mx-auto px-2">
+    <div class="flex lg:flex-row flex-col justify-center items-center gap-8 max-w-8xl mx-auto px-2">
 
-        <div class="flex items-center">
-            <img
-                src="{{ asset('assets/images/credentail-1.png') }}"
-                class="h-[420px] w-auto object-contain"
-                alt="Certificate 1">
-        </div>
-
-        <div class="flex items-center">
-            <img
-                src="{{ asset('assets/images/credentail-2.png') }}"
-                class="h-[420px] w-auto object-contain"
-                alt="Certificate 2">
-        </div>
-
-        <div class="flex items-center">
-            <img
-                src="{{ asset('assets/cartificate/4.png') }}"
-                class="h-[420px] w-auto object-contain"
-                alt="Certificate 3">
-        </div>
-
+    <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+            src="{{ asset('assets/images/credentail-1.png') }}"
+            class="h-[420px] w-auto object-contain rounded-md border"
+            alt="Certificate 1">
     </div>
+
+    <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+            src="{{ asset('assets/images/credentail-2.png') }}"
+            class="h-[420px] w-auto object-contain rounded-md border"
+            alt="Certificate 2">
+    </div>
+
+    <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+            src="{{ asset('assets/cartificate/4.png') }}"
+            class="h-[420px] w-auto object-contain rounded-md border"
+            alt="Certificate 3">
+    </div>
+
+</div>
+
 
     </div>
 </section>

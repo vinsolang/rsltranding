@@ -436,7 +436,7 @@
     <div class="col-lg-6 col-md-6">
       <label class="choose-field">
         {{ app()->getLocale() === 'en'
-      ? 'Commodities'
+      ? 'Commodities (Please select Import or Export first)'
       : (app()->getLocale() === 'km'
         ? 'ទំនិញ'
         : '商品种类') }}

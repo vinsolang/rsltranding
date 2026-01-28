@@ -3,10 +3,10 @@
         x-data="{ open: false }">
         <a href="{{ route('home') }}" class="flex justify-center items-center lg:space-x-2 xl:space-x-4 md:space-x-4 md:ml-4 lg:ml-1 xl:ml-4">
             <img src="{{ asset('assets/logo/logo-image.png') }}" alt="" class="w-[50px] xl:w-[100px] md:w-[70px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-10 py-2">
-            <img src="{{ asset('assets/logo/logo-text.png') }}" alt="" class="w-[140px] xl:w-[370px] lg:w-[180px] md:w-[240px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-2 py-2">
+            <img src="{{ asset('assets/logo/logo-text.png') }}" alt="" class="w-[140px] xl:w-[280px] lg:w-[180px] md:w-[240px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-2 py-2">
         </a>
         <div class="hidden lg:flex items-center gap-2">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center space-x-2">
                 <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
                         {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
                     </span>
                 </a>
-                <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
                     <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -49,7 +49,7 @@
                             d="M13.1165 0C5.88409 0 0 5.88409 0 13.1165C0 20.3484 5.88409 26.233 13.1165 26.233C20.3484 26.233 26.233 20.3484 26.233 13.1165C26.233 5.88409 20.3494 0 13.1165 0ZM16.3784 13.5783H14.2445V21.1842H11.0824C11.0824 21.1842 11.0824 17.0283 11.0824 13.5783H9.57928V10.8901H11.0824V9.15132C11.0824 7.90603 11.6741 5.96017 14.2736 5.96017L16.6167 5.96915V8.57861C16.6167 8.57861 15.1929 8.57861 14.916 8.57861C14.6392 8.57861 14.2455 8.71703 14.2455 9.31088V10.8906H16.6548L16.3784 13.5783Z"
                             fill="#007BFF" />
                     </svg>
-                </a>
+                </a>    
                 <a href="https://t.me/+85511678588" target="_blank">
                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

@@ -1407,11 +1407,11 @@
         </div>
 
         <div class="we-start-person-none">
-            <img src="{{ asset('assets/logo/rsl-person-rice-cambo.png') }}">
+            <img src="{{ asset('assets/logo/person-rice-photo.png') }}">
         </div>
 
         <div class="we-start-person">
-            <img src="{{ asset('assets/logo/rsl-person-rice-cambo.png') }}" class="2xl:ml-40 ml-36 w-[50%] h-[60%]">
+            <img src="{{ asset('assets/logo/person-rice-photo.png') }}" class="2xl:ml-40 ml-36 w-[50%] h-[60%]">
 
 
         </div>

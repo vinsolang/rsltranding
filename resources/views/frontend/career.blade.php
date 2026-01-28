@@ -684,9 +684,9 @@
                             <div class="career-input-form">
                                 <select id="position" name="position" class="form-select">
                                     <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : '请选择职位') }}</option>
-                                    <option value="Position1">Position1</option>
-                                    <option value="Position2">Position2</option>
-                                    <option value="Position3">Position3</option>
+                                    <option value="Position1">Sales Executive</option>
+                                    <option value="Position2">Sales Supervisor</option>
+                                    <option value="Position3">Sales Manager</option>
                                 </select>
                             </div>
                         </div>
