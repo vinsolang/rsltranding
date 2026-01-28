@@ -991,13 +991,20 @@
     }
     @media screen and (min-width: 2560px) {
     .-mt-4k {
-        margin-top: -1300px; /* huge negative margin only on 4K */
+        margin-top: -1300px; 
     }
 }
 
  @media screen and (min-width: 2560px) {
     .m-4kk {
-        margin-top: 300px; /* huge negative margin only on 4K */
+        margin-top: 300px; 
+    }
+}
+@media screen and (max-width: 768px) {
+    .founder-section {
+        margin-top: 260px !important;
+        position: relative;
+        z-index: 1;
     }
 }
 </style>
@@ -1226,12 +1233,12 @@
     </div>
 </section>
 
-<section class="relative md:-mt-96 mt-10 -mt-4k z-[999]">
+<section class="founder-section relative md:-mt-96 mt-96 -mt-4k z-[999]">
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
         <img src="{{ asset('assets/profile-team/REACH-SOTHORN.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#ffffff] md:text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Founder' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
+        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Founder' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
         <div class="p-bg">
             <p class="{{ app()->getLocale() === 'km'
                     ? 'max-w-4xl'

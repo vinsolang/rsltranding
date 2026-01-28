@@ -1452,7 +1452,7 @@
                 <div class="card">
                     <img src="{{ asset('assets/images/card-2.png') }}">
                     <div class="card-content">
-                        <h4>{{ app()->getLocale() === 'en' ? 'Coffee' : (app()->getLocale() === 'km' ? 'កាហ្វេ' : '咖啡') }}</h4>
+                        <h4>{{ app()->getLocale() === 'en' ? 'Roasted Coffee Bean' : (app()->getLocale() === 'km' ? 'កាហ្វេ' : '咖啡') }}</h4>
                         <p>{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.'
                                 : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។'
                                 : '高品质的柬埔寨咖啡豆经过精心烘焙和加工，以供全球出口市场使用。') }}</p>

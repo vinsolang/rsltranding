@@ -53,7 +53,7 @@
 <form id="contactForm" action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container" novalidate>
   <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : '联系表格') }}</p>
 
-  <div class="row">
+  <div class="row md:text-lg text-sm">
     @csrf
 
     <!-- Name -->
@@ -436,7 +436,7 @@
     <div class="col-lg-6 col-md-6">
       <label class="choose-field">
         {{ app()->getLocale() === 'en'
-      ? 'Commodities (Please select Import or Export first)'
+      ? 'Commodities'
       : (app()->getLocale() === 'km'
         ? 'ទំនិញ'
         : '商品种类') }}
