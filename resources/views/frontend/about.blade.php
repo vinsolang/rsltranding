@@ -1135,10 +1135,10 @@
                     </div>
                     {{-- Core Values --}}
                     <div class="text-center mt-[30px]">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-white">
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-green-600 md:text-white">
                             {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'តម្លៃស្នូលរបស់យើង' : '我们的核心价值观') }}
                         </h3>
-                        <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-white/90">
+                        <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-green-600 md:text-white/90">
                             P E A C E
                         </div>
                     </div>

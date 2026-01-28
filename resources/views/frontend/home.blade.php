@@ -1290,6 +1290,17 @@
             transform: scale(1);
         }
     }
+
+    .logo-video {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.6s ease;
+}
+
+.logo-img {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
 </style>
 
 {{-- banner --}}
@@ -1301,7 +1312,7 @@
             <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
         </video>
         {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
-        <video id="logoVideo" autoplay muted loop playsinline preload="auto" class="home-banner-logo hidden">
+        <video id="logoVideo" muted loop playsinline preload="auto" class="home-banner-logo hidden">
             <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
         </video>
 
@@ -2006,4 +2017,37 @@
 
 @section('home')
 <script src="{{ asset('assets/js/home.js') }}"></script>
+
 @endsection
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("logoVideo");
+    const img = document.getElementById("logoImg");
+
+    if (!video) return;
+
+    // Try autoplay (mobile-safe)
+    video.muted = true;
+    video.play().then(() => {
+        // Success
+    }).catch(() => {
+        // Fallback if autoplay blocked
+        console.log("Autoplay blocked, waiting for interaction");
+    });
+
+    // When video starts playing
+    video.addEventListener("playing", () => {
+        video.style.opacity = "1";
+        img.style.opacity = "0";
+    });
+});
+</script>
+<script>
+document.addEventListener("click", () => {
+    const video = document.getElementById("logoVideo");
+    if (video && video.paused) {
+        video.play();
+    }
+}, { once: true });
+</script>
+
