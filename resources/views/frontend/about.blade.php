@@ -1272,7 +1272,7 @@
                     : '我们使命的核心是致力于全球福祉。通过提供优质的产品，我们的目标是为世界各地的人们延长寿命和健康。我们致力于无限期地服务和支持我们的全球社区，确保全人类繁荣的未来。') }}
             </p>
             <div class="text-black inline-block px-4 py-1 text-sm font-semibold mt-1">
-                Warm Regard
+                Warm Regards
             </div>
             <p class="mt-3 text-base">
                 Mr. REACH SOTHORN
@@ -1327,6 +1327,7 @@
         </div>
     </div> --}}
     <section class="relative w-full overflow-hidden">
+         <h1 class="text-center text-2xl text-[#059848] mt-8 font-bold">{{ app()->getLocale() === 'en' ? 'OUR FOUNDING TEAM' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '介绍我们的团队') }}</h1>
     <!-- Background -->
     <div class="absolute inset-0">
         <!-- Gradient -->
