@@ -237,6 +237,11 @@
         height: 190vh;
     }
 }
+@media (max-width: 426px) {
+    .first-card-background img {
+        height: 150vh;
+    }
+}
 
     /* 4K and large monitors */
     @media screen and (min-width: 2560px) {
