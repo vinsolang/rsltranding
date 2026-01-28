@@ -124,6 +124,12 @@
             border-radius: 41.5px;
             margin-top: 3rem;
         }
+           .first-card-background img {
+            object-fit: cover;
+            width: 100%;
+            height: 70vh;
+
+        }
     }
 
 
@@ -191,7 +197,7 @@
         .first-card {
             position: relative;
             width: 100%;
-            height: 170vh;
+            height: 180vh;
             padding-top: 18rem;
             margin-top: -13% !important;
         }
@@ -227,14 +233,14 @@
     .first-card-background img {
         object-fit: cover;
         width: 100%;
-        height: 170vh;
+        height: 230vh;
 
     }
 
     /* 4K and large monitors */
     @media screen and (min-width: 2560px) {
     .first-card-background img {
-        height: 100vh; /* exactly one viewport height */
+        height: 125vh; /* exactly one viewport height */
         width: 100%;   /* scale width proportionally */
         object-fit: cover; /* cover whole section */
     }
@@ -263,6 +269,8 @@
         .first-card .first-card-sub-title p {
             font-size: 16px;
         }
+
+        
     }
 
 
@@ -991,7 +999,7 @@
     }
     @media screen and (min-width: 2560px) {
     .-mt-4k {
-        margin-top: -1300px; 
+        margin-top: -1110px; 
     }
 }
 
@@ -1003,6 +1011,13 @@
 @media screen and (max-width: 768px) {
     .founder-section {
         margin-top: 350px !important;
+        position: relative;
+        z-index: 1;
+    }
+}
+@media screen and (max-width: 600px) {
+    .founder-section {
+        margin-top: 600px !important;
         position: relative;
         z-index: 1;
     }
@@ -1109,7 +1124,7 @@
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
                                         <p>
                                             {!! app()->getLocale() === 'en'
-                                            ? 'To Find the BEST Quality Products with Reasonable<br>Price for Customer'
+                                            ? 'To Find the BEST Quality Products with Reasonable<br>price for customer. '
                                             : (app()->getLocale() === 'km'
                                             ? 'ស្វែងរកផលិតផលគុណភាពល្អបំផុត<br>ជាមួយតម្លៃសមរម្យសម្រាប់អតិថិជន'
                                             : '为客户寻找最优质、价格合理的产品') !!}
@@ -1123,7 +1138,7 @@
                                             <br>
 
                                             {{ app()->getLocale() === 'en'
-                                                    ? 'To Help Farmer to get more jobs and better incomes'
+                                                    ? 'To Help Farmer to get more jobs and better incomes. '
                                                     : (app()->getLocale() === 'km'
                                                         ? 'ជួយកសិករឲ្យមានការងារច្រើនជាងមុន និងចំណូលប្រសើរជាងមុន'
                                                         : '帮助农民获得更多工作和更好收入') }}
@@ -1134,17 +1149,17 @@
                         </div>
                     </div>
                     {{-- Core Values --}}
-                    <div class="text-center mt-[30px]">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-green-600 md:text-white">
+                    <div class="text-center mt-2">
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-black">
                             {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'តម្លៃស្នូលរបស់យើង' : '我们的核心价值观') }}
                         </h3>
-                        <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-green-600 md:text-white/90">
+                        <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-black">
                             P E A C E
                         </div>
                     </div>
 
-                    <div class="w-[280px] md:w-[200px] lg:w-[300px] xl:w-[454px] h-[300px] mx-auto">
-                        <img src="{{ asset('assets/logo/rsl-core-value.png') }}" alt="" class="">
+                    <div class="relative top-0 xl:-top-8 2xl:-top-14 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[850px] h-auto md:h-[300px] mx-auto">
+                        <img src="{{ asset('assets/logo/rsl-core-value.png') }}" alt="" class="w-full h-full object-fill">
                     </div>
                     {{-- @php
                     $values = [
@@ -1233,12 +1248,12 @@
     </div>
 </section>
 
-<section class="founder-section relative md:-mt-96 mt-96 -mt-4k z-[999]">
+<section class="founder-section relative md:mt-[450px] mt-[25rem] -mt-4k z-[999]">
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
         <img src="{{ asset('assets/profile-team/REACH-SOTHORN.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
-        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Founder' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
+        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'MESSAGE FROM FOUNDER' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
         <div class="p-bg">
             <p class="{{ app()->getLocale() === 'km'
                     ? 'max-w-4xl'
@@ -1255,7 +1270,7 @@
 </section>
 
 <section>
-    <div class="meet-our-team-card">
+    {{-- <div class="meet-our-team-card">
         <div class="container">
             <h1>{{ app()->getLocale() === 'en' ? 'OUR FOUNDING TEAM' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '介绍我们的团队') }}</h1>
             <div class="row">
@@ -1295,7 +1310,107 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+    <section class="relative w-full overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0">
+        <!-- Gradient -->
+        {{-- <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-green-400 to-green-700"></div> --}}
+
+        <!-- Rice background overlay -->
+        {{-- <img src="/assets/images/rice-bg.png"
+            class="absolute inset-0 w-full h-full object-cover opacity-40"
+            alt=""> --}}
     </div>
+
+    <!-- Content -->
+    <div class="relative max-w-6xl mx-auto px-6 py-20 space-y-24">
+
+        <!-- PERSON 1 -->
+        <div class="flex md:flex-row flex-col items-center gap-10">
+            <!-- Diamond Image -->
+            <div class="relative w-[260px] lg:w-72 h-60 md:h-44 lg:h-56 rotate-45 flex items-center justify-center">
+                <img src="{{ asset('assets/profile-team/1.png') }}"
+                    class="w-full h-full object-cover rotate-[-45deg]"
+                    alt="">
+                
+            </div>
+
+            <!-- Text -->
+            <div class="text-black w-full md:max-w-5xl">
+                <h3 class="text-xl md:text-2xl font-bold uppercase">Mr. Reach Sothorn</h3>
+                <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
+                    Founder
+                </div>
+                <p class="mt-3 text-base">
+                    Mr. Sothorn has over 20 years in Shipping & Logistics Industry.
+                </p>
+            </div>
+        </div>
+
+        <!-- PERSON 2 -->
+        <div class="flex md:flex-row flex-col items-center gap-10 justify-center lg:ml-32">
+            <div class="relative w-[260px] lg:w-72 h-60 md:h-44 lg:h-56 rotate-45 flex items-center justify-center">
+                <img src="{{ asset('assets/profile-team/2.png') }}"
+                    class="w-full h-full object-cover rotate-[-45deg]"
+                    alt="">
+                
+            </div>
+
+            <div class="text-black w-full md:max-w-5xl">
+                <h3 class="text-xl lg:text-2xl font-bold "><span class="uppercase">Mr. Chov Sombath</span> (Mike)</h3>
+                <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
+                    Co-Founder
+                </div>
+                <p class="mt-3 text-base">
+                    Mr. Mike has over 13 years in Logistics & Supply Chain Management.
+                </p>
+            </div>
+        </div>
+
+        <!-- PERSON 3 -->
+        <div class="flex md:flex-row flex-col items-center gap-10">
+            <div class="relative w-[260px] lg:w-72 h-60 md:h-44 lg:h-56 rotate-45 flex items-center justify-center">
+                <img src="{{ asset('assets/profile-team/3.png') }}"
+                    class="w-full h-full object-cover rotate-[-45deg]"
+                    alt="">
+                
+            </div>
+
+            <div class="text-black w-full md:max-w-5xl">
+                <h3 class="text-xl md:text-2xl font-bold uppercase">Mr. Chheng Sony</h3>
+                <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
+                    Co-Founder
+                </div>
+                <p class="mt-3 text-base">
+                    Mr. Sony has over 15 years in Agriculture Industry.
+                </p>
+            </div>
+        </div>
+
+         <!-- PERSON 2 -->
+        <div class="flex md:flex-row flex-col items-center gap-10 justify-center lg:ml-32">
+            <div class="relative w-[260px] lg:w-72 h-60 md:h-44 lg:h-56 rotate-45 flex items-center justify-center">
+                <img src="{{ asset('assets/profile-team/4.png') }}"
+                    class="w-full h-full object-cover rotate-[-45deg]"
+                    alt="">
+                
+            </div>
+
+            <div class="text-black w-full md:max-w-5xl">
+                <h3 class="text-xl lg:text-2xl font-bold"><span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)</h3>
+                <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
+                    Co-Founder
+                </div>
+                <p class="mt-3 text-base">
+                    Ms. Jessie has over 15 years in Accounting & Finance Management.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 </section>
 
 <section>
