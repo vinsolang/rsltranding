@@ -2,8 +2,8 @@
     <div class="w-full h-[70px] lg:h-[100px] flex items-center justify-between max-w-7xl mx-auto px-4"
         x-data="{ open: false }">
         <a href="{{ route('home') }}" class="flex justify-center items-center lg:space-x-2 xl:space-x-4 md:space-x-4 md:ml-4 lg:ml-1 xl:ml-4">
-            <img src="{{ asset('assets/logo/logo-image.png') }}" alt="" class="w-[50px] xl:w-[100px] md:w-[70px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-10 py-2">
-            <img src="{{ asset('assets/logo/logo-text.png') }}" alt="" class="w-[140px] xl:w-[280px] lg:w-[180px] md:w-[240px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-2 py-2">
+            <img src="{{ asset('assets/logo/logo-image.png') }}" alt="" class="w-[50px] xl:w-[100px] md:w-[70px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-0 py-2">
+            <img src="{{ asset('assets/logo/logo-text.png') }}" alt="" class="w-[125px] xl:w-[280px] lg:w-[180px] md:w-[240px] sm:w-[200px] lg:ml-16 md:ml-20 sm:ml-12 ml-0 py-2">
         </a>
         <div class="hidden lg:flex items-center gap-2">
             <div class="flex items-center space-x-2">

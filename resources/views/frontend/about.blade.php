@@ -1130,7 +1130,7 @@
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
                                         <p>
                                             {!! app()->getLocale() === 'en'
-                                            ? 'To Find the BEST Quality Products with Reasonable<br>price for customer. '
+                                            ? 'To find the BEST quality products with reasonable <br/> price for customers.'
                                             : (app()->getLocale() === 'km'
                                             ? 'ស្វែងរកផលិតផលគុណភាពល្អបំផុត<br>ជាមួយតម្លៃសមរម្យសម្រាប់អតិថិជន'
                                             : '为客户寻找最优质、价格合理的产品') !!}

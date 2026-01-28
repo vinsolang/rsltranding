@@ -1062,7 +1062,7 @@
             }
 
             .banner-content .main-banner-h1-bg h1 {
-                font-size: 40px;
+                font-size: 20px;
             }
 
             .banner-content .main-banner-p-bg {
@@ -1128,15 +1128,15 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">
-                            {{ app()->getLocale() === 'en' ? 'Our' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="pt-4">
+                            {{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}
                         </h1>
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">
+                        {{-- <h1 data-aos="zoom-in-up" data-aos-duration="1200">
                             {{ app()->getLocale() === 'en' ? 'Main Products' : (app()->getLocale() === 'km' ? '' : '') }}
-                        </h1>
+                        </h1> --}}
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1400">
+                        <p data-aos="zoom-in-up" data-aos-duration="1400" class="text-left">
                             {{ app()->getLocale() === 'en'
                                 ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
                                                                                     & Cassava, Exported Worldwide with Quality You Can Trust.'

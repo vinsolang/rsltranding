@@ -461,25 +461,30 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Address -->
-    <div class="col-lg-6 col-md-6 input-field">
-      <div class="field-wrap">
-        <input class="col-12" name="address" required
-          placeholder="{{ app()->getLocale() === 'en' ? 'Address' : (app()->getLocale() === 'km' ? 'អាសយដ្ឋាន' : '地址') }}">
-        <span class="star-inside">*</span>
-      </div>
-    </div>
+      
 
-    <!-- Email -->
-    <div class="col-lg-6 col-md-6 input-field">
+       <!-- Email -->
+    <div class="col-lg-12 col-md-12 input-field">
       <div class="field-wrap">
         <input class="col-12" name="email" required
           placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៉ីម៉ែល)' : '电子邮件') }}">
         <span class="star-inside">*</span>
       </div>
     </div>
+
+    </div>
+
+    
+<!-- Address -->
+      <div class="col-lg-12 col-md-12 input-field">
+        <div class="field-wrap">
+          <input class="col-12" name="address" required
+            placeholder="{{ app()->getLocale() === 'en' ? 'Address' : (app()->getLocale() === 'km' ? 'អាសយដ្ឋាន' : '地址') }}">
+          <span class="star-inside">*</span>
+        </div>
+      </div>
+   
 
     <!-- Message (optional) -->
     <div class="col-12 input-field">
