@@ -406,6 +406,56 @@
             
         }
 
+
+        
+
+         .card-product .card-product-detail-1 .smaill-detail-card button {
+            color: #1E1E1E;
+            font-size: 20px;
+            width: 274px;
+            height: 47px;
+        }
+
+        .card-product .card-product-detail-1 .smaill-detail-card button a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+
+        .card-product .card-product-detail-1 .smaill-detail-card button:hover {
+            background-color: #059848;
+            color: #FFFFFF;
+            width: 274px;
+            height: 47px;
+            border-radius: 23.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-product .card-product-detail-1 .smaill-detail-card button:hover a {
+            color: #FFFFFF
+        }
+
+
+        .card-product .card-product-detail-1 .btn-card-interest-to-export {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card-product .card-product-detail-1 .btn-card-interest-to-export button {
+            width: 165px;
+            height: 42.66px;
+            background: linear-gradient(to right, #8DC640, #059848);
+            border-radius: 41.5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #FFFFFF;
+            
+        }
+
         .card-no {
             width: 72px;
             height: 72px;
