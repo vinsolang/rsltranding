@@ -1023,7 +1023,7 @@
 }
 @media screen and (max-width: 426px) {
     .founder-section {
-        margin-top: 200px !important;
+        margin-top: 30px !important;
         position: relative;
         z-index: 1;
     }
