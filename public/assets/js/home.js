@@ -10,11 +10,20 @@ answer.classList.toggle('active');
 }
 
 
-document.addEventListener('touchstart', () => {
-  logoVideo.play();
-}, { once: true });
+const logoVideo = document.getElementById('logoVideo');
 
-logoVideo.oncanplay = () => {
-  logoVideo.style.opacity = 1;
+function tryPlay() {
+    if (logoVideo.paused) {
+        logoVideo.play().catch(() => {});
+    }
+}
+
+document.addEventListener('click', tryPlay, { once: true });
+document.addEventListener('touchstart', tryPlay, { once: true });
+
+logoVideo.onerror = () => {
+    document.getElementById('logoImg').classList.remove('hidden');
+    logoVideo.classList.add('hidden');
 };
+
 
