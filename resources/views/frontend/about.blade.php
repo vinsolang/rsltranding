@@ -1023,7 +1023,7 @@
 }
 @media screen and (max-width: 426px) {
     .founder-section {
-        margin-top: 600px !important;
+        margin-top: 200px !important;
         position: relative;
         z-index: 1;
     }
@@ -1254,11 +1254,11 @@
     </div>
 </section>
 
-<section class="founder-section relative md:mt-[450px] mt-[25rem] -mt-4k z-[999]">
+<section class="founder-section relative md:mt-[450px] -mt-4k z-[999]">
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
-        <img src="{{ asset('assets/profile-team/REACH-SOTHORN.png') }}" class="w-48 h-48 rounded-full object-contain bg-gray-200 p-1">
+        <img src="{{ asset('assets/profile-team/1.png') }}" class="w-72 h-72 rounded-full object-contain p-1">
         <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'MESSAGE FROM FOUNDER' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
         <div class="p-bg">
             <p class="{{ app()->getLocale() === 'km'
@@ -1271,6 +1271,15 @@
                     : (app()->getLocale() === 'km' ? 'យើងនឹងជ្រើសរើសផលិតផលល្អៗដែលមានគុណភាពខ្ពស់ ធ្វើឱ្យប្រជាជនជុំវិញពិភពលោក មានសុខភាពល្អ អាយុវែង ហើយយើងនឹងតាមបម្រើ តាមការពារ និងតាមថែរក្សាពួកគាត់ជារៀងរហូតតាមរយៈការផ្គត់ផ្គង់ផលិតផលរបស់យើង ដើម្បីអនាគតដ៏អស្ចារ្យសម្រាប់មនុស្សជាតិ៚' 
                     : '我们使命的核心是致力于全球福祉。通过提供优质的产品，我们的目标是为世界各地的人们延长寿命和健康。我们致力于无限期地服务和支持我们的全球社区，确保全人类繁荣的未来。') }}
             </p>
+            <div class="text-black inline-block px-4 py-1 text-sm font-semibold mt-1">
+                Warm Regard
+            </div>
+            <p class="mt-3 text-base">
+                Mr. REACH SOTHORN
+            </p>
+            <h1 class="text-[#ffffff] bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] text-xl uppercase max-w-52 mx-auto">
+                Founder
+            </h1>
         </div>
     </div>
 </section>
