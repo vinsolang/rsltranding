@@ -124,12 +124,7 @@
             border-radius: 41.5px;
             margin-top: 3rem;
         }
-           .first-card-background img {
-            object-fit: cover;
-            width: 100%;
-            height: 70vh;
-
-        }
+        
     }
 
 
@@ -234,8 +229,14 @@
         object-fit: cover;
         width: 100%;
         height: 230vh;
-
     }
+
+    /* Mobile only */
+@media (max-width: 768px) {
+    .first-card-background img {
+        height: 190vh;
+    }
+}
 
     /* 4K and large monitors */
     @media screen and (min-width: 2560px) {
@@ -1015,7 +1016,7 @@
         z-index: 1;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 426px) {
     .founder-section {
         margin-top: 600px !important;
         position: relative;
@@ -1324,7 +1325,7 @@
     </div>
 
     <!-- Content -->
-    <div class="relative max-w-6xl mx-auto px-6 py-20 space-y-24">
+    <div class="relative max-w-6xl mx-auto px-6 py-20 md:space-y-20 space-y-6">
 
         <!-- PERSON 1 -->
         <div class="flex md:flex-row flex-col items-center gap-10">
