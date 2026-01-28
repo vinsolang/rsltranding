@@ -1136,8 +1136,8 @@
                         </div>
                     </div>
 
-                    <div class="md:w-[500px] md:h-[300px] mx-auto">
-                        <img src="{{ asset('assets/logo/corevalue.png') }}" alt="" class="">
+                    <div class="md:w-[454px] md:h-[300px] mx-auto">
+                        <img src="{{ asset('assets/logo/rsl-core-value.png') }}" alt="" class="">
                     </div>
                     {{-- @php
                     $values = [
