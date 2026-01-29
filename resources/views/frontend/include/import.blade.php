@@ -1110,7 +1110,9 @@
         <div class="first-card">
             <div class="main-card-product">
                 <div class="container mt-[-400px] lg:mt-[-180px]">
-                    <h2 class="text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#059848] leading-tight fw-bolder pb-20 text-center">Commodities</h2>
+                    <h2 class="text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#059848] leading-tight fw-bolder pb-20 text-center">
+                        {{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផល' : 'Commodities') }}
+                    </h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-4">
                         {{-- item 1 --}}
 
