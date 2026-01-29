@@ -171,8 +171,15 @@
             padding-right: 1rem;
             padding-bottom: 5rem;
         }
+         
+
     }
 
+    @media screen and (max-width: 768px) {
+        .main-banner .home-banner-logo {
+            display: none;
+        }
+    }
 
     @media screen and (max-width: 426px) {
 
@@ -184,6 +191,7 @@
         .main-banner .home-banner-logo {
             width: 230px;
             max-width: 100%;
+            display: none;
         }
 
 
@@ -1298,31 +1306,32 @@
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full"
             poster="fallback-image.jpg">
             <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
-            <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
+            {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
         </video>
         {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
         <video
-    id="logoVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    class="home-banner-logo hidden"
->
-    <!-- iOS & Android -->
-    {{-- <source src="{{ asset('assets/videos/LOGO.mp4') }}" type="video/mp4">+ --}}
+            id="logoVideo"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            class="home-banner-logo hidden"
+        >
+            <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
+        </video>
 
-    <!-- Chrome / Desktop -->
-    <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
-</video>
-
+        <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
+            poster="fallback-image.jpg">
+            <source src="{{ asset('assets/videos/bg-rsl/bg-rsl-mobile/bg-apple-rsl.mp4') }}" type="video/mp4">
+            {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
+        </video>
         {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
 
 
-        <div class="home-banner-context">
+        <div class="home-banner-context md:mt-0 mt-44">
             {{-- <h5 class="popup">{{ __('messages.home') }}</h5> --}}
-            <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h5>
+            <h5 class="uppercase md:mt-0 mt-6" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h5>
             <h1 data-aos="zoom-in-up" data-aos-duration="1200" class="{{ app()->getLocale() === 'km' ? 'khmer-title' : 'english-title' }}">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}</h1>
             <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'សុខភាព ជីវិត អនាគត' : '健康 生活 未来') }}</h3>
 
