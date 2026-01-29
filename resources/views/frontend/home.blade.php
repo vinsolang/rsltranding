@@ -1337,7 +1337,7 @@
 
             <button class="btn-explore-our-exports md:mt-0 -mt-5" data-aos="zoom-in-up" data-aos-duration="1600">
                 <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីការនាំចេញ' : '探索我们的出口业务') }}</a></p>
+                <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的出口业务') }}</a></p>
             </button>
         </div>
     </div>
@@ -1365,14 +1365,8 @@
                     ? 'max-w-5xl'
                     : 'max-w-6xl'
                 }}">
-            {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
-                dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
-                Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
-                while supporting them for better opportunities and incomes.'
-                : (app()->getLocale() === 'km' ? ' ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ
-                ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា
-                អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល
-                និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។'
+            {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets, dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper, Corn, Cashew Nuts, Mangoes, Dried Mango, Cassava, Charcoal, Plantation Wood and other several local products to buyers worldwide while supporting them for better opportunities and incomes.'
+                : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក ពោត គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី ធ្យូង ឈើដាំ និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែច្រើន។'
                 : 'RSL贸易有限公司成立于2015年，专注于本地和国际市场的农产品，致力于将当地农民与我们联系起来，将大米，咖啡，胡椒，香蕉，腰果，芒果，芒果干，木薯干等几种当地产品带给全球买家，同时支持他们获得更好的机会和收入。') }}
         </p>
 
@@ -1403,7 +1397,7 @@
             </div> --}}
 
             <!-- Image (BOTTOM) -->
-            <div class="w-full max-w-[1000px] mb-48">
+            <div class="w-full md:w-[1000px] mb-48 2xl:w-[1300px] 3xl:w-[1450px]">
                 <img
                     src="{{ asset('assets/images/map-3.png') }}"
                     alt="Map Image"
@@ -1594,14 +1588,14 @@
                 <div class="card">
                     <img src="{{ asset('assets/images/pepper1.png') }}">
                     <div class="card-content">
-                        <h4>{{ app()->getLocale() === 'en' ? 'Pepper ' : (app()->getLocale() === 'km' ? '' : '') }}</h4>
+                        <h4>{{ app()->getLocale() === 'en' ? 'Pepper ' : (app()->getLocale() === 'km' ? 'ម្រេច' : 'Pepper') }}</h4>
                         <p>{{ app()->getLocale() === 'en' ? 'Premium Cambodian pepper known for its rich aroma and bold flavor, suitable for global food and spice markets.'
-                                : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់ៗ គុណភាពនាំចេញ ជាមួយនឹងរសជាតិឈ្ងុយឆ្ងាញ់ និងផ្អែមធម្មជាតិ។'
+                                : (app()->getLocale() === 'km' ? 'ម្រេច​កម្ពុជា​គុណភាពខ្ពស់ ល្បី​ដោយសារ​ក្លិន​ឈ្ងុយ​​និងឱជារស​ឈ្ងុយឆ្ងាញ់​ស័ក្តិសម​សម្រាប់​ទីផ្សារ​ម្ហូបអាហារ​និង​គ្រឿងទេស​ពិភពលោក។'
                                 : '出口级新鲜芒果，味道浓郁，甜度自然。') }}</p>
 
                         <div class="wrapper-card-content">
                             <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
-                            <h1>{{ app()->getLocale() === 'en' ? '.07' : (app()->getLocale() === 'km' ? '.០៧' : '.08') }}</h1>
+                            <h1>{{ app()->getLocale() === 'en' ? '.07' : (app()->getLocale() === 'km' ? '.០៧' : '.07') }}</h1>
                         </div>
 
                         <div class="card-content-logo">
@@ -1616,14 +1610,14 @@
                 <div class="card">
                     <img src="{{ asset('assets/products/charcoul.jpg') }}" class="object-cover md:h-[238px] lg:h-[207px] xl:h-[292px]">
                     <div class="card-content">
-                        <h4>{{ app()->getLocale() === 'en' ? 'Charcoal' : (app()->getLocale() === 'km' ? '' : '') }}</h4>
-                        <p>{{ app()->getLocale() === 'en' ? 'Standard Coconut Shell Charcoal and Black & White Charcoal for Local and International Demand.'
-                                : (app()->getLocale() === 'km' ? 'Standard Coconut Shell Charcoal and Black & White Charcoal for Local and International Demand.'
-                                : 'Standard Coconut Shell Charcoal and Black & White Charcoal for Local and International Demand.') }}</p>
+                        <h4>{{ app()->getLocale() === 'en' ? 'Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូង' : 'Charcoal') }}</h4>
+                        <p>{{ app()->getLocale() === 'en' ? 'High-Quality Coconut Shell Charcoal consist of Black & White Charcoal Serving Local and Global Markets.'
+                                : (app()->getLocale() === 'km' ? 'ធ្យូងសំបកដូងស្តង់ដារ មានធ្យូងខ្មៅ និងស សម្រាប់ផ្គត់ផ្គង់តម្រូវការក្នុងស្រុក និងអន្តរជាតិ។'
+                                : 'High-Quality Coconut Shell Charcoal consist of Black & White Charcoal Serving Local and Global Markets.') }}</p>
 
                         <div class="wrapper-card-content">
                             <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>
-                            <h1>{{ app()->getLocale() === 'en' ? '.08' : (app()->getLocale() === 'km' ? '.៨' : '.08') }}</h1>
+                            <h1>{{ app()->getLocale() === 'en' ? '.08' : (app()->getLocale() === 'km' ? '.0៨' : '.08') }}</h1>
                         </div>
 
                         <div class="card-content-logo">
@@ -1638,10 +1632,10 @@
                 <div class="card">
                     <img src="{{ asset('assets/products/plantation-wood.jpg') }}" class="object-cover h-[280px] md:h-[238px] lg:h-[207px] xl:h-[292px]">
                     <div class="card-content">
-                        <h4>{{ app()->getLocale() === 'en' ? 'Plantation Wood' : (app()->getLocale() === 'km' ? 'Plantation Wood' : 'Plantation Wood') }}</h4>
-                        <p>{{ app()->getLocale() === 'en' ? 'There are very good quality wood such as Acacia, Eucalyptus, Cashew and Rubber Wood will be wood log, wood chip, sawdust, sawtimber and wood pellets for export from here.'
-                                : (app()->getLocale() === 'km' ? 'There are very good quality wood such as Acacia, Eucalyptus, Cashew and Rubber Wood will be wood log, wood chip, sawdust, sawtimber and wood pellets for export from here.'
-                                : 'There are very good quality wood such as Acacia, Eucalyptus, Cashew and Rubber Wood will be wood log, wood chip, sawdust, sawtimber and wood pellets for export from here.') }}</p>
+                        <h4>{{ app()->getLocale() === 'en' ? 'Plantation Wood' : (app()->getLocale() === 'km' ? 'ឈើដាំ' : 'Plantation Wood') }}</h4>
+                        <p>{{ app()->getLocale() === 'en' ? 'Our plantation wood is properly sourced , processed to meet international export standards.'
+                                : (app()->getLocale() === 'km' ? 'ផលិតផលឈើដាំមានប្រភពច្បាស់លាស់ កែច្នៃដើម្បីបំពេញតាមស្តង់ដារនាំចេញអន្តរជាតិ។'
+                                : 'Our plantation wood is properly sourced , processed to meet international export standards.') }}</p>
 
                         <div class="wrapper-card-content">
                             <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '了解更多') }}</button></a>

@@ -782,7 +782,7 @@
     }
     @media screen and (min-width: 2560px) {
     .-mt-4k {
-        margin-top: -1110px; 
+        margin-top: -1000px; 
     }
 }
 
@@ -2212,7 +2212,7 @@
 
                                 <div class="min-w-0  md:ml-[22px]">
                                     <h2 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-green-600">
-                                        {{ app()->getLocale() === 'en' ? 'Our Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យរបស់យើង' : '我们的愿景') }}
+                                        {{ app()->getLocale() === 'en' ? 'Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យ' : '我们的愿景') }}
                                     </h2>
 
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
@@ -2221,7 +2221,7 @@
                                             {!! app()->getLocale() === 'en'
                                             ? 'Everyone has Better Health, Longer Life &amp;<br class="hidden sm:block"> Greater Future.'
                                             : (app()->getLocale() === 'km'
-                                            ? 'គ្រប់គ្នាមានសុខភាពល្អជាងមុន អាយុវែងជាងមុន និងអនាគត<br class="hidden sm:block">អស្ចារ្យជាងមុន'
+                                            ? 'គ្រប់គ្នាមានសុខភាពល្អជាងមុន អាយុវែងជាងមុន និងអនាគត<br class="hidden sm:block">អស្ចារ្យជាងមុន។'
                                             : '每个人都拥有更健康、更长寿与更美好的未来。') !!}
                                         </p>
                                     </div>
@@ -2250,7 +2250,7 @@
 
                                 <div class="min-w-0 md:ml-[25px] ">
                                     <h2 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-orange-500">
-                                       {{ app()->getLocale() === 'en' ? 'Our Mission' : (app()->getLocale() === 'km' ? 'Our Mission' : 'Our Mission') }}
+                                       {{ app()->getLocale() === 'en' ? 'Mission' : (app()->getLocale() === 'km' ? 'បេសកកម្ម ' : 'Mission') }}
                                     </h2>
 
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
@@ -2258,21 +2258,21 @@
                                             {!! app()->getLocale() === 'en'
                                             ? 'To find the BEST quality products with reasonable <br/> price for customers.'
                                             : (app()->getLocale() === 'km'
-                                            ? 'ស្វែងរកផលិតផលគុណភាពល្អបំផុត<br>ជាមួយតម្លៃសមរម្យសម្រាប់អតិថិជន'
+                                            ? 'ស្វែងរកផលិតផលគុណភាពល្អបំផុតជាមួយតម្លៃសមរម្យសម្រាប់អតិថិជន។'
                                             : '为客户寻找最优质、价格合理的产品') !!}
                                             <br>
 
                                             {!! app()->getLocale() === 'en'
                                             ? 'To Bring <span class="font-bold text-green-600">“Made in Cambodia”</span> to THE WORLD.'
                                             : (app()->getLocale() === 'km'
-                                            ? 'នាំ <span class="font-bold text-green-600">“ផលិតនៅកម្ពុជា”</span> ទៅកាន់ពិភពលោក'
+                                            ? 'នាំ <span class="font-bold text-green-600">“ផលិតនៅកម្ពុជា”</span>ទៅកាន់ពិភពលោក។'
                                             : '将 <span class="font-bold text-green-600">“柬埔寨制造”</span> 推向世界。') !!}
                                             <br>
 
                                             {{ app()->getLocale() === 'en'
                                                     ? 'To Help Farmer to get more jobs and better incomes. '
                                                     : (app()->getLocale() === 'km'
-                                                        ? 'ជួយកសិករឲ្យមានការងារច្រើនជាងមុន និងចំណូលប្រសើរជាងមុន'
+                                                        ? 'ជួយកសិករឲ្យមានការងារច្រើនជាងមុន និងចំណូលប្រសើរជាងមុន។'
                                                         : '帮助农民获得更多工作和更好收入') }}
                                         </p>
                                     </div>
@@ -2283,15 +2283,24 @@
                     {{-- Core Values --}}
                     <div class="text-center mt-2 md:py-0 py-2">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-black">
-                            {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'តម្លៃស្នូលរបស់យើង' : '我们的核心价值观') }}
+                            {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '我们的核心价值观') }}
                         </h3>
                         <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-black">
                             P E A C E
                         </div>
                     </div>
 
+                    @php
+                        $mapImages = [
+                            'en' => 'assets/logo/rsl-core-value.png',
+                            'km' => 'assets/logo/core-value-khmer-bg.png',
+                            'cn' => 'assets/logo/core-value-chin-bg.png',
+                        ];
+
+                        $image = $mapImages[app()->getLocale()] ?? $mapImages['en'];
+                    @endphp
                     <div class="relative top-0 xl:-top-8 2xl:-top-14 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[850px] h-auto md:h-[300px] mx-auto md:py-0">
-                        <img src="{{ asset('assets/logo/rsl-core-value.png') }}" alt="" class="w-full h-full object-fill">
+                        <img src="{{ asset($image) }}" alt="" class="w-full h-full object-fill">
                     </div>
                     {{-- @php
                     $values = [
@@ -2385,7 +2394,7 @@
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
         <img src="{{ asset('assets/profile-team/1.png') }}" class="w-72 h-72 rounded-full object-contain p-1">
-        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'MESSAGE FROM FOUNDER' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : '董事会寄语 ') }}</h5>
+        <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'MESSAGE FROM FOUNDER' : (app()->getLocale() === 'km' ? 'សារពីស្ថាបនិក' : '董事会寄语 ') }}</h5>
         <div class="p-bg">
             <p class="{{ app()->getLocale() === 'km'
                     ? 'max-w-4xl'
@@ -2394,17 +2403,20 @@
                 {{ app()->getLocale() === 'en' ? 'At the heart of our mission is a commitment to global well-being. By providing premium, high-quality
                     products, we aim to enhance longevity and health for people everywhere. We are dedicated to serving
                     and supporting our global community indefinitely, ensuring a thriving future for all humanity.' 
-                    : (app()->getLocale() === 'km' ? 'យើងនឹងជ្រើសរើសផលិតផលល្អៗដែលមានគុណភាពខ្ពស់ ធ្វើឱ្យប្រជាជនជុំវិញពិភពលោក មានសុខភាពល្អ អាយុវែង ហើយយើងនឹងតាមបម្រើ តាមការពារ និងតាមថែរក្សាពួកគាត់ជារៀងរហូតតាមរយៈការផ្គត់ផ្គង់ផលិតផលរបស់យើង ដើម្បីអនាគតដ៏អស្ចារ្យសម្រាប់មនុស្សជាតិ៚' 
+                    : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំនឹងជ្រើសរើសផលិតផលល្អៗដែលមានគុណភាពខ្ពស់ ធ្វើឱ្យប្រជាជនជុំវិញពិភពលោក មានសុខភាពល្អ អាយុវែង ហើយយើងខ្ញ៉ំនឹងតាមបម្រើ តាមការពារ និងតាមថែរក្សាពួកគាត់ជារៀងរហូតតាមរយៈការផ្គត់ផ្គង់ផលិតផល ដើម្បីអនាគតដ៏អស្ចារ្យសម្រាប់មនុស្សជាតិ៚' 
                     : '我们使命的核心是致力于全球福祉。通过提供优质的产品，我们的目标是为世界各地的人们延长寿命和健康。我们致力于无限期地服务和支持我们的全球社区，确保全人类繁荣的未来。') }}
             </p>
             <div class="text-black inline-block px-4 py-1 text-sm font-semibold mt-1">
-                Warm Regards,
+                
+                {{ app()->getLocale() === 'en' ? 'Warm Regards,' : (app()->getLocale() === 'km' ? 'ដោយក្តីគោរព,' : 'Warm Regards,') }}
             </div>
             <p class="mt-3 text-base font-bold">
-                Mr. REACH SOTHORN
+                
+                {{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ​ សុធន់' : 'Mr. REACH SOTHORN') }}
             </p>
             <h1 class="text-[#ffffff] bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] text-xl uppercase max-w-52 mx-auto">
-                Founder
+                
+                  {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : 'Founder') }}
             </h1>
         </div>
     </div>
@@ -2480,12 +2492,16 @@
 
             <!-- Text -->
             <div class="text-black w-full md:max-w-5xl">
-                <h3 class="text-xl md:text-2xl font-bold uppercase">Mr. Reach Sothorn</h3>
+                <h3 class="text-xl md:text-2xl font-bold uppercase">
+                      {{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Mr. Reach Sothorn') }}
+                </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
-                    Founder
+                    
+                      {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : 'Founder') }}
                 </div>
                 <p class="mt-3 text-base">
-                    Mr. Sothorn has over 20 years in Shipping & Logistics Industry.
+                    
+                    {{ app()->getLocale() === 'en' ? 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.' : (app()->getLocale() === 'km' ? 'លោក សុធន់ មានបទពិសោធន៍ជាង 20 ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន។' : 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.') }}
                 </p>
             </div>
         </div>
@@ -2500,12 +2516,16 @@
             </div>
 
             <div class="text-black w-full md:max-w-5xl">
-                <h3 class="text-xl lg:text-2xl font-bold "><span class="uppercase">Mr. Chov Sombath</span> (Mike)</h3>
+                <h3 class="text-xl lg:text-2xl font-bold ">
+                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Mr. Chov Sombath</span> (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : '<span class="uppercase">Mr. Chov Sombath</span> (Mike)') !!}
+                </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
-                    Co-Founder
+                    
+                    {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'Co-Founder') }}
                 </div>
                 <p class="mt-3 text-base">
-                    Mr. Mike has over 13 years in Logistics & Supply Chain Management.
+                   
+                    {{ app()->getLocale() === 'en' ? ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.' : (app()->getLocale() === 'km' ? 'លោក សម្បត្តិ មានបទពិសោធន៍ជាង ១៣ ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន និងការគ្រប់គ្រងខ្សែសង្វាក់ផ្គត់ផ្គង់។' : ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.') }}
                 </p>
             </div>
         </div>
@@ -2520,12 +2540,15 @@
             </div>
 
             <div class="text-black w-full md:max-w-5xl">
-                <h3 class="text-xl md:text-2xl font-bold uppercase">Mr. Chheng Sony</h3>
+                <h3 class="text-xl md:text-2xl font-bold uppercase">
+                      {{ app()->getLocale() === 'en' ? 'Mr. Chheng Sony' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'Mr. Chheng Sony') }}
+                </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
-                    Co-Founder
+                    {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'Co-Founder') }}
                 </div>
                 <p class="mt-3 text-base">
-                    Mr. Sony has over 15 years in Agriculture Industry.
+                    
+                    {{ app()->getLocale() === 'en' ? 'Mr. Sony has over 15 years in Agriculture Industry.' : (app()->getLocale() === 'km' ? 'លោក សូនី មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងវិស័យកសិកម្ម។' : 'Mr. Sony has over 15 years in Agriculture Industry.') }}
                 </p>
             </div>
         </div>
@@ -2540,12 +2563,15 @@
             </div>
 
             <div class="text-black w-full md:max-w-5xl">
-                <h3 class="text-xl lg:text-2xl font-bold"><span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)</h3>
+                <h3 class="text-xl lg:text-2xl font-bold">
+                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)' : (app()->getLocale() === 'km' ? 'អ្នកស្រី  ស្រ៊ុន ពេជ្រឡាង(Jessie)' : '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)') !!}
+                </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
-                    Co-Founder
+                     {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'Co-Founder') }}
                 </div>
                 <p class="mt-3 text-base">
-                    Ms. Jessie has over 15 years in Accounting & Finance Management.
+                    
+                    {{ app()->getLocale() === 'en' ? 'Ms. Jessie has over 15 years in Accounting & Finance Management.' : (app()->getLocale() === 'km' ? 'អ្នកស្រី ពេជ្រឡាង មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងការគ្រប់គ្រងគណនេយ្យ និងហិរញ្ញវត្ថុ។' : 'Ms. Jessie has over 15 years in Accounting & Finance Management.') }}
                 </p>
             </div>
         </div>

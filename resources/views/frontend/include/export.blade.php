@@ -313,7 +313,7 @@
 
         .card-product .card-product-detail-1 {
             width: 100%;
-            height: 500px !important;
+            height: 520px !important;
             min-height: unset;
             background-color: #EEFFF8;
             position: relative;
@@ -324,6 +324,29 @@
             padding-right: 2rem;
             padding-top: 3rem;
             padding-bottom: 1.5rem;
+        }
+
+         @media screen and (max-width: 2560px) {
+            .card-product .card-product-detail-1 {
+                width: 100%;
+                height: 580px !important;
+            }
+             html[lang="km"] .card-product .card-product-detail-1 {
+                height: 490px !important;
+            }
+
+        }
+
+        
+         @media screen and (max-width: 1040px) {
+            .card-product .card-product-detail-1 {
+                width: 100%;
+                height: 520px !important;
+            }
+              html[lang="km"] .card-product .card-product-detail-1 {
+                height: 490px !important;
+            }
+
         }
 
         @media screen and (max-width: 767px) {
@@ -1157,7 +1180,7 @@
                 <div class="banner-content md:mt-0 mt-64">
                     <div class="main-banner-h1-bg">
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="pt-4">
-                            {{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}
+                            {{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលចម្បង' : '出口商品') }}
                         </h1>
                         {{-- <h1 data-aos="zoom-in-up" data-aos-duration="1200">
                             {{ app()->getLocale() === 'en' ? 'Main Products' : (app()->getLocale() === 'km' ? '' : '') }}
@@ -1166,16 +1189,15 @@
                     <div class="main-banner-p-bg">
                         <p data-aos="zoom-in-up" data-aos-duration="1400" class="text-left">
                             {{ app()->getLocale() === 'en'
-                                ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
-                                                                                    & Cassava, Exported Worldwide with Quality You Can Trust.'
+                                ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Pepper, Corn, Cashew Nuts, Mangoes, Cassava, Charcoal & Plantation Wood, Exported Worldwide with Quality You Can Trust.'
                                 : (app()->getLocale() === 'km'
-                                    ? 'ផលិតផលកសិកម្មកម្ពុជារួមមាន អង្ករ កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំណាប់ស្វាយ និងដំឡូងមី ត្រូវបាននាំចេញទៅកាន់ទីផ្សារពិភពលោកជាមួយនឹងគុណភាពដែលលោកអ្នកអាចទុកចិត្តបាន។'
+                                    ? 'ផលិតផលកសិកម្មកម្ពុជារួមមាន អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី ធ្យូង ឈើដាំ និងផលិតផលជាច្រើនទៀតត្រូវបាននាំចេញទៅកាន់ទីផ្សារពិភពលោកជាមួយនឹងគុណភាពដែលលោកអ្នកអាចទុកចិត្តបាន។'
                                     : '优质柬埔寨农产品-大米，咖啡，玉米，腰果，芒果和木薯，出口到世界各地，质量值得信赖。') }}
                         </p>
                     </div>
                     <a data-aos="zoom-in-up" data-aos-duration="1600" href="#interest"><button
                             class="btn-Interest-to-export">
-                            {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}
+                            {{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីផលិតផល' : '兴趣出口') }}
                         </button></a>
                 </div>
             </div>
@@ -1190,7 +1212,9 @@
             <div class="main-card-product" id="interest">
                 <div class="container mt-[-140px]">
                     <div class="row gap-y-20">
-                    <h2 class="text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#059848] leading-tight fw-bolder pb-2 text-center 2xl:py-36">Our Main Commodities</h2>
+                    <h2 class="text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#059848] leading-tight fw-bolder pb-2 text-center 2xl:py-36">
+                         {{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលចម្បង' : 'Our Main Commodities') }}
+                    </h2>
                         
                         <div class="col-lg-4 col-md-6 col-12" id="rice">
                             <div class="card-product" x-data="{
@@ -1599,46 +1623,59 @@
                                            active: 'default',
                                             products: {
                                                 default: {
-                                                    title: 'Plantation Wood',
-                                                    desc: 'Sustainably sourced forestry products from Cambodia, processed to meet international export standards.',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Plantation Wood' : (app()->getLocale() === 'km' ? 'ឈើដាំ' : 'Plantation Wood') }}',
+                                                    desc: '{{ app()->getLocale() === 'en' ? 'There is very good quality wood such as Acacia which will be wood log, wood chip, sawtimber and wood pellets for export from here.' : (app()->getLocale() === 'km' ? 'ផ្គត់ផ្គង់ឈើដាំប្រកបដោយគុណភាពល្អដូចជាឈើអាកាស្យា ឈើដុំ ឈើបន្ទះ ឈើអារ និងគ្រាប់ឈើសម្រាប់នាំចេញពីទីនេះ។' : 'There is very good quality wood such as Acacia which will be wood log, wood chip, sawtimber and wood pellets for export from here.') }}',
                                                     img: '{{ asset('assets/charcoal/charcoal-2.jpg') }}'
                                                 },
 
                                                 charcoal: {
-                                                    title: 'Coconut Shell Charcoal',
-                                                    desc: 'High-quality natural charcoal made from coconut shells. Long burning time, low smoke, ideal for BBQ and industrial use.',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងសំបកដូង' : 'Coconut Shell Charcoal') }}',
+                                                    desc: '{{ app()->getLocale() === 'en' ? 'High-quality natural charcoal made from coconut shells. Long burning time, low smoke, ideal for BBQ and industrial use.' : (app()->getLocale() === 'km' ? 'ធ្យូងធម្មជាតិដែលមានគុណភាពខ្ពស់ផលិតពីសំបកដូង។ ដុតបានយូរ មានផ្សែងតិច ល្អសម្រាប់ដុតសាច់អាំង និងប្រើប្រាស់ក្នុងឧស្សាហកម្ម។' : 'High-quality natural charcoal made from coconut shells. Long burning time, low smoke, ideal for BBQ and industrial use.') }}',
                                                     img: '{{ asset('assets/products/Coconut-Shell.jpg') }}'
                                                 },
 
                                                 white_black: {
-                                                    title: 'White & Black Charcoal',
-                                                    desc: 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : 'White & Black Charcoal') }}',
+                                                    desc: '{{ app()->getLocale() === 'en' ? 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅលំដាប់ខ្ពស់ ដែលមានជាតិកាបូនខ្ពស់ ចំហេះស្អាត និងបញ្ចេញកំដៅខ្លាំង។' : 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.') }}',
                                                     img: '{{ asset('assets/products/Black-Charcoal.jpg') }}'
                                                 },
 
                                                 wood_chip: {
-                                                    title: 'Wood Chip',
-                                                    desc: 'Processed wood chips used for biomass fuel, landscaping, animal bedding, and industrial applications.',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Chip' : (app()->getLocale() === 'km' ? 'បន្ទះឈើ' : 'Wood Chip') }}',
+                                                    desc: '{{ app()->getLocale() === 'en' ? 'Processed wood chips used for biomass fuel, landscaping, animal bedding, and industrial applications.' : (app()->getLocale() === 'km' ? 'បន្ទះឈើកែច្នៃដែលប្រើសម្រាប់ចំហេះឥន្ធនៈ ររៀបចំដេគ័រខាងក្រៅ ធ្វើរោងសត្វ និងប្រើក្នុងឧស្សាហកម្មនានា។' : 'Processed wood chips used for biomass fuel, landscaping, animal bedding, and industrial applications.') }}',
                                                     img: '{{ asset('assets/products/Wood-Chip.jpg') }}'
                                                 },
 
                                                 sawdust: {
-                                                    title: 'Wood Sawdust',
-                                                    desc: 'Fine wood particles suitable for fuel briquettes, composting, particle board, and agricultural use.',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កំទេចឈើ' : 'Wood Sawdust') }}',
+                                                    desc: '{{ app()->getLocale() === 'en' ? 'Fine wood particles suitable for fuel briquettes, composting, particle board, and agricultural use.' : (app()->getLocale() === 'km' ? 'កំទេចឈើល្អិតៗដែលសមស្របសម្រាប់ដុតជាចំហេះធ្យូងឥន្ធនៈ ការធ្វើជីកំប៉ុស ប្រើជាបន្ទះឈើតូចៗ និងការប្រើប្រាស់កសិកម្ម។' : 'Fine wood particles suitable for fuel briquettes, composting, particle board, and agricultural use.') }}',
                                                     img: '{{ asset('assets/products/Wood-Sawdust.jpg') }}'
                                                 },
 
                                                 timber: {
-                                                    title: 'Wood Timber',
-                                                    desc: 'High-quality plantation timber for construction, furniture manufacturing, and export markets.',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ដំុឈើ' : 'Wood Timber') }}',
+                                                    desc: '{{ app()->getLocale() === 'en' ? 'High-quality plantation timber for construction, furniture manufacturing, and export markets.' : (app()->getLocale() === 'km' ? 'ដំុឈើប្រកបដោយគុណភាពខ្ពស់ប្រើប្រាស់សម្រាប់សំណង់ ការផលិតគ្រឿងសង្ហារឹម និងទីផ្សារនាំចេញ។' : 'High-quality plantation timber for construction, furniture manufacturing, and export markets.') }}',
                                                     img: '{{ asset('assets/products/Wood-Timber.jpg') }}'
                                                 },
 
                                                 pellet: {
-                                                    title: 'Wood Pellet',
-                                                    desc: 'Compressed wood pellets used as renewable biomass fuel with high energy efficiency.',
+                                                    title: `{{ 
+                                                        app()->getLocale() === 'en'
+                                                            ? 'Wood Pellet'
+                                                            : (app()->getLocale() === 'km'
+                                                                ? 'គ្រាប់ឈើ'
+                                                                : '木质颗粒')
+                                                    }}`,
+                                                    desc: `{{ 
+                                                        app()->getLocale() === 'en'
+                                                            ? 'Compressed wood pellets used as renewable biomass fuel with high energy efficiency.'
+                                                            : (app()->getLocale() === 'km'
+                                                                ? 'គ្រាប់ឈើដែលបានបង្ហាប់ ប្រើជាឥន្ធនៈជីវម៉ាសដែលអាចកកើតឡើងវិញ មានប្រសិទ្ធភាពថាមពលខ្ពស់។'
+                                                                : '压缩木质颗粒，用作可再生生物质燃料，具有高能效。')
+                                                    }}`,
                                                     img: '{{ asset('assets/products/Wood-Pellet.jpg') }}'
                                                 }
+
                                             }
                                         }">
                                         <!-- Image -->
@@ -1655,32 +1692,43 @@
                                         <div class="smaill-detail-card">
 
                                             <button x-show="active === 'default'" @click="active = 'charcoal'" class="relative -top-6">
-                                                Coconut Shell Charcoal
+                                                
+                                                {{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងសំបកដូង' : 'Coconut Shell Charcoal') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'white_black'" class="relative -top-6">
-                                                White & Black Charcoal
+                                                
+                                                {{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : 'White & Black Charcoal') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'wood_chip'" class="relative -top-6">
-                                                Wood Chip
+                                               
+                                                {{ app()->getLocale() === 'en' ? 'Wood Chip' : (app()->getLocale() === 'km' ? 'បន្ទះឈើ' : 'Wood Chip') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'sawdust'" class="relative -top-6">
-                                                Wood Sawdust
+                                               
+                                                {{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កំទេចឈើ' : 'Wood Sawdust') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'timber'" class="relative -top-6">
-                                                Wood Timber
+                                               
+                                                {{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ដំុឈើ' : 'Wood Timber') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'pellet'" class="relative -top-6">
-                                                Wood Pellet
+                                                {{ 
+                                                        app()->getLocale() === 'en'
+                                                            ? 'Wood Pellet'
+                                                            : (app()->getLocale() === 'km'
+                                                                ? 'គ្រាប់ឈើ'
+                                                                : '木质颗粒')
+                                                    }}
                                             </button>
 
                                             <!-- Back -->
                                             <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                                Back
+                                                 {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : '回去') }}
                                             </button>
                                         </div>
 

@@ -16,8 +16,8 @@
                     </svg>
                     <span>
                         {{-- {{ $locale === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច ' : ($locale === 'cn' ? 'Monday - Friday 8am - 5pm' : '星期一至五 8am - 5pm') }} --}}
-                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
-                        {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
+                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
+                        {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期一至五 8am - 5pm') }}
                     </span>
                 </a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
@@ -28,7 +28,7 @@
                             fill="#109A49" />
                     </svg>
 
-                    <span>{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
+                    <span>{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
                 </a>
                 <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
                     <svg width="15" height="15" viewBox="0 0 16 16" fill="none"
@@ -38,7 +38,7 @@
                             fill="#109A49" />
                     </svg>
 
-                    <span>{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</span>
+                    <span>{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</span>
                 </a>
 
                 {{-- social media --}}
@@ -248,7 +248,7 @@
                 <li>
                     <a href="{{  route('our_product')}}"
                         class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('our_product') ? 'bg-[#059848] text-[#fff]' : '' }}">
-                        {{ app()->getLocale() === 'en' ? 'Our Products' : (app()->getLocale() === 'km' ? 'ផលិតផលរបស់យើងខ្ញុំ' : '我们的产品') }}
+                        {{ app()->getLocale() === 'en' ? 'Our Products' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '我们的产品') }}
                     </a>
                 </li>
 
@@ -282,8 +282,8 @@
                                 fill="#109A49" />
                         </svg>
                         <span>
-                            {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
-                            {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
+                            {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
+                            {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期一至五 8am - 5pm') }}
                         </span>
                     </a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">
@@ -294,7 +294,7 @@
                                 fill="#109A49" />
                         </svg>
 
-                        <span>{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
+                        <span>{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
                     </a>
                     <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">
                         <svg width="15" height="15" viewBox="0 0 16 16" fill="none"
@@ -304,7 +304,7 @@
                                 fill="#109A49" />
                         </svg>
 
-                        <span>{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</span>
+                        <span>{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</span>
                     </a>
                 </div>
 

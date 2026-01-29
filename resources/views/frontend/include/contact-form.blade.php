@@ -206,6 +206,7 @@
             placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរសព្ទ' : '手机号码') }}"
             required
             autocomplete="tel" />
+            <span class="star-inside">*</span>
         </div>
       </div>
     </div>
@@ -224,7 +225,7 @@
       <div class="field-wrap">
         <span class="star-inside" style="margin-right: -3px; margin-top: 4px;">*</span>
         <select name="trade_type" id="tradeType" class="form-select" required>
-          <option value="">{{ app()->getLocale() === 'en' ? 'Select Import/Export/Local Buying' : (app()->getLocale() === 'km' ? 'ជ្រើសរើសទំនិញ នាំចូល/នាំចេញ ' : '选择进出口') }}</option>
+          <option value="">{{ app()->getLocale() === 'en' ? 'Select Import/Export/Local Buying' : (app()->getLocale() === 'km' ? 'ជ្រើសរើសទំនិញ នាំចូល/នាំចេញ/ទិញក្នុងស្រុក' : '选择进出口') }}</option>
           <option value="import">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'នាំចូល (ជ្រើសរើសទំនិញ)' : '进口 - Import') }}</option>
           <option value="export">{{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'នាំចេញ (ជ្រើសរើសទំនិញ)' : '出口 - Export') }}</option>
           <option value="local_buying">{{ app()->getLocale() === 'en' ? 'Local Buying' : (app()->getLocale() === 'km' ? 'ការទិញក្នុងប្រទេស' : '本地采购') }}</option>

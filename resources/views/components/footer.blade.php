@@ -294,7 +294,7 @@
 
         <div class="footer-content">
             <div class="footer-navigate">
-                <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5>
+                {{-- <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5> --}}
 
                 <li><a href="{{ route('home') }}">
                         {{ app()->getLocale() === 'en' ? 'HOME' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
@@ -303,7 +303,7 @@
                         {{ app()->getLocale() === 'en' ? 'ABOUT US' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
                     </a></li>
                 <li><a href="{{ route('export') }}">
-                        {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : '出口') }}
+                        {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '出口') }}
                     </a></li>
                 {{-- <li><a href="{{ route('import') }}">
                         {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : '进口') }}
@@ -340,18 +340,18 @@
                 </li>
 
                 <li>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white no-underline"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white no-underline"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
                 </li>
                 <li>
-                    <h5 class="">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
+                    <h5 class="">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
                 </li>
                 <li>
                     <h5 class="">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
                 </li>
                 
                 <li>
-                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
-                    {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ម៉ោង៨ព្រឹក ដល់ម៉ោង១២រសៀល' : '星期一至五 8am - 5pm') }}
+                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
+                    {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期一至五 8am - 5pm') }}
                 </li>
                 {{-- <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li> --}}
  {{-- <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li> --}}
@@ -406,7 +406,7 @@
                     worldwide while supporting farmers with better opportunities and incomes.'
                     : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។'
                     : 'RSL贸易公司成立于2015年，是柬埔寨农业出口的领导者，致力于将当地农民与全球市场联系起来。我们的目标是将最好的“柬埔寨制造”产品（如大米、咖啡、玉米、腰果、芒果、木薯和其他营养水果）带给世界各地的买家，同时为农民提供更好的机会和收入。') }}</p> --}}
-                <h1 style="font-size: 20px">{{ app()->getLocale() === 'en' ? 'Our Location' : (app()->getLocale() === 'km' ? 'Our Location' : 'Our Location') }}</h1>
+                <h1 style="font-size: 20px">{{ app()->getLocale() === 'en' ? 'Our Location' : (app()->getLocale() === 'km' ? 'ទីតាំងការិយាល័យ' : 'Our Location') }}</h1>
                 <div class="company-bg">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d14962.26142335518!2d104.898867!3d11.587007!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM1JzEzLjIiTiAxMDTCsDUzJzU1LjkiRQ!5e1!3m2!1sen!2skh!4v1768977457230!5m2!1sen!2skh"
