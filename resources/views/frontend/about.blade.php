@@ -2290,18 +2290,28 @@
                         </div>
                     </div>
 
-                    @php
-                        $mapImages = [
-                            'en' => 'assets/logo/rsl-core-value.png',
-                            'km' => 'assets/logo/core-value-khmer-bg.png',
-                            'cn' => 'assets/logo/core-value-chin-bg.png',
-                        ];
+                    {{-- @php
+                        $locale = app()->getLocale();
 
-                        $image = $mapImages[app()->getLocale()] ?? $mapImages['en'];
-                    @endphp
+    $mapImages = [
+        'en'    => 'assets/logo/rsl-core-value.png',
+        'km'    => 'assets/logo/core-value-khmer-bg.png',
+        'zh'    => 'assets/logo/core-value-chin-bg.png',
+        'zh_CN' => 'assets/logo/core-value-chin-bg.png',
+    ];
+
+    $image = $mapImages[$locale] ?? $mapImages['en'];
+                    @endphp --}}
                     <div class="relative top-0 xl:-top-8 2xl:-top-14 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[850px] h-auto md:h-[300px] mx-auto md:py-0">
-                        <img src="{{ asset($image) }}" alt="" class="w-full h-full object-fill">
+                        <img src="{{ asset(
+                        app()->getLocale() === 'en'
+                            ? 'assets/logo/rsl-core-value.png'
+                            : (app()->getLocale() === 'km'
+                                ? 'assets/logo/core-value-khmer-bg.png'
+                                : 'assets/logo/core-value-chin-bg.png')
+                    ) }}" alt="" class="w-full h-full object-fill">
                     </div>
+            
                     {{-- @php
                     $values = [
                     [
