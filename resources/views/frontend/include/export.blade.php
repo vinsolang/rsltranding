@@ -909,6 +909,16 @@
             object-fit: cover;
         }
 
+        .main-banner .banner-img-1 {
+            position: absolute;
+            width: 100%;
+            height: 120vh;
+            top: 0%;
+            z-index: -1;
+            object-fit: cover;
+            display: none;
+        }
+
         .banner-content {
             width: 100%;
             display: flex;
@@ -1016,12 +1026,27 @@
 
 
             .main-banner .banner-img {
+                display: none;
                 position: absolute;
                 width: 100%;
                 height: 130vh;
                 top: 0%;
                 z-index: -1;
                 object-fit: cover;
+            }
+
+             .main-banner .banner-img-1 {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 130vh;
+                top: 0%;
+                z-index: -1;
+                object-fit: cover;
+            }
+             .wrapper-banner .home-banner-logo {
+                width: 200px !important;
+                display: none;
             }
         }
 
@@ -1057,9 +1082,7 @@
                 text-align: center;
             }
 
-            .wrapper-banner .home-banner-logo {
-                width: 200px !important;
-            }
+           
 
             .banner-content .main-banner-h1-bg h1 {
                 font-size: 20px;
@@ -1115,8 +1138,13 @@
            <!-- <img class="banner-img" src="{{ asset('assets/images/banner-img-1.png') }}">  -->
             <video autoplay muted loop playsinline class="absolute banner-img inset-0 z-[-10] object-cover w-full h-full"
                 poster="fallback-image.jpg">
-                <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
+                <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4" >
                 <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
+            </video>
+            <video autoplay muted loop playsinline class="absolute banner-img-1 inset-0 z-[-10] object-cover w-full h-full"
+                poster="fallback-image.jpg">
+                <source src="{{ asset('assets/videos/bg-rsl/bg-rsl-mobile/bg-apple-rsl.mp4') }}" type="video/mp4" >
+                {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
             </video>
             <div class="wrapper-banner">
                 <div class="logo-video">
@@ -1124,15 +1152,9 @@
                         <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
                     </video>
 
-                     <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
-                    poster="fallback-image.jpg">
-                    <source src="{{ asset('assets/videos/bg-rsl/bg-rsl-mobile/bg-apple-rsl.mp4') }}" type="video/mp4">
-                    {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
-                </video>
-                    <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
+                    {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
                 </div>
-
-                <div class="banner-content">
+                <div class="banner-content md:mt-0 mt-64">
                     <div class="main-banner-h1-bg">
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="pt-4">
                             {{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលសំខាន់' : '出口商品') }}

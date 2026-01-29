@@ -175,13 +175,13 @@
 
     }
 
-    @media screen and (max-width: 768px) {
+    /* @media screen and (min-width: 769px) {
         .main-banner .home-banner-logo {
             display: none;
         }
-    }
+    } */
 
-    @media screen and (max-width: 426px) {
+    @media screen and (max-width: 767px) {
 
         .main-banner {
             gap: 2rem;
