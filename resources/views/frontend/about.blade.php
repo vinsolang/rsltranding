@@ -2307,11 +2307,11 @@
                         app()->getLocale() === 'en'
                             ? 'assets/logo/rsl-core-value.png'
                             : (app()->getLocale() === 'km'
-                                ? 'assets/logo/core-value-khmer-bg.png'
+                                ? 'assets/logo/kh-bg-core.png'
                                 : 'assets/logo/core-value-chin-bg.png')
                     ) }}" alt="" class="w-full h-full object-fill">
                     </div>
-            
+          
                     {{-- @php
                     $values = [
                     [
