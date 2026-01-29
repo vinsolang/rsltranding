@@ -1050,7 +1050,7 @@
                 </video>
                 <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
             </div>
-            <div class="banner-content">
+            <div class="banner-content md:mt-0 -mt-14">
                 <div class="main-banner-h1-bg">
                     <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}</h1>
                 </div>

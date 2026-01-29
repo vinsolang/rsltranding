@@ -1335,7 +1335,7 @@
             <h1 data-aos="zoom-in-up" data-aos-duration="1200" class="{{ app()->getLocale() === 'km' ? 'khmer-title' : 'english-title' }}">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}</h1>
             <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'សុខភាព ជីវិត អនាគត' : '健康 生活 未来') }}</h3>
 
-            <button class="btn-explore-our-exports" data-aos="zoom-in-up" data-aos-duration="1600">
+            <button class="btn-explore-our-exports md:mt-0 -mt-5" data-aos="zoom-in-up" data-aos-duration="1600">
                 <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
                 <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីការនាំចេញ' : '探索我们的出口业务') }}</a></p>
             </button>

@@ -619,6 +619,11 @@
                         <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
                     </video>
 
+                     <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
+                    poster="fallback-image.jpg">
+                    <source src="{{ asset('assets/videos/bg-rsl/bg-rsl-mobile/bg-apple-rsl.mp4') }}" type="video/mp4">
+                    {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
+                </video>
                     <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
                 </div>
                 <div class="banner-content">

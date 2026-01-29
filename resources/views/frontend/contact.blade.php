@@ -40,6 +40,7 @@
                 <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
                 <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
             </video>
+            
             <div class="form-contact">
 
                 {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
