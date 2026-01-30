@@ -32,6 +32,7 @@ class SendContactController extends Controller
 
     Mail::to('info@rsltrading.com')->send(new ContactMail($data));
 
-    return back()->with('success', 'Contact Form submitted successfully!');
+    return back()->with('successfully', 'Your message has been sent successfully!');
     }
 }
+// info@rsltrading.com

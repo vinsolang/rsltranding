@@ -28,6 +28,7 @@ class ApplicationController extends Controller
         //  SEND TO DIFFERENT GMAIL
         Mail::to('info@rsltrading.com')->send(new ApplicationMail($data));
 
-        return back()->with('successfully', 'Application submitted successfully!');
+        return back()->with('successfully', 'Your message has been sent successfully!');
     }
 }
+// info@rsltrading.com

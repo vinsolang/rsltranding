@@ -50,6 +50,22 @@
   }
 </style>
 
+   @if (session('successfully'))
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show" x-transition
+            class="fixed top-6 right-6 z-50 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg">
+            {{ session('successfully') }}
+        </div>
+    @endif
+
+    @if ($errors->any())
+            <div class="mb-6 rounded-xl bg-red-50 border border-red-200 p-4 text-red-600">
+                <ul class="list-disc pl-5 space-y-1">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 <form id="contactForm" action="{{ route('application.send') }}" method="POST" class="wrapper-contact container" novalidate>
   <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : '联系表格') }}</p>
 

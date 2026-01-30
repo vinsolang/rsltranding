@@ -1771,6 +1771,26 @@
             <div class="first-card-background">
                 <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}">
             </div>
+            @if (session('successfully'))
+                <div x-data="{ show: true }"
+                    x-init="setTimeout(() => show = false, 3000)"
+                    x-show="show"
+                    x-transition
+                    class="fixed top-6 right-6 z-50 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg">
+                    {{ session('successfully') }}
+                </div>
+            @endif
+
+
+            @if ($errors->any())
+                <div class="mb-6 rounded-xl bg-red-50 border border-red-200 p-4 text-red-600">
+                    <ul class="list-disc pl-5 space-y-1">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('contacts.send') }}" method="POST" enctype="multipart/form-data"
                 class="career-main-form">
                 @csrf
@@ -1784,7 +1804,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អ៉ីម៉ែល' : '邮箱') }}</label>
+                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អ៊ីម៉ែល' : '邮箱') }}</label>
                             <div class="career-input-form">
                                 <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
                             </div>
@@ -1849,4 +1869,5 @@
 
 @section('career')
     <script src="{{ asset('assets/js/career.js') }}"></script>
+   
 @endsection

@@ -2,7 +2,7 @@
 
 <p><strong>Name:</strong> {{ $data['name'] }}</p>
 <p><strong>Email:</strong> {{ $data['email'] }}</p>
-<p><strong>Phone:</strong> +{{ $data['country_code'] }} {{ $data['phone'] }}</p>
+<p><strong>Phone:</strong> {{ $data['country_code'] }} {{ $data['phone'] }}</p>
 
 @if(!empty($data['company']))
     <p><strong>Company:</strong> {{ $data['company'] }}</p>
