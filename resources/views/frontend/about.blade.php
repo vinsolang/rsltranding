@@ -2212,7 +2212,7 @@
 
                                 <div class="min-w-0  md:ml-[22px]">
                                     <h2 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-green-600">
-                                        {{ app()->getLocale() === 'en' ? 'Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យ' : '我们的愿景') }}
+                                        {{ app()->getLocale() === 'en' ? 'Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យ' : '愿景') }}
                                     </h2>
 
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
@@ -2250,7 +2250,7 @@
 
                                 <div class="min-w-0 md:ml-[25px] ">
                                     <h2 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-orange-500">
-                                       {{ app()->getLocale() === 'en' ? 'Mission' : (app()->getLocale() === 'km' ? 'បេសកកម្ម ' : 'Mission') }}
+                                       {{ app()->getLocale() === 'en' ? 'Mission' : (app()->getLocale() === 'km' ? 'បេសកកម្ម ' : '使命宣言') }}
                                     </h2>
 
                                     <div class="leading-3 text-[8px] sm:text-sm lg:text-base">
@@ -2259,7 +2259,7 @@
                                             ? 'To find the BEST quality products with reasonable <br/> price for customers.'
                                             : (app()->getLocale() === 'km'
                                             ? 'ស្វែងរកផលិតផលគុណភាពល្អបំផុតជាមួយតម្លៃសមរម្យសម្រាប់អតិថិជន។'
-                                            : '为客户寻找最优质、价格合理的产品') !!}
+                                            : '为客户寻找最优质、价格合理的产品。') !!}
                                             <br>
 
                                             {!! app()->getLocale() === 'en'
@@ -2273,7 +2273,7 @@
                                                     ? 'To Help Farmer to get more jobs and better incomes. '
                                                     : (app()->getLocale() === 'km'
                                                         ? 'ជួយកសិករឲ្យមានការងារច្រើនជាងមុន និងចំណូលប្រសើរជាងមុន។'
-                                                        : '帮助农民获得更多工作和更好收入') }}
+                                                        : '帮助农民获得更多工作和更好收入。') }}
                                         </p>
                                     </div>
                                 </div>
@@ -2283,7 +2283,7 @@
                     {{-- Core Values --}}
                     <div class="text-center mt-2 md:py-0 py-2">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-black">
-                            {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '我们的核心价值观') }}
+                            {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
                         </h3>
                         <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-black">
                             P E A C E
@@ -2418,15 +2418,15 @@
             </p>
             <div class="text-black inline-block px-4 py-1 text-sm font-semibold mt-1">
                 
-                {{ app()->getLocale() === 'en' ? 'Warm Regards,' : (app()->getLocale() === 'km' ? 'ដោយក្តីគោរព,' : 'Warm Regards,') }}
+                {{ app()->getLocale() === 'en' ? 'Warm Regards,' : (app()->getLocale() === 'km' ? 'ដោយក្តីគោរព,' : '温暖的问候，') }}
             </div>
             <p class="mt-3 text-base font-bold">
                 
-                {{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ​ សុធន់' : 'Mr. REACH SOTHORN') }}
+                {{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ​ សុធន់' : 'Reach Sothorn 先生') }}
             </p>
             <h1 class="text-[#ffffff] bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] text-xl uppercase max-w-52 mx-auto">
                 
-                  {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : 'Founder') }}
+                  {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : '创始人') }}
             </h1>
         </div>
     </div>
@@ -2475,7 +2475,7 @@
         </div>
     </div> --}}
     <section class="relative w-full overflow-hidden">
-         <h1 class="text-center text-2xl text-[#059848] mt-12 font-bold">{{ app()->getLocale() === 'en' ? 'OUR FOUNDING TEAM' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '介绍我们的团队') }}</h1>
+         <h1 class="text-center text-2xl text-[#059848] mt-12 font-bold">{{ app()->getLocale() === 'en' ? 'OUR FOUNDING TEAM' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '创始团队') }}</h1>
     <!-- Background -->
     <div class="absolute inset-0">
         <!-- Gradient -->
@@ -2503,15 +2503,15 @@
             <!-- Text -->
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl md:text-2xl font-bold uppercase">
-                      {{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Mr. Reach Sothorn') }}
+                      {{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Reach Sothorn 先生') }}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
                     
-                      {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : 'Founder') }}
+                      {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : '创始人') }}
                 </div>
                 <p class="mt-3 text-base">
                     
-                    {{ app()->getLocale() === 'en' ? 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.' : (app()->getLocale() === 'km' ? 'លោក សុធន់ មានបទពិសោធន៍ជាង 20 ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន។' : 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.') }}
+                    {{ app()->getLocale() === 'en' ? 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.' : (app()->getLocale() === 'km' ? 'លោក សុធន់ មានបទពិសោធន៍ជាង 20 ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន។' : 'Sothorn先生在航运和物流行业拥有超过20年的经验。') }}
                 </p>
             </div>
         </div>
@@ -2527,15 +2527,15 @@
 
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl lg:text-2xl font-bold ">
-                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Mr. Chov Sombath</span> (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : '<span class="uppercase">Mr. Chov Sombath</span> (Mike)') !!}
+                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Mr. Chov Sombath</span> (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'Chov Sambath (Mike) 先生') !!}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
                     
-                    {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'Co-Founder') }}
+                    {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}
                 </div>
                 <p class="mt-3 text-base">
                    
-                    {{ app()->getLocale() === 'en' ? ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.' : (app()->getLocale() === 'km' ? 'លោក សម្បត្តិ មានបទពិសោធន៍ជាង ១៣ ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន និងការគ្រប់គ្រងខ្សែសង្វាក់ផ្គត់ផ្គង់។' : ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.') }}
+                    {{ app()->getLocale() === 'en' ? ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.' : (app()->getLocale() === 'km' ? 'លោក សម្បត្តិ មានបទពិសោធន៍ជាង ១៣ ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន និងការគ្រប់គ្រងខ្សែសង្វាក់ផ្គត់ផ្គង់។' : 'Mike 先生有超过13年的物流和供应链管理经验。') }}
                 </p>
             </div>
         </div>
@@ -2551,14 +2551,14 @@
 
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl md:text-2xl font-bold uppercase">
-                      {{ app()->getLocale() === 'en' ? 'Mr. Chheng Sony' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'Mr. Chheng Sony') }}
+                      {{ app()->getLocale() === 'en' ? 'Mr. Chheng Sony' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'Chheng Sony 先生') }}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
-                    {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'Co-Founder') }}
+                    {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}
                 </div>
                 <p class="mt-3 text-base">
                     
-                    {{ app()->getLocale() === 'en' ? 'Mr. Sony has over 15 years in Agriculture Industry.' : (app()->getLocale() === 'km' ? 'លោក សូនី មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងវិស័យកសិកម្ម។' : 'Mr. Sony has over 15 years in Agriculture Industry.') }}
+                    {{ app()->getLocale() === 'en' ? 'Mr. Sony has over 15 years in Agriculture Industry.' : (app()->getLocale() === 'km' ? 'លោក សូនី មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងវិស័យកសិកម្ម។' : 'Sony 先生 在农业领域拥有超过15年的经验行业经验。') }}
                 </p>
             </div>
         </div>
@@ -2574,14 +2574,14 @@
 
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl lg:text-2xl font-bold">
-                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)' : (app()->getLocale() === 'km' ? 'អ្នកស្រី  ស្រ៊ុន ពេជ្រឡាង(Jessie)' : '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)') !!}
+                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)' : (app()->getLocale() === 'km' ? 'អ្នកស្រី  ស្រ៊ុន ពេជ្រឡាង(Jessie)' : 'Srun Phechlang (Jessie) 女士') !!}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
-                     {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'Co-Founder') }}
+                     {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}
                 </div>
                 <p class="mt-3 text-base">
                     
-                    {{ app()->getLocale() === 'en' ? 'Ms. Jessie has over 15 years in Accounting & Finance Management.' : (app()->getLocale() === 'km' ? 'អ្នកស្រី ពេជ្រឡាង មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងការគ្រប់គ្រងគណនេយ្យ និងហិរញ្ញវត្ថុ។' : 'Ms. Jessie has over 15 years in Accounting & Finance Management.') }}
+                    {{ app()->getLocale() === 'en' ? 'Ms. Jessie has over 15 years in Accounting & Finance Management.' : (app()->getLocale() === 'km' ? 'អ្នកស្រី ពេជ្រឡាង មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងការគ្រប់គ្រងគណនេយ្យ និងហិរញ្ញវត្ថុ។' : 'Jessie 女士在会计和财务管理领域拥有超过 15 年的经验。') }}
                 </p>
             </div>
         </div>

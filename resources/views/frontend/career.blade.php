@@ -1830,13 +1830,13 @@
                                 <select id="position" name="position" class="form-select">
                                     <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : '请选择职位') }}</option>
                                     <option value="Sales Executive">
-                                        {{ app()->getLocale() === 'en' ? 'Sales Executive' : (app()->getLocale() === 'km' ? 'អ្នកប្រត្តិបត្តិផ្នែកលក់' : 'Sales Executive') }}
+                                        {{ app()->getLocale() === 'en' ? 'Sales Executive' : (app()->getLocale() === 'km' ? 'អ្នកប្រត្តិបត្តិផ្នែកលក់' : '销售主管') }}
                                     </option>
                                     <option value="Sales Supervisor">
-                                        {{ app()->getLocale() === 'en' ? 'Sales Supervisor' : (app()->getLocale() === 'km' ? 'អ្នកត្រួតពិនិត្យផ្នែកលក់' : 'Sales Supervisor') }}
+                                        {{ app()->getLocale() === 'en' ? 'Sales Supervisor' : (app()->getLocale() === 'km' ? 'អ្នកត្រួតពិនិត្យផ្នែកលក់' : '销售主管') }}
                                     </option>
                                     <option value="Sales Manager">
-                                        {{ app()->getLocale() === 'en' ? 'Sales Manager' : (app()->getLocale() === 'km' ? ' ប្រធានផ្នែកលក់' : 'Sales Manager') }}
+                                        {{ app()->getLocale() === 'en' ? 'Sales Manager' : (app()->getLocale() === 'km' ? ' ប្រធានផ្នែកលក់' : '销售经理') }}
                                     </option>
                                 </select>
                             </div>

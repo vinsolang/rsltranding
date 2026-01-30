@@ -297,26 +297,26 @@
                 {{-- <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5> --}}
 
                 <li><a href="{{ route('home') }}">
-                        {{ app()->getLocale() === 'en' ? 'HOME' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
+                        {{ app()->getLocale() === 'en' ? 'HOME' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '首页') }}
                     </a></li>
                 <li><a href="{{ route('about') }}">
-                        {{ app()->getLocale() === 'en' ? 'ABOUT US' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}
+                        {{ app()->getLocale() === 'en' ? 'ABOUT US' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '关于我们') }}
                     </a></li>
                 <li><a href="{{ route('export') }}">
-                        {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '出口') }}
+                        {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '我们的产品') }}
                     </a></li>
                 {{-- <li><a href="{{ route('import') }}">
                         {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : '进口') }}
                     </a></li> --}}
                 
                 <li><a href="{{ route('events') }}" class="uppercase">
-                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
+                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '我们的活动') }}
                     </a></li>
                 <li><a href="{{ route('career') }}" class="uppercase">
-                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '职业') }}
                     </a></li>
                 <li><a href="{{ route('contact') }}" class="uppercase">
-                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
+                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方式') }}
                     </a></li>
 
             </div>
@@ -350,8 +350,8 @@
                 </li>
                 
                 <li>
-                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
-                    {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期一至五 8am - 5pm') }}
+                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '周一至周五 上午8点至下午5点') }}<br>
+                    {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期六 上午8点至中午12点') }}
                 </li>
                 {{-- <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li> --}}
  {{-- <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li> --}}
@@ -406,7 +406,7 @@
                     worldwide while supporting farmers with better opportunities and incomes.'
                     : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។'
                     : 'RSL贸易公司成立于2015年，是柬埔寨农业出口的领导者，致力于将当地农民与全球市场联系起来。我们的目标是将最好的“柬埔寨制造”产品（如大米、咖啡、玉米、腰果、芒果、木薯和其他营养水果）带给世界各地的买家，同时为农民提供更好的机会和收入。') }}</p> --}}
-                <h1 style="font-size: 20px">{{ app()->getLocale() === 'en' ? 'Our Location' : (app()->getLocale() === 'km' ? 'ទីតាំងការិយាល័យ' : 'Our Location') }}</h1>
+                <h1 style="font-size: 20px">{{ app()->getLocale() === 'en' ? 'Our Location' : (app()->getLocale() === 'km' ? 'ទីតាំងការិយាល័យ' : '我们的办公地点') }}</h1>
                 <div class="company-bg">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d14962.26142335518!2d104.898867!3d11.587007!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM1JzEzLjIiTiAxMDTCsDUzJzU1LjkiRQ!5e1!3m2!1sen!2skh!4v1768977457230!5m2!1sen!2skh"
