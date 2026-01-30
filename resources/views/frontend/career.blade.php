@@ -1766,7 +1766,7 @@
     </div>
 </section>
 
-    <section id="first-card">
+    <section id="first-card" class="md:mt-0 -mt-96">
         <div class="first-card">
             <div class="first-card-background">
                 <img src="{{ asset('assets/logo/rsl-ac-home-style-1.png') }}">
