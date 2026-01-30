@@ -17,8 +17,8 @@ class SendContactController extends Controller
         'email' => 'required|email',
         'phone' => 'required|string',
         'position' => 'required|string',
-        'cv' => 'nullable|file|mimes:pdf,doc,docx|max:5120',
-        'cover_letter' => 'nullable|file|mimes:pdf,doc,docx|max:5120',
+        'cv' => 'nullable|file|mimes:pdf,doc,docx|max:51200',
+        'cover_letter' => 'nullable|file|mimes:pdf,doc,docx|max:51200',
     ]);
 
     // Store files if exist
