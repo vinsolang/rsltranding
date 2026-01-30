@@ -1337,7 +1337,7 @@
 
             <button class="btn-explore-our-exports md:mt-0 -mt-5" data-aos="zoom-in-up" data-aos-duration="1600">
                 <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的出口业务') }}</a></p>
+                <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的产品') }}</a></p>
             </button>
         </div>
     </div>
@@ -1367,7 +1367,7 @@
                 }}">
             {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets, dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper, Corn, Cashew Nuts, Mangoes, Dried Mango, Cassava, Charcoal, Plantation Wood and other several local products to buyers worldwide while supporting them for better opportunities and incomes.'
                 : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក ពោត គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី ធ្យូង ឈើដាំ និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែច្រើន។'
-                : 'RSL贸易有限公司成立于2015年，专注于本地和国际市场的农产品，致力于将当地农民与我们联系起来，将大米，咖啡，胡椒，香蕉，腰果，芒果，芒果干，木薯干等几种当地产品带给全球买家，同时支持他们获得更好的机会和收入。') }}
+                : '成立于 2015 年的 RSL 贸易有限公司专注于面向本地及国际市场的农产品业务，致力于将当地农民与我们联系起来，将诸如大米、咖啡、辣椒、玉米、腰果、芒果、干芒果、木薯、木炭、种植木材以及其他几种当地产品等农业产品带给全球买家，同时为他们提供更好的机会和收入保障。') }}
         </p>
 
         {{-- <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10 {{ app()->getLocale() === 'km'
@@ -1435,7 +1435,7 @@
 
 {{-- Commodities --}}
 <section>
-    <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? '' : '主要商品') }}</h5>
+    <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលចម្បង' : '主要商品') }}</h5>
     <div class="container">
         <div class="row">
 

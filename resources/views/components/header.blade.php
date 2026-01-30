@@ -16,8 +16,8 @@
                     </svg>
                     <span>
                         {{-- {{ $locale === 'km' ? 'ច័ន្ទ សុក្រ ៨ព្រឹក ៥ល្ងាច ' : ($locale === 'cn' ? 'Monday - Friday 8am - 5pm' : '星期一至五 8am - 5pm') }} --}}
-                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '星期一至五 8am - 5pm') }}<br>
-                        {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期一至五 8am - 5pm') }}
+                        {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '周一至周五 上午8点至下午5点') }}<br>
+                        {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '星期六 上午8点至中午12点') }}
                     </span>
                 </a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
