@@ -1820,8 +1820,11 @@
                         <div class="col-lg-6">
                             <label class="text-[#fff] mb-1" for="cv">{{ app()->getLocale() === 'en' ? 'Upload CV' : (app()->getLocale() === 'km' ? 'អាប់ឡូត CV' : '上传简历') }}</label>
                             <div class="career-file-form">
-                                <input type="file" id="cv" name="cv" placeholder="Upload your CV">
+                                <input type="file" id="cv" name="cv" placeholder="Upload your CV" accept=".pdf,.doc,.docx">
                             </div>
+                             <small class="text-red-500">
+                                {{-- Max file size: 20MB --}}
+                            </small>
                         </div>
 
                         <div class="col-lg-6">
@@ -1845,9 +1848,12 @@
                         <div class="col-lg-6">
                             <label class="text-[#fff] mb-1" for="cover_letter">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : (app()->getLocale() === 'km' ? 'អាប់ឡូត Cover Letter' : '上传求职信') }}</label>
                             <div class="career-file-form">
-                                <input type="file" id="cover_letter" name="cover_letter"
+                                <input type="file" id="cover_letter" name="cover_letter" accept=".pdf,.doc,.docx"
                                     placeholder="Upload your cover letter">
                             </div>
+                            <small class="text-red-500">
+                                {{-- Max file size: 20MB --}}
+                            </small>
                         </div>
 
                         <div class="col-12 d-flex justify-content-center">
@@ -1869,5 +1875,27 @@
 
 @section('career')
     <script src="{{ asset('assets/js/career.js') }}"></script>
-   
+   <script>
+    document.getElementById('cv').addEventListener('change', function () {
+        const file = this.files[0];
+        const maxSize = 20 * 1024 * 1024; // 20MB
+
+        if (file && file.size > maxSize) {
+            alert('CV file size must be 20MB or less.');
+            this.value = '';
+        }
+    });
+</script>
+<script>
+    document.getElementById('cover_letter').addEventListener('change', function () {
+        const file = this.files[0];
+        const maxSize = 20 * 1024 * 1024; // 20MB
+
+        if (file && file.size > maxSize) {
+            alert('Cover Letter file size must be 20MB or less.');
+            this.value = '';
+        }
+    });
+</script>
+
 @endsection

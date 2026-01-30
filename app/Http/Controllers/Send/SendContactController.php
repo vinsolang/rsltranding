@@ -17,8 +17,8 @@ class SendContactController extends Controller
         'email' => 'required|email',
         'phone' => 'required|string',
         'position' => 'required|string',
-        'cv' => 'nullable|file|mimes:pdf,doc,docx|max:51200',
-        'cover_letter' => 'nullable|file|mimes:pdf,doc,docx|max:51200',
+        'cv' => 'nullable|file|mimes:pdf,doc,docx|max:20480',
+        'cover_letter' => 'nullable|file|mimes:pdf,doc,docx|max:20480',
     ]);
 
     // Store files if exist
@@ -30,7 +30,7 @@ class SendContactController extends Controller
         $data['cover_letter_path'] = $request->file('cover_letter')->store('applications', 'public');
     }
 
-    Mail::to('vinsolang9@gmail.com')->send(new ContactMail($data));
+    Mail::to('info@rsltrading.com')->send(new ContactMail($data));
 
     return back()->with('successfully', 'Your message has been sent successfully!');
     }
