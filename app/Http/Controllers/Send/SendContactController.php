@@ -30,7 +30,7 @@ class SendContactController extends Controller
         $data['cover_letter_path'] = $request->file('cover_letter')->store('applications', 'public');
     }
 
-    Mail::to('info@rsltrading.com')->send(new ContactMail($data));
+    Mail::to('vinsolang9@gmail.com')->send(new ContactMail($data));
 
     return back()->with('successfully', 'Your message has been sent successfully!');
     }
