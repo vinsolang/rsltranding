@@ -8,7 +8,7 @@
 @if(!empty($data['cv_path']))
     <p>
         <strong>CV:</strong>
-        <a href="{{ asset('storage/' . $data['cv_path']) }}" target="_blank">
+        <a href="{{ Storage::url($data['cv_path']) }}" target="_blank">
             View / Download CV
         </a>
         {{-- <img src="{{ asset('storage/' . $data['cv_path']) }}" alt=""> --}}
@@ -18,7 +18,7 @@
 @if(!empty($data['cover_letter_path']))
     <p>
         <strong>Cover Letter:</strong>
-        <a href="{{ asset('storage/' . $data['cover_letter_path']) }}" target="_blank">
+        <a href="{{ Storage::url($data['cover_letter_path']) }}" target="_blank">
             View / Download Cover Letter
         </a>
         {{-- <img src="{{ asset('storage/' . $data['cover_letter_path']) }}" alt=""> --}}
