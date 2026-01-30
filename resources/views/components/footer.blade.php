@@ -297,26 +297,32 @@
                 {{-- <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5> --}}
 
                 <li><a href="{{ route('home') }}">
-                        {{ app()->getLocale() === 'en' ? 'HOME' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '首页') }}
+                   
+                         {{ app()->getLocale() === 'en' ? 'HOME' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
                     </a></li>
                 <li><a href="{{ route('about') }}">
-                        {{ app()->getLocale() === 'en' ? 'ABOUT US' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '关于我们') }}
+                   
+                        {{ app()->getLocale() === 'en' ? 'ABOUT US' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}</a>
                     </a></li>
                 <li><a href="{{ route('export') }}">
-                        {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '我们的产品') }}
+                        
+                         {{ app()->getLocale() === 'en' ? 'OUR PRODUCTS' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '我们的产品') }}
                     </a></li>
                 {{-- <li><a href="{{ route('import') }}">
                         {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : '进口') }}
                     </a></li> --}}
                 
                 <li><a href="{{ route('events') }}" class="uppercase">
-                        {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '我们的活动') }}
+                        
+                         {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
                     </a></li>
                 <li><a href="{{ route('career') }}" class="uppercase">
-                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '职业') }}
+                        
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
                     </a></li>
                 <li><a href="{{ route('contact') }}" class="uppercase">
-                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方式') }}
+                        
+                        {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
                     </a></li>
 
             </div>
@@ -364,7 +370,7 @@
                     <img src="{{ asset('assets/images/footer-logo.png') }}">
                 </a>
 
-                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'ទំនាក់ទំនងមកយើងខ្ញុំ' : '聯絡我們') }}</h5>
+                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'ទំនាក់ទំនងមកយើងខ្ញុំ' : '联系我们') }}</h5>
 
                 <div class="link-social">
                     <a href="https://www.facebook.com/rsltradingcambodia" target="_blank"><svg width="27"
