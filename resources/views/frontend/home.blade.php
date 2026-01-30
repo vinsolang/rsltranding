@@ -193,6 +193,9 @@
             max-width: 100%;
             display: none;
         }
+        .main-banner .banner-vdo{
+            display: none;
+        }
 
 
         .main-banner .home-banner-context h5 {
@@ -1303,7 +1306,7 @@
 {{-- banner --}}
 <section>
     <div class="main-banner bg-cover relative">
-        <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full"
+        <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full banner-vdo"
             poster="fallback-image.jpg">
             <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
             {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
@@ -1324,6 +1327,7 @@
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
             poster="fallback-image.jpg">
             <source src="{{ asset('assets/videos/bg-rsl/bg-rsl-mobile/bg-apple-rsl.mp4') }}" type="video/mp4">
+            {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
             {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
         </video>
         {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
