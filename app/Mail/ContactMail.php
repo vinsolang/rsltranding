@@ -4,10 +4,12 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Attachment;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 
 class ContactMail extends Mailable
 {
@@ -50,6 +52,20 @@ class ContactMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        $attachments = [];
+
+    if (!empty($this->data['cv_path']) && Storage::disk('public')->exists($this->data['cv_path'])) {
+        $attachments[] = Attachment::fromPath(
+            storage_path('app/public/' . $this->data['cv_path'])
+        )->as('CV.pdf');
+    }
+
+    if (!empty($this->data['cover_letter_path']) && Storage::disk('public')->exists($this->data['cover_letter_path'])) {
+        $attachments[] = Attachment::fromPath(
+            storage_path('app/public/' . $this->data['cover_letter_path'])
+        )->as('Cover_Letter.pdf');
+    }
+
+    return $attachments;
     }
 }
