@@ -1301,6 +1301,10 @@
             transform: scale(1);
         }
     }
+    video::-webkit-media-controls {
+    display: none !important;
+}
+
 </style>
 
 {{-- banner --}}
@@ -1319,6 +1323,7 @@
             loop
             playsinline
             preload="auto"
+            
             class="home-banner-logo hidden"
         >
             <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">

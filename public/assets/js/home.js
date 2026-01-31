@@ -10,7 +10,7 @@ answer.classList.toggle('active');
 }
 
 
-const logoVideo = document.getElementById('logoVideo');
+/*const logoVideo = document.getElementById('logoVideo');
 
 function tryPlay() {
     if (logoVideo.paused) {
@@ -27,3 +27,4 @@ logoVideo.onerror = () => {
 };
 
 
+*/
