@@ -122,6 +122,7 @@
 
         .main-banner .home-banner-context {
             text-align: center;
+            
         }
 
         .main-banner .home-banner-context h5 {
@@ -266,6 +267,9 @@
 
         .rsl-trading-map img {
             width: 1200px;
+        }
+        .main-banner .home-banner-context {
+            margin-top: 200px;
         }
     }
 
@@ -584,6 +588,12 @@
         .card .card-content {
             width: 390px;
         }
+          .main-banner .home-banner-context .khmer-title {
+        font-size: 30px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
     }
 
 
@@ -1363,7 +1373,7 @@
 
     <!-- Content -->
     <div
-        class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-[340px] top-12">
+        class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-[300px] top-12">
 
         <h2 class="relative text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text md:top-6 top-0">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h2>
 
