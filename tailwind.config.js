@@ -13,6 +13,8 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                moul: ['Moul', 'serif'],
+                inter: ['Inter', 'system-ui', 'sans-serif'],
             },
         },
     },

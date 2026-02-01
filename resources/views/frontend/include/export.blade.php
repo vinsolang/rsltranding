@@ -1153,6 +1153,22 @@
                 transform: scale(1);
             }
         }
+         .banner-content .main-banner-h1-bg .km-title{
+         font-size: 50px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       @media screen and (max-width: 641px) {
+         .banner-content .main-banner-h1-bg .km-title{
+         font-size: 30px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       }
         
     </style>
 
@@ -1179,7 +1195,7 @@
                 </div>
                 <div class="banner-content md:mt-0 mt-64">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="pt-4">
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul km-title' : ''  }}">
                             {{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលចម្បង' : '我们的主要产品') }}
                         </h1>
                         {{-- <h1 data-aos="zoom-in-up" data-aos-duration="1200">

@@ -1858,6 +1858,22 @@
             transform: scale(1);
         }
     }
+     .banner-content .main-banner-h1-bg .km-title{
+         font-size: 50px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       @media screen and (max-width: 641px) {
+         .banner-content .main-banner-h1-bg .km-title{
+         font-size: 30px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       }
 </style>
     {{-- <section>
         <div class="main-banner relative">
@@ -1926,7 +1942,7 @@
         <div class="home-banner-context md:mt-0 mt-[260px]">
             <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Activites' : (app()->getLocale() === 'km' ? 'សកម្មភាពអាជីវកម្ម' : '商业活动') }}</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul km-title' : ''  }}">{{ app()->getLocale() === 'en' ? 'Activites' : (app()->getLocale() === 'km' ? 'សកម្មភាពអាជីវកម្ម' : '商业活动') }}</h1>
                     </div>
                     <div class="main-banner-p-bg md:w-full max-w-[300px] ">
                         <p data-aos="zoom-in-up" data-aos-duration="1200">​​{{ app()->getLocale() === 'en' ? '​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា' : '您在柬埔寨农产品出口领域的可靠合作伙伴') }}</p>
@@ -1943,7 +1959,7 @@
             <div class="first-card-background">
                 <img src="{{ asset('assets/images/second-bg.png') }}">
             </div>
-            <div class="w-full max-w-7xl mx-auto pt-20">
+            {{-- <div class="w-full max-w-7xl mx-auto pt-20">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
                     <div class="relative overflow-hidden group bg-black" data-aos="fade-up" data-aos-duration="1000">
                         <img src="{{ asset('assets/images/Activites-2.JPG') }}" alt="Image"
@@ -1975,11 +1991,131 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+            @php
+                $albums = [
+                    [
+                        'title_en' => 'Visit rice mills in Battambang province.',
+                        'title_km' => 'ទស្សនារោងម៉ាស៊ីនកិនស្រូវនៅខេត្តបាត់ដំបង។',
+                        'title_cn' => '参观马德望省的碾米厂。',
+                        'date' => '12 Jan 2025',
+                        'images' => [
+                            'assets/images/Activites-2.JPG',
+                            'assets/images/image.png',
+                            'assets/images/card-1.png',
+                        ],
+                    ],
+                    [
+                        'title_en' => 'Rice packing activities in Kandal province.',
+                        'title_km' => 'សកម្មភាពវេចខ្ចប់អង្ករនៅខេត្តកណ្តាល។',
+                        'title_cn' => '干丹省的大米包装活动。',
+                        'date' => '25 Feb 2025',
+                        'images' => [
+                            'assets/images/Activites-4.JPG',
+                            'assets/images/card-1.png',
+                            'assets/images/Activites-4.JPG',
+                        ],
+                    ],
+                    [
+                        'title_en' => 'Harvesting activities in Battambang province.',
+                        'title_km' => 'សកម្មភាពប្រមូលផលនៅខេត្តបាត់ដំបង។',
+                        'title_cn' => '马丹奉省的采收活动。',
+                        'date' => '25 Feb 2025',
+                        'images' => [
+                            'assets/images/Activites-5.JPG',
+                            'assets/images/card-5.png',
+                            'assets/images/Activites-5.JPG',
+                        ],
+                    ],
+                     [
+        'title_en' => 'Coffee Export Activities',
+        'title_km' => 'សកម្មភាពនាំចេញកាហ្វេ',
+        'title_cn' => '咖啡出口活动',
+        'date' => '15 Jan 2025',
+        'images' => [
+            'assets/images/card-2.png',
+            'assets/images/export/coffee_bean.jpg',
+            'assets/images/card-2.png',
+        ],
+    ],
+    [
+        'title_en' => 'Yellow Corn Export Activities',
+        'title_km' => 'សកម្មភាពនាំចេញពោតលឿង',
+        'title_cn' => '黄玉米出口活动',
+        'date' => '02 Feb 2025',
+        'images' => [
+            'assets/images/Activites-3.JPG',
+            'assets/images/export-card-product-1.png',
+            'assets/images/Activites-3.JPG',
+        ],
+    ],
+    [
+        'title_en' => 'Plantation Wood Export Activities',
+        'title_km' => 'សកម្មភាពនាំចេញឈើចម្ការ',
+        'title_cn' => '人工林木材出口活动',
+        'date' => '25 Feb 2025',
+        'images' => [
+            'assets/charcoal/charcoal-1.jpg',
+            'assets/charcoal/charcoal-2.jpg',
+            'assets/images/charcoal1.png',
+        ],
+    ],
+                ];
+            @endphp
+            <div class="max-w-7xl mx-auto pt-20 px-4"
+     x-data="gallery()">
+            {{-- <img src="{{ asset('assets/images/charcoal1.png') }}" alt=""> --}}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        @foreach ($albums as $index => $album)
+            <div class="group cursor-pointer"
+                 @click="open({{ $index }})"
+                 data-aos="fade-up">
+
+                <div class="relative overflow-hidden rounded-xl">
+                    <img src="{{ asset($album['images'][0]) }}"
+                         class="w-full h-[500px] object-cover object-bottom transition-all duration-300 group-hover:opacity-50">
+
+                    <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
+                        <h3 class="text-white text-lg font-semibold">
+                          
+                             {{ app()->getLocale() === 'en' ? $album['title_en'] : (app()->getLocale() === 'km' ?  $album['title_km'] : $album['title_cn'] ) }}
+                        </h3>
+                        <p class="text-white/80 text-sm">
+                            {{ $album['date'] }}
+                        </p>
+                    </div>
+                </div>
             </div>
+        @endforeach
+
+    </div>
+
+    {{-- FULLSCREEN GALLERY --}}
+    <div x-show="show"
+          x-cloak
+        x-transition.opacity.duration.500ms
+         class="fixed inset-0 bg-black z-20 flex items-center justify-center">
+
+        <button class="absolute top-4 right-4 text-white text-3xl"
+                @click="close()">✕</button>
+
+        <button class="absolute left-4 text-white text-4xl"
+                @click="prev()">‹</button>
+
+        <img :src="images[current]"
+             class="max-h-[90vh] max-w-[90vw] object-contain">
+
+        <button class="absolute right-4 text-white text-4xl"
+                @click="next()">›</button>
+    </div>
+</div>
+
+
         </div>
     </section>
 
-    <section id="contact" class="relative z-[50]">
+    <section id="contact" class="relative z-10">
         {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>Contact Form</p>
             <div class="row">
@@ -2243,4 +2379,46 @@
             <img src="{{ asset('assets/images/bg-3.png') }}">
         </div>
     </section>
+
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<script>
+function gallery() {
+    return {
+        show: false,
+        albums: @json($albums),
+        images: [],
+        current: 0,
+
+        open(index) {
+            this.images = this.albums[index].images.map(img => '/' + img);
+            this.current = 0;
+            this.show = true;
+        },
+        close() {
+            this.show = false;
+        },
+        next() {
+            this.current = (this.current + 1) % this.images.length;
+        },
+        prev() {
+            this.current =
+                (this.current - 1 + this.images.length) % this.images.length;
+        },
+    }
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Close modal if language switch happened
+    setTimeout(() => {
+        document.querySelectorAll('[x-data]').forEach(el => {
+            if (el.__x) {
+                el.__x.$data.show = false;
+            }
+        });
+    }, 500); // ⏱ 0.5s (change to 1000 for 1s)
+});
+</script>
+
 @endsection

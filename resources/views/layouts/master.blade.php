@@ -44,9 +44,16 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <!-- Kantumruy Pro -->
-  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <!-- Battambang -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Nokora:wght@100..900&family=Siemreap&display=swap" rel="stylesheet">
+  {{-- Khmer Os Moul Light --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Moul&family=Nokora:wght@100..900&family=Siemreap&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Moul&display=swap" rel="stylesheet">
+
   {{-- aos --}}
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -55,8 +62,8 @@
     display: none !important;
   }
 
-  .kantumruy {
-    font-family: "Kantumruy Pro", sans-serif;
+  .battambang {
+   font-family: "Battambang", system-ui;
   }
 
   .ibm {
@@ -110,7 +117,7 @@
 
 {{-- <body class="{{ app()->getLocale() === 'en' ? 'inter' : 'kantumruy' }}" > --}}
 
-<body class="{{ app()->getLocale() === 'en' ? 'inter' : 'kantumruy' }} overflow-hidden">
+<body class="{{ app()->getLocale() === 'en' ? 'inter' : 'battambang' }} overflow-hidden">
   @php
   $locale = app()->getLocale();
   @endphp
@@ -230,14 +237,6 @@
       ],
 
       local_buying: [
-        "{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី' : '巴斯马蒂大米（印度）') }}",
-        "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
-        "{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ម្អម ' : '孜然籽') }}",
-        "{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'គ្រាប់រមៀត' : '姜黄（整粒）') }}",
-        "{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម' : '红辣椒（整颗）') }}",
-        "{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញបៃតង' : '绿豆蔻（绿色）') }}",
-        "{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម' : '红辣椒粉') }}",
-        "{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹម' : '干大蒜') }}",
         "{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ ' : '大米') }}",
         "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
         "{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយ' : '新鲜芒果') }}",
@@ -247,6 +246,14 @@
         "{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី' : '乾木薯') }}",
         "{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '胡椒') }}",
         "{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : '咖啡豆') }}",
+        "{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី' : '巴斯马蒂大米（印度）') }}",
+        "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄色玉米') }}",
+        "{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ម្អម ' : '孜然籽') }}",
+        "{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'គ្រាប់រមៀត' : '姜黄（整粒）') }}",
+        "{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម' : '红辣椒（整颗）') }}",
+        "{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញបៃតង' : '绿豆蔻（绿色）') }}",
+        "{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម' : '红辣椒粉') }}",
+        "{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹម' : '干大蒜') }}",
         OTHER_VALUE
       ]
     };

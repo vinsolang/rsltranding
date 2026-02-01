@@ -60,8 +60,9 @@
     }
 
     .main-banner .home-banner-context .khmer-title {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: bolder;
+        font-family: "Moul", serif;
         color: #059848
     }
 
@@ -131,7 +132,7 @@
         .main-banner .home-banner-context h1 {
             font-size: 50px;
             font-weight: bolder;
-            color: #059848
+            color: #059848;
         }
 
         .main-banner .home-banner-context h3 {
@@ -1338,9 +1339,9 @@
         {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
 
 
-        <div class="home-banner-context md:mt-0 mt-44">
+        <div class="home-banner-context">
             {{-- <h5 class="popup">{{ __('messages.home') }}</h5> --}}
-            <h5 class="uppercase md:mt-0 mt-6" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h5>
+            <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h5>
             <h1 data-aos="zoom-in-up" data-aos-duration="1200" class="{{ app()->getLocale() === 'km' ? 'khmer-title' : 'english-title' }}">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}</h1>
             <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'សុខភាព ជីវិត អនាគត' : '健康 生活 未来') }}</h3>
 
@@ -1353,7 +1354,7 @@
 </section>
 
 {{-- contact --}}
-<section class="home-first-banner relative w-full h-[100vh] md:h-[130vh] ">
+<section class="home-first-banner relative w-full h-[100vh] md:h-[130vh]">
 
     <!-- Background Image -->
     <div class="absolute inset-0 z-10">
@@ -1362,11 +1363,11 @@
 
     <!-- Content -->
     <div
-        class=" relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-72">
+        class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-[340px] top-12">
 
-        <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h2>
+        <h2 class="relative text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text md:top-6 top-0">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h2>
 
-        <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder {{ app()->getLocale() == 'km' ? 'text-xl md:text-2xl' : 'text-[30px] md:text-[50px]' }}">
+        <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder pt-4 {{ app()->getLocale() === 'km' ? 'text-xl md:text-2xl font-moul' : 'text-[30px] md:text-[50px]' }}">
             {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក' : 'RSL 贸易有限公司') }}
         </h1>
 

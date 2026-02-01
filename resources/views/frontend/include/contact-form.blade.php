@@ -67,7 +67,7 @@
             </div>
         @endif
 <form id="contactForm" action="{{ route('application.send') }}" method="POST" class="wrapper-contact container" novalidate>
-  <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញពត៌មាន' : '联系表格') }}</p>
+  <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'ទម្រង់បែបបទបំពេញព័ត៌មាន' : '联系表格') }}</p>
 
   <div class="row md:text-lg text-sm">
     @csrf
@@ -485,7 +485,7 @@
     <div class="col-lg-12 col-md-12 input-field">
       <div class="field-wrap">
         <input class="col-12" name="email" required
-          placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៊ីមែល)' : '电子邮件') }}">
+          placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អុីមែល)' : '电子邮件') }}">
         <span class="star-inside">*</span>
       </div>
     </div>

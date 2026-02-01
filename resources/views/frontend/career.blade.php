@@ -384,6 +384,22 @@
                 transform: scale(1);
             }
         }
+         .banner-content .main-banner-h1-bg .km-title{
+         font-size: 50px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       @media screen and (max-width: 641px) {
+         .banner-content .main-banner-h1-bg .km-title{
+         font-size: 30px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       }
     </style>
 
 <style>
@@ -1749,15 +1765,15 @@
         <div class="home-banner-context md:mt-0 mt-[260px]">
              <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000"> {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul km-title' : ''  }}"> {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}</h1>
                     </div>
                     <div class="main-banner-p-bg max-w-[550px] text-left">
                         <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'J​​oin Our Team and Grow with Cambodia’s Leading Agricultural Exporter' : (app()->getLocale() === 'km' ? 'ចូលរួមជាមួយក្រុមការងាររបស់យើងខ្ញុំនឹងរីកចម្រើនជាមួយក្រុមហ៊ុននាំចេញផលិតផលកសិកម្មឈានមុខគេរបស់ប្រទេសកម្ពុជា' : '加入我们的团队，与柬埔寨领先的农业出口商') }}</p>
 
                         <p data-aos="zoom-in-up" data-aos-duration="1400">
-                            {{ app()->getLocale() === 'en' ? '​Be part of a company that connects local farmers to global markets, values integrity, and delivers quality products worldwide.' 
-                            : (app()->getLocale() === 'km' ? 'ក្លាយជាផ្នែកមួយនៃក្រុមហ៊ុនដែលផ្សាភ្ជាប់កសិករក្នុងស្រុកទៅកាន់ទីផ្សារសកល ឱ្យតម្លៃលើភាពសុចរិត និងផ្តល់ផលិតផលដែលមានគុណភាពទូទាំងពិភពលោក។' 
-                            : '起成长-成为公司的一员，将当地农民与全球市场联系起来，重视诚信，并在全球范围内') }}
+                            {!! app()->getLocale() === 'en' ? '​Be part of a company that connects local farmers to global markets, values integrity, and delivers quality products worldwide.' 
+                            : (app()->getLocale() === 'km' ? 'ក្លាយជាផ្នែកមួយនៃក្រុមហ៊ុនដែលផ្សាភ្ជាប់កសិករក្នុងស្រុកទៅកាន់ទីផ្សារសកល ឱ្យតម្លៃលើភាព <br/> សុចរិត និងផ្តល់ផលិតផលដែលមានគុណភាពទូទាំងពិភពលោក។' 
+                            : '起成长-成为公司的一员，将当地农民与全球市场联系起来，重视诚信，并在全球范围内') !!}
                         </p>
                     </div>
                     <a data-aos="zoom-in-up" data-aos-duration="1600" href="#first-card"><button class="btn-Interest-to-export">{{ app()->getLocale() === 'en' ? 'View Open Positions' : (app()->getLocale() === 'km' ? 'មើលមុខតំណែងទំនេរ' : '“查看空缺职位') }}</button></a>
@@ -1804,7 +1820,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អ៊ីម៉ែល' : '邮箱') }}</label>
+                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អុីម៉ែល' : '邮箱') }}</label>
                             <div class="career-input-form">
                                 <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
                             </div>

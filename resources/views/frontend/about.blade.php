@@ -8,8 +8,6 @@
      <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
 @endsection --}}
 
-
-
 @section('content')
 <style>
     :root {
@@ -685,8 +683,22 @@
         justify-content: center;
         align-items: center;
     }
-
- 
+    .banner-content .main-banner-h1-bg .km-title{
+         font-size: 50px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       @media screen and (max-width: 641px) {
+         .banner-content .main-banner-h1-bg .km-title{
+         font-size: 30px;
+        font-weight: bolder;
+        font-family: "Moul", serif;
+        color: #059848
+    }
+    
+       }
 
     .wrapper-banner .logo-video {
         display: flex;
@@ -2172,10 +2184,10 @@
 
              <div class="banner-content md:mt-0 mt-2">
                 <div class="main-banner-h1-bg">
-                    <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}</h1>
+                    <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul md:mt-0 mt-14 km-title' : '' }}">{{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}</h1>
                 </div>
                 <div class="main-banner-p-bg">
-                    <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? '​​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា' : '我们是您值得信赖的柬埔寨农产品出口合作伙伴') }}</p>
+                    <p data-aos="zoom-in-up" data-aos-duration="1200" class="pt-6">{{ app()->getLocale() === 'en' ? '​​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា' : '我们是您值得信赖的柬埔寨农产品出口合作伙伴') }}</p>
                 </div>
                 <a data-aos="zoom-in-up" data-aos-duration="1400" href="#first-card"><button class="btn-Interest-to-export"> {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</button></a>
             </div>
@@ -2418,16 +2430,16 @@
             </p>
             <div class="text-black inline-block px-4 py-1 text-sm font-semibold mt-1">
                 
-                {{ app()->getLocale() === 'en' ? 'Warm Regards,' : (app()->getLocale() === 'km' ? 'ដោយក្តីគោរព,' : '温暖的问候，') }}
+                {{ app()->getLocale() === 'en' ? 'Warm Regards,' : (app()->getLocale() === 'km' ? 'ដោយក្តីគោរព' : '温暖的问候，') }}
             </div>
-            <p class="mt-3 text-base font-bold">
+            <p class="mt-3 text-[20px] font-bold">
                 
-                {{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ​ សុធន់' : 'Reach Sothorn 先生') }}
+                {{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ​ សុធន' : 'Reach Sothorn 先生') }}
             </p>
-            <h1 class="text-[#ffffff] bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] text-xl uppercase max-w-52 mx-auto">
+            {{-- <h1 class="text-[#ffffff] bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] text-xl uppercase max-w-52 mx-auto">
                 
                   {{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : '创始人') }}
-            </h1>
+            </h1> --}}
         </div>
     </div>
 </section>
@@ -2503,7 +2515,7 @@
             <!-- Text -->
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl md:text-2xl font-bold uppercase">
-                      {{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Reach Sothorn 先生') }}
+                      {{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន' : 'Reach Sothorn 先生') }}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
                     
@@ -2527,7 +2539,7 @@
 
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl lg:text-2xl font-bold ">
-                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Mr. Chov Sombath</span> (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'Chov Sambath (Mike) 先生') !!}
+                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Mr. Chov Sombath</span> (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (ម៉ៃ)' : 'Chov Sambath (Mike) 先生') !!}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
                     
@@ -2535,7 +2547,7 @@
                 </div>
                 <p class="mt-3 text-base">
                    
-                    {{ app()->getLocale() === 'en' ? ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.' : (app()->getLocale() === 'km' ? 'លោក សម្បត្តិ មានបទពិសោធន៍ជាង ១៣ ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន និងការគ្រប់គ្រងខ្សែសង្វាក់ផ្គត់ផ្គង់។' : 'Mike 先生有超过13年的物流和供应链管理经验。') }}
+                    {{ app()->getLocale() === 'en' ? ' Mr. Mike has over 13 years in Logistics & Supply Chain Management.' : (app()->getLocale() === 'km' ? 'លោក ម៉ៃ មានបទពិសោធន៍ជាង ១៣ ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន និងការគ្រប់គ្រងខ្សែច្រវាក់ផ្គត់ផ្គង់។' : 'Mike 先生有超过13年的物流和供应链管理经验。') }}
                 </p>
             </div>
         </div>
@@ -2574,14 +2586,14 @@
 
             <div class="text-black w-full md:max-w-5xl">
                 <h3 class="text-xl lg:text-2xl font-bold">
-                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)' : (app()->getLocale() === 'km' ? 'អ្នកស្រី  ស្រ៊ុន ពេជ្រឡាង(Jessie)' : 'Srun Phechlang (Jessie) 女士') !!}
+                    {!! app()->getLocale() === 'en' ? '<span class="uppercase">Ms. SRUN PHECHLANG</span> (Jessie)' : (app()->getLocale() === 'km' ? 'កញ្ញា ស្រ៊ុន ផិចឡាង(Jessie)' : 'Srun Phechlang (Jessie) 女士') !!}
                 </h3>
                 <div class="text-white inline-block bg-[linear-gradient(135deg,#41a346,#65b045,#84bf41)] px-4 py-1 text-sm font-semibold mt-1">
                      {{ app()->getLocale() === 'en' ? 'Co-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : '联合创始人') }}
                 </div>
                 <p class="mt-3 text-base">
                     
-                    {{ app()->getLocale() === 'en' ? 'Ms. Jessie has over 15 years in Accounting & Finance Management.' : (app()->getLocale() === 'km' ? 'អ្នកស្រី ពេជ្រឡាង មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងការគ្រប់គ្រងគណនេយ្យ និងហិរញ្ញវត្ថុ។' : 'Jessie 女士在会计和财务管理领域拥有超过 15 年的经验。') }}
+                    {{ app()->getLocale() === 'en' ? 'Ms. Jessie has over 15 years in Accounting & Finance Management.' : (app()->getLocale() === 'km' ? 'កញ្ញា ផិចឡាង មានបទពិសោធន៍ជាង ១៥ ឆ្នាំក្នុងការគ្រប់គ្រងគណនេយ្យ និងហិរញ្ញវត្ថុ។' : 'Jessie 女士在会计和财务管理领域拥有超过 15 年的经验。') }}
                 </p>
             </div>
         </div>
@@ -2593,7 +2605,7 @@
 
 <section>
     <div class="credentail-card-title">
-        <h1>{{ app()->getLocale() === 'en' ? 'Business Credential Licenses' : (app()->getLocale() === 'km' ? 'ឯកសារចុះបញ្ជិកាសហគ្រាស' : '营业执照') }}</h1>
+        <h1>{{ app()->getLocale() === 'en' ? 'Business Credential Licenses' : (app()->getLocale() === 'km' ? 'ឯកសារផ្លូវការរបស់ក្រុមហ៊ុន' : '营业执照') }}</h1>
     </div>
     <div class="business-credentail-card">
         {{-- <div class="business-credentail-card-wrapper">
