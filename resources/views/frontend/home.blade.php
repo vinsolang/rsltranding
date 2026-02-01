@@ -1364,7 +1364,7 @@
 </section>
 
 {{-- contact --}}
-<section class="home-first-banner relative w-full h-[100vh] md:h-[130vh]">
+<section class="home-first-banner relative w-full h-[100vh] md:h-[150vh]">
 
     <!-- Background Image -->
     <div class="absolute inset-0 z-10">
@@ -1373,7 +1373,7 @@
 
     <!-- Content -->
     <div
-        class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-[300px] top-12">
+        class="relative z-20 w-full h-full max-w-8xl mx-auto flex flex-col items-center justify-center text-center font-[700] md:pt-[280px] pt-[220px]">
 
         <h2 class="relative text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text md:top-6 top-0">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : '欢迎来到') }}</h2>
 
