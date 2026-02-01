@@ -1637,11 +1637,11 @@
                                 <div class="">
                                     <div class="card-product" x-data="{
                                            active: 'default',
-                                            products: {
+                                                products: {
                                                 default: {
                                                     title: '{{ app()->getLocale() === 'en' ? 'Plantation Wood' : (app()->getLocale() === 'km' ? 'ឈើដាំ' : '种植林木') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'There is very good quality wood such as Acacia which will be wood log, wood chip, sawtimber and wood pellets for export from here.' : (app()->getLocale() === 'km' ? 'ផ្គត់ផ្គង់ឈើដាំប្រកបដោយគុណភាពល្អដូចជាឈើអាកាស្យា ឈើដុំ ឈើបន្ទះ ឈើអារ និងគ្រាប់ឈើសម្រាប់នាំចេញពីទីនេះ។' : '这里有着非常优质的木材，比如金合欢木，这些木材将被加工成原木、木屑、锯材以及木屑颗粒，用于出口。') }}',
-                                                    img: '{{ asset('assets/charcoal/charcoal-2.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/Wood-Log.JPG') }}'
                                                 },
 
                                                 charcoal: {
@@ -1653,7 +1653,7 @@
                                                 white_black: {
                                                     title: '{{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : '白黑炭') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅលំដាប់ខ្ពស់ ដែលមានជាតិកាបូនខ្ពស់ ចំហេះស្អាត និងបញ្ចេញកំដៅខ្លាំង។' : '优质白黑炭，含碳量高，燃烧干净，热输出强劲。') }}',
-                                                    img: '{{ asset('assets/products/Black-Charcoal.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/Black-Charcoal.JPG') }}'
                                                 },
 
                                                 wood_chip: {
@@ -1665,13 +1665,13 @@
                                                 sawdust: {
                                                     title: '{{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កំទេចឈើ' : '木屑') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'Fine wood particles suitable for fuel briquettes, composting, particle board, and agricultural use.' : (app()->getLocale() === 'km' ? 'កំទេចឈើល្អិតៗដែលសមស្របសម្រាប់ដុតជាចំហេះធ្យូងឥន្ធនៈ ការធ្វើជីកំប៉ុស ប្រើជាបន្ទះឈើតូចៗ និងការប្រើប្រាស់កសិកម្ម។' : '优质的木屑颗粒，可用于制作燃料砖块、堆肥、刨花板以及农业用途。') }}',
-                                                    img: '{{ asset('assets/products/Wood-Sawdust.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/Sawdust.JPG') }}'
                                                 },
 
                                                 timber: {
                                                     title: '{{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ដំុឈើ' : '木材') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'High-quality plantation timber for construction, furniture manufacturing, and export markets.' : (app()->getLocale() === 'km' ? 'ដំុឈើប្រកបដោយគុណភាពខ្ពស់ប្រើប្រាស់សម្រាប់សំណង់ ការផលិតគ្រឿងសង្ហារឹម និងទីផ្សារនាំចេញ។' : '高品质的种植林木材，适用于建筑、家具制造以及出口市场。') }}',
-                                                    img: '{{ asset('assets/products/Wood-Timber.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/Saw-Timber.JPG') }}'
                                                 },
 
                                                 pellet: {
@@ -1689,7 +1689,7 @@
                                                                 ? 'គ្រាប់ឈើដែលបានបង្ហាប់ ប្រើជាឥន្ធនៈជីវម៉ាសដែលអាចកកើតឡើងវិញ មានប្រសិទ្ធភាពថាមពលខ្ពស់។'
                                                                 : '作为可再生生物质燃料使用的压缩木屑颗粒，具有极高的能源效率。')
                                                     }}`,
-                                                    img: '{{ asset('assets/products/Wood-Pellet.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/Wood-Pellets.JPG') }}'
                                                 }
 
                                             }

@@ -2062,54 +2062,78 @@
     ],
                 ];
             @endphp
-            <div class="max-w-7xl mx-auto pt-20 px-4"
-     x-data="gallery()">
-            {{-- <img src="{{ asset('assets/images/charcoal1.png') }}" alt=""> --}}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {{-- GALLERY WRAPPER --}}
+<div x-data="gallery({{ Js::from($albums) }})">
+
+    {{-- CONTENT --}}
+    <div class="max-w-7xl mx-auto pt-20 px-4 space-y-20">
 
         @foreach ($albums as $index => $album)
-            <div class="group cursor-pointer"
-                 @click="open({{ $index }})"
+
+            @php $isEven = $index % 2 === 0; @endphp
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
                  data-aos="fade-up">
 
-                <div class="relative overflow-hidden rounded-xl">
-                    <img src="{{ asset($album['images'][0]) }}"
-                         class="w-full h-[500px] object-cover object-bottom transition-all duration-300 group-hover:opacity-50">
-
-                    <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
-                        <h3 class="text-white text-lg font-semibold">
-                          
-                             {{ app()->getLocale() === 'en' ? $album['title_en'] : (app()->getLocale() === 'km' ?  $album['title_km'] : $album['title_cn'] ) }}
-                        </h3>
-                        <p class="text-white/80 text-sm">
-                            {{ $album['date'] }}
-                        </p>
-                    </div>
+                {{-- IMAGE --}}
+                <div class="{{ $isEven ? '' : 'lg:order-2' }}">
+                    <img
+                        src="{{ asset($album['images'][0]) }}"
+                        class="w-full h-[420px] object-cover rounded-2xl cursor-pointer"
+                        @click="open({{ $index }})">
                 </div>
-            </div>
-        @endforeach
 
+                {{-- TEXT --}}
+                <div>
+                    <h3 class="text-2xl font-semibold text-[#03254B] mb-3">
+                        {{ app()->getLocale() === 'en'
+                            ? $album['title_en']
+                            : (app()->getLocale() === 'km'
+                                ? $album['title_km']
+                                : $album['title_cn']) }}
+                    </h3>
+
+                    <p class="text-gray-500 mb-4">{{ $album['date'] }}</p>
+
+                    {{-- <p class="text-gray-600 mb-6 line-clamp-3">
+                        {{ $album['description'] }}
+                    </p> --}}
+
+                    <button
+                        @click="open({{ $index }})"
+                        class="px-6 py-3 bg-[#03254B] text-white rounded-lg">
+                        Details →
+                    </button>
+                </div>
+
+            </div>
+
+        @endforeach
     </div>
 
-    {{-- FULLSCREEN GALLERY --}}
-    <div x-show="show"
-          x-cloak
-        x-transition.opacity.duration.500ms
-         class="fixed inset-0 bg-black z-20 flex items-center justify-center">
+    {{--  FULLSCREEN MODAL (OUTSIDE CONTAINER) --}}
+    <div
+        x-show="show"
+        x-cloak
+        x-transition.opacity
+        class="fixed inset-0 bg-black/90 z-[99999] flex items-center justify-center">
 
-        <button class="absolute top-4 right-4 text-white text-3xl"
+        <button class="absolute top-6 right-6 text-white text-3xl"
                 @click="close()">✕</button>
 
-        <button class="absolute left-4 text-white text-4xl"
+        <button class="absolute left-6 text-white text-5xl"
                 @click="prev()">‹</button>
 
-        <img :src="images[current]"
-             class="max-h-[90vh] max-w-[90vw] object-contain">
+        <img
+            :src="images[current]"
+            class="max-h-screen max-w-screen object-contain">
 
-        <button class="absolute right-4 text-white text-4xl"
+        <button class="absolute right-6 text-white text-5xl"
                 @click="next()">›</button>
     </div>
+
 </div>
+
 
 
         </div>
@@ -2383,31 +2407,34 @@
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 <script>
-function gallery() {
-    return {
-        show: false,
-        albums: @json($albums),
-        images: [],
-        current: 0,
+    function gallery(albums) {
+        return {
+            show: false,
+            images: [],
+            current: 0,
 
-        open(index) {
-            this.images = this.albums[index].images.map(img => '/' + img);
-            this.current = 0;
-            this.show = true;
-        },
-        close() {
-            this.show = false;
-        },
-        next() {
-            this.current = (this.current + 1) % this.images.length;
-        },
-        prev() {
-            this.current =
-                (this.current - 1 + this.images.length) % this.images.length;
-        },
+            open(index) {
+                this.images = albums[index].images;
+                this.current = 0;
+                this.show = true;
+            },
+
+            close() {
+                this.show = false;
+            },
+
+            next() {
+                this.current = (this.current + 1) % this.images.length;
+            },
+
+            prev() {
+                this.current =
+                    (this.current - 1 + this.images.length) % this.images.length;
+            }
+        }
     }
-}
 </script>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // Close modal if language switch happened

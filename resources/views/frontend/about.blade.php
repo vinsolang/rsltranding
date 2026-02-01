@@ -2297,9 +2297,9 @@
                         <h3 class="text-3xl md:text-4xl font-extrabold text-black">
                             {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
                         </h3>
-                        <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-black">
+                        {{-- <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-black">
                             P E A C E
-                        </div>
+                        </div> --}}
                     </div>
 
                     {{-- @php
@@ -2314,16 +2314,16 @@
 
     $image = $mapImages[$locale] ?? $mapImages['en'];
                     @endphp --}}
-                    <div class="relative top-0 xl:-top-8 2xl:-top-14 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[850px] h-auto md:h-[300px] mx-auto md:py-0">
+                    <div class="relative top-0 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[900px] h-auto md:h-[300px] mx-auto md:py-0">
                         <img src="{{ asset(
                         app()->getLocale() === 'en'
-                            ? 'assets/logo/rsl-core-value.png'
+                            ? 'assets/about-core/core-value-final-en.png'
                             : (app()->getLocale() === 'km'
-                                ? 'assets/logo/kh-bg-core.png'
-                                : 'assets/logo/core-value-chin-bg.png')
+                                ? 'assets/about-core/core-value-final-kh.png'
+                                : 'assets/about-core/core-value-final-cn.png')
                     ) }}" alt="" class="w-full h-full object-fill">
                     </div>
-          
+                    {{-- <img src="{{ asset('assets/about-core/core-value-final') }}" alt=""> --}}
                     {{-- @php
                     $values = [
                     [

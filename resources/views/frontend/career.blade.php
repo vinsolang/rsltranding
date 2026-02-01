@@ -147,8 +147,8 @@
             padding-bottom: 4rem;
             padding-top: 4rem;
             margin-bottom: 15rem;
-            padding-left: 10rem;
-            padding-right: 10rem;
+            /* padding-left: 10rem;
+            padding-right: 10rem; */
         }
 
         @media screen and (max-width: 1025px) {
@@ -1806,82 +1806,94 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif
-            <form action="{{ route('contacts.send') }}" method="POST" enctype="multipart/form-data"
-                class="career-main-form">
-                @csrf
-                <div class="container">
-                    <div class="row gx-5">
-                        <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="name">{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : '姓名') }}</label>
-                            <div class="career-input-form">
-                                <input id="name" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your full name' : (app()->getLocale() === 'km' ? 'បញ្ចូលឈ្មោះពេញរបស់អ្នក' : '请输入您的全名') }}">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អុីម៉ែល' : '邮箱') }}</label>
-                            <div class="career-input-form">
-                                <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="phone">{{ app()->getLocale() === 'en' ? 'Phone Number' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ' : '电话号码') }}</label>
-                            <div class="career-input-form">
-                                <input id="phone" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your phone number' : (app()->getLocale() === 'km' ? 'បញ្ចូលលេខទូរសព្ទរបស់អ្នក' : '请输入您的电话号码') }}">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="cv">{{ app()->getLocale() === 'en' ? 'Upload CV' : (app()->getLocale() === 'km' ? 'អាប់ឡូត CV' : '上传简历') }}</label>
-                            <div class="career-file-form">
-                                <input type="file" id="cv" name="cv" placeholder="Upload your CV" accept=".pdf,.doc,.docx">
-                            </div>
-                             <small class="text-red-500">
-                                {{-- Max file size: 20MB --}}
-                            </small>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="position">{{ app()->getLocale() === 'en' ? 'Position' : (app()->getLocale() === 'km' ? 'មុខតំណែង' : '职位') }}</label>
-                            <div class="career-input-form">
-                                <select id="position" name="position" class="form-select">
-                                    <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : '请选择职位') }}</option>
-                                    <option value="Sales Executive">
-                                        {{ app()->getLocale() === 'en' ? 'Sales Executive' : (app()->getLocale() === 'km' ? 'អ្នកប្រត្តិបត្តិផ្នែកលក់' : '销售主管') }}
-                                    </option>
-                                    <option value="Sales Supervisor">
-                                        {{ app()->getLocale() === 'en' ? 'Sales Supervisor' : (app()->getLocale() === 'km' ? 'អ្នកត្រួតពិនិត្យផ្នែកលក់' : '销售主管') }}
-                                    </option>
-                                    <option value="Sales Manager">
-                                        {{ app()->getLocale() === 'en' ? 'Sales Manager' : (app()->getLocale() === 'km' ? ' ប្រធានផ្នែកលក់' : '销售经理') }}
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <label class="text-[#fff] mb-1" for="cover_letter">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : (app()->getLocale() === 'km' ? 'អាប់ឡូត Cover Letter' : '上传求职信') }}</label>
-                            <div class="career-file-form">
-                                <input type="file" id="cover_letter" name="cover_letter" accept=".pdf,.doc,.docx"
-                                    placeholder="Upload your cover letter">
-                            </div>
-                            <small class="text-red-500">
-                                {{-- Max file size: 20MB --}}
-                            </small>
-                        </div>
-
-                        <div class="col-12 d-flex justify-content-center">
-                            <button type="submit" class="btn-career-submit">
-                                <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                                <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'ដាក់ស្នើ' : '提交') }}</p>
-                            </button>
-                        </div>
-
-                    </div>
+            @endif  
+           <div class="flex flex-col md:flex-row w-full h-full">
+                <div class="md:w-1/2 w-full z-50 ">
+                    <img
+                        src="{{ asset('assets/charcoal/image.png') }}"
+                        class="career-main-form w-full h-[515px] md:h-[806px] lg:h-[515px] object-cover"
+                        alt="">
                 </div>
-            </form>
+
+                <div class="md:w-1/2 w-full">
+                    <form action="{{ route('contacts.send') }}" method="POST" enctype="multipart/form-data"
+                        class="career-main-form">
+                        @csrf
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label class="text-[#fff] mb-1" for="name">{{ app()->getLocale() === 'en' ? 'Name' : (app()->getLocale() === 'km' ? 'ឈ្មោះ' : '姓名') }}</label>
+                                    <div class="career-input-form">
+                                        <input id="name" name="name" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your full name' : (app()->getLocale() === 'km' ? 'បញ្ចូលឈ្មោះពេញរបស់អ្នក' : '请输入您的全名') }}">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អុីម៉ែល' : '邮箱') }}</label>
+                                    <div class="career-input-form">
+                                        <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label class="text-[#fff] mb-1" for="phone">{{ app()->getLocale() === 'en' ? 'Phone Number' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ' : '电话号码') }}</label>
+                                    <div class="career-input-form">
+                                        <input id="phone" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your phone number' : (app()->getLocale() === 'km' ? 'បញ្ចូលលេខទូរសព្ទរបស់អ្នក' : '请输入您的电话号码') }}">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label class="text-[#fff] mb-1" for="cv">{{ app()->getLocale() === 'en' ? 'Upload CV' : (app()->getLocale() === 'km' ? 'អាប់ឡូត CV' : '上传简历') }}</label>
+                                    <div class="career-file-form">
+                                        <input type="file" id="cv" name="cv" placeholder="Upload your CV" accept=".pdf,.doc,.docx">
+                                    </div>
+                                    <small class="text-red-500">
+                                        {{-- Max file size: 20MB --}}
+                                    </small>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label class="text-[#fff] mb-1" for="position">{{ app()->getLocale() === 'en' ? 'Position' : (app()->getLocale() === 'km' ? 'មុខតំណែង' : '职位') }}</label>
+                                    <div class="career-input-form">
+                                        <select id="position" name="position" class="form-select">
+                                            <option selected disabled>{{ app()->getLocale() === 'en' ? 'Select a position' : (app()->getLocale() === 'km' ? 'បំពេញមុខតំណែង' : '请选择职位') }}</option>
+                                            <option value="Sales Executive">
+                                                {{ app()->getLocale() === 'en' ? 'Sales Executive' : (app()->getLocale() === 'km' ? 'អ្នកប្រត្តិបត្តិផ្នែកលក់' : '销售主管') }}
+                                            </option>
+                                            <option value="Sales Supervisor">
+                                                {{ app()->getLocale() === 'en' ? 'Sales Supervisor' : (app()->getLocale() === 'km' ? 'អ្នកត្រួតពិនិត្យផ្នែកលក់' : '销售主管') }}
+                                            </option>
+                                            <option value="Sales Manager">
+                                                {{ app()->getLocale() === 'en' ? 'Sales Manager' : (app()->getLocale() === 'km' ? ' ប្រធានផ្នែកលក់' : '销售经理') }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label class="text-[#fff] mb-1" for="cover_letter">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : (app()->getLocale() === 'km' ? 'អាប់ឡូត Cover Letter' : '上传求职信') }}</label>
+                                    <div class="career-file-form">
+                                        <input type="file" id="cover_letter" name="cover_letter" accept=".pdf,.doc,.docx"
+                                            placeholder="Upload your cover letter">
+                                    </div>
+                                    <small class="text-red-500">
+                                        {{-- Max file size: 20MB --}}
+                                    </small>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button type="submit" class="btn-career-submit">
+                                        <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
+                                        <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'ដាក់ស្នើ' : '提交') }}</p>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+             
+           </div>
 
 
         </div>
