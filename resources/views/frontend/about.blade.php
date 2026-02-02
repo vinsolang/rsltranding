@@ -2314,16 +2314,16 @@
 
     $image = $mapImages[$locale] ?? $mapImages['en'];
                     @endphp --}}
-                    <div class="relative top-0 w-[280px] md:w-[500px] lg:w-[600px] xl:w-[900px] h-auto md:h-[300px] mx-auto md:py-0">
+                    <div class="relative top-0 w-[340px] md:w-[550px] lg:w-[650px] xl:w-[950px] h-auto md:h-[300px] mx-auto md:py-0">
                         <img src="{{ asset(
                         app()->getLocale() === 'en'
-                            ? 'assets/about-core/core-value-final-en.png'
+                            ? 'assets/about-core/core-value-final-en11.png'
                             : (app()->getLocale() === 'km'
-                                ? 'assets/about-core/core-value-final-kh.png'
-                                : 'assets/about-core/core-value-final-cn.png')
+                                ? 'assets/about-core/core-value-final-kh11.png'
+                                : 'assets/about-core/core-value-final-cn11.png')
                     ) }}" alt="" class="w-full h-full object-fill">
                     </div>
-                    {{-- <img src="{{ asset('assets/about-core/core-value-final') }}" alt=""> --}}
+                    {{-- <img src="{{ asset('assets/about-core/core-value-final-kh11.png') }}" alt=""> --}}
                     {{-- @php
                     $values = [
                     [
