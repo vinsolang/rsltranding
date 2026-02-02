@@ -2049,17 +2049,7 @@
             'assets/images/Activites-3.JPG',
         ],
     ],
-    [
-        'title_en' => 'Plantation Wood Export Activities',
-        'title_km' => 'សកម្មភាពនាំចេញឈើចម្ការ',
-        'title_cn' => '人工林木材出口活动',
-        'date' => '25 Feb 2025',
-        'images' => [
-            'assets/charcoal/charcoal-1.jpg',
-            'assets/charcoal/charcoal-2.jpg',
-            'assets/images/charcoal1.png',
-        ],
-    ],
+    
                 ];
             @endphp
           {{-- GALLERY WRAPPER --}}
@@ -2102,7 +2092,7 @@
                     <button
                         @click="open({{ $index }})"
                         class="px-6 py-3 bg-[#03254B] text-white rounded-lg">
-                        Details →
+                        {{ app()->getLocale() === 'en' ? 'Details' : (app()->getLocale() === 'km' ? 'ព័ត៌មានលម្អិត' : '细节') }} →
                     </button>
                 </div>
 

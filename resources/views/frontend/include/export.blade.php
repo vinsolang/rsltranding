@@ -1653,7 +1653,7 @@
                                                 white_black: {
                                                     title: '{{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : '白黑炭') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅលំដាប់ខ្ពស់ ដែលមានជាតិកាបូនខ្ពស់ ចំហេះស្អាត និងបញ្ចេញកំដៅខ្លាំង។' : '优质白黑炭，含碳量高，燃烧干净，热输出强劲。') }}',
-                                                    img: '{{ asset('assets/products/pro-7/Black-Charcoal.JPG') }}'
+                                                    img: '{{ asset('assets/products/pro-7/White-black-Charcoal.png') }}'
                                                 },
 
                                                 wood_chip: {

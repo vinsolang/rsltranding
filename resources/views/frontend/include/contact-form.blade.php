@@ -244,7 +244,7 @@
           <option value="">{{ app()->getLocale() === 'en' ? 'Select Import/Export/Local Buying' : (app()->getLocale() === 'km' ? 'ជ្រើសរើសទំនិញ នាំចូល/នាំចេញ/ទិញក្នុងស្រុក' : '选择进出口') }}</option>
           <option value="import">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'នាំចូល (ជ្រើសរើសទំនិញ)' : '进口 - Import') }}</option>
           <option value="export">{{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'នាំចេញ (ជ្រើសរើសទំនិញ)' : '出口 - Export') }}</option>
-          <option value="local_buying">{{ app()->getLocale() === 'en' ? 'Local Buying' : (app()->getLocale() === 'km' ? 'ការទិញក្នុងប្រទេស' : '本地采购') }}</option>
+          <option value="local_buying">{{ app()->getLocale() === 'en' ? 'Local Buying' : (app()->getLocale() === 'km' ? 'ការទិញក្នុងស្រុក' : '本地采购') }}</option>
         </select>
         <!-- <span class="star-inside">*</span> -->
       </div>

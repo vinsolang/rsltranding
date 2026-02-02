@@ -400,6 +400,27 @@
     }
     
        }
+    /* Base: Mobile */
+.btn-view-more {
+    position: relative;
+    top: 0;
+    z-index: 50;
+    padding: 0.5rem 1.25rem; /* example px-5 py-2 */
+    border-radius: 9999px; /* full rounded */
+}
+       /* Desktop / medium screens */
+@media (min-width: 1440px) {
+    .btn-view-more {
+        top: -8rem; 
+    }
+}
+
+/* Large screens (iMac / 4K) */
+@media (min-width: 2560px) {
+    .btn-view-more {
+        top: 0;
+    }
+}
     </style>
 
 <style>
@@ -1807,15 +1828,165 @@
                     </ul>
                 </div>
             @endif  
-           <div class="flex flex-col md:flex-row w-full h-full">
-                <div class="md:w-1/2 w-full z-50 ">
-                    <img
-                        src="{{ asset('assets/charcoal/image.png') }}"
-                        class="career-main-form w-full h-[515px] md:h-[806px] lg:h-[515px] object-cover"
-                        alt="">
+           <div class="flex flex-col lg:flex-row w-full h-full"
+                 x-data="{
+                    open: false,
+                    active: null,
+                    items: [
+                        {
+                            img: '{{ asset('assets/job/sale-executive.jpeg') }}',
+                            title: 'Sales Executive',
+                            desc: 
+                                `
+                                    <h4>Job Summary</h4>
+                                    <p>
+                                        The Sales Executive is responsible for generating new business, maintaining client relationships,
+                                        and achieving sales targets through effective product promotion and customer engagement.
+                                    </p>
+
+                                    <h4>Key Responsibilities</h4>
+                                    <ul>
+                                        <li>Identify and develop new customers in local and international markets</li>
+                                        <li>Promote and sell company products to wholesalers, distributors, and partners</li>
+                                        <li>Prepare quotations, follow up on inquiries, and close sales deals</li>
+                                        <li>Maintain strong relationships with existing clients</li>
+                                        <li>Collect market feedback and competitor information</li>
+                                        <li>Prepare sales reports and update customer databases</li>
+                                        <li>Coordinate with operations and logistics teams to ensure smooth delivery</li>
+                                    </ul>
+
+                                    <h4>Requirements</h4>
+                                    <ul>
+                                        <li>Bachelor’s degree in Business, Marketing, or related field</li>
+                                        <li>Minimum 1–2 years of sales experience (trading or FMCG preferred)</li>
+                                        <li>Strong communication and negotiation skills</li>
+                                        <li>Self-motivated and target-driven</li>
+                                        <li>Good command of English; Khmer required (additional languages are an advantage)</li>
+                                        <li>Willingness to travel when required</li>
+                                    </ul>
+                                `
+                        },
+                        {
+                            img: '{{ asset('assets/job/sale-supvisor.jpeg') }}',
+                            title: 'Sales Supervisor',
+                            desc: 
+                                `
+                                    <h4>Job Summary</h4>
+                                        <p>
+                                            The Sales Supervisor supports the Sales Manager by supervising daily sales activities,
+                                            guiding the sales team, and ensuring targets and performance standards are met.
+                                        </p>
+
+                                        <h4>Key Responsibilities</h4>
+                                        <ul>
+                                            <li>Supervise and support Sales Executives in daily operations</li>
+                                            <li>Monitor sales performance and ensure achievement of targets</li>
+                                            <li>Assist in implementing sales strategies and promotional plans</li>
+                                            <li>Train, coach, and motivate sales staff</li>
+                                            <li>Ensure proper reporting of sales activities and customer feedback</li>
+                                            <li>Maintain strong relationships with key customers</li>
+                                            <li>Coordinate between sales team and management</li>
+                                        </ul>
+
+                                        <h4>Requirements</h4>
+                                        <ul>
+                                            <li>Bachelor’s degree in Business, Marketing, or related field</li>
+                                            <li>Minimum 3 years of sales experience, with supervisory exposure preferred</li>
+                                            <li>Strong leadership and team management skills</li>
+                                            <li>Good analytical and reporting skills</li>
+                                            <li>Excellent communication and problem-solving abilities</li>
+                                            <li>Proficient in Microsoft Office and CRM systems</li>
+                                        </ul>
+                                `
+                        },
+                        {
+                            img: '{{ asset('assets/job/sales-manager.jpeg') }}',
+                            title: 'Sales Manager',
+                            desc: `
+                                <h4>Job Summary</h4>
+                                <p>
+                                    The Sales Manager leads the sales department, develops sales strategies,
+                                    drives revenue growth, and expands market presence for RSL Trading Company.
+                                </p>
+
+                                <h4>Key Responsibilities</h4>
+                                <ul>
+                                    <li>Develop and implement short- and long-term sales strategies</li>
+                                    <li>Set sales targets and monitor team performance</li>
+                                    <li>Lead, manage, and develop the sales team</li>
+                                    <li>Identify new markets, business opportunities, and strategic partnerships</li>
+                                    <li>Manage key accounts and high-value clients</li>
+                                    <li>Analyze sales data, market trends, and competitor activities</li>
+                                    <li>Prepare sales forecasts, budgets, and management reports</li>
+                                    <li>Collaborate with senior management to support company growth</li>
+                                </ul>
+
+                                <h4>Requirements</h4>
+                                <ul>
+                                    <li>Bachelor’s or Master’s degree in Business, Marketing, or related field</li>
+                                    <li>Minimum 5 years of sales experience, including management level</li>
+                                    <li>Proven track record in sales growth and team leadership</li>
+                                    <li>Strong strategic thinking and negotiation skills</li>
+                                    <li>Excellent communication and presentation skills</li>
+                                    <li>Experience in trading, import/export, or commodities is a strong advantage</li>
+                                </ul>
+                            `
+
+                        }
+                    ]
+                }"
+           >
+                <div class="flex lg:flex-row flex-col lg:w-1/2 w-full z-50 ">
+                     <template x-for="(item, index) in items" :key="index">
+                        <div class="text-center">
+
+                            <img
+                                :src="item.img"
+                                class="w-full h-[515px] md:h-[750px] lg:h-[515px] object-contain"
+                                alt="">
+
+                            <!-- Button below image -->
+                            <button
+                                @click="active = item; open = true"
+                                class="btn-view-more z-50 px-5 py-2 text-white rounded-full">
+                                <img src="{{ asset('assets/products/btn-view-more.png') }}" alt="">
+                            </button>
+
+                        </div>
+                    </template>
                 </div>
 
-                <div class="md:w-1/2 w-full">
+                <!-- Full Screen Popup -->
+    <div
+    x-show="open"
+    x-transition.opacity
+    x-cloak
+    class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
+
+    <div
+        class="bg-white max-w-3xl w-full mx-4 p-6 relative rounded-lg
+               max-h-[90vh] overflow-y-auto">
+
+        <!-- Close -->
+        <button
+            @click="open = false"
+            class="absolute top-3 right-3 text-2xl text-gray-600 hover:text-black">
+            ✕
+        </button>
+
+        <!-- Dynamic Content -->
+        <template x-if="active">
+            <div>
+                <h2 class="text-2xl font-semibold mb-4" x-text="active.title"></h2>
+                <div class="text-gray-700 leading-relaxed" x-html="active.desc"></div>
+            </div>
+        </template>
+
+    </div>
+</div>
+
+
+                <div class="lg:w-1/2 w-full">
                     <form action="{{ route('contacts.send') }}" method="POST" enctype="multipart/form-data"
                         class="career-main-form">
                         @csrf
