@@ -1382,12 +1382,12 @@
                                     default: {
                                         title: '{{ app()->getLocale() === 'en' ? 'Nuts & Legumes' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​' : '坚果和豆类') }}',
                                         desc: '{{ app()->getLocale() === 'en' ? 'Premium-grade nuts and legumes sourced from trusted Cambodian farmers.' : (app()->getLocale() === 'km' ? 'គ្រាប់ធញ្ញជាតិ និង​សណ្តែក​​លំដាប់​ខ្ពស់​ដែល​មាន​ប្រភព​មក​ពី​កសិករ​ក្នុងស្រុក​ប្រកបដោយទំនុកចិត្ត។' : '优质的坚果和豆类均来自可信赖的柬埔寨农民所种植的作物。') }}',
-                                        img: '{{ asset('assets/images/export-card-product-3.png') }}'
+                                        img: '{{ asset('assets/products/coffee/Cashew-Nut06.jpg') }}'
                                     },
                                     cashew: {
                                         title: '{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}',
                                         desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' : '高品质的柬埔寨腰果，适合出口全球市场。') }}',
-                                        img: '{{ asset('assets/products/cashew-nuts.jpg') }}'
+                                        img: '{{ asset('assets/products/coffee/Cashew-Nut04.jpg') }}'
                                     },
                                     peanut: {
                                         title: '{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'សណ្តែកដី' : '花生') }}',
@@ -1577,7 +1577,7 @@
                                                         : (app()->getLocale() === 'km'
                                                         ? 'គ្រាប់កាហ្វេលីងកម្ពុជាមានក្លិនឈ្ងុយ និងរសជាតិសមតុល្យ សមស្របសម្រាប់ទីផ្សារអន្តរជាតិ។'
                                                         : '精心烘焙的柬埔寨咖啡豆，香气浓郁，口感均衡，适合国际市场。') }}',
-                                                    img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
+                                                    img: '{{ asset('assets/products/coffee/coffee-bean.jpg') }}'
                                                 },
 
                                                 powder: {
@@ -1587,7 +1587,7 @@
                                                         : (app()->getLocale() === 'km'
                                                         ? 'ម្សៅកាហ្វេលីងល្អិត រួចរាល់សម្រាប់ឆុង និងសមស្របសម្រាប់លក់ និងនាំចេញ។'
                                                         : '细磨烘焙咖啡粉，即冲即用，适合零售及出口。') }}',
-                                                    img: '{{ asset('assets/products/Powder.jpg') }}'
+                                                    img: '{{ asset('assets/products/coffee/coffee_beans_4_800x.webp') }}'
                                                 }
                                             }
                                     }">

@@ -1828,81 +1828,217 @@
                     </ul>
                 </div>
             @endif  
+            {{-- <img src="{{ asset('assets/job/sales_executive_en.jpg') }}" alt=""> --}}
            <div class="flex flex-col lg:flex-row w-full h-full"
                  x-data="{
                     open: false,
                     active: null,
                     items: [
                         {
-                            img: '{{ asset('assets/job/sale-executive.jpeg') }}',
-                            title: 'Sales Executive',
-                            desc: 
-                                `
-                                    <h4>Job Summary</h4>
-                                    <p>
-                                        The Sales Executive is responsible for generating new business, maintaining client relationships,
-                                        and achieving sales targets through effective product promotion and customer engagement.
-                                    </p>
+                            imgen: '{{ asset('assets/job/sales_executive_en.jpg') }}',
+                            imgkh: '{{ asset('assets/job/sales_executive_kh.jpg') }}',
+                            imgcn: '{{ asset('assets/job/sales_executive_cn.jpg') }}',
+                            titleen: 'Sales Executive',
+                            titlekh: 'អ្នកប្រត្តិបត្តិផ្នែកលក់',
+                            titlecn: '销售主管',
 
-                                    <h4>Key Responsibilities</h4>
-                                    <ul>
-                                        <li>Identify and develop new customers in local and international markets</li>
-                                        <li>Promote and sell company products to wholesalers, distributors, and partners</li>
-                                        <li>Prepare quotations, follow up on inquiries, and close sales deals</li>
-                                        <li>Maintain strong relationships with existing clients</li>
-                                        <li>Collect market feedback and competitor information</li>
-                                        <li>Prepare sales reports and update customer databases</li>
-                                        <li>Coordinate with operations and logistics teams to ensure smooth delivery</li>
-                                    </ul>
+                            descen: `
+                                <h4>Job Summary</h4>
+                                <p>
+                                    The Sales Executive is responsible for generating new business, maintaining client relationships,
+                                    and achieving sales targets through effective product promotion and customer engagement.
+                                </p>
 
-                                    <h4>Requirements</h4>
-                                    <ul>
-                                        <li>Bachelor’s degree in Business, Marketing, or related field</li>
-                                        <li>Minimum 1–2 years of sales experience (trading or FMCG preferred)</li>
-                                        <li>Strong communication and negotiation skills</li>
-                                        <li>Self-motivated and target-driven</li>
-                                        <li>Good command of English; Khmer required (additional languages are an advantage)</li>
-                                        <li>Willingness to travel when required</li>
-                                    </ul>
-                                `
+                                <h4>Key Responsibilities</h4>
+                                <ul>
+                                    <li>Identify and develop new customers in local and international markets</li>
+                                    <li>Promote and sell company products to wholesalers, distributors, and partners</li>
+                                    <li>Prepare quotations, follow up on inquiries, and close sales deals</li>
+                                    <li>Maintain strong relationships with existing clients</li>
+                                    <li>Collect market feedback and competitor information</li>
+                                    <li>Prepare sales reports and update customer databases</li>
+                                    <li>Coordinate with operations and logistics teams to ensure smooth delivery</li>
+                                </ul>
+
+                                <h4>Requirements</h4>
+                                <ul>
+                                    <li>Bachelor’s degree in Business, Marketing, or related field</li>
+                                    <li>Minimum 1–2 years of sales experience (trading or FMCG preferred)</li>
+                                    <li>Strong communication and negotiation skills</li>
+                                    <li>Self-motivated and target-driven</li>
+                                    <li>Good command of English; Khmer required (additional languages are an advantage)</li>
+                                    <li>Willingness to travel when required</li>
+                                </ul>
+                            `,
+
+                            desckh: `
+                                <h4>សេចក្តីសង្ខេបពីការងារ</h4>
+                                <p>
+                                    មុខតំណែងអ្នកលក់ (Sales Executive) មានភារកិច្ចក្នុងការស្វែងរកអាជីវកម្មថ្មី
+                                    ថែរក្សាទំនាក់ទំនងជាមួយអតិថិជន និងសម្រេចគោលដៅលក់
+                                    តាមរយៈការផ្សព្វផ្សាយផលិតផល និងការបម្រើអតិថិជនប្រកបដោយប្រសិទ្ធភាព។
+                                </p>
+
+                                <h4>ភារកិច្ចសំខាន់ៗ</h4>
+                                <ul>
+                                    <li>ស្វែងរក និងអភិវឌ្ឍអតិថិជនថ្មីទាំងក្នុងស្រុក និងអន្តរជាតិ</li>
+                                    <li>ផ្សព្វផ្សាយ និងលក់ផលិតផលរបស់ក្រុមហ៊ុនទៅកាន់អ្នកលក់ដុំ អ្នកចែកចាយ និងដៃគូ</li>
+                                    <li>រៀបចំសម្រង់តម្លៃ តាមដានសំណើ និងបិទកិច្ចព្រមព្រៀងលក់</li>
+                                    <li>ថែរក្សាទំនាក់ទំនងល្អជាមួយអតិថិជនដែលមានស្រាប់</li>
+                                    <li>ប្រមូលព័ត៌មានទីផ្សារ និងព័ត៌មានគូប្រកួត</li>
+                                    <li>រៀបចំរបាយការណ៍លក់ និងធ្វើបច្ចុប្បន្នភាពទិន្នន័យអតិថិជន</li>
+                                    <li>សហការជាមួយក្រុមប្រតិបត្តិការ និងដឹកជញ្ជូន ដើម្បីធានាការដឹកជញ្ជូនរលូន</li>
+                                </ul>
+
+                                <h4>លក្ខខណ្ឌតម្រូវការ</h4>
+                                <ul>
+                                    <li>មានបរិញ្ញាបត្រផ្នែកធុរកិច្ច ទីផ្សារ ឬជំនាញដែលពាក់ព័ន្ធ</li>
+                                    <li>មានបទពិសោធន៍ការងារផ្នែកលក់យ៉ាងតិច ១–២ ឆ្នាំ (ពាណិជ្ជកម្ម ឬ FMCG នឹងផ្តល់អាទិភាព)</li>
+                                    <li>មានជំនាញទំនាក់ទំនង និងចរចាល្អ</li>
+                                    <li>មានការលើកទឹកចិត្តខ្លួនឯង និងផ្តោតលើគោលដៅ</li>
+                                    <li>ប្រើប្រាស់ភាសាអង់គ្លេសបានល្អ ត្រូវការភាសាខ្មែរ (ភាសាបន្ថែមគឺជាប្រយោជន៍)</li>
+                                    <li>អាចធ្វើដំណើរតាមការចាំបាច់</li>
+                                </ul>
+                            `,
+
+                            desccn: `
+                                <h4>职位概述</h4>
+                                <p>
+                                    销售专员（Sales Executive）负责开发新客户、维护客户关系，
+                                    并通过有效的产品推广和客户沟通实现销售目标。
+                                </p>
+
+                                <h4>主要职责</h4>
+                                <ul>
+                                    <li>在本地及国际市场开发并拓展新客户</li>
+                                    <li>向批发商、分销商及合作伙伴推广和销售公司产品</li>
+                                    <li>准备报价单，跟进客户询问并完成销售交易</li>
+                                    <li>维护并加强与现有客户的良好关系</li>
+                                    <li>收集市场反馈及竞争对手信息</li>
+                                    <li>编制销售报告并更新客户数据库</li>
+                                    <li>与运营及物流团队协作，确保顺利交付</li>
+                                </ul>
+
+                                <h4>任职要求</h4>
+                                <ul>
+                                    <li>商业、市场营销或相关专业本科及以上学历</li>
+                                    <li>至少 1–2 年销售经验（有贸易或快消品经验者优先）</li>
+                                    <li>具备良好的沟通和谈判能力</li>
+                                    <li>积极主动，目标导向</li>
+                                    <li>良好的英语能力；需会高棉语（掌握其他语言者更佳）</li>
+                                    <li>能够根据需要出差</li>
+                                </ul>
+                            `
                         },
+
                         {
-                            img: '{{ asset('assets/job/sale-supvisor.jpeg') }}',
-                            title: 'Sales Supervisor',
-                            desc: 
-                                `
-                                    <h4>Job Summary</h4>
-                                        <p>
-                                            The Sales Supervisor supports the Sales Manager by supervising daily sales activities,
-                                            guiding the sales team, and ensuring targets and performance standards are met.
-                                        </p>
+                            imgen: '{{ asset('assets/job/sales_supervisor_en.jpg') }}',
+                            imgkh: '{{ asset('assets/job/sales_supervisor_kh.jpg') }}',
+                            imgcn: '{{ asset('assets/job/sales_supervisor_cn.jpg') }}',
+                            titleen: 'Sales Supervisor',
+                            titlekh: 'អ្នកត្រួតពិនិត្យផ្នែកលក់',
+                            titlecn: '销售主管',
 
-                                        <h4>Key Responsibilities</h4>
-                                        <ul>
-                                            <li>Supervise and support Sales Executives in daily operations</li>
-                                            <li>Monitor sales performance and ensure achievement of targets</li>
-                                            <li>Assist in implementing sales strategies and promotional plans</li>
-                                            <li>Train, coach, and motivate sales staff</li>
-                                            <li>Ensure proper reporting of sales activities and customer feedback</li>
-                                            <li>Maintain strong relationships with key customers</li>
-                                            <li>Coordinate between sales team and management</li>
-                                        </ul>
+                            descen: `
+                                <h4>Job Summary</h4>
+                                <p>
+                                    The Sales Supervisor supports the Sales Manager by supervising daily sales activities,
+                                    guiding the sales team, and ensuring targets and performance standards are met.
+                                </p>
 
-                                        <h4>Requirements</h4>
-                                        <ul>
-                                            <li>Bachelor’s degree in Business, Marketing, or related field</li>
-                                            <li>Minimum 3 years of sales experience, with supervisory exposure preferred</li>
-                                            <li>Strong leadership and team management skills</li>
-                                            <li>Good analytical and reporting skills</li>
-                                            <li>Excellent communication and problem-solving abilities</li>
-                                            <li>Proficient in Microsoft Office and CRM systems</li>
-                                        </ul>
-                                `
+                                <h4>Key Responsibilities</h4>
+                                <ul>
+                                    <li>Supervise and support Sales Executives in daily operations</li>
+                                    <li>Monitor sales performance and ensure achievement of targets</li>
+                                    <li>Assist in implementing sales strategies and promotional plans</li>
+                                    <li>Train, coach, and motivate sales staff</li>
+                                    <li>Ensure proper reporting of sales activities and customer feedback</li>
+                                    <li>Maintain strong relationships with key customers</li>
+                                    <li>Coordinate between sales team and management</li>
+                                </ul>
+
+                                <h4>Requirements</h4>
+                                <ul>
+                                    <li>Bachelor’s degree in Business, Marketing, or related field</li>
+                                    <li>Minimum 3 years of sales experience, with supervisory exposure preferred</li>
+                                    <li>Strong leadership and team management skills</li>
+                                    <li>Good analytical and reporting skills</li>
+                                    <li>Excellent communication and problem-solving abilities</li>
+                                    <li>Proficient in Microsoft Office and CRM systems</li>
+                                </ul>
+                            `,
+
+                            desckh: `
+                                <h4>សេចក្តីសង្ខេបពីការងារ</h4>
+                                <p>
+                                    មុខតំណែងអ្នកគ្រប់គ្រងការលក់ (Sales Supervisor) ជួយគាំទ្រអ្នកគ្រប់គ្រងការលក់
+                                    ដោយត្រួតពិនិត្យសកម្មភាពលក់ប្រចាំថ្ងៃ ដឹកនាំក្រុមលក់
+                                    និងធានាថាគោលដៅ និងស្តង់ដារការងារត្រូវបានសម្រេច។
+                                </p>
+
+                                <h4>ភារកិច្ចសំខាន់ៗ</h4>
+                                <ul>
+                                    <li>ត្រួតពិនិត្យ និងគាំទ្រអ្នកលក់ក្នុងការងារប្រចាំថ្ងៃ</li>
+                                    <li>តាមដានលទ្ធផលការលក់ និងធានាការសម្រេចគោលដៅ</li>
+                                    <li>ជួយអនុវត្តយុទ្ធសាស្ត្រលក់ និងផែនការផ្សព្វផ្សាយ</li>
+                                    <li>បណ្តុះបណ្តាល ណែនាំ និងលើកទឹកចិត្តបុគ្គលិកលក់</li>
+                                    <li>ធានាការរាយការណ៍ត្រឹមត្រូវអំពីសកម្មភាពលក់ និងមតិយោបល់អតិថិជន</li>
+                                    <li>ថែរក្សាទំនាក់ទំនងល្អជាមួយអតិថិជនសំខាន់ៗ</li>
+                                    <li>សម្របសម្រួលរវាងក្រុមលក់ និងអ្នកគ្រប់គ្រង</li>
+                                </ul>
+
+                                <h4>លក្ខខណ្ឌតម្រូវការ</h4>
+                                <ul>
+                                    <li>មានបរិញ្ញាបត្រផ្នែកធុរកិច្ច ទីផ្សារ ឬជំនាញដែលពាក់ព័ន្ធ</li>
+                                    <li>មានបទពិសោធន៍ការងារផ្នែកលក់យ៉ាងតិច ៣ ឆ្នាំ (មានបទពិសោធន៍គ្រប់គ្រងនឹងផ្តល់អាទិភាព)</li>
+                                    <li>មានជំនាញដឹកនាំ និងគ្រប់គ្រងក្រុមបានល្អ</li>
+                                    <li>មានជំនាញវិភាគ និងរៀបចំរបាយការណ៍</li>
+                                    <li>មានជំនាញទំនាក់ទំនង និងដោះស្រាយបញ្ហាបានល្អ</li>
+                                    <li>អាចប្រើប្រាស់ Microsoft Office និងប្រព័ន្ធ CRM បានល្អ</li>
+                                </ul>
+                            `,
+
+                            desccn: `
+                                <h4>职位概述</h4>
+                                <p>
+                                    销售主管（Sales Supervisor）协助销售经理，
+                                    负责监督日常销售活动、指导销售团队，
+                                    并确保完成销售目标及绩效标准。
+                                </p>
+
+                                <h4>主要职责</h4>
+                                <ul>
+                                    <li>监督并支持销售代表的日常工作</li>
+                                    <li>监控销售业绩，确保达成销售目标</li>
+                                    <li>协助实施销售策略和促销计划</li>
+                                    <li>培训、指导并激励销售人员</li>
+                                    <li>确保销售活动和客户反馈的正确汇报</li>
+                                    <li>维护与重要客户的良好关系</li>
+                                    <li>协调销售团队与管理层之间的工作</li>
+                                </ul>
+
+                                <h4>任职要求</h4>
+                                <ul>
+                                    <li>商业、市场营销或相关专业本科及以上学历</li>
+                                    <li>至少 3 年销售经验，有管理或主管经验者优先</li>
+                                    <li>具备良好的领导能力和团队管理能力</li>
+                                    <li>具备良好的数据分析和报告能力</li>
+                                    <li>优秀的沟通能力和问题解决能力</li>
+                                    <li>熟练使用 Microsoft Office 及 CRM 系统</li>
+                                </ul>
+                            `
                         },
+
+
                         {
-                            img: '{{ asset('assets/job/sales-manager.jpeg') }}',
-                            title: 'Sales Manager',
-                            desc: `
+                            imgen: '{{ asset('assets/job/sales_manager_en.jpg') }}',
+                            imgkh: '{{ asset('assets/job/sales_manager_kh.jpg') }}',
+                            imgcn: '{{ asset('assets/job/sales_manager_cn.jpg') }}',
+                            titleen: 'Sales Manager',
+                            titlekh: 'ប្រធានផ្នែកលក់',
+                            titlecn: '销售经理',
+
+                            descen: `
                                 <h4>Job Summary</h4>
                                 <p>
                                     The Sales Manager leads the sales department, develops sales strategies,
@@ -1930,9 +2066,71 @@
                                     <li>Excellent communication and presentation skills</li>
                                     <li>Experience in trading, import/export, or commodities is a strong advantage</li>
                                 </ul>
-                            `
+                            `,
 
+                            desckh: `
+                                <h4>សេចក្តីសង្ខេបពីការងារ</h4>
+                                <p>
+                                    មុខតំណែងអ្នកគ្រប់គ្រងការលក់ (Sales Manager) ទទួលខុសត្រូវដឹកនាំនាយកដ្ឋានលក់
+                                    បង្កើតយុទ្ធសាស្ត្រលក់ ជំរុញការកើនឡើងនៃប្រាក់ចំណូល
+                                    និងពង្រីកទីផ្សាររបស់ក្រុមហ៊ុន RSL Trading Company។
+                                </p>
+
+                                <h4>ភារកិច្ចសំខាន់ៗ</h4>
+                                <ul>
+                                    <li>រៀបចំ និងអនុវត្តយុទ្ធសាស្ត្រលក់រយៈពេលខ្លី និងរយៈពេលវែង</li>
+                                    <li>កំណត់គោលដៅលក់ និងតាមដានប្រសិទ្ធភាពក្រុមការងារ</li>
+                                    <li>ដឹកនាំ គ្រប់គ្រង និងអភិវឌ្ឍក្រុមលក់</li>
+                                    <li>ស្វែងរកទីផ្សារថ្មី ឱកាសអាជីវកម្ម និងដៃគូយុទ្ធសាស្ត្រ</li>
+                                    <li>គ្រប់គ្រងអតិថិជនសំខាន់ៗ និងអតិថិជនមានតម្លៃខ្ពស់</li>
+                                    <li>វិភាគទិន្នន័យលក់ និន្នាការទីផ្សារ និងសកម្មភាពគូប្រកួត</li>
+                                    <li>រៀបចំព្យាករណ៍លក់ ថវិកា និងរបាយការណ៍គ្រប់គ្រង</li>
+                                    <li>សហការជាមួយអ្នកគ្រប់គ្រងជាន់ខ្ពស់ ដើម្បីគាំទ្រការកើនឡើងរបស់ក្រុមហ៊ុន</li>
+                                </ul>
+
+                                <h4>លក្ខខណ្ឌតម្រូវការ</h4>
+                                <ul>
+                                    <li>មានបរិញ្ញាបត្រ ឬអនុបណ្ឌិតផ្នែកធុរកិច្ច ទីផ្សារ ឬជំនាញពាក់ព័ន្ធ</li>
+                                    <li>មានបទពិសោធន៍ការងារផ្នែកលក់យ៉ាងតិច ៥ ឆ្នាំ រួមទាំងកម្រិតគ្រប់គ្រង</li>
+                                    <li>មានប្រវត្តិជោគជ័យក្នុងការកើនឡើងលក់ និងដឹកនាំក្រុម</li>
+                                    <li>មានជំនាញគិតយុទ្ធសាស្ត្រ និងចរចាល្អ</li>
+                                    <li>មានជំនាញទំនាក់ទំនង និងបង្ហាញការងារល្អ</li>
+                                    <li>មានបទពិសោធន៍ផ្នែកពាណិជ្ជកម្ម នាំចូល/នាំចេញ ឬទំនិញ គឺជាប្រយោជន៍ខ្លាំង</li>
+                                </ul>
+                            `,
+
+                            desccn: `
+                                <h4>职位概述</h4>
+                                <p>
+                                    销售经理（Sales Manager）负责领导销售部门，
+                                    制定销售策略，推动收入增长，
+                                    并扩大 RSL Trading Company 的市场影响力。
+                                </p>
+
+                                <h4>主要职责</h4>
+                                <ul>
+                                    <li>制定并实施短期及长期销售战略</li>
+                                    <li>设定销售目标并监督团队绩效</li>
+                                    <li>领导、管理并培养销售团队</li>
+                                    <li>开拓新市场、商业机会及战略合作伙伴</li>
+                                    <li>管理重点客户及高价值客户</li>
+                                    <li>分析销售数据、市场趋势及竞争对手活动</li>
+                                    <li>编制销售预测、预算及管理报告</li>
+                                    <li>与高层管理团队协作，支持公司发展</li>
+                                </ul>
+
+                                <h4>任职要求</h4>
+                                <ul>
+                                    <li>商业、市场营销或相关专业本科或硕士学历</li>
+                                    <li>至少 5 年销售经验，包含管理层经验</li>
+                                    <li>具备销售增长及团队领导的成功经验</li>
+                                    <li>具备优秀的战略思维和谈判能力</li>
+                                    <li>出色的沟通和演示能力</li>
+                                    <li>具有贸易、进出口或大宗商品经验者优先</li>
+                                </ul>
+                            `
                         }
+
                     ]
                 }"
            >
@@ -1941,7 +2139,7 @@
                         <div class="text-center">
 
                             <img
-                                :src="item.img"
+                                :src="{{ app()->getLocale() === 'en' ? 'item.imgen' : (app()->getLocale() === 'km' ? 'item.imgkh' : 'item.imgcn') }}"
                                 class="w-full h-[515px] md:h-[750px] lg:h-[515px] object-contain"
                                 alt="">
 
@@ -1949,7 +2147,14 @@
                             <button
                                 @click="active = item; open = true"
                                 class="btn-view-more z-50 px-5 py-2 text-white rounded-full">
-                                <img src="{{ asset('assets/products/btn-view-more.png') }}" alt="">
+                                {{-- <img src="{{ asset('assets/products/btn-view-more-cn.png') }}" alt=""> --}}
+                                <img src="{{ asset(
+                                app()->getLocale() === 'en'
+                                        ? 'assets/products/btn-view-more.png'
+                                        : (app()->getLocale() === 'km'
+                                            ? 'assets/products/btn-view-more-kh.png'
+                                            : 'assets/products/btn-view-more-cn.png')
+                                ) }}" alt="" class="">
                             </button>
 
                         </div>
@@ -1977,8 +2182,18 @@
         <!-- Dynamic Content -->
         <template x-if="active">
             <div>
-                <h2 class="text-2xl font-semibold mb-4" x-text="active.title"></h2>
-                <div class="text-gray-700 leading-relaxed" x-html="active.desc"></div>
+                <h2 class="text-2xl font-semibold mb-4" x-text=" {{ app()->getLocale() === 'en'
+        ? 'active.titleen'
+        : (app()->getLocale() === 'km'
+            ? 'active.titlekh'
+            : 'active.titlecn')
+    }}"></h2>
+                <div class="text-gray-700 leading-relaxed" x-html=" {{ app()->getLocale() === 'en'
+        ? 'active.descen'
+        : (app()->getLocale() === 'km'
+            ? 'active.desckh'
+            : 'active.desccn')
+    }}"></div>
             </div>
         </template>
 
@@ -2098,3 +2313,6 @@
 </script>
 
 @endsection
+
+
+   
