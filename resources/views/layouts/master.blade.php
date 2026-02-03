@@ -128,7 +128,7 @@
 
     @yield('content')
 
-    <div class=" {{ Route::is('career') ? '-mt-96 md:mt-128 lg:mt-0' : '' }}">
+    <div class="{{ Route::is('career') ? '-mt-96 md:mt-128 lg:mt-0' : '' }}">
         @include('components.footer')
     </div>
   </div>

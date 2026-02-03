@@ -292,6 +292,7 @@
 
         <img class="footer-bg" src="{{ asset('assets/images/footer-bg.png') }}">
 
+
         <div class="footer-content">
             <div class="footer-navigate">
                 {{-- <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'ការរុករក' : '導航') }}</h5> --}}

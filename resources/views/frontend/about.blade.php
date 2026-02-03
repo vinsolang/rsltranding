@@ -2415,7 +2415,7 @@
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
-        <img src="{{ asset('assets/profile-team/1.png') }}" class="w-72 h-72 rounded-full object-contain p-1">
+        <img src="{{ asset('assets/profile-team/1-new.png') }}" class="w-72 h-72 rounded-full object-contain p-1">
         <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'MESSAGE FROM FOUNDER' : (app()->getLocale() === 'km' ? 'សារពីស្ថាបនិក' : '董事会寄语 ') }}</h5>
         <div class="p-bg">
             <p class="{{ app()->getLocale() === 'km'
@@ -2506,7 +2506,7 @@
         <div class="flex md:flex-row flex-col items-center gap-10">
             <!-- Diamond Image -->
             <div class="relative w-[260px] lg:w-72 h-60 md:h-44 lg:h-56 rotate-45 flex items-center justify-center">
-                <img src="{{ asset('assets/profile-team/1.png') }}"
+                <img src="{{ asset('assets/profile-team/1-new.png') }}"
                     class="w-full h-full object-cover rotate-[-45deg]"
                     alt="">
                 
@@ -2531,7 +2531,7 @@
         <!-- PERSON 2 -->
         <div class="flex md:flex-row flex-col items-center gap-10 justify-center lg:ml-32">
             <div class="relative w-[260px] lg:w-72 h-60 md:h-44 lg:h-56 rotate-45 flex items-center justify-center">
-                <img src="{{ asset('assets/profile-team/2.png') }}"
+                <img src="{{ asset('assets/profile-team/2-new.png') }}"
                     class="w-full h-full object-cover rotate-[-45deg]"
                     alt="">
                 
