@@ -1342,7 +1342,7 @@
         {{-- Version Mobile --}}
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
             poster="fallback-image.jpg">
-            <source src="{{ asset('assets/vdo/animation-rsl-final.mp4') }}" type="video/mp4">
+            <source src="{{ asset('assets/vdo/animation-rsl-final-vdo.mp4') }}" type="video/mp4">
             {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
             {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
         </video>
