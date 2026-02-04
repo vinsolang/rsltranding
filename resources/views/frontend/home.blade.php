@@ -1495,7 +1495,7 @@
                                 : '高品质的柬埔寨咖啡豆经过精心烘焙和加工，以供全球出口市场使用。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#bean"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.02' : (app()->getLocale() === 'km' ? '.០២' : '.02') }}</h1>
                         </div>
 
@@ -1544,7 +1544,7 @@
                                 : ' 高品质的柬埔寨腰果，适合出口全球市场。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#cashew"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.04' : (app()->getLocale() === 'km' ? '.០៤' : '.04') }}</h1>
                         </div>
 
@@ -1569,7 +1569,7 @@
                                 : '高品质的干木薯，可用于工业加工及国际出口。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#cassava"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.05' : (app()->getLocale() === 'km' ? '.០៥' : '.05') }}</h1>
                         </div>
 
@@ -1594,7 +1594,7 @@
                                 : '出口级新鲜芒果，味道浓郁，甜度自然。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#fresh_mango"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.06' : (app()->getLocale() === 'km' ? '.០៦' : '.06') }}</h1>
                         </div>
 
@@ -1606,6 +1606,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="card">
                     <img src="{{ asset('assets/images/pepper1.png') }}">
@@ -1616,7 +1617,7 @@
                                 : '优质柬埔寨胡椒，以其浓郁的香气和强烈的风味而著称，适合全球食品和香料市场。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#pepper"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.07' : (app()->getLocale() === 'km' ? '.០៧' : '.07') }}</h1>
                         </div>
 
@@ -1628,6 +1629,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="card">
                     <img src="{{ asset('assets/products/charcoul.jpg') }}" class="object-cover md:h-[238px] lg:h-[207px] xl:h-[292px]">
@@ -1638,7 +1640,7 @@
                                 : '高品质椰壳活性炭由黑色和白色两种炭粒组成，面向本地及全球市场供应产品。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#white_black"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.08' : (app()->getLocale() === 'km' ? '.0៨' : '.08') }}</h1>
                         </div>
 
@@ -1650,6 +1652,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="card">
                     <img src="{{ asset('assets/products/plantation-wood.jpg') }}" class="object-cover h-[280px] md:h-[238px] lg:h-[207px] xl:h-[292px]">
@@ -1660,7 +1663,7 @@
                                 : '我们的种植林木均来自可靠来源，并经过加工处理，符合国际出口标准。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#product"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.09' : (app()->getLocale() === 'km' ? '.០៩' : '.09') }}</h1>
                         </div>
 

@@ -1268,11 +1268,27 @@
 
                                 },
                                 init() {
-                                    const hash = window.location.hash.replace('#', '');
+                                    const hash = window.location.hash.replace('#','');
                                     if (hash && this.products[hash]) {
-                                        this.active = hash;
+                                        this.active = hash; // open the right product
+
+                                        const el = document.getElementById('products');
+                                        if(el) {
+                                            setTimeout(() => {
+                                                // calculate offset so the full card shows
+                                                const paddingBottom = 1050; // adjust this to give extra space at bottom
+                                                const elementBottom = el.offsetTop + el.offsetHeight;
+                                                const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                window.scrollTo({
+                                                    top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                    behavior: 'smooth'
+                                                });
+                                            }, 50);
+                                        }
                                     }
-                                }    
+                                }
+
                             }">
                                 <!-- Image -->
                                 <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
@@ -1287,12 +1303,16 @@
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
                                         <!-- Fresh Mango -->
-                                        <button x-show="active === 'default'" @click="active = 'rice'">
+                                        <button 
+                                            x-show="active === 'default'"
+                                            @click="active='rice'; history.replaceState(null,'','#rice')">
                                             {{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : '大米') }}
                                         </button>
 
                                         <!-- Dried Mango -->
-                                        <button x-show="active === 'default'" @click="active = 'yellow_corn'">
+                                        <button 
+                                            x-show="active === 'default'"
+                                            @click="active='yellow_corn'; history.replaceState(null,'','#yellow_corn')">
                                             {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : '黄玉米') }}
                                         </button>
 
@@ -1337,7 +1357,29 @@
                                         desc: '{{ app()->getLocale() === 'en' ? 'Carefully dried mango slices for long shelf life and premium taste.' : (app()->getLocale() === 'km' ? 'ចំណិតស្វាយហាលស្ងួតល្អដើម្បីទទួលបានកាលបរិច្ឆេទរក្សាទុកបានយូរអង្វែង និងរសជាតិឆ្ងាញ់។' : '精心干燥处理的芒果片，保质期长且口感上乘。') }}',
                                         img: '{{ asset('assets/images/export/dry_mango.jpg') }}'
                                     }
+                                },
+                                 init() {
+                                    const hash = window.location.hash.replace('#','');
+                                    if (hash && this.products[hash]) {
+                                        this.active = hash; // open the right product
+
+                                        const el = document.getElementById('fruits');
+                                        if(el) {
+                                            setTimeout(() => {
+                                                // calculate offset so the full card shows
+                                                const paddingBottom = 1050; // adjust this to give extra space at bottom
+                                                const elementBottom = el.offsetTop + el.offsetHeight;
+                                                const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                window.scrollTo({
+                                                    top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                    behavior: 'smooth'
+                                                });
+                                            }, 50);
+                                        }
+                                    }
                                 }
+
                             }">
                                 <!-- Image -->
                                 <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
@@ -1352,7 +1394,7 @@
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
                                         <!-- Fresh Mango -->
-                                        <button x-show="active === 'default'" @click="active = 'fresh_mango'">
+                                        <button x-show="active === 'default'" @click="active='fresh_mango'; history.replaceState(null,'','#fresh_mango')">
                                             {{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់' : '新鲜芒果') }}
                                         </button>
 
@@ -1381,7 +1423,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-12" id="nuts">
+                        <div class="col-lg-4 col-md-6 col-12" id="nuts_leg">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
@@ -1400,7 +1442,29 @@
                                         desc: '{{ app()->getLocale() === 'en' ? 'Premium peanuts processed for food and industrial use.' : (app()->getLocale() === 'km' ? 'សណ្តែកដីប្រកបដោយគុណភាពខ្ពស់កែច្នៃសម្រាប់ម្ហូបអាហារ និងការប្រើប្រាស់ក្នុងឧស្សាហកម្មនានា។' : '优质花生，用于食品和工业加工。') }}',
                                         img: '{{ asset('assets/images/export/peanut.jpg') }}'
                                     }
+                                },
+                                 init() {
+                                    const hash = window.location.hash.replace('#','');
+                                    if (hash && this.products[hash]) {
+                                        this.active = hash; // open the right product
+
+                                        const el = document.getElementById('nuts_leg');
+                                        if(el) {
+                                            setTimeout(() => {
+                                                // calculate offset so the full card shows
+                                                const paddingBottom = 1050; // adjust this to give extra space at bottom
+                                                const elementBottom = el.offsetTop + el.offsetHeight;
+                                                const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                window.scrollTo({
+                                                    top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                    behavior: 'smooth'
+                                                });
+                                            }, 50);
+                                        }
+                                    }
                                 }
+
                             }">
                                 <!-- Image -->
                                 <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
@@ -1415,7 +1479,9 @@
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
                                         <!-- Cashew -->
-                                        <button x-show="active === 'default'" @click="active = 'cashew'">
+                                        <button 
+                                                x-show="active === 'default'" 
+                                                @click="active='cashew'; history.replaceState(null,'','#cashew')">
                                             {{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : '腰果') }}
                                         </button>
 
@@ -1452,7 +1518,7 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-4">
                                 {{-- item 1 --}}
 
-                                <div class="">
+                                <div class="" id="cassavas">
                                     <div class="card-product" x-data="{
                                         active: 'default',
                                         products: {
@@ -1466,7 +1532,29 @@
                                                 desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' : '高品质的干木薯，适用于工业加工及国际出口。') }}',
                                                 img: '{{ asset('assets/images/export-card-product-4.png') }}'
                                             }
-                                        }
+                                        },
+                                         init() {
+                                                const hash = window.location.hash.replace('#','');
+                                                if (hash && this.products[hash]) {
+                                                    this.active = hash; // open the right product
+
+                                                    const el = document.getElementById('cassavas');
+                                                    if(el) {
+                                                        setTimeout(() => {
+                                                            // calculate offset so the full card shows
+                                                            const paddingBottom = 900; // adjust this to give extra space at bottom
+                                                            const elementBottom = el.offsetTop + el.offsetHeight;
+                                                            const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                            window.scrollTo({
+                                                                top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                                behavior: 'smooth'
+                                                            });
+                                                        }, 50);
+                                                    }
+                                                }
+                                            }
+
                                     }">
                                         <!-- Image -->
                                         <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
@@ -1481,7 +1569,7 @@
                                         <!-- Buttons -->
                                         <div class="smaill-detail-card">
                                             <!-- Dried Cassava -->
-                                            <button x-show="active === 'default'" @click="active = 'cassava'" class="relative top-6">
+                                            <button x-show="active === 'default'" @click="active='cassava'; history.replaceState(null,'','#cassava')" class="relative top-6">
                                                 {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី​ស្ងួត' : '干木薯') }}
                                             </button>
 
@@ -1507,7 +1595,7 @@
                                 </div>
 
                                 {{-- item 2 --}}
-                                <div class="">
+                                <div class="" id="pepper_product">
                                     <div class="card-product" x-data="{
                                          active: 'default',
                                         products: {
@@ -1521,7 +1609,28 @@
                                                 desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'ម្រេចកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញអន្តរជាតិ។' : '高品质的柬埔寨辣椒，适合出口至国际市场的使用。') }}',
                                                 img: '{{ asset('assets/images/export-card-product-5.png') }}'
                                             }
-                                        }
+                                        },
+                                        init() {
+                                                const hash = window.location.hash.replace('#','');
+                                                if (hash && this.products[hash]) {
+                                                    this.active = hash; // open the right product
+
+                                                    const el = document.getElementById('pepper_product');
+                                                    if(el) {
+                                                        setTimeout(() => {
+                                                            // calculate offset so the full card shows
+                                                            const paddingBottom = 900; // adjust this to give extra space at bottom
+                                                            const elementBottom = el.offsetTop + el.offsetHeight;
+                                                            const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                            window.scrollTo({
+                                                                top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                                behavior: 'smooth'
+                                                            });
+                                                        }, 50);
+                                                    }
+                                                }
+                                            }
                                     }">
                                         <!-- Image -->
                                         <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
@@ -1536,7 +1645,7 @@
                                         <!-- Buttons -->
                                         <div class="smaill-detail-card">
                                             <!-- Pepper -->
-                                            <button x-show="active === 'default'" @click="active = 'pepper'" class="relative top-6">
+                                            <button x-show="active === 'default'" @click="active='pepper'; history.replaceState(null,'','#pepper')" class="relative top-6">
                                                 {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : '佩珀') }}
                                             </button>
 
@@ -1595,7 +1704,30 @@
                                                         : '细磨烘焙咖啡粉，即冲即用，适合零售及出口。') }}',
                                                     img: '{{ asset('assets/products/coffee/coffee_beans_4_800x.webp') }}'
                                                 }
+                                            },
+                                           init() {
+                                                const hash = window.location.hash.replace('#','');
+                                                if (hash && this.products[hash]) {
+                                                    this.active = hash; // open the right product
+
+                                                    const el = document.getElementById('coffee');
+                                                    if(el) {
+                                                        setTimeout(() => {
+                                                            // calculate offset so the full card shows
+                                                            const paddingBottom = 900; // adjust this to give extra space at bottom
+                                                            const elementBottom = el.offsetTop + el.offsetHeight;
+                                                            const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                            window.scrollTo({
+                                                                top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                                behavior: 'smooth'
+                                                            });
+                                                        }, 50);
+                                                    }
+                                                }
                                             }
+
+
                                     }">
                                         <!-- Image -->
                                         <img class="card-product-bg-1 h-[250px] object-cover" :src="products[active].img">
@@ -1610,7 +1742,9 @@
                                         <!-- Buttons -->
                                         <div class="smaill-detail-card">
                                             <!-- Roasted Coffee Beans -->
-                                            <button x-show="active === 'default'" @click="active = 'bean'">
+                                            <button 
+                                                x-show="active === 'default'" 
+                                                @click="active='bean'; history.replaceState(null,'','#bean')">
                                                 {{ app()->getLocale() === 'en' ? 'Roasted Coffee Bean' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេលីង' : '咖啡豆') }}
                                             </button>
 
@@ -1640,10 +1774,10 @@
                                 </div>
 
                                 {{-- item 4 --}}
-                                <div class="">
+                                <div class="" id="product">
                                     <div class="card-product" x-data="{
                                            active: 'default',
-                                                products: {
+                                            products: {
                                                 default: {
                                                     title: '{{ app()->getLocale() === 'en' ? 'Plantation Wood' : (app()->getLocale() === 'km' ? 'ឈើដាំ' : '种植林木') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'There is very good quality wood such as Acacia which will be wood log, wood chip, sawtimber and wood pellets for export from here.' : (app()->getLocale() === 'km' ? 'ផ្គត់ផ្គង់ឈើដាំប្រកបដោយគុណភាពល្អដូចជាឈើអាកាស្យា ឈើដុំ ឈើបន្ទះ ឈើអារ និងគ្រាប់ឈើសម្រាប់នាំចេញពីទីនេះ។' : '这里有着非常优质的木材，比如金合欢木，这些木材将被加工成原木、木屑、锯材以及木屑颗粒，用于出口。') }}',
@@ -1698,6 +1832,27 @@
                                                     img: '{{ asset('assets/products/pro-7/Wood-Pellets.JPG') }}'
                                                 }
 
+                                            },
+                                            init() {
+                                                const hash = window.location.hash.replace('#','');
+                                                if (hash && this.products[hash]) {
+                                                    this.active = hash; // open the right product
+
+                                                    const el = document.getElementById('product');
+                                                    if(el) {
+                                                        setTimeout(() => {
+                                                            // calculate offset so the full card shows
+                                                            const paddingBottom = 900; // adjust this to give extra space at bottom
+                                                            const elementBottom = el.offsetTop + el.offsetHeight;
+                                                            const scrollPosition = elementBottom - window.innerHeight + paddingBottom;
+
+                                                            window.scrollTo({
+                                                                top: scrollPosition > 0 ? scrollPosition : 0, // don't scroll negative
+                                                                behavior: 'smooth'
+                                                            });
+                                                        }, 50);
+                                                    }
+                                                }
                                             }
                                         }">
                                         <!-- Image -->
@@ -1718,7 +1873,7 @@
                                                 {{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងសំបកដូង' : '椰壳炭') }}
                                             </button>
 
-                                            <button x-show="active === 'default'" @click="active = 'white_black'" class="relative -top-6">
+                                            <button x-show="active === 'default'" @click="active='white_black'; history.replaceState(null,'','#white_black')" class="relative -top-6">
                                                 
                                                 {{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : '白黑炭') }}
                                             </button>
