@@ -1116,7 +1116,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-4">
                         {{-- item 1 --}}
 
-                        <div class="">
+                        <div class="" >
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
@@ -1244,7 +1244,7 @@
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
                                         </button>
                                     </div>
 
@@ -1307,7 +1307,7 @@
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
                                         </button>
                                     </div>
 
@@ -1365,7 +1365,7 @@
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : '回去') }}
                                         </button>
                                     </div>
 

@@ -2028,27 +2028,27 @@
                         ],
                     ],
                      [
-        'title_en' => 'Coffee Export Activities',
-        'title_km' => 'សកម្មភាពនាំចេញកាហ្វេ',
-        'title_cn' => '咖啡出口活动',
-        'date' => '15 Jan 2025',
-        'images' => [
-            'assets/images/card-2.png',
-            'assets/images/export/coffee_bean.jpg',
-            'assets/images/card-2.png',
-        ],
-    ],
-    [
-        'title_en' => 'Yellow Corn Export Activities',
-        'title_km' => 'សកម្មភាពនាំចេញពោតលឿង',
-        'title_cn' => '黄玉米出口活动',
-        'date' => '02 Feb 2025',
-        'images' => [
-            'assets/images/Activites-3.JPG',
-            'assets/images/export-card-product-1.png',
-            'assets/images/Activites-3.JPG',
-        ],
-    ],
+                        'title_en' => 'Coffee Export Activities',
+                        'title_km' => 'សកម្មភាពនាំចេញកាហ្វេ',
+                        'title_cn' => '咖啡出口活动',
+                        'date' => '15 Jan 2025',
+                        'images' => [
+                            'assets/images/card-2.png',
+                            'assets/images/export/coffee_bean.jpg',
+                            'assets/images/card-2.png',
+                        ],
+                    ],
+                    [
+                        'title_en' => 'Yellow Corn Export Activities',
+                        'title_km' => 'សកម្មភាពនាំចេញពោតលឿង',
+                        'title_cn' => '黄玉米出口活动',
+                        'date' => '02 Feb 2025',
+                        'images' => [
+                            'assets/images/Activites-3.JPG',
+                            'assets/images/export-card-product-1.png',
+                            'assets/images/Activites-3.JPG',
+                        ],
+                    ],
     
                 ];
             @endphp
@@ -2069,7 +2069,7 @@
                 <div class="{{ $isEven ? '' : 'lg:order-2' }}">
                     <img
                         src="{{ asset($album['images'][0]) }}"
-                        class="w-full h-[420px] object-cover rounded-2xl cursor-pointer"
+                        class="w-full h-[750px] object-cover rounded-2xl cursor-pointer"
                         @click="open({{ $index }})">
                 </div>
 

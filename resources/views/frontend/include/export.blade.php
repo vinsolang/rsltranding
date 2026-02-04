@@ -1232,7 +1232,7 @@
                          {{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលចម្បង' : '我们的主要商品') }}
                     </h2>
                         
-                        <div class="col-lg-4 col-md-6 col-12" id="rice">
+                        <div class="col-lg-4 col-md-6 col-12" id="products">
                             <div class="card-product" x-data="{
                                 active: 'default',
                                 products: {
@@ -1266,7 +1266,13 @@
                                         img: '{{ asset('assets/images/card-3.png') }}'
                                     }
 
-                                }
+                                },
+                                init() {
+                                    const hash = window.location.hash.replace('#', '');
+                                    if (hash && this.products[hash]) {
+                                        this.active = hash;
+                                    }
+                                }    
                             }">
                                 <!-- Image -->
                                 <img class="card-product-bg h-[300px] object-cover" :src="products[active].img">
@@ -1556,7 +1562,7 @@
                                 </div>
 
                                 {{-- item 3 --}}
-                                <div class="">
+                                <div class="" id="coffee">
                                     <div class="card-product" x-data="{
                                         active: 'default',
                                             products: {

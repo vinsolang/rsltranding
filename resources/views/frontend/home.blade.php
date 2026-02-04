@@ -1321,6 +1321,7 @@
 {{-- banner --}}
 <section>
     <div class="main-banner bg-cover relative">
+        {{-- Version Desktop --}}
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full banner-vdo"
             poster="fallback-image.jpg">
             <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
@@ -1339,7 +1340,7 @@
         >
             <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
         </video>
-
+        {{-- Version Mobile --}}
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
             poster="fallback-image.jpg">
             <source src="{{ asset('assets/videos/bg-rsl/bg-rsl-mobile/bg-apple-rsl.mp4') }}" type="video/mp4">
@@ -1440,11 +1441,12 @@
                 <p class="">{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“យើងខ្ញុំជួយកសិករក្នុងស្រុកដោយបង្កើតឱកាសសម្រាប់ការលក់ផលិតផលកសិកម្មផលិតដោយកូនខ្មែរ។”' : '“我们通过为柬埔寨的农产品创造全球市场机会，来帮助当地的农民。”') }}</p>
             </div>
         </div>
-
+        {{-- Version Desktop  --}}
         <div class="we-start-person-none">
             <img src="{{ asset('assets/logo/person-rice-photo.png') }}" class="pt-16">
         </div>
 
+        {{-- Version Mobile --}}
         <div class="we-start-person">
             <img src="{{ asset('assets/logo/person-rice-photo.png') }}" class="2xl:ml-40 ml-36 w-[50%] h-[60%]">
 
@@ -1453,7 +1455,7 @@
     </div>
 </section>
 
-{{-- Commodities --}}
+{{-- Our Main Products --}}
 <section>
     <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Products' : (app()->getLocale() === 'km' ? 'ផលិតផលចម្បង' : '主要产品') }}</h5>
     <div class="container">
@@ -1517,7 +1519,7 @@
                                 : '高品质的黄玉米，可用于动物饲料、食品加工以及工业用途。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#yellow_corn"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.03' : (app()->getLocale() === 'km' ? '.០៣' : '.03') }}</h1>
                         </div>
 
