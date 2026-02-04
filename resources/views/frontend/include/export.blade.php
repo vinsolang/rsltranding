@@ -1182,7 +1182,7 @@
             </video>
             <video autoplay muted loop playsinline class="absolute banner-img-1 inset-0 z-[-10] object-cover w-full h-full"
                 poster="fallback-image.jpg">
-                <source src="{{ asset('assets/vdo/animation-rsl-final.mp4') }}" type="video/mp4" >
+                <source src="{{ asset('assets/vdo/animation-rsl-final-vdo.mp4') }}" type="video/mp4" >
                 {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
             </video>
             <div class="wrapper-banner">
