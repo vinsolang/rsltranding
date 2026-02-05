@@ -140,25 +140,25 @@
     .first-card-background img {
         object-fit: cover;
         width: 100%;
-        height: 230vh;
+        height: 160vh;
     }
 
     /* Mobile only */
 @media (max-width: 768px) {
     .first-card-background img {
-        height: 190vh;
+        height: 170vh;
     }
 }
 @media (max-width: 426px) {
     .first-card-background img {
-        height: 135vh;
+        height: 100vh;
     }
 }
 
     /* 4K and large monitors */
     @media screen and (min-width: 2560px) {
     .first-card-background img {
-        height: 125vh; /* exactly one viewport height */
+        height: 100vh; /* exactly one viewport height */
         width: 100%;   /* scale width proportionally */
         object-fit: cover; /* cover whole section */
     }
@@ -794,9 +794,15 @@
     }
     @media screen and (min-width: 2560px) {
     .-mt-4k {
-        margin-top: -1000px; 
+        margin-top: -1300px; 
     }
 }
+ @media screen and (min-width: 1024px) and (max-width: 2517px) {
+    .-mt-4k {
+        margin-top: -400px; 
+    }
+}
+
 
  @media screen and (min-width: 2560px) {
     .m-4kk {
@@ -2569,7 +2575,7 @@
     </div>
 </section>
 
-<section class="founder-section relative md:mt-[450px] -mt-4k z-[999]">
+<section class="founder-section relative md:mt-[100px] -mt-4k z-[999]">
     {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
