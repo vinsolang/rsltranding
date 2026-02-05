@@ -90,7 +90,7 @@
 
         .first-card-background img {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -410,6 +410,11 @@
 }
        /* Desktop / medium screens */
 @media (min-width: 1440px) {
+    .btn-view-more {
+        top: -8rem; 
+    }
+}
+@media (min-width: 1024px) {
     .btn-view-more {
         top: -8rem; 
     }
@@ -1713,22 +1718,31 @@
         }
     }
 
-      @media screen and (max-width: 2560px) {
+      @media screen and (min-width: 2560px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
-            left: 260px;
+            left: 700px;
             top: -80px;
         }
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (min-width: 1700px) and (max-width: 2542px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 600px;
+            top: -80px;
+        }
+    }
+     @media screen and (max-width: 1699px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
             left: 250px;
             top: -80px;
         }
+      
     }
 
      @media screen and (max-width: 1024px) {
@@ -1747,7 +1761,7 @@
             top: -40px;
         }
     }
-
+    
        @media screen and (max-width: 732px) {
         .main-banner .home-banner-context {
             text-align: center;
@@ -1764,8 +1778,6 @@
             top: -40px;
         }
     }
-
-
     @media screen and (max-width: 426px) {
         .rsl-trading-map {
             width: 1200px;
@@ -1906,7 +1918,7 @@
                 </div>
             @endif  
             {{-- <img src="{{ asset('assets/job/sales_executive_en.jpg') }}" alt=""> --}}
-           <div class="flex flex-col lg:flex-row w-full h-full"
+           <div class="flex flex-col justify-center items-center w-full h-full"
                  x-data="{
                     open: false,
                     active: null,
@@ -2211,7 +2223,7 @@
                     ]
                 }"
            >
-                <div class="flex lg:flex-row flex-col lg:w-1/2 w-full z-50 ">
+                <div class="flex lg:flex-row flex-col lg:w-1/2 w-full z-50 relative top-1 lg:top-52 xl:top-44 2xl:top-56">
                      <template x-for="(item, index) in items" :key="index">
                         <div class="text-center">
 
@@ -2239,46 +2251,47 @@
                 </div>
 
                 <!-- Full Screen Popup -->
-    <div
-    x-show="open"
-    x-transition.opacity
-    x-cloak
-    class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
+                <div
+                    x-show="open"
+                    x-transition.opacity
+                    x-cloak
+                    class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
 
-    <div
-        class="bg-white max-w-3xl w-full mx-4 p-6 relative rounded-lg
-               max-h-[90vh] overflow-y-auto">
+                    <div
+                        class="bg-white max-w-3xl w-full mx-4 p-6 relative rounded-lg
+                            max-h-[90vh] overflow-y-auto">
 
-        <!-- Close -->
-        <button
-            @click="open = false"
-            class="absolute top-3 right-3 text-2xl text-gray-600 hover:text-black">
-            ✕
-        </button>
+                        <!-- Close -->
+                        <button
+                            @click="open = false"
+                            class="absolute top-3 right-3 text-2xl text-gray-600 hover:text-black">
+                            ✕
+                        </button>
 
-        <!-- Dynamic Content -->
-        <template x-if="active">
-            <div>
-                <h2 class="text-2xl font-semibold mb-4" x-text=" {{ app()->getLocale() === 'en'
-        ? 'active.titleen'
-        : (app()->getLocale() === 'km'
-            ? 'active.titlekh'
-            : 'active.titlecn')
-    }}"></h2>
-                <div class="text-gray-700 leading-relaxed" x-html=" {{ app()->getLocale() === 'en'
-        ? 'active.descen'
-        : (app()->getLocale() === 'km'
-            ? 'active.desckh'
-            : 'active.desccn')
-    }}"></div>
-            </div>
-        </template>
+                        <!-- Dynamic Content -->
+                        <template x-if="active">
+                            <div>
+                                <h2 class="text-2xl font-semibold mb-4" x-text=" {{ app()->getLocale() === 'en'
+                        ? 'active.titleen'
+                        : (app()->getLocale() === 'km'
+                            ? 'active.titlekh'
+                            : 'active.titlecn')
+                    }}"></h2>
+                                <div class="text-gray-700 leading-relaxed" x-html=" {{ app()->getLocale() === 'en'
+                        ? 'active.descen'
+                        : (app()->getLocale() === 'km'
+                            ? 'active.desckh'
+                            : 'active.desccn')
+                    }}"></div>
+                            </div>
+                        </template>
 
-    </div>
-</div>
+                    </div>
+                </div>
 
 
-                <div class="lg:w-1/2 w-full">
+                {{-- form --}}
+                <div class="w-full relative top-1 lg:top-32 xl:top-40 2xl:top-56">
                     <form action="{{ route('contacts.send') }}" method="POST" enctype="multipart/form-data"
                         class="career-main-form">
                         @csrf

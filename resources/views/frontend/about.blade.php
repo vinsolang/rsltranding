@@ -2115,22 +2115,31 @@
 
 
 
-      @media screen and (max-width: 2560px) {
+      @media screen and (min-width: 2560px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
-            left: 260px;
+            left: 700px;
             top: -80px;
         }
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (min-width: 1700px) and (max-width: 2542px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 600px;
+            top: -80px;
+        }
+    }
+     @media screen and (max-width: 1699px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
             left: 250px;
             top: -80px;
         }
+      
     }
 
      @media screen and (max-width: 1024px) {
@@ -2374,12 +2383,12 @@
                     </div>
                     {{-- Core Values --}}
                     <div class="text-center mt-2 md:py-0 py-2">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-black">
+                        <h3 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-black pt-2 md:py-4">
                             {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
                         </h3>
-                        {{-- <div class="mt-1 text-lg md:text-xl font-bold tracking-[0.5em] text-black">
+                        <div class="mt-1 text-lg md:text-2xl font-bold tracking-[0.5em] text-black md:py-3">
                             P E A C E
-                        </div> --}}
+                        </div>
                     </div>
 
                     {{-- @php
@@ -2394,15 +2403,84 @@
 
     $image = $mapImages[$locale] ?? $mapImages['en'];
                     @endphp --}}
-                    <div class="relative top-0 w-[380px] md:w-[550px] lg:w-[650px] xl:w-[950px] h-auto md:h-[300px] mx-auto md:py-0">
-                        <img src="{{ asset(
+                      {{-- <img src="{{ asset(
                         app()->getLocale() === 'en'
                             ? 'assets/about-core/core-value-final-en11.png'
                             : (app()->getLocale() === 'km'
                                 ? 'assets/about-core/core-value-final-kh11.png'
                                 : 'assets/about-core/core-value-final-cn11.png')
-                    ) }}" alt="" class="w-full h-full object-cover">
+                    ) }}" alt="" class="w-full h-full object-cover"> --}}
+
+                    <div class="relative max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
+                        <!-- Image -->
+                        <img
+                            src="{{ asset('assets/about-core/core-value.png') }}"
+                            alt=""
+                            class="w-full h-[115px] md:h-[230px] lg:h-[300px] object-cover rounded-lg"
+                        >
+
+                        <!-- Overlay text -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="flex justify-center gap-0 md:gap-1 lg:gap-3 px-3 text-left text-[#212552]">
+                                
+                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                    <h1 class="leading-3 text-[8px] sm:text-[12px] lg:text-base font-normal md:font-semibold">
+                                        {{ app()->getLocale() === 'en' ? ' P - Passion' : (app()->getLocale() === 'km' ? 'ចំណង់ខ្លាំង' : '激情') }}
+                                    </h1>
+                                    <p class="leading-3 text-[8px] sm:text-[12px] lg:text-base">
+                                       
+                                         {{ app()->getLocale() === 'en' ? ' Having a strong drive and enthusiasm for your work.' : (app()->getLocale() === 'km' ? 'មានកម្លាំងចិត្ត និងភាពសកម្មក្នុងការងារ ដោយចំណង់ចំណូលចិត្ត និងសេចក្តីស្រលាញ់ពិតប្រាកដ។' : '为客户寻找最优质、价格合理的产品。') }}
+                                    </p>
+                                </div>
+
+                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
+                                      
+                                        {{ app()->getLocale() === 'en' ? 'E - Excellence' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាព' : '卓越') }}
+                                    </h1>
+                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                      
+                                        {{ app()->getLocale() === 'en' ? ' Striving to achieve the best possible results.' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាពដើម្បីទទួលបានលទ្ធផលល្អបំផុត។' : '努力通过奉献，技能和持续改进来达到最好的结果。') }}
+                                    </p>
+                                </div>
+
+                                <div class="max-w-40 md:max-w-40 mx-auto">
+                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
+                                        
+                                        {{ app()->getLocale() === 'en' ? 'A - Accountability' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវ' : '问责制') }}
+                                    </h1>
+                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                        {{ app()->getLocale() === 'en' ? 'Taking full responsibility for actions.' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវខ្ពស់ចំពោះសកម្មភាព និងលទ្ធផល។' : '对自己的行为、决定和结果负全责。') }}
+                                        
+                                    </p>
+                                </div>
+
+                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
+                                        
+                                          {{ app()->getLocale() === 'en' ? 'C - Compassion' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា' : '同情心') }}
+                                    </h1>
+                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                       
+                                        {{ app()->getLocale() === 'en' ? 'Showing kindness and care for others.' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា និងជួយសង្គ្រោះអ្នកដទៃ។' : '表现出善意、关心和愿意帮助有需要的人。') }}
+                                    </p>
+                                </div>
+
+                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
+                                       
+                                        {{ app()->getLocale() === 'en' ? ' E - Empathy' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត' : '同理心') }}
+                                    </h1>
+                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                       
+                                        {{ app()->getLocale() === 'en' ? ' Understanding others’ feelings and needs.' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត យល់អារម្មណ៍ អំពីតម្រូវការ និងទុក្ខធុរៈអ្នកដទៃ។' : '理解和分享他人的感受、需求和挑战。') }}
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
                     {{-- <img src="{{ asset('assets/about-core/core-value-final-kh11.png') }}" alt=""> --}}
                     {{-- @php
                     $values = [
@@ -2603,7 +2681,7 @@
                 </div>
                 <p class="mt-3 text-base">
                     
-                    {{ app()->getLocale() === 'en' ? 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.' : (app()->getLocale() === 'km' ? 'លោក សុធន់ មានបទពិសោធន៍ជាង 20 ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន។' : 'Sothorn先生在航运和物流行业拥有超过20年的经验。') }}
+                    {{ app()->getLocale() === 'en' ? 'Mr. Sothorn has over 20 years in Shipping & Logistics Industry.' : (app()->getLocale() === 'km' ? 'លោក សុធន មានបទពិសោធន៍ជាង 20 ឆ្នាំក្នុងវិស័យដឹកជញ្ជូន។' : 'Sothorn先生在航运和物流行业拥有超过20年的经验。') }}
                 </p>
             </div>
         </div>

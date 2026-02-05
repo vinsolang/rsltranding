@@ -1198,6 +1198,34 @@
         }
     }
 
+    
+      @media screen and (min-width: 2560px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 700px;
+            top: -80px;
+        }
+    }
+
+    @media screen and (min-width: 1700px) and (max-width: 2542px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 600px;
+            top: -80px;
+        }
+    }
+     @media screen and (max-width: 1699px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 250px;
+            top: -80px;
+        }
+      
+    }
+
      @media screen and (max-width: 1024px) {
         .main-banner .wrapper-banner {
             text-align: center;
@@ -1315,7 +1343,7 @@
                     </div>
                     <a data-aos="zoom-in-up" data-aos-duration="1600" href="#interest"><button
                             class="btn-Interest-to-export">
-                            {{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的产品') }}
+                            {{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ព័ត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的产品') }}
                         </button></a>
                 </div>
             </div>
@@ -1887,31 +1915,31 @@
                                                 },
 
                                                 charcoal: {
-                                                    title: '{{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងសំបកដូង' : '椰壳炭') }}',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងត្រឡោកដូង' : '椰壳炭') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'High-quality natural charcoal made from coconut shells. Long burning time, low smoke, ideal for BBQ and industrial use.' : (app()->getLocale() === 'km' ? 'ធ្យូងធម្មជាតិដែលមានគុណភាពខ្ពស់ផលិតពីសំបកដូង។ ដុតបានយូរ មានផ្សែងតិច ល្អសម្រាប់ដុតសាច់អាំង និងប្រើប្រាស់ក្នុងឧស្សាហកម្ម។' : '由椰壳制成的高品质天然炭。燃烧时间长，烟雾少，非常适合烧烤和工业用途。') }}',
-                                                    img: '{{ asset('assets/products/Coconut-Shell.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/coconut-shell.jpg') }}'
                                                 },
 
                                                 white_black: {
-                                                    title: '{{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : '白黑炭') }}',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងធ្យូងខ្មៅ' : '白黑炭') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'Premium white and black charcoal with high carbon content, clean combustion, and strong heat output.' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅលំដាប់ខ្ពស់ ដែលមានជាតិកាបូនខ្ពស់ ចំហេះស្អាត និងបញ្ចេញកំដៅខ្លាំង។' : '优质白黑炭，含碳量高，燃烧干净，热输出强劲。') }}',
                                                     img: '{{ asset('assets/products/pro-7/White-black-Charcoal.png') }}'
                                                 },
 
                                                 wood_chip: {
-                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Chip' : (app()->getLocale() === 'km' ? 'បន្ទះឈើ' : '木屑') }}',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Chip' : (app()->getLocale() === 'km' ? 'ចំណិតឈើ' : '木屑') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'Processed wood chips used for biomass fuel, landscaping, animal bedding, and industrial applications.' : (app()->getLocale() === 'km' ? 'បន្ទះឈើកែច្នៃដែលប្រើសម្រាប់ចំហេះឥន្ធនៈ ររៀបចំដេគ័រខាងក្រៅ ធ្វើរោងសត្វ និងប្រើក្នុងឧស្សាហកម្មនានា។' : '经过加工的木屑，可用于生物质燃料、园林绿化、动物垫料以及工业用途。') }}',
-                                                    img: '{{ asset('assets/products/Wood-Chip.jpg') }}'
+                                                    img: '{{ asset('assets/products/pro-7/wood-chip-2.jpg') }}'
                                                 },
 
                                                 sawdust: {
-                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កំទេចឈើ' : '木屑') }}',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កម្ទេចឈើម៉ត់(អាចម៍រណារ)' : '木屑') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'Fine wood particles suitable for fuel briquettes, composting, particle board, and agricultural use.' : (app()->getLocale() === 'km' ? 'កំទេចឈើល្អិតៗដែលសមស្របសម្រាប់ដុតជាចំហេះធ្យូងឥន្ធនៈ ការធ្វើជីកំប៉ុស ប្រើជាបន្ទះឈើតូចៗ និងការប្រើប្រាស់កសិកម្ម។' : '优质的木屑颗粒，可用于制作燃料砖块、堆肥、刨花板以及农业用途。') }}',
                                                     img: '{{ asset('assets/products/pro-7/Sawdust.JPG') }}'
                                                 },
 
                                                 timber: {
-                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ដំុឈើ' : '木材') }}',
+                                                    title: '{{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ឈើអារ' : '木材') }}',
                                                     desc: '{{ app()->getLocale() === 'en' ? 'High-quality plantation timber for construction, furniture manufacturing, and export markets.' : (app()->getLocale() === 'km' ? 'ដំុឈើប្រកបដោយគុណភាពខ្ពស់ប្រើប្រាស់សម្រាប់សំណង់ ការផលិតគ្រឿងសង្ហារឹម និងទីផ្សារនាំចេញ។' : '高品质的种植林木材，适用于建筑、家具制造以及出口市场。') }}',
                                                     img: '{{ asset('assets/products/pro-7/Saw-Timber.JPG') }}'
                                                 },
@@ -1972,27 +2000,27 @@
 
                                             <button x-show="active === 'default'" @click="active = 'charcoal'" class="relative -top-6">
                                                 
-                                                {{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងសំបកដូង' : '椰壳炭') }}
+                                                {{ app()->getLocale() === 'en' ? 'Coconut Shell Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងត្រឡោកដូង' : '椰壳炭') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active='white_black'; history.replaceState(null,'','#white_black')" class="relative -top-6">
                                                 
-                                                {{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងខ្មៅ' : '白黑炭') }}
+                                                {{ app()->getLocale() === 'en' ? 'White & Black Charcoal' : (app()->getLocale() === 'km' ? 'ធ្យូងស និងធ្យូងខ្មៅ' : '白黑炭') }}
                                             </button>
 
-                                            <button x-show="active === 'default'" @click="active = 'wood_chip'" class="relative -top-6">
+                                            <button x-show="active === 'default'" @click="active='wood_chip'; history.replaceState(null,'','#wood_chip')" class="relative -top-6">
                                                
-                                                {{ app()->getLocale() === 'en' ? 'Wood Chip' : (app()->getLocale() === 'km' ? 'បន្ទះឈើ' : '木屑') }}
+                                                {{ app()->getLocale() === 'en' ? 'Wood Chip' : (app()->getLocale() === 'km' ? 'ចំណិតឈើ' : '木屑') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'sawdust'" class="relative -top-6">
                                                
-                                                {{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កំទេចឈើ' : '木屑') }}
+                                                {{ app()->getLocale() === 'en' ? 'Wood Sawdust' : (app()->getLocale() === 'km' ? 'កម្ទេចឈើម៉ត់(អាចម៍រណារ)' : '木屑') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'timber'" class="relative -top-6">
                                                
-                                                {{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ដំុឈើ' : '木材') }}
+                                                {{ app()->getLocale() === 'en' ? 'Wood Timber' : (app()->getLocale() === 'km' ? 'ឈើអារ' : '木材') }}
                                             </button>
 
                                             <button x-show="active === 'default'" @click="active = 'pellet'" class="relative -top-6">

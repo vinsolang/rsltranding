@@ -1875,22 +1875,31 @@
     
        }
 
-      @media screen and (max-width: 2560px) {
+      @media screen and (min-width: 2560px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
-            left: 350px;
+            left: 700px;
             top: -80px;
         }
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (min-width: 1700px) and (max-width: 2542px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 600px;
+            top: -80px;
+        }
+    }
+     @media screen and (max-width: 1699px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
             left: 250px;
             top: -80px;
         }
+      
     }
 
      @media screen and (max-width: 1024px) {
@@ -2190,9 +2199,12 @@
         <button class="absolute left-6 text-white text-5xl"
                 @click="prev()">‹</button>
 
-        <img
-            :src="images[current]"
-            class="max-h-screen max-w-screen object-contain">
+        <!-- Image wrapper -->
+        <div class="w-[90vw] h-[90vw] max-w-[600px] max-h-[600px]">
+            <img
+                :src="images[current]"
+                class="w-full h-full object-cover rounded-lg">
+        </div>
 
         <button class="absolute right-6 text-white text-5xl"
                 @click="next()">›</button>

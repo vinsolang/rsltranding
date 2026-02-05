@@ -48,23 +48,32 @@
     .main-banner .home-banner-context {
         text-align: center;
     }
-
-    @media screen and (max-width: 2560px) {
+    
+    @media screen and (min-width: 2560px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
-            left: 260px;
+            left: 700px;
             top: -80px;
         }
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (min-width: 1700px) and (max-width: 2542px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 600px;
+            top: -80px;
+        }
+    }
+     @media screen and (max-width: 1699px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
             left: 250px;
             top: -80px;
         }
+      
     }
 
      @media screen and (max-width: 1024px) {
@@ -83,15 +92,23 @@
             top: -40px;
         }
     }
-     @media screen and (max-width: 441px) {
+    
+       @media screen and (max-width: 732px) {
         .main-banner .home-banner-context {
             text-align: center;
             position: relative;
             left: 10px;
-            top: 0px;
+            top: -30px;
         }
     }
-    
+      @media screen and (max-width: 588px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: -40px;
+        }
+    }
     @media screen and (max-width: 426px) {
         .rsl-trading-map {
             width: 1200px;
@@ -131,7 +148,7 @@
     }
 
     .main-banner .home-banner-context .khmer-title {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: bolder;
         font-family: "Moul", serif;
         color: #059848
@@ -1416,7 +1433,7 @@
 
             <button class="btn-explore-our-exports md:mt-0 -mt-5" data-aos="zoom-in-up" data-aos-duration="1600">
                 <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的产品') }}</a></p>
+                <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Products' : (app()->getLocale() === 'km' ? 'ព័ត៌មានបន្ថែមអំពីផលិតផល' : '探索我们的产品') }}</a></p>
             </button>
         </div>
     </div>
@@ -1721,7 +1738,7 @@
                                 : '我们的种植林木均来自可靠来源，并经过加工处理，符合国际出口标准。') }}</p>
 
                         <div class="wrapper-card-content">
-                            <a href="{{ route('our_product') }}#product"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
+                            <a href="{{ route('our_product') }}#wood_chip"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Detail' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : '更多详情') }}</button></a>
                             <h1>{{ app()->getLocale() === 'en' ? '.09' : (app()->getLocale() === 'km' ? '.០៩' : '.09') }}</h1>
                         </div>
 

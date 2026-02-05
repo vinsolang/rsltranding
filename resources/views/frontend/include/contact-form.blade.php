@@ -219,7 +219,7 @@
             id="phone"
             type="tel"
             name="phone"
-            placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរសព្ទ' : '手机号码') }}"
+            placeholder="{{ app()->getLocale() === 'en' ? 'Mobile Phone' : (app()->getLocale() === 'km' ? 'ទូរស័ព្ទ' : '手机号码') }}"
             required
             autocomplete="tel" />
             <span class="star-inside">*</span>

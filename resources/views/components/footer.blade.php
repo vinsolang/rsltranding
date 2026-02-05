@@ -350,14 +350,14 @@
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white no-underline"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អុីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
                 </li>
                 <li>
-                    <h5 class="">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
+                    <h5 class="">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
                 </li>
                 <li>
                     <h5 class="">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : '办公时间:') }}</h5>
                 </li>
                 
                 <li>
-                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃច័ន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '周一至周五 上午8点至下午5点') }}<br>
+                    {{ app()->getLocale() === 'en' ? 'Monday - Friday 8am - 5pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃចន្ទដល់សុក្រ ៨ព្រឹក ដល់ ៥ល្ងាច' : '周一至周五 上午8点至下午5点') }}<br>
                     {{ app()->getLocale() === 'en' ? 'Saturday 8am - 12pm' : (app()->getLocale() === 'km' ? 'ថ្ងៃសៅរ៍ ៨ព្រឹក ដល់ ១២រសៀល' : '周六 上午8点至中午12点') }}
                 </li>
                 {{-- <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li> --}}
