@@ -45,19 +45,19 @@
         style="background-image: url('{{ asset('assets/images/nav_bg.png') }}')">
         <li>
             <a href="{{ route('home') }}"
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('home') ? 'active' : '' }}">
+                class="text-[#000] px-4 py-4 w-full nav_link lg:text-[14px] xl:text-[16px] text-decoration-none {{ Route::is('home') ? 'active' : '' }}">
                 {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : '住宅') }}
             </a>
         </li>
         <li>
             <a href="{{ route('about') }} "
 
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('about') ? 'active' : '' }}">
+                class="text-[#000] px-4 py-4 w-full nav_link lg:text-[14px] xl:text-[16px] text-decoration-none {{ Route::is('about') ? 'active' : '' }}">
                             {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : '公司简介') }}</a>
         </li>
         <li>
             <a href="{{ route('our_product') }}"
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('our_product') ? 'active' : '' }}">
+                class="text-[#000] px-4 py-4 w-full nav_link lg:text-[14px] xl:text-[16px] text-decoration-none {{ Route::is('our_product') ? 'active' : '' }}">
                 {{ app()->getLocale() === 'en' ? 'Our Products' : (app()->getLocale() === 'km' ? 'ផលិតផល' : '我们的产品') }}
             </a>
         </li>
@@ -65,19 +65,19 @@
         
         <li>
             <a href="{{ route('events') }} "
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('events') ? 'active' : '' }}">
+                class="text-[#000] px-4 py-4 w-full nav_link lg:text-[14px] xl:text-[16px] text-decoration-none {{ Route::is('events') ? 'active' : '' }}">
                 {{ app()->getLocale() === 'en' ? 'our Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : '商业活动') }}
             </a>
         </li>
         <li>
             <a href="{{ route('career') }} "
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('career') ? 'active' : '' }}">
+                class="text-[#000] px-4 py-4 w-full nav_link lg:text-[14px] xl:text-[16px] text-decoration-none {{ Route::is('career') ? 'active' : '' }}">
                 {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}
             </a>
         </li>
         <li>
             <a href="{{ route('contact') }}"
-                class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('contact') ? 'active' : '' }}">
+                class="text-[#000] px-4 py-4 w-full nav_link lg:text-[14px] xl:text-[16px] text-decoration-none {{ Route::is('contact') ? 'active' : '' }}">
                 {{ app()->getLocale() === 'en' ? 'Contact us' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : '联系方法') }}
             </a>
         </li>

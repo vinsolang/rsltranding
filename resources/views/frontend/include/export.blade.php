@@ -1189,6 +1189,14 @@
             top: 40px;
         }
     }
+      @media screen and (max-width: 1095px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 300px;
+            top: 100px;
+        }
+    }
 
      @media screen and (max-width: 1024px) {
         .main-banner .wrapper-banner {
@@ -1202,10 +1210,19 @@
         .main-banner .wrapper-banner {
             text-align: center;
             position: relative;
-            left: -150px;
+            left: 350px;
             top: 150px;
         }
     }
+      @media screen and (max-width: 821px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 250px;
+            top: 150px;
+        }
+    }
+     
       @media screen and (max-width: 768px) {
         .main-banner .wrapper-banner {
             text-align: center;
