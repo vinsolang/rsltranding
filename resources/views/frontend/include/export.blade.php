@@ -1170,29 +1170,114 @@
     
        }
         
+    
+
+      @media screen and (max-width: 2560px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 600px;
+            top: 40px;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 580px;
+            top: 40px;
+        }
+    }
+
+     @media screen and (max-width: 1024px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 500px;
+            top: 100px;
+        }
+    }
+      @media screen and (max-width: 811px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: -150px;
+            top: 150px;
+        }
+    }
+      @media screen and (max-width: 768px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 30px;
+            top: 150px;
+        }
+    }
+    
+       @media screen and (max-width: 732px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: 0px;
+        }
+    }
+      @media screen and (max-width: 588px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: 0px;
+        }
+    }
+    @media screen and (max-width: 426px) {
+        .rsl-trading-map {
+            width: 1200px;
+        }
+
+        .rsl-trading-map img {
+            width: 1200px;
+        }
+        .main-banner .wrapper-banner {
+            margin-top: 200px;
+             text-align: center;
+            position: relative;
+            left: 0px;
+            top: px;
+        }
+    }
+     @media screen and (max-width: 375px) {
+        .main-banner .wrapper-banner {
+            text-align: center;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+    }
+    
     </style>
 
     <section>
         <div class="main-banner relative">
-           <!-- <img class="banner-img" src="{{ asset('assets/images/banner-img-1.png') }}">  -->
+          
             <video autoplay muted loop playsinline class="absolute banner-img inset-0 z-[-10] object-cover w-full h-full"
                 poster="fallback-image.jpg">
-                <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4" >
-                <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
+                <source src="{{ asset('assets/vdo/8.mp4') }}" type="video/mp4" >
+                {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
             </video>
             <video autoplay muted loop playsinline class="absolute banner-img-1 inset-0 z-[-10] object-cover w-full h-full"
                 poster="fallback-image.jpg">
                 <source src="{{ asset('assets/vdo/animation-rsl-final-vdo.mp4') }}" type="video/mp4" >
-                {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
+                
             </video>
             <div class="wrapper-banner">
-                <div class="logo-video">
+                {{-- <div class="logo-video">
                     <video id="logoVideo" autoplay muted loop playsinline class="home-banner-logo hidden">
                         <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
                     </video>
 
-                    {{-- <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo"> --}}
-                </div>
+                </div> --}}
                 <div class="banner-content md:mt-0 mt-64">
                     <div class="main-banner-h1-bg">
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul km-title' : ''  }}">

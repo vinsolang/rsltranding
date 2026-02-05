@@ -83,6 +83,14 @@
             top: -40px;
         }
     }
+     @media screen and (max-width: 441px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: 0px;
+        }
+    }
     
     @media screen and (max-width: 426px) {
         .rsl-trading-map {
@@ -109,7 +117,6 @@
         }
     }
 
-    
     
 
     .main-banner .home-banner-context h5 {

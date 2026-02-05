@@ -1874,6 +1874,82 @@
     }
     
        }
+
+      @media screen and (max-width: 2560px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 350px;
+            top: -80px;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 250px;
+            top: -80px;
+        }
+    }
+
+     @media screen and (max-width: 1024px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 250px;
+            top: -50px;
+        }
+    }
+      @media screen and (max-width: 768px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 150px;
+            top: -40px;
+        }
+    }
+    
+       @media screen and (max-width: 732px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: -30px;
+        }
+    }
+      @media screen and (max-width: 588px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: -40px;
+        }
+    }
+    @media screen and (max-width: 426px) {
+        .rsl-trading-map {
+            width: 1200px;
+        }
+
+        .rsl-trading-map img {
+            width: 1200px;
+        }
+        .main-banner .home-banner-context {
+            margin-top: 200px;
+             text-align: center;
+            position: relative;
+            left: 0px;
+            top: px;
+        }
+    }
+     @media screen and (max-width: 375px) {
+        .main-banner .home-banner-context {
+            text-align: center;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+    }
 </style>
     {{-- <section>
         <div class="main-banner relative">
@@ -1915,11 +1991,11 @@
     <div class="main-banner bg-cover relative">
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full"
             poster="fallback-image.jpg">
-            <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
+            <source src="{{ asset('assets/vdo/8.mp4') }}" type="video/mp4">
             {{-- <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm"> --}}
         </video>
         {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
-        <video
+        {{-- <video
             id="logoVideo"
             autoplay
             muted
@@ -1929,7 +2005,7 @@
             class="home-banner-logo hidden"
         >
             <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
-        </video>
+        </video> --}}
 
         <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full md:hidden"
             poster="fallback-image.jpg">
