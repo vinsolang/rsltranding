@@ -83,9 +83,10 @@
 
     .first-card {
         position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 8rem 1rem; /* spacing instead of vh */
+        width: 100%;
+        height: 170vh;
+        padding-top: 18rem;
+        margin-top: -12% !important;
     }
 
     @media screen and (max-width: 2561px) and (min-width: 1441px) {
@@ -128,35 +129,19 @@
 
     }
 
-   .first-card-background {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
-
-.first-card-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-@media (max-width: 1024px) {
-    .first-card {
-        padding: 6rem 1rem;
+    .first-card-background {
+        z-index: 0 !important;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
     }
-}
 
-@media (max-width: 768px) {
-    .first-card {
-        padding: 4rem 1rem;
+    .first-card-background img {
+        object-fit: cover;
+        width: 100%;
+        height: 160vh;
     }
-}
-
-@media (max-width: 426px) {
-    .first-card {
-        padding: 3rem 1rem;
-    }
-}
-
 
     /* Mobile only */
 @media (max-width: 768px) {
@@ -2488,17 +2473,15 @@
                 
                 {{ app()->getLocale() === 'en' ? 'Mr. REACH SOTHORN' : (app()->getLocale() === 'km' ? 'លោក រាជ​ សុធន' : 'Reach Sothorn 先生') }}
             </p>
+           
         </div>
     </div>
 </section>
 
 <section>
+  
     <section class="relative w-full overflow-hidden">
          <h1 class="text-center text-2xl text-[#059848] mt-12 font-bold">{{ app()->getLocale() === 'en' ? 'OUR FOUNDING TEAM' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : '创始团队') }}</h1>
-    <!-- Background -->
-    <div class="absolute inset-0">
-    </div>
-
     <!-- Content -->
     <div class="relative max-w-6xl mx-auto px-6 py-20 md:space-y-20 space-y-6">
 
@@ -2608,6 +2591,19 @@
         <h1>{{ app()->getLocale() === 'en' ? 'Business Credential Licenses' : (app()->getLocale() === 'km' ? 'ឯកសារផ្លូវការរបស់ក្រុមហ៊ុន' : '营业执照') }}</h1>
     </div>
     <div class="business-credentail-card">
+        {{-- <div class="business-credentail-card-wrapper">
+                <div class="credentail-img">
+                    <img src="{{ asset('assets/images/credentail-1.png') }}">
+    </div>
+
+    <div class="credentail-img">
+        <img src="{{ asset('assets/images/credentail-2.png') }}">
+    </div>
+
+    <div class="credentail-img">
+        <img src="{{ asset('assets/cartificate/4.png') }}">
+    </div>
+    </div> --}}
     <div class="flex lg:flex-row flex-col justify-center items-center gap-8 max-w-8xl mx-auto px-2">
 
     <div class="flex items-center bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
