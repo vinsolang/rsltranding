@@ -2420,8 +2420,8 @@
                     <div class="relative max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
                         <img src="{{ asset(
                             app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
-                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
-                                : 'assets/about-core/core-value-style-kh/core-value-en.svg')
+                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer.svg'
+                                : 'assets/about-core/core-value-style-kh/core-value-chin.svg')
                         ) }}" alt="" class="w-full h-full object-cover">
                         <!-- Image -->
                         {{-- <img
