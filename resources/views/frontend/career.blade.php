@@ -1878,7 +1878,7 @@
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul km-title' : ''  }}"> {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : '就业机会') }}</h1>
                     </div>
                     <div class="main-banner-p-bg max-w-[550px] text-left">
-                        <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'J​​oin Our Team and Grow with Cambodia’s Leading Agricultural Exporter' : (app()->getLocale() === 'km' ? 'ចូលរួមជាមួយក្រុមការងាររបស់យើងខ្ញុំនឹងរីកចម្រើនជាមួយក្រុមហ៊ុននាំចេញផលិតផលកសិកម្មឈានមុខគេរបស់ប្រទេសកម្ពុជា' : '加入我们的团队，与柬埔寨领先的农业出口商') }}</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'J​​oin Our Team and Grow with Cambodia’s Leading Agricultural Exporter' : (app()->getLocale() === 'km' ? 'ចូលរួមជាមួយក្រុមការងាររបស់យើងខ្ញុំនឹងរីកចម្រើនជាមួយក្រុមហ៊ុននាំចេញផលិតផលកសិកម្មឈានមុខគេរបស់ប្រទេសកម្ពុជា។' : '加入我们的团队，与柬埔寨领先的农业出口商') }}</p>
 
                         <p data-aos="zoom-in-up" data-aos-duration="1400">
                             {!! app()->getLocale() === 'en' ? '​Be part of a company that connects local farmers to global markets, values integrity, and delivers quality products worldwide.' 

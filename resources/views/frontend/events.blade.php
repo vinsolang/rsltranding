@@ -2030,7 +2030,7 @@
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="{{ app()->getLocale() === 'km' ? 'font-moul km-title' : ''  }}">{{ app()->getLocale() === 'en' ? 'Activites' : (app()->getLocale() === 'km' ? 'សកម្មភាពអាជីវកម្ម' : '商业活动') }}</h1>
                     </div>
                     <div class="main-banner-p-bg md:w-full max-w-[300px] ">
-                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​{{ app()->getLocale() === 'en' ? '​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា' : '您在柬埔寨农产品出口领域的可靠合作伙伴') }}</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​{{ app()->getLocale() === 'en' ? '​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា។' : '您在柬埔寨农产品出口领域的可靠合作伙伴') }}</p>
                     </div>
                     <a data-aos="zoom-in-up" data-aos-duration="1400" href="#contact"><button
                             class="btn-Interest-to-export"> {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : '兴趣出口') }}</button></a>
