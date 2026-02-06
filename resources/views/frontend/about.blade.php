@@ -2447,10 +2447,10 @@
                     </div>
 
 
-                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto {{ app()->getLocale() === 'km' ? 'left-2' : '' }}">
+                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
                         <img src="{{ asset(
                             app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
-                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer-1.svg'
+                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer-2.svg'
                                 : 'assets/about-core/core-value-style-kh/core-value-chin-1.svg')
                         ) }}" alt="" class="w-full h-full object-cover">
                     </div>
