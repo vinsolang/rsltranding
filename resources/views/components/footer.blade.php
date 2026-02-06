@@ -347,7 +347,7 @@
                 </li>
 
                 <li>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white no-underline"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អុីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white no-underline"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
                 </li>
                 <li>
                     <h5 class="">{{ app()->getLocale() === 'en' ? '+855 11 678 588' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ +៨៥៥ ១១ ៦៧៨ ៥៨៨' : '+855 11 678 588') }}</h5>
