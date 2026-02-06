@@ -2392,9 +2392,9 @@
                         <h3 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-black pt-2 md:py-4">
                             {{ app()->getLocale() === 'en' ? 'Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
                         </h3>
-                        <div class="mt-1 text-lg md:text-2xl font-bold tracking-[0.5em] text-black md:py-3">
+                        {{-- <div class="mt-1 text-lg md:text-2xl font-bold tracking-[0.5em] text-black md:py-3">
                             P E A C E
-                        </div>
+                        </div> --}}
                     </div>
 
                     {{-- @php
@@ -2418,15 +2418,20 @@
                     ) }}" alt="" class="w-full h-full object-cover"> --}}
 
                     <div class="relative max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
+                        <img src="{{ asset(
+                            app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
+                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
+                                : 'assets/about-core/core-value-style-kh/core-value-en.svg')
+                        ) }}" alt="" class="w-full h-full object-cover">
                         <!-- Image -->
-                        <img
+                        {{-- <img
                             src="{{ asset('assets/about-core/core-value.png') }}"
                             alt=""
                             class="w-full h-[115px] md:h-[230px] lg:h-[300px] object-cover rounded-lg"
-                        >
-
+                        > --}}
+                        {{-- <img src="{{ asset('assets/about-core/core-value-style-kh/core-value-en.svg' }}" alt=""> --}}
                         <!-- Overlay text -->
-                        <div class="absolute inset-0 flex items-center justify-center">
+                        {{-- <div class="absolute inset-0 flex items-center justify-center">
                             @php
                                 $isKh = app()->getLocale() === 'km';
                             @endphp
@@ -2573,7 +2578,7 @@
 
                         
 
-                        </div>
+                        </div> --}}
                     </div>
 
                     {{-- <img src="{{ asset('assets/about-core/core-value-final-kh11.png') }}" alt=""> --}}
