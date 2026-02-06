@@ -2305,9 +2305,9 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <label class="text-[#fff] mb-1" for="email">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អុីម៉ែល' : '邮箱') }}</label>
-                                    <div class="career-input-form">
-                                        <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៉ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
+                                    <label class="text-[#fff] mb-1" for="email" style="font-family: Kantumruy Pro, sans-serif;">{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'អ៊ីម៉ែល' : '邮箱') }}</label>
+                                    <div class="career-input-form" style="font-family: Kantumruy Pro, sans-serif;">
+                                        <input id="email" name="email" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your email address' : (app()->getLocale() === 'km' ? 'បញ្ចូលអាសយដ្ឋានអ៊ីម៉ែលរបស់អ្នក' : '请输入您的邮箱地址') }}">
                                     </div>
                                 </div>
 

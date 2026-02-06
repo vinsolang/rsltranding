@@ -346,7 +346,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li style="font-family: Kantumruy Pro, sans-serif;">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@rsltrading.com" target="_blank" class="text-white no-underline"><h5 class="">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5></a>
                 </li>
                 <li>

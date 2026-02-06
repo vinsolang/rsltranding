@@ -91,7 +91,7 @@
                             fill="#109A49" />
                     </svg>
 
-                    <span>{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អុីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
+                    <span style="font-family: Kantumruy Pro, sans-serif;">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
                 </a>
                 <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] text-decoration-none">
                     <svg width="15" height="15" viewBox="0 0 16 16" fill="none"
@@ -362,7 +362,7 @@
                                 fill="#109A49" />
                         </svg>
 
-                        <span>{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
+                        <span style="font-family: Kantumruy Pro, sans-serif;">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៊ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</span>
                     </a>
                     <a href="#" class="flex items-center gap-2 text-[12px] text-[#1E1E1E] no-underline">
                         <svg width="15" height="15" viewBox="0 0 16 16" fill="none"

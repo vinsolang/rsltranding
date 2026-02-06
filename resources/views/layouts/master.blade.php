@@ -53,6 +53,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Moul&family=Nokora:wght@100..900&family=Siemreap&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Moul&display=swap" rel="stylesheet">
+   <!-- Kantumruy Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
   {{-- aos --}}
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
