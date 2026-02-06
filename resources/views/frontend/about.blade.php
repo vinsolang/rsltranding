@@ -154,11 +154,10 @@
         height: 100vh;
     }
 }
-
     /* 4K and large monitors */
     @media screen and (min-width: 2560px) {
     .first-card-background img {
-        height: 100vh; /* exactly one viewport height */
+        height: 110vh; /* exactly one viewport height */
         width: 100%;   /* scale width proportionally */
         object-fit: cover; /* cover whole section */
     }
@@ -2299,7 +2298,7 @@
         </div>
         <div class="md:mt-1 m-4kk">
             <div class="relative mx-auto max-w-6xl px-4 md:px-80 -mt-14">
-                <div class="gap-b-32 md:space-y-0 space-y-8">
+                <div class="gap-b-32 space-y-8">
                     {{-- Vision --}}
                     <div class="relative mx-auto min-h-14 md:mb-12 max-w-4xl md:py-0 py-2">
                         {{-- Background image (BEHIND text) --}}
@@ -2388,15 +2387,57 @@
                         </div>
                     </div>
                     {{-- Core Values --}}
-                    <div class="text-center mt-2 md:py-0 py-2">
-                        <h3 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-black pt-2 md:py-4">
-                            {{ app()->getLocale() === 'en' ? 'Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
-                        </h3>
-                        {{-- <div class="mt-1 text-lg md:text-2xl font-bold tracking-[0.5em] text-black md:py-3">
+                    {{-- <div class="relative text-center mt-2 py-2 md:py-0">
+                        
+                        <img 
+                            src="{{ asset('assets/about-core/core-value-style-kh/bg-corevalues.svg') }}" 
+                            alt="Core Values Background"
+                            class="mx-auto w-full max-w-md md:max-w-2xl"
+                        >
+
+                     
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3
+                                class="mv-title-mission
+                                    text-lg sm:text-2xl md:text-3xl
+                                    font-extrabold tracking-tight text-black
+                                    px-4 text-center">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Core Values'
+                                    : (app()->getLocale() === 'km'
+                                        ? 'គុណតម្លៃស្នូល'
+                                        : '核心价值观') }}
+                            </h3>
+                        </div>
+                    </div> --}}
+
+                    <div class="relative top-[20px] md:top-20 mx-auto min-h-14 my-1 mb-20 max-w-4xl md:py-0 py-2">
+
+                        {{-- Background image (BEHIND text) --}}
+                        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                            <img
+                                src="{{ asset('assets/about-core/core-value-style-kh/bg-corevalues.svg') }}"
+                                alt=""
+                                class="lg:w-[1000px] object-contain" />
+                        </div>
+                        {{-- Card content (ABOVE image) --}}
+                        <div class="mv-card relative z-20">
+                            <div class="flex items-center gap-2 md:gap-6 ">
+                                <div
+                                    class="max-w-10 sm:max-w-12 md:max-w-16 flex items-center text-orange-500 ml-[19%] md:ml-[18%]">
+                                    {{-- icon --}}
+                                    <img class="w-full ml-[-12px]" src="{{ asset('assets/about-core/core-value-style-kh/icon-corevalue.svg') }}" alt="">
+                                </div>
+
+                                <div class="mv-title-mission md:mt-0 md:ml-[20px] text-lg leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-[#79c259]">
+                                   {{ app()->getLocale() === 'en' ? 'Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class="mt-1 text-lg md:text-2xl font-bold tracking-[0.5em] text-black md:py-3">
                             P E A C E
                         </div> --}}
-                    </div>
-
                     {{-- @php
                         $locale = app()->getLocale();
 
@@ -2417,11 +2458,11 @@
                                 : 'assets/about-core/core-value-final-cn11.png')
                     ) }}" alt="" class="w-full h-full object-cover"> --}}
 
-                    <div class="relative max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
+                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] left-4 md:left-8 max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
                         <img src="{{ asset(
                             app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
-                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer.svg'
-                                : 'assets/about-core/core-value-style-kh/core-value-chin.svg')
+                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer-1.svg'
+                                : 'assets/about-core/core-value-style-kh/core-value-chin-1.svg')
                         ) }}" alt="" class="w-full h-full object-cover">
                         <!-- Image -->
                         {{-- <img
