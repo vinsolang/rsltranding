@@ -2312,7 +2312,7 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <label class="text-[#fff] mb-1" for="phone">{{ app()->getLocale() === 'en' ? 'Phone Number' : (app()->getLocale() === 'km' ? 'លេខទូរសព្ទ' : '电话号码') }}</label>
+                                    <label class="text-[#fff] mb-1" for="phone">{{ app()->getLocale() === 'en' ? 'Phone Number' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ' : '电话号码') }}</label>
                                     <div class="career-input-form">
                                         <input id="phone" name="phone" placeholder="{{ app()->getLocale() === 'en' ? 'Enter your phone number' : (app()->getLocale() === 'km' ? 'បញ្ចូលលេខទូរសព្ទរបស់អ្នក' : '请输入您的电话号码') }}">
                                     </div>

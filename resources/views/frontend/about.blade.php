@@ -2433,7 +2433,7 @@
                             <div class="flex justify-center gap-2 md:gap-1 lg:gap-4 px-3 text-left text-[#212552]" x-data="{ openPopup: false }" x-cloak>
                                 
                                 <div class="mx-auto {{ $isKh ? 'w-[100px] md:w-40 lg:w-[150px]' : 'w-[85px] md:w-28 lg:w-36' }}">
-                                    <h1 class="leading-3 text-[8px] sm:text-[12px] lg:text-base font-normal md:font-semibold">
+                                    <h1 class="leading-3 text-[8px] sm:text-[12px] lg:text-base font-semibold">
                                         {{ app()->getLocale() === 'en' ? ' P - Passion' : (app()->getLocale() === 'km' ? 'ចំណង់ខ្លាំង' : '激情') }}
                                     </h1>
                                     <p class="leading-3 text-[8px] lg:text-base">
@@ -2443,7 +2443,7 @@
                                 </div>
 
                                 <div class="mx-auto {{ $isKh ? 'w-[100px] md:w-40 lg:w-44' : 'w-[85px] md:w-28 lg:w-36' }}">
-                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
+                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-semibold">
                                       
                                         {{ app()->getLocale() === 'en' ? 'E - Excellence' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាព' : '卓越') }}
                                     </h1>
@@ -2454,7 +2454,7 @@
                                 </div>
 
                                 <div class="w-[100px] md:w-36 lg:w-36 max-w-40 md:max-w-40 mx-auto">
-                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
+                                    <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-semibold">
                                         
                                         {{ app()->getLocale() === 'en' ? 'A - Accountability' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវ' : '问责制') }}
                                     </h1>
