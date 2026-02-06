@@ -1,6 +1,6 @@
 .contact-bg {
     width: 100%;
-    height: 150vh;
+    height: 100vh;
     position: relative;
 }
 
@@ -43,7 +43,13 @@
     text-align: center;
     margin-bottom: 5rem;
 }
-
+@media screen and (min-width: 2560px) {
+    .contact-bg {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+}
 @media screen and (max-width: 1025px) {
     .wrapper-contact {
         margin-top: 8rem;
@@ -61,6 +67,11 @@
         text-align: center;
         margin-bottom: 5rem;
     }
+    .contact-bg {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+}
 }
 
 @media screen and (max-width: 769px) {
@@ -99,6 +110,11 @@
         text-align: center;
         margin-bottom: 2rem;
     }
+    .contact-bg {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+}
 }
 
 .wrapper-contact .input-field input {

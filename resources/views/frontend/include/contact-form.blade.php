@@ -481,11 +481,11 @@
 
       
 
-       <!-- Email -->
+    <!-- Email -->
     <div class="col-lg-12 col-md-12 input-field">
       <div class="field-wrap">
         <input class="col-12" name="email" required
-          placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អ៊ីមែល)' : '电子邮件') }}">
+          placeholder="{{ app()->getLocale() === 'en' ? 'Email' : (app()->getLocale() === 'km' ? 'សារអេឡិចត្រូនិក (អុីមែល)' : '电子邮件') }}">
         <span class="star-inside">*</span>
       </div>
     </div>
