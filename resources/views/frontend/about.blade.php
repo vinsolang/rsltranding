@@ -2447,7 +2447,7 @@
                     </div>
 
 
-                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto {{ app()->getLocale() === 'km' ? 'left-6' : '' }}">
+                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto {{ app()->getLocale() === 'km' ? 'left-4' : '' }}">
                         <img src="{{ asset(
                             app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
                                 : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer-1.svg'
