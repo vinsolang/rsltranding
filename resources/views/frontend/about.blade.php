@@ -150,7 +150,7 @@
     .first-card-background img {
         object-fit: cover;
         width: 100%;
-        height: 170vh;
+        height: 180vh;
     }
 
     /* Mobile only */
@@ -808,7 +808,7 @@
 }
  @media screen and (min-width: 1024px) and (max-width: 2517px) {
     .-mt-4k {
-        margin-top: -400px; 
+        margin-top: -320px; 
     }
 }
 
@@ -2447,7 +2447,7 @@
                     </div>
 
 
-                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
+                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto {{ app()->getLocale() === 'km' ? 'left-6' : '' }}">
                         <img src="{{ asset(
                             app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
                                 : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer-1.svg'
@@ -2460,7 +2460,7 @@
     </div>
 </section>
 
-<section class="founder-section relative md:mt-[100px] -mt-4k z-[999]">
+<section class="founder-section relative md:mt-[120px] -mt-4k z-[999]">
     <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2 ">
         <img src="{{ asset('assets/profile-team/1-new.png') }}" class="w-72 h-72 rounded-full object-contain p-1">
         <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'MESSAGE FROM FOUNDER' : (app()->getLocale() === 'km' ? 'សារពីស្ថាបនិក' : '董事会寄语 ') }}</h5>
