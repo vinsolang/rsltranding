@@ -2390,7 +2390,7 @@
                     {{-- Core Values --}}
                     <div class="text-center mt-2 md:py-0 py-2">
                         <h3 class="mv-title-mission text-lg mt-3 leading-[10px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-black pt-2 md:py-4">
-                            {{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
+                            {{ app()->getLocale() === 'en' ? 'Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
                         </h3>
                         <div class="mt-1 text-lg md:text-2xl font-bold tracking-[0.5em] text-black md:py-3">
                             P E A C E
@@ -2427,63 +2427,152 @@
 
                         <!-- Overlay text -->
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="flex justify-center gap-0 md:gap-1 lg:gap-3 px-3 text-left text-[#212552]">
+                            @php
+                                $isKh = app()->getLocale() === 'km';
+                            @endphp
+                            <div class="flex justify-center gap-2 md:gap-1 lg:gap-4 px-3 text-left text-[#212552]" x-data="{ openPopup: false }" x-cloak>
                                 
-                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                <div class="mx-auto {{ $isKh ? 'w-[100px] md:w-40 lg:w-[150px]' : 'w-[85px] md:w-28 lg:w-36' }}">
                                     <h1 class="leading-3 text-[8px] sm:text-[12px] lg:text-base font-normal md:font-semibold">
                                         {{ app()->getLocale() === 'en' ? ' P - Passion' : (app()->getLocale() === 'km' ? 'ចំណង់ខ្លាំង' : '激情') }}
                                     </h1>
-                                    <p class="leading-3 text-[8px] sm:text-[12px] lg:text-base">
+                                    <p class="leading-3 text-[8px] lg:text-base">
                                        
                                          {{ app()->getLocale() === 'en' ? ' Having a strong drive and enthusiasm for your work.' : (app()->getLocale() === 'km' ? 'មានកម្លាំងចិត្ត និងភាពសកម្មក្នុងការងារ ដោយចំណង់ចំណូលចិត្ត និងសេចក្តីស្រលាញ់ពិតប្រាកដ។' : '为客户寻找最优质、价格合理的产品。') }}
                                     </p>
                                 </div>
 
-                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                <div class="mx-auto {{ $isKh ? 'w-[100px] md:w-40 lg:w-44' : 'w-[85px] md:w-28 lg:w-36' }}">
                                     <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
                                       
                                         {{ app()->getLocale() === 'en' ? 'E - Excellence' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាព' : '卓越') }}
                                     </h1>
-                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                    <p class="leading-3 text-[8px] lg:text-base">
                                       
                                         {{ app()->getLocale() === 'en' ? ' Striving to achieve the best possible results.' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាពដើម្បីទទួលបានលទ្ធផលល្អបំផុត។' : '努力通过奉献，技能和持续改进来达到最好的结果。') }}
                                     </p>
                                 </div>
 
-                                <div class="max-w-40 md:max-w-40 mx-auto">
+                                <div class="w-[100px] md:w-36 lg:w-36 max-w-40 md:max-w-40 mx-auto">
                                     <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
                                         
                                         {{ app()->getLocale() === 'en' ? 'A - Accountability' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវ' : '问责制') }}
                                     </h1>
-                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                    <p class="leading-3 text-[8px] lg:text-base">
                                         {{ app()->getLocale() === 'en' ? 'Taking full responsibility for actions.' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវខ្ពស់ចំពោះសកម្មភាព និងលទ្ធផល។' : '对自己的行为、决定和结果负全责。') }}
                                         
                                     </p>
+                                    <div class="w-full flex justify-center mt-3 md:hidden">
+                                    <button
+                                        @click="openPopup = true"
+                                        class="text-xs text-blue-600 font-semibold">
+                                       
+                                        {{ app()->getLocale() === 'en' ? 'Read more' : (app()->getLocale() === 'km' ? 'មើលបន្ថែម' : '閱讀更多') }}
+                                    </button>
+                                </div>
                                 </div>
 
-                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                <div class="md:max-w-36 mx-auto md:block hidden">
                                     <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
                                         
                                           {{ app()->getLocale() === 'en' ? 'C - Compassion' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា' : '同情心') }}
                                     </h1>
-                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                    <p class="leading-3 text-[8px] lg:text-base">
                                        
                                         {{ app()->getLocale() === 'en' ? 'Showing kindness and care for others.' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា និងជួយសង្គ្រោះអ្នកដទៃ។' : '表现出善意、关心和愿意帮助有需要的人。') }}
                                     </p>
                                 </div>
 
-                                <div class="max-w-28 md:max-w-36 mx-auto">
+                                <div class="{{ $isKh ? 'w-[110px] md:w-40 lg:w-44' : 'w-[85px] md:w-28 lg:w-44' }} mx-auto md:block hidden">
                                     <h1 class="leading-3 text-[8px] sm:text-sm lg:text-base font-normal md:font-semibold">
                                        
                                         {{ app()->getLocale() === 'en' ? ' E - Empathy' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត' : '同理心') }}
                                     </h1>
-                                    <p class="leading-3 text-[8px] sm:text-sm lg:text-base">
+                                    <p class="leading-3 text-[8px] lg:text-base">
                                        
                                         {{ app()->getLocale() === 'en' ? ' Understanding others’ feelings and needs.' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត យល់អារម្មណ៍ អំពីតម្រូវការ និងទុក្ខធុរៈអ្នកដទៃ។' : '理解和分享他人的感受、需求和挑战。') }}
                                     </p>
                                 </div>
+                                
 
+                                <!-- Popup Background -->
+                                <div
+                                    x-show="openPopup"
+                                    x-transition.opacity
+                                    class="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4"
+                                    @click.self="openPopup = false">
+
+                                    <!-- Popup Content -->
+                                    <div
+                                        x-transition
+                                        class="bg-white rounded-lg p-4 w-full max-w-sm text-[#212552] relative">
+
+                                        <!-- Close Button -->
+                                        <button
+                                            @click="openPopup = false"
+                                            class="absolute top-2 right-3 text-lg font-bold text-gray-500">
+                                            ✕
+                                        </button>
+
+                                    <div class="md:max-w-36 mx-auto">
+                                            <h1 class="leading-3 text-[12px] font-semibold">
+                                                {{ app()->getLocale() === 'en' ? ' P - Passion' : (app()->getLocale() === 'km' ? 'ចំណង់ខ្លាំង' : '激情') }}
+                                            </h1>
+                                            <p class="leading-3 text-[10px] lg:text-base">
+                                            
+                                                {{ app()->getLocale() === 'en' ? ' Having a strong drive and enthusiasm for your work.' : (app()->getLocale() === 'km' ? 'មានកម្លាំងចិត្ត និងភាពសកម្មក្នុងការងារ ដោយចំណង់ចំណូលចិត្ត និងសេចក្តីស្រលាញ់ពិតប្រាកដ។' : '为客户寻找最优质、价格合理的产品。') }}
+                                            </p>
+                                        </div>
+
+                                        <div class="md:max-w-36 mx-auto">
+                                            <h1 class="leading-3 text-[12px] font-semibold">
+                                            
+                                                {{ app()->getLocale() === 'en' ? 'E - Excellence' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាព' : '卓越') }}
+                                            </h1>
+                                            <p class="leading-3 text-[10px] lg:text-base">
+                                            
+                                                {{ app()->getLocale() === 'en' ? ' Striving to achieve the best possible results.' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាពដើម្បីទទួលបានលទ្ធផលល្អបំផុត។' : '努力通过奉献，技能和持续改进来达到最好的结果。') }}
+                                            </p>
+                                        </div>
+
+                                        <div class="md:max-w-40 mx-auto">
+                                            <h1 class="leading-3 text-[12px] font-semibold">
+                                                
+                                                {{ app()->getLocale() === 'en' ? 'A - Accountability' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវ' : '问责制') }}
+                                            </h1>
+                                            <p class="leading-3 text-[10px] lg:text-base">
+                                                {{ app()->getLocale() === 'en' ? 'Taking full responsibility for actions.' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវខ្ពស់ចំពោះសកម្មភាព និងលទ្ធផល។' : '对自己的行为、决定和结果负全责。') }}
+                                                
+                                            </p>
+                                        </div>
+
+                                        <div class="md:max-w-36 mx-auto">
+                                            <h1 class="leading-3 text-[12px] font-semibold">
+                                                
+                                                {{ app()->getLocale() === 'en' ? 'C - Compassion' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា' : '同情心') }}
+                                            </h1>
+                                            <p class="leading-3 text-[10px] lg:text-base">
+                                            
+                                                {{ app()->getLocale() === 'en' ? 'Showing kindness and care for others.' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា និងជួយសង្គ្រោះអ្នកដទៃ។' : '表现出善意、关心和愿意帮助有需要的人。') }}
+                                            </p>
+                                        </div>
+
+                                        <div class="md:max-w-36 mx-auto">
+                                            <h1 class="leading-3 text-[12px] font-semibold">
+                                            
+                                                {{ app()->getLocale() === 'en' ? ' E - Empathy' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត' : '同理心') }}
+                                            </h1>
+                                            <p class="leading-3 text-[8px] lg:text-base">
+                                            
+                                                {{ app()->getLocale() === 'en' ? ' Understanding others’ feelings and needs.' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត យល់អារម្មណ៍ អំពីតម្រូវការ និងទុក្ខធុរៈអ្នកដទៃ។' : '理解和分享他人的感受、需求和挑战。') }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                        
+
                         </div>
                     </div>
 
