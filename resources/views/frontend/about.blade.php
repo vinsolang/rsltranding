@@ -2424,18 +2424,18 @@
                     <div class="relative top-[20px] md:top-20 mx-auto min-h-14 my-1 mb-20 max-w-4xl md:py-0 py-2">
 
                         {{-- Background image (BEHIND text) --}}
-                        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                        {{-- <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
                             <img
                                 src="{{ asset('assets/about-core/core-value-style-kh/bg-corevalues.svg') }}"
                                 alt=""
                                 class="lg:w-[1000px] object-contain" />
-                        </div>
+                        </div> --}}
                         {{-- Card content (ABOVE image) --}}
-                        <div class="mv-card relative z-20">
+                        {{-- <div class="mv-card relative z-20">
                             <div class="flex items-center gap-2 md:gap-6 ">
                                 <div
                                     class="max-w-10 sm:max-w-12 md:max-w-16 flex items-center text-orange-500 ml-[19%] md:ml-[18%]">
-                                    {{-- icon --}}
+                                    
                                     <img class="w-full ml-[-12px]" src="{{ asset('assets/about-core/core-value-style-kh/icon-corevalue.svg') }}" alt="">
                                 </div>
 
@@ -2443,16 +2443,24 @@
                                    {{ app()->getLocale() === 'en' ? 'Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
 
-                    <div class="relative top-[-6px] md:top-[80px] lg:top-[100px] max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
+                    <div class="relative -top-20 md:-top-14 max-w-[600px] md:max-w-[750px] lg:max-w-[1200px] mx-auto">
                         <img src="{{ asset(
-                            app()->getLocale() === 'en' ? 'assets/about-core/core-value-style-kh/core-value-en.svg'
-                                : (app()->getLocale() === 'km' ? 'assets/about-core/core-value-style-kh/core-value-khmer-2.svg'
-                                : 'assets/about-core/core-value-style-kh/core-value-chin-1.svg')
+                            app()->getLocale() === 'en' ? 'assets/about-core/corevalue-final/core-english.svg'
+                                : (app()->getLocale() === 'km' ? 'assets/about-core/corevalue-final/core-khmer.svg'
+                                : 'assets/about-core/corevalue-final/core-chin.svg')
                         ) }}" alt="" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-5 md:top-12 lg:top-20 left-[162px] md:left-[300px] lg:left-[445px] -translate-x-1/2 text-center
+                                text-lg sm:text-2xl md:text-3xl
+                                font-extrabold tracking-tight
+                                text-[#79c259] z-50"
+                        >
+                            {{ app()->getLocale() === 'en' ? 'Core Values' : (app()->getLocale() === 'km' ? 'គុណតម្លៃស្នូល' : '核心价值观') }}
+                        </div>
                     </div>
                 </div>
             </div>
